@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>25 RWD 試排版Document</title>
+	<style>
+	   *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+       }
+       #menu_control{
+            position: absolute;
+            z-index: -2;
+            opacity: 0;
+        }
+        .header{
+            height: 50px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .logo{
+            width: 60px;
+            height: 40px;
+            margin-left: 10px;
+        }
+        .log a{
+            display: block;
+            height: 40px;
+        }
+        .logo img{
+            /* vertical-align: middle; */
+            display: block;
+        }
+        .menu_btn{
+            width: 40px;
+            height: 40px;
+            background-color: #000;
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+
+        }
+        .menu_btn span{
+            opacity: 0;
+            width: 1px;
+            height: 1px;
+            display: : block;
+            overflow: hidden;
+        }
+        .menu_btn::before{
+            content:  '';
+            position: absolute;
+            height: 2px;
+            left: 2px;
+            width: 36px;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            box-shadow: 0px 8px 0px #aaa, 0px -8px 0px #aaa;
+
+        }
+        nav{
+            width: 80%;
+            height: calc(100vh-50px);
+            background-color: #282923;
+            position: absolute;
+            top: 50px;
+            left: -100%;
+            transition: .5s;
+
+        }
+        nav a{
+            display:  block;
+            text-decoration: none;
+            color:  #a6e22c;
+            padding: 10px 20px;
+            border-bottom: 1px solid #a6e22c;
+        }
+        #menu_control:checked ~ .header nav{
+            left: 0;
+        }
+        @media screen and (max-width : 767px){}
+        @media screen and (min-width : 768px) {
+            .menu_btn {display: none}
+            .header{
+                display: flex;
+                justify-content: space-between;
+                background-color: #282923;
+                align-items: center;
+            }
+            .logo{
+
+            }
+            nav{
+                position: relative;
+                display: flex;
+                left: 0;
+                top: 0;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+
+            }
+            nav a{
+                border-bottom: none;
+            }
+        }
+       img {
+        vertical-align: bottom ;  
+        /*影像部隊應baseline */
+       }
+       .footer{
+            background-color: #333;
+            color:  #aaa;
+            text-align: center;
+            padding: 10px 0;
+       }
+       .item-group{
+            width: 100%;
+            max-width:  1400px;
+            margin: auto;
+       }
+       .banner img {
+        width: 100%;
+       }
+       .title {
+            margin: 0 0px 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+       }
+       .title h2{
+        text-align: center;
+        font-size: 46px;
+       }
+       .title p{
+        text-align: center;
+        font-size: 22px;
+       }
+       .item{
+        margin: 0 10px 40px;
+       }
+       .item .text h3 {
+        font-size: 24px;
+        text-align: center;
+       }
+		.item .pic img {
+            width: 100%;
+        }
+        .service {
+            padding: 0px 0;
+            background-color: #ffa;
+            /* 淺黃色 */
+        }
+        .dervice .item{
+            margin: 0;
+        }
+        @media screen and (min-width: 768px){
+            .item-group{
+            display: flex;
+            }
+            .service .item{
+                display: flex;
+            }
+            .service .item .pic,
+            .service .item .text {
+                width: 50%;
+                margin: 0;
+            }
+            .service .item .text{
+                display: flex;
+                padding: 0 20px;
+                box-sizing: border-box;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        
+	</style>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu_control">
+    <!-- input:c#menu_control -->
+
+    <div class="header">
+        <h1 class="logo">
+            <a href="#"><img src="https://picsum.photos/60/40/?random=1"></a>
+        </h1>
+    
+
+    <label for="menu_control" class="menu_btn">
+        <span>選單</span>
+    </label>
+    
+    <nav>
+        <!--  a[#]{link} -->
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+        <a href="#">link</a>
+
+    </nav>
+    </div>
+
+
+    <div class="banner">
+        <img src="https://picsum.photos/1400/500/?random=1">
+    </div>
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi, iure, accusantium. Repellendus, itaque sed?</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=2" alt="1">
+                    </div>
+                    <div class="text">
+                    <h3>About</h3>
+                    <p>廣泛空調她們完美頁面作戰篇，玻璃事實彼此檢測本地然後貢獻全部塑料鈴聲忽然課程，財產傳統作戰忘記解決方案下面求購無門業主責任適應傳來電視台循，快車專欄平台事業可以用左，對象瞭解是有保存發達表演很難他，房地產求職上次商家規格廣東問道機會，增加集中重大青島排行榜一口出版先進一面。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=3">
+                    </div>
+                    <div class="text">
+                    <h3>About</h3>
+                    <p>除了都有隨時邀請客人也就是全新更好，下載最重要我一性質聯繫人個性時代請教忍不住回家評分人們旅，限制青島時候笑話基礎上視頻十分思路印刷涉及存，難道當時購物簡直細胞微軟東西碩士代碼玩家想想手段，到達坐在差不多每年繼續它的玻璃之下年代其中建議因，我和收集及其大約地圖在，是否進了開關組圖財務上面肯定你好樂隊導航做好繼續事故特性希，措施服裝旁邊意識考察能在共和國突然異常很好資金，自行用戶也在世紀體內老人，。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=4">
+                    </div>
+                    <div class="text">
+                    <h3>About</h3>
+                    <p>違法評價老公怎麼會名單快車每日眼前，社會如有全球我和適合小孩，山東觀眾很有多少遊戲連載供應商一眼技巧一副，是誰權力不願意瀋陽缺乏擔心的確可愛證，網上是指練習道德下來最重要任意你會，侵犯力量教學交通美元走了警察電器請教更好圖形宣佈，加拿大第一個職位集中已有必須安排色，私服收藏本頁最低主人之一變得這段空中名稱已經忍不住據說慢慢，他對對你負責人內地她說全，逐漸想要一天不可以夫妻工廠確，專區溫度辛苦高效。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="service">
+        <div class="wrap">
+            <!-- <div class="title"></div> -->
+            <!-- <div class="title">
+                <h2>關於我們2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi, iure, accusantium. Repellendus, itaque sed?</p>
+            </div> -->
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=5">
+                    </div>
+                    <div class="text">
+                    <h3>Service</h3>
+                    <p>非常想要等級刪除可能會，水晶很多不懂最重要還會給我維護調節老師教材科研不會建材害怕，印象一點幾乎求助實際之外不禁法人，協會基本幾次業主軟件先進性教，有的運行平台帳號增長於是推，方面位於協議治療等方面無關一聲有的有人回家，有時等人導航教授但是等方面不夠只不過難。</p>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+<div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error inventore dolores rem veritatis earum. Quasi, iure, accusantium. Repellendus, itaque sed?</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=12">
+                    </div>
+                    <div class="text">
+                    <h3>Products</h3>
+                    <p>照片看來突出實施第一，接着讓他精英說話個人建，字體都不遇到供求會員插，仔細醫療全文同樣閲讀者加快三個您是，討論目標逐步中華人民共和國青島台灣但，淡淡的人政府廣告恐怖一次對，常委會名單那時焦點機，工具各項主機上班老闆上漲已被負責顧客小遊戲歌詞異常供，精英四川新聞網回家多年緊緊英國隨後為何包括每年，體力成都售價又有五金女友無比工人終於各類一聲我也，背景仍然更新引起停止正確家庭複雜言論他不對，要有江蘇。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=13">
+                    </div>
+                    <div class="text">
+                    <h3>Products</h3>
+                    <p>請問會議音樂網有限公，職業周圍女朋友心中步驟顧客呼吸玩具實業決策地區辦公室並在氣，距離規劃精選無疑權限針對通道陽光顯示器點擊數打，多個地位最高我覺得參考少女不太走出訪問總是一是容量三人，失望不如中國怎麼會適用一眼貢獻技術有利於商，一起培養倒是團體衝突改革聯繫方式稱為秘，忽然複製指揮最新站內最後看看鐵通馬上超級在我跟着屬於通，告訴我今年詳細熱情長大主人走到小孩不，廣場雖然處罰街道站內，奇蹟是指方案。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=14">
+                    </div>
+                    <div class="text">
+                    <h3>Products</h3>
+                    <p>然後正好本地下載當中說法，色情創建身份便宜藍色是他應當頓時不了供應一台國產光臨，英文同意郵件就像好像原帖什麼樣少年多年評估相關圖，整合計劃專區學校這次寧波對此職工記錄下，優質三個異常分享放在的說宣佈時候好像以外，好看一部分想法剛才使得，一般說完故事進程液晶各位排行斑竹上面名稱孤獨影響委，舉行評級國產樣子財經二級其中司機經過垃，計劃表達您是迅速新聞外面十年許可證方便水果對付傢俱微，符合即使下載次數。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                    <img src="https://picsum.photos/300/200/?random=15">
+                    </div>
+                    <div class="text">
+                    <h3>Products</h3>
+                    <p>他也處理器年輕人計算嘗試行動增長可憐付款，全體電視劇其他的過了團隊心裡收購常委會就像廣告垃圾伊拉，報名回到管理員綠色我還儘快家庭巨，聽說利潤同步深深但他，首次類似發帖開放寶寶但我，廣東到處不好時間由於產權試題會員價福建辦，偉大一對儘量持續處理器，剛才過來言論風情委員會驚訝依，家庭在線一顆這個問題他不勞動，觀眾樓上我只運用地說，休息森林皮膚表情年代資金指南是，手段進口女兒我很英雄高興通道趕緊，選手。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy copyright by JK 2019
+    </div>
+</body>
+</html>

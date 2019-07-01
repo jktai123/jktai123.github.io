@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例 菜鸟教程</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+   <h1> <a href="http://www.runoob.com/bootstrap4/bootstrap4-tutorial.html" class="text-info">菜鸟教程</a></h1>
+  <h1>h1 Bootstrap 标题 (2.5rem = 40px)</h1>
+  <h2>h2 Bootstrap 标题 (2rem = 32px)</h2>
+  <h3>h3 Bootstrap 标题 (1.75rem = 28px)</h3>
+  <h4>h4 Bootstrap 标题 (1.5rem = 24px)</h4>
+  <h5>h5 Bootstrap 标题 (1.25rem = 20px)</h5>
+  <h6>h6 Bootstrap 标题 (1rem = 16px)</h6>
+  <br/>
+<h1>Display H1 标题</h1>
+<p>Display  标题可以输出更大更粗的字体样式。</p>
+<h1 class="display-1">H1 Display 1</h1>
+<h1 class="display-2">H1 Display 2</h1>
+<h1 class="display-3">H1Display 3</h1>
+<h1 class="display-4">H1Display 4</h1>
+<br/>
+<h1>更小文本标题</h1>
+<p>small 元素用于字号更小的颜色更浅的文本:</p>
+<h1>h1 标题 <small>副标题</small></h1>
+<h2>h2 标题 <small>副标题</small></h2>
+<h3>h3 标题 <small>副标题</small></h3>
+<h4>h4 标题 <small>副标题</small></h4>
+<h5>h5 标题 <small>副标题</small></h5>
+<h6>h6 标题 <small>副标题</small></h6>
+
+<br>
+<h1>p 高亮文本</h1>
+<p>使用 mark 元素来 <mark>高亮</mark> 文本。</p>
+
+<br>
+<h1>Abbreviations</h1>
+<p>The abbr element is used to mark up an abbreviation or acronym:</p>
+<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+<br>
+<h1>Blockquotes</h1>
+<p>The blockquote element is used to present content from another source:</p>
+<blockquote class="blockquote">
+    <p>For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF
+        works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million
+        globally.</p>
+    <footer class="blockquote-footer">From WWF's website</footer>
+</blockquote>
+
+<br>
+<h1>Description Lists</h1>
+<p>The dl element indicates a description list:</p>
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+<br>
+<h1>代码片段</h1>
+<p>可以将一些代码元素放到 code 元素里面:</p>
+<p>以下 HTML 元素: <code>span</code>, <code>section</code>, 和 <code>div</code> 用于定义部分文档内容。</p>
+
+<br>
+<h1>Keyboard Inputs</h1>
+<p>To indicate input that is typically entered via the keyboard, use the kbd element:</p>
+<p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+
+<br>
+<h1>Multiple Code Lines</h1>
+<p>For multiple lines of code, use the pre element:</p>
+<pre>
+Text in a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks.
+</pre>
+
+<br>
+<h1>代表指定意义的文本颜色</h1>
+<p class="text-muted">柔和的文本。</p>
+<p class="text-primary">重要的文本。</p>
+<p class="text-success">执行成功的文本。</p>
+<p class="text-info">代表一些提示信息的文本。</p>
+<p class="text-warning">警告文本。</p>
+<p class="text-danger">危险操作文本。</p>
+<p class="text-secondary">副标题。</p>
+<p class="text-dark">深灰色文字。</p>
+<p class="text-light">浅灰色文本（白色背景上看不清楚）。</p>
+<p class="text-white">白色文本（白色背景上看不清楚）。</p>
+
+<br>
+<h1>文本颜色</h1>
+<p>鼠标移动到链接。</p>
+<a href="#" class="text-muted">柔和的链接。</a>
+<a href="#" class="text-primary">主要链接。</a>
+<a href="#" class="text-success">成功链接。</a>
+<a href="#" class="text-info">信息文本链接。</a>
+<a href="#" class="text-warning">警告链接。</a>
+<a href="#" class="text-danger">危险链接。</a>
+<a href="#" class="text-secondary">副标题链接。</a>
+<a href="#" class="text-dark">深灰色链接。</a>
+<a href="#" class="text-light">浅灰色链接。</a>
+</br>
+
+<h1>背景颜色</h1>
+<p class="bg-primary text-white">重要的背景颜色。</p>
+<p class="bg-success text-white">执行成功背景颜色。</p>
+<p class="bg-info text-white">信息提示背景颜色。</p>
+<p class="bg-warning text-white">警告背景颜色</p>
+<p class="bg-danger text-white">危险背景颜色。</p>
+<p class="bg-secondary text-white">副标题背景颜色。</p>
+<p class="bg-dark text-white">深灰背景颜色。</p>
+<p class="bg-light text-dark">浅灰背景颜色。</p>
+
+<br>
+<h1>Bootstrap4 基础表格</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h1>
+条纹表格table-striped
+</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h1>带边框表格table-bordered</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h1>鼠标悬停状态表格table-hover</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h1>黑色背景表格
+.table-dark</h1>
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h1>指定意义的颜色类</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Default</td>
+            <td>Defaultson</td>
+            <td>def@somemail.com</td>
+        </tr>
+        <tr class="table-primary">
+            <td>Primary</td>
+            <td>Joe</td>
+            <td>joe@example.com</td>
+        </tr>
+        <tr class="table-success">
+            <td>Success</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr class="table-danger">
+            <td>Danger</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr class="table-info">
+            <td>Info</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+        <tr class="table-warning">
+            <td>Warning</td>
+            <td>Refs</td>
+            <td>bo@example.com</td>
+        </tr>
+        <tr class="table-active">
+            <td>Active</td>
+            <td>Activeson</td>
+            <td>act@example.com</td>
+        </tr>
+        <tr class="table-secondary">
+            <td>Secondary</td>
+            <td>Secondson</td>
+            <td>sec@example.com</td>
+        </tr>
+        <tr class="table-light">
+            <td>Light</td>
+            <td>Angie</td>
+            <td>angie@example.com</td>
+        </tr>
+        <tr class="table-dark text-dark">
+            <td>Dark</td>
+            <td>Bo</td>
+            <td>bo@example.com</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<h1>表头颜色
+</h1>
+<p>
+在 Bootstrap v4.0.0-beta.2 中.thead-dark 类用于给表头添加黑色背景， .thead-light 类用于给表头添加灰色背景:
+</p><p>
+在 Bootstrap v4.0.0-beta 这个版本中，.thead-inverse 类用于给表头添加黑色背景，.thead-default 类用于给表头添加灰色背景。</p>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>较小的表格
+</h1>
+<p>.table-sm 类用于通过减少内边距来设置较小的表格:</p>
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+        </tr>
+        <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+</div>
+
+<h1>Bootstrap4 导航栏</h1>
+<p>导航栏一般放在页面的顶部。
+
+    我们可以使用 .navbar 类来创建一个标准的导航栏，后面紧跟: .navbar-expand-xl|lg|md|sm 类来创建响应式的导航栏 (大屏幕水平铺开，小屏幕垂直堆叠)。
+
+    导航栏上的选项可以使用 ul> 元素并添加 class="navbar-nav" 类。 然后在 li> 元素上添加 .nav-item 类， a> 元素上使用 .nav-link 类:</p>
+
+<nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+<br>
+
+<div class="container-fluid">
+    <h3>简单的导航栏实例</h3>
+    <p>导航栏一般放在页面的顶部。</p>
+    <p>我们可以使用 .navbar 类来创建一个标准的导航栏，后面紧跟: .navbar-expand-xl|lg|md|sm 类来创建响应式的导航栏 (大屏幕水平铺开，小屏幕垂直堆叠)。</p>
+</div>
+
+
+<nav class="navbar bg-light">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+<br>
+
+<div class="container-fluid">
+    <h3>垂直导航栏</h3>
+    <p>导航栏一般在页面头部。</p>
+</div>
+
+
+<div class="container">
+    <h3>不同颜色导航栏</h3>
+    <p>对于暗色背景需要设置文本颜色为浅色的，对于浅色背景需要设置文本颜色为深色的。</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <h3>品牌/Logo</h3>
+    <p>.navbar-brand 类用于高亮显示品牌/Logo:</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">logo
+        <img src="https://picsum.photos/40/30/?random=10" alt="logo" style="width:40px;">
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1
+                <img src="https://picsum.photos/40/30/?random=11 alt="logo" style="width:40px;">
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid">
+    <h3>品牌 / Logo</h3>
+    <p>果使用图片，可以使用 .navbar-brand 类来设置图片自适应导航栏。</p>
+</div>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+<div class="container">
+    <h3>折叠导航栏</h3>
+    <p>通常，小屏幕上我们都会折叠导航栏，通过点击来显示导航选项。</p>
+    <p>提示: 如果你删除 .navbar-expand-md 类，导航链接会一直隐藏，且切换按钮会一直显示。</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Logo</a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                Dropdown link
+            </a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+        </li>
+    </ul>
+</nav>
+<br>
+
+<div class="container">
+    <h3>导航栏使用下拉菜单</h3>
+    <p>导航栏上可以设置下拉菜单。</p>
+</div>
+
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <form class="form-inline">
+        <input class="form-control" type="text" placeholder="Search">
+        <button class="btn btn-success" type="button">Search</button>
+    </form>
+</nav>
+<br>
+
+<div class="container">
+    <h3>导航栏的表单</h3>
+    <p>导航栏的表单 form 元素使用 class="form-inline" 类来排版输入框与按钮：</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <form class="form-inline">
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="Username">
+        </div>
+    </form>
+</nav>
+<br>
+
+<div class="container">
+    <h3>导航表单</h3>
+    <p> .input-group-addon 类用于在输入框前添加小标签。</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+        </li>
+    </ul>
+    <!-- Navbar text-->
+    <span class="navbar-text">
+        Navbar text
+        
+    </span>
+</nav>
+<br>
+
+<div class="container">
+    <h3>导航栏文本</h3>
+    <p>使用 .navbar-text 类来设置导航栏上非链接文本，可以保证水平对齐，颜色与内边距一样。</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Logo</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-fluid" style="margin-top:80px">
+    <h3>固定导航栏</h3>
+    <p>导航栏可以固定在头部或者底部。</p>
+    <h1>滚动页面查看效果。</h1>
+</div>
+
+<h1>Bootstrap4 面包屑导航（Breadcrumb）</h1>
+<p>包屑导航是一种基于网站层次信息的显示方式。以博客为例，面包屑导航可以显示发布日期、类别或标签。它们表示当前页面在导航层次结构内的位置，是在用户界面中的一种导航辅助。
+
+Bootstrap 中的面包屑导航是一个简单的带有 .breadcrumb class 的无序列表。分隔符会通过 CSS（bootstrap.min.css）中的 ::before 和 content 来添加，下面所示的 class
+自动被添加：</p>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item active">Home</li>
+</ol>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item active">Library</li>
+</ol>
+<ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">Library</a></li>
+    <li class="breadcrumb-item active">Data</li>
+</ol>
+<nav class="breadcrumb">
+    <a class="breadcrumb-item" href="#">Home</a>
+    <a class="breadcrumb-item" href="#">Library</a>
+    <a class="breadcrumb-item" href="#">Data</a>
+    <span class="breadcrumb-item active">Bootstrap</span>
+</nav>
+
+
+</body>
+</html>

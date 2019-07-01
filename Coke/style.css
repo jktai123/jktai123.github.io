@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color: green;
+    font-size : 60px;
+    background-color: chartreuse;
+}
+p{
+    color: #9;
+    font-size : 20px;
+    margin-bottom: 30px;
+    /* background-color: rgb(52, 50, 54); */
+}
+nav{
+    background-color: #000;
+    text-align: center;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 20px;
+    font-size: 16px;
+    background-color: #000;
+    transition: 1s;
+    /* transition-property: inherit; */
+}
+nav a:hover{
+    background-color: #ff00dd;
+
+}

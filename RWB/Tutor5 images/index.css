@@ -1,0 +1,20 @@
+body{
+	/* background: url("https://www.nmh.gov.tw/file/Upload/banner/image/724fc302-03e9-4278-8d27-38fb30fc15cc.jpg") repeat; */
+	/* background: url("pattern15.png") repeat;  */
+	background: url("https://d31l02nbp0owar.cloudfront.net/m/t/12851/12841448/a-0001.jpg") repeat;
+}
+img{
+	max-width:100%;
+	/* align: center;   */
+}
+.menuBar{
+	
+	color:white;
+	text-align: center;
+}
+.button{
+	background:#777777;
+	width: 24%;
+	margin: 0 .5%;
+	float:left;
+}

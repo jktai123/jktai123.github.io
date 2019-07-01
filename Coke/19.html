@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>19 Document</title>
+	<style>
+		.wrap{
+			width: 960px;
+			margin: auto;
+			display: flex;
+		}
+		.item{
+			width: 300px;
+			margin: 10px;
+			border: 1px solid #aaa;
+			padding: 10px;
+			position: relative;
+		}
+		.item img{
+			width: 100%;
+		}
+		.item .tab{
+			background-color: #f00;
+			color: #fff;
+			padding: 6px 10px;
+			position: absolute;  //參考父層定位
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="item">
+			<div class="tab">Hot</div>
+			<img src="https://picsum.photos/300/200/?random=3">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse doloremque omnis nemo veritatis explicabo sint optio, porro asperiores aspernatur, saepe atque, temporibus velit modi repellat laboriosam, quae quo. Et, sint.</p>
+		</div>
+		<div class="item">
+			<div class="tab">Hot</div>
+			<img src="https://picsum.photos/300/200/?random=1">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus reiciendis, eveniet impedit harum, quibusdam consequuntur libero, asperiores iusto quas incidunt veritatis. Similique, quaerat sed eligendi placeat, laboriosam corporis possimus repellendus.</p>
+		</div>
+		<div class="item">
+			<div class="tab">Hot</div>
+			<img src="https://picsum.photos/600/400/?random=2">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, distinctio eum nesciunt illo magni odio itaque inventore adipisci facere nam soluta, non recusandae. Dicta dolore dolor, placeat nisi, ex quos.</p>
+		</div>
+		<div class="item">
+			<div class="tab">Hot</div>
+			<img src="https://picsum.photos/600/400/?random=5">
+			<h2>Title</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, distinctio eum nesciunt illo magni odio itaque inventore adipisci facere nam soluta, non recusandae. Dicta dolore dolor, placeat nisi, ex quos.</p>
+		</div>
+	</div>
+</body>
+</html>

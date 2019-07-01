@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>28 Bootstrap Hello, world!</title>
+    <style>
+      .jumbotron{
+        background: url("https://picsum.photos/1920/400/?=15") no-repeat center /cover;
+        margin-bottom: 0;
+        color: #fff;
+      }
+      .path{
+        background-color: #ccc;
+      }
+      .path .breadcrumb{
+        background-color: transparent;
+      }
+      .main-footer{
+        background-color: #000;
+        color: #fff;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- <img src="https://picsum.photos/1920/400/?random=1"> -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#amos-blk"  data-toggle="modal" >登入</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+
+<!-- Button trigger modal -->
+   <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#amos-blk">
+      Launch demo modal
+    </button> -->
+
+
+    <!-- <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div> -->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/800/400/?random=8" class="d-block w-100" alt="1st">
+          <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/800/400/?random=9" class="d-block w-100" alt="2nd">
+          <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum possimus debitis quia nihil perspiciatis laboriosam impedit, quos iure qui ratione.</p>
+        </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://picsum.photos/800/400/?random=10" class="d-block w-100" alt="3rd">
+          <div class="carousel-caption d-none d-md-block">
+          <h5>Thrid slide label</h5>
+          <p>他是開了分為轉身一條</p>
+        </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+
+    <div  class="path">
+      <div class="container">
+          <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data</li>
+              </ol>
+          </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action active">
+              Cras justo odio
+            </a>
+            <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+            <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+            <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">Vestibulum at eros</a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-9">
+          <h1>Title</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem est, quis illo incidunt totam eius suscipit similique culpa esse provident ipsum assumenda ipsam a molestias! Voluptatibus, minus officiis fuga quod.</p>
+          <div class="row">
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=30" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, velit.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=31" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, quisquam.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=32" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, earum!</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=33" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veniam!</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=20" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, velit.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=21" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, quisquam.</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=22" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, earum!</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="item">
+                <img src="https://picsum.photos/300/200/?random=23" class="img-fluid">
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, veniam!</p>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="page">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
+  
+    <div class="container-fluid main-footer text-center">
+        &copy; copyright by JK 2019
+    </div>
+
+    
+
+    <div class="modal" id="amos-blk" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">登入</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

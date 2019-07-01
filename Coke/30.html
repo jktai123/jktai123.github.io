@@ -1,0 +1,61 @@
+<!doctype html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>30 Jquery L3 CDN</title>
+<!-- 	<script src="../js/jquery-3.3.1.js"></script>   -->
+    <style>
+    	.box-a{
+    		width: 200px;
+    		height: 200px;
+    		display: inline-block;
+    		background-color: #aaa;
+    	}
+    	.box-b{
+    		width: 200px;
+    		height: 200px;
+    		display: inline-block;
+    		background-color: #faa;
+    	}
+    	.product-title{
+    		background-color: #000;
+    		color: #fff;
+    		padding: 10px;
+    		cursor: pointer;
+    	}
+    	.content{
+    		display: none;
+    	}
+    </style>
+	
+	 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<bfdy>
+   <div class="box-a">
+   	 box-a
+   </div>
+	<div class="box-b">
+		box-b	
+	</div>
+
+	<div class="product-title">產品介紹</div>
+
+	<div class="content">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus dolorem aliquid minus dignissimos neque nostrum ratione voluptates est optio id sint quisquam nihil sapiente, nesciunt amet minima porro aperiam voluptas. Natus beatae consequatur ipsum maiores. Delectus vel nihil soluta fugiat, ullam tempore, officiis voluptates quis natus nam itaque modi, harum sit ut dicta dolorem. Molestias, facere optio minima quod id ad harum nisi earum reprehenderit officia esse ea nesciunt saepe fuga quibusdam laboriosam quaerat debitis obcaecati eaque, quis voluptates sapiente accusamus explicabo possimus! Fugit placeat distinctio iusto consequuntur, adipisci! Minima totam quis consequatur modi, dicta suscipit saepe. Alias omnis, necessitatibus.</div>
+	<script>
+		$(document).ready(function() {
+			//test1
+			$(".box-a").click(function(){
+				$(".box-b").toggle();
+			})
+			//demo1
+			$('.product-title').dblclick(function() {
+				/* Act on the event */
+				$('.content').toggle();
+			});
+		})
+	</script>
+   
+</body>
+</html>

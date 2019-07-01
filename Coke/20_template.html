@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>20 Document</title>
+	<link rel="stylesheet" href="reset.css">
+	<style>
+		.header{
+			display: flex;
+			padding: 6px 10px;
+			background-color: #a00;
+		}
+		.header .logo{
+			display: inline-block;
+			padding: 6px 0;
+		}
+		.header nav {
+			text-align: right;
+			width: 100%;
+			font-size: 0;
+
+		}
+		.header nav a{
+			font-size: 16px;
+			color: #fff;
+			text-decoration: none;
+			display: inline-block;
+			line-height: 52px;
+			padding: 0 10px;
+		}
+		.header nav a:hover{
+			background-color: #fa0;
+		}
+		.banner img{
+			width: 100%;
+
+		}
+		.path{
+			
+			display: flex;
+		}
+		.path li{
+			position: relative;
+			padding: 6px 8px;
+		}
+		.path li a{
+			color: #aaa;
+			text-decoration: none;
+			font-size: 14px;
+		}
+		.item h3{
+			font-size: 36px;
+			padding: 0 0 30px;
+		}
+		.path li + li::before{
+			content: '/';
+			color: #aaa;
+			position: absolute;
+			left: 0;
+
+		}
+		.wrap{
+			width: 960px;
+			margin: auto;
+		}
+		.about{	
+			padding: 40px 0 60px;
+		}
+		.about .wrap{
+			
+			display: flex;
+		}
+		.about  .item{
+			width: 300px;
+			margin: 0 10px;
+			text-align: center;
+		}
+		.about  .item h3{
+			color: #000;
+			transition: 0.5s;
+		}
+		.about  .item p{
+			color: #000;
+			transition: 0.5s;
+		}.about  .item:hover h3{
+			color: #fa0;
+		}
+		.about  .item:hover p{
+			color: #fa0;
+		}
+		.about   img{
+			border-radius: 50% ;
+		}
+		.about > h2{
+			width: 960p;
+			font-size: 42px;
+			text-align: center;
+			padding: 20px 0;
+		}
+		.about > p{
+			width: 660px;
+			margin: auto;
+			padding: 0 0 40px;
+			text-align: center;
+		}
+
+		.products{
+			background-color: #ccc;
+		}
+
+		.products .wrap{
+			display: flex;
+		}
+
+		.products .item{
+			width: 50%;
+		}
+
+		.products .item img{
+			width: 100%;
+		}
+
+		.products .pic{}
+		.products .text{
+				display:  flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 0px 20px;
+				text-align: center;
+		}
+		/* .products .text >p {
+			width: 260px;
+			margin: auto;
+			padding: 0 0 0px;
+			text-align: center;
+		} */
+		.service{
+			padding: 40px 0;
+			background-color: #ffa;
+		}
+		.service > h2 {
+			width: 960px;
+			margin: auto;
+			text-align: center;
+			font-size: 42px;
+			padding: 40px 0;
+		}
+		.service> p{
+			width: 960px;
+			margin: auto;
+			text-align: center;
+			padding-bottom: 40px;
+		}
+		.service .wrap{
+			display: flex;
+		}
+		.service .item{
+			margin: 0 10px;
+			width: 300px;
+			text-align: center;
+		}
+		.service .item h3{}
+		.service .item p{}
+		.service .item img{
+			width: 100%;
+		}
+		.footer{
+			text-align: center;
+			background-color: #000;
+			color:  #888;
+			padding: 20px 0px;
+
+
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<a href="#" class="logo"><img src="https://picsum.photos/60/40/?random=1" alt="網站名稱"></a>
+		<nav>
+			<a href="#">關於我們</a>	
+			<a href="#">產品</a>	
+			<a href="#">服務</a>	
+			<a href="#">聯絡我們</a>	
+			<a href="#">網站地圖</a>	
+		</nav>
+	</div>
+
+	
+
+
+	<div class="banner">
+		<img src="https://picsum.photos/1200/400/?random=2">
+	</div>
+
+
+	<ul class="path"> 
+		<li><a href="#">首頁</a></li>
+		<li><a href="#">最新消息</a></li>
+		<li><a href="#">最上頁</a></li>
+	</ul>
+
+
+	<div class="about">
+		
+		<h2>關於我們</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid recusandae veniam, vero delectus hic repudiandae ex eius architecto mollitia in.</p>
+		<div class="wrap">
+			<div class="item">
+				<img src="https://picsum.photos/70/70/?random=3">
+				<h3>About</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ducimus deleniti vero, cum velit a esse, pariatur fuga iste consequatur magnam incidunt repudiandae, aliquid corporis explicabo quod unde distinctio at!</p>
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/50/50/?random=4">
+				<h3>About</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ducimus deleniti vero, cum velit a esse, pariatur fuga iste consequatur magnam incidunt repudiandae, aliquid corporis explicabo quod unde distinctio at!</p>
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/50/50/?random=5">
+				<h3>About</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ducimus deleniti vero, cum velit a esse, pariatur fuga iste consequatur magnam incidunt repudiandae, aliquid corporis explicabo quod unde distinctio at!</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="products">
+		<div class="wrap">
+			<div class="item pic">
+				<img src="https://picsum.photos/300/200/?random=6">
+			</div>
+			<div class="item text">
+				<h3>Products</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quisquam eius voluptate, odit sed itaque doloribus dolor, labore quos eaque commodi optio accusamus aut repellat ipsa iusto debitis nihil qui repellendus eveniet nostrum facere voluptatum nam ullam animi. Accusamus omnis voluptatibus, cupiditate, magnam ducimus reprehenderit nisi voluptatum deserunt quos totam.</p>
+			</div>
+		</div>
+	</div>
+	<div class="service">
+		<h2>服務項目</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quos, dolores! Vel commodi, laborum veniam, rerum itaque, eos ullam aliquam totam cumque vitae eius nam quaerat porro, cum dolore placeat!</p>
+		<div class="wrap">
+			<div class="item">
+				<img src="https://picsum.photos/300/200/?random=7">
+				<h3>Service</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos magni sequi, nesciunt nulla quaerat laborum error fugiat. Temporibus mollitia facere non, nostrum praesentium deserunt! Aperiam, omnis provident iusto. Vero, illo!</p>
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/300/200/?random=8">
+				<h3>Service</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, a, quis repudiandae aliquid omnis ipsam laborum ipsum inventore quaerat iste dolore esse quo, fugit eius labore veniam necessitatibus! Repudiandae, consequuntur!</p>
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/300/200/?random=9">
+				<h3>Service</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet corrupti, illum vel, enim sit veritatis accusantium, repudiandae omnis hic tenetur, asperiores eaque ab tempora laboriosam quaerat reiciendis aperiam consequatur ipsam.</p>
+			</div>
+			<div class="item">
+				<img src="https://picsum.photos/300/200/?random=10">
+				<h3>Service</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea alias vitae perspiciatis nostrum, voluptatem dolorum ab nesciunt, numquam hic nam accusantium aspernatur consequatur facilis adipisci iure. Velit possimus, sed maxime.</p>
+			</div>
+		</div>
+	</div
+	<div class="footer">
+		&copy copyright by JK 2019
+	</div>
+</body>
+</html>
+

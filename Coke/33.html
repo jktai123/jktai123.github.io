@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>33 Jquery Effect Slide/Fade toggle control</title>
+	<style>
+		.controller{
+			display: block;
+			padding: 6px 10px;
+			color: #fff;
+			background-color: #000;
+			width: 300px;
+			text-decoration: none;
+		}
+		.text{
+			width: 280px;
+			padding: 20px;
+			background-color: #ccc;
+			
+		}
+		.text.x{
+			display: none;
+		}
+	</style>
+	<script src='js/jquery-3.4.1.min.js'></script>
+
+</head>
+<body>
+	<a href="#" class="controller controller2">開/關 Fade</a>
+	<div class="text text2">
+		基金貼圖感染新技術設置據說指導謝謝較大不出，就算高興不管決策簡單廣東一系列先進性，本月是啊懂得吃飯成長，航空貼子物質重視企業運行平台住宅不出發送一，外國廠家不了首先以便模擬那就報名意思，玻璃小組具有青年的人處於建設這一為您魔法細胞部落備案整體，主體細節小組宣傳完成每年舉行不喜歡重新事，但我等人下了。
+	</div>
+
+	<a href="#" class="controller controller1">開/關 Slide</a>
+	<div class="text text1">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas nihil amet aperiam et est cumque non assumenda similique nostrum vero debitis excepturi repudiandae molestias eligendi pariatur, alias? Repudiandae, voluptas, debitis.
+	</div>
+
+
+
+	<script>
+		$(document).ready(function(){
+
+			$('.controller1').click(function(){
+				$('.text1').slideToggle();
+			})
+			$('.controller2').click(function(){
+				$('.text2').fadeToggle();
+			})
+
+		})
+	</script>
+</body>
+</html>

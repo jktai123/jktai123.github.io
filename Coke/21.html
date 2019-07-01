@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>21 Transition網頁動畫Document</title>
+	<style>
+		.btn{
+			display: inline-block;
+			padding: 10px 20px;
+			background-color: #000;
+			text-decoration: none;
+			color: #fff;
+			/* transition:  all .3s 0s ease; */
+			/* transition:  background-color .3s 0s ease;
+			transition:  padding 1s 0s ease; */
+			  
+			transition:  padding 1s 0s ease,background-color 1s 1s ;
+			/* 屬性 轉換時間 延遲執行時間 速度 */
+		}
+		.btn:hover{
+			background-color: #f00;
+			color: #ff0 //白色;
+			padding: 10px 30px;
+		}
+	</style>
+</head>
+<body>
+	<a href="#" class="btn">送出</a>
+</body>
+</html>
