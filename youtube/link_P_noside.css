@@ -1,0 +1,24 @@
+ul{ font-size: 10px;}
+li{ display: inline-block;width: 140px;height: 40px;background-color: rgb(235, 235, 190);margin: 8px;font-size: 15px;text-align: center;line-height: 30px;}
+a  {text-decoration: none; color:darkblue}
+iframe { width : 1000px; height: 500px ; }
+
+
+.main {margin-left: 0px ;font-size: 28px; padding: 0px 10px; }
+.main p1 {color: rgb(170, 211, 187);background-color:rgb(202, 138, 207);
+        font-size: 25px; 
+        display: inline-block;padding: 6px 8px 6px 16px;}
+.main h1{ font-size: 40px; 
+        color: blue;padding: 6px 8px 6px 16px;}
+    h2{ font-size: 30 px;
+        color: blue;display: inline-block;padding: 6px 8px 6px 16px;}
+@media screen and (max-height: 450px) 
+  { 
+    
+
+    h1{ font-size: 40px; text-align: center;
+        color: blue;}
+    h2{ font-size: 30 px;
+        color: rgb(119, 224, 48);}
+ 
+    }  
