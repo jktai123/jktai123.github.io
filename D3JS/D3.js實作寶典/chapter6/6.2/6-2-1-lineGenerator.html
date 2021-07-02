@@ -1,0 +1,41 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>6.2.1 線段產生器的簡例</title>  
+  </head> 
+  <style>
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVG繪制區域的寬度
+var height = 500;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+
+//線段的點資料，每一項是一個點的x和y座標
+var lines = [[80,80],[200,100],[200,200],[100,200]];
+
+//建立一個線段產生器
+var linePath = d3.svg.line();
+
+//加入路徑
+svg.append("path")
+	.attr("d",linePath(lines))	//使用了線段產生器
+	.attr("stroke","black")
+	.attr("stroke-width","3px")
+	.attr("fill","none");
+	
+	
+
+
+</script> 
+
+</body>
+</html>

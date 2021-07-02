@@ -1,0 +1,153 @@
+﻿<html>  
+  <head>  
+        <meta charset="utf-8">  
+        <title>4.7.2 更新資料</title>  
+  </head> 
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var dataset = [50, 43, 120, 87, 99, 167, 142];
+
+var width  = 800;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+
+//外邊框
+var padding = { top: 20 , right: 20, bottom: 20, left: 20 };
+//矩形所占的寬度（內含空白），單位為像素
+var rectStep = 35;	
+//矩形所占的寬度（不內含空白），單位為像素
+var rectWidth = 30;
+
+
+function draw(){
+
+	//取得矩形的update部分
+	var updateRect = svg.selectAll("rect")
+					.data(dataset);
+	
+	//取得矩形的enter部分
+	var enterRect = updateRect.enter();
+	
+	//取得矩形的exit部分
+	var exitRect = updateRect.exit();
+	
+	//1. 矩形的update部分的處理方法
+	updateRect.attr("fill","steelblue")		//設定彩色為steelblue
+			.attr("x", function(d,i){		//設定矩形的x座標
+				return padding.left + i * rectStep;
+			})
+			.attr("y", function(d){		//設定矩形的y座標
+				return height- padding.bottom - d;
+			})
+			.attr("width",rectWidth)		//設定矩形的寬度
+			.attr("height",function(d){	//設定矩形的高度
+				return d;
+			});
+	
+	//2. 矩形的enter部分的處理方法
+	enterRect.append("rect")
+			.attr("fill","steelblue")		//設定彩色為steelblue
+			.attr("x", function(d,i){		//設定矩形的x座標
+				return padding.left + i * rectStep;
+			})
+			.attr("y", function(d){		//設定矩形的y座標
+				return height- padding.bottom - d;
+			})
+			.attr("width",rectWidth)		//設定矩形的寬度
+			.attr("height",function(d){	//設定矩形的高度
+				return d;
+			});
+	
+	//3. 矩形的exit部分的處理方法
+	exitRect.remove();
+			
+	
+	//取得文字的update部分
+	var updateText = svg.selectAll("text")
+					.data(dataset);
+	
+	//取得文字的enter部分
+	var enterText = updateText.enter();
+	
+	//取得文字的exit部分
+	var exitText = updateText.exit();
+	
+	//1. 文字的update部分的處理方法
+	updateText.attr("fill","white")
+				.attr("font-size","14px")
+				.attr("text-anchor","middle")
+				.attr("x", function(d,i){
+					return padding.left + i * rectStep;
+				})
+				.attr("y", function(d){
+					return height- padding.bottom - d;
+				})
+				.attr("dx",rectWidth/2)
+				.attr("dy","1em")
+				.text(function(d){
+					return d;
+				});
+	
+	//2. 文字的enter部分的處理方法
+	enterText.append("text")
+				.attr("fill","white")
+				.attr("font-size","14px")
+				.attr("text-anchor","middle")
+				.attr("x", function(d,i){
+					return padding.left + i * rectStep;
+				})
+				.attr("y", function(d){
+					return height- padding.bottom - d;
+				})
+				.attr("dx",rectWidth/2)
+				.attr("dy","1em")
+				.text(function(d){
+					return d;
+				});
+	
+	//3. 文字的exit部分的處理方法
+	exitText.remove();
+}
+
+draw();
+
+function mysort(){
+	dataset.sort(d3.ascending);
+	draw();
+}
+	function mysort2() {
+		dataset.sort(d3.descending);
+		draw();
+	}
+	function mysort3() {
+			d3.shuffle(dataset);
+			draw();
+		}
+function myadd(){
+	dataset.push( Math.floor(Math.random() * 200) );
+	draw();
+}
+	function mypull() {
+			dataset.pop();
+			draw();
+		}
+</script> 
+
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" onclick="mysort()">   排序  </button>
+<button type="button" onclick="myadd()">   增加資料  </button>
+<button type="button" onclick="mypull()"> 去資料 </button>
+<button type="button" onclick="mysort2()"> 排序減冪 </button>
+<button type="button" onclick="mysort3()"> 排序任意 </button>
+
+</body>
+
+</html>

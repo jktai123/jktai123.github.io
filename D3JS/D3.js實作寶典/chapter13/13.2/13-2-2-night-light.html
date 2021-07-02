@@ -1,0 +1,144 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>13.2.2 夜光圖</title>  
+  </head> 
+  <style>
+	.province {
+		stroke: white;
+		stroke-width: 1px;
+	}
+  
+	.southsea {
+		stroke: black;
+		stroke-width: 1px;
+		fill: #222;
+	}
+
+	.point {
+
+	}
+  </style>
+<body>
+<script src="../../d3/d3.min.js"></script>
+<script src="../../d3/topojson.js"></script>
+<script>
+
+var width = 700,
+	height = 700;
+	
+var svg = d3.select("body").append("svg")
+	.attr("width", width)
+	.attr("height", height);
+
+
+var projection = d3.geo.mercator()
+						.center([107, 31])
+						.scale(600)
+    					.translate([width/2, height/2]);
+	
+var path = d3.geo.path()
+				.projection(projection);	
+
+var defs = svg.append("defs");
+
+var gaussian = defs.append("filter")
+				.attr("id","gaussian");
+
+gaussian.append("feGaussianBlur")
+	.attr("in","SourceGraphic")
+	.attr("stdDeviation","1");
+
+
+	
+d3.json("china.topojson", function(error, toporoot) {
+	if (error) 
+		return console.error(error);
+	
+	//輸出china.topojson的物件
+	console.log(toporoot);
+	
+	//將TopoJSON物件轉換成GeoJSON，儲存在georoot中
+	var georoot = topojson.feature(toporoot,toporoot.objects.china);
+	
+	//輸出GeoJSON物件
+	console.log(georoot);
+
+	//包括中國各省路徑的分群組元素
+	var china = svg.append("g");
+		
+	//加入中國各種的路徑元素
+	var provinces = china.selectAll("path")
+			.data( georoot.features )
+			.enter()
+			.append("path")
+			.attr("class","province")
+			.style("fill", "#222")
+			.attr("d", path );
+
+
+	d3.json("cities.json", function(error, chinadata){
+
+		var cities = [];
+		for(var i=0; i<chinadata.provinces.length; i++){
+			var pv = chinadata.provinces[i];
+			console.log(pv);
+
+			for(var j=0; j<pv.children.length; j++){
+				var city = pv.children[j];
+				cities.push(
+					{ name: city.name , 
+					  log: Number(city.log), 
+					  lat: Number(city.lat) 
+				});
+			}
+		}
+
+		//定義最小值和最大值對應的彩色
+		var a = d3.rgb(255,255,255);
+		var b = d3.rgb(255,255,0);
+		 
+		//彩色插值函數
+		var computeColor = d3.interpolate(a,b);
+
+		var points = svg.selectAll("circle")
+						.data(cities)		//綁定陣列
+						.enter()
+						.append("circle")
+						.attr("class","point")
+						.attr("cx",function(d){
+							return projection([d.log, d.lat])[0];	//設定x座標
+						})
+						.attr("cy",function(d){
+							return projection([d.log, d.lat])[1];	//設定y座標
+						})
+						.attr("r",2.5)		//標注點半徑
+						.style("fill",function(d){
+							//計算燈光強度（彩色）
+							var color = computeColor(Math.random());
+							return color.toString();
+						})
+						//設定過濾器
+						.style("filter","url(#"+ gaussian.attr("id") +")");
+
+	});
+});
+	
+	
+d3.xml("southchinasea.svg", function(error, xmlDocument) {
+	svg.html(function(d){
+		return d3.select(this).html() + xmlDocument.getElementsByTagName("g")[0].outerHTML;
+	});
+	
+	var gSouthSea = d3.select("#southsea");
+	
+	gSouthSea.attr("transform","translate(540,410)scale(0.5)")
+		.attr("class","southsea");
+
+});
+
+
+</script>
+		
+    </body>  
+</html>  

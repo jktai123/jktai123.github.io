@@ -1,0 +1,116 @@
+﻿<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>11.2.2.4 計算相鄰地區</title>  
+  </head> 
+  <style>
+	.province {
+		stroke: white;
+		stroke-width: 1px;
+	}
+	
+	.boundary {
+		fill: none;
+		stroke: red;
+		stroke-width: 5px;
+	}
+  
+	.southsea {
+		stroke: black;
+		stroke-width: 1px;
+		fill: #ccc;
+	}
+
+  </style>
+<body>
+<script src="../../../../d3/d3.min.js" charset="utf-8"></script> 
+<script src="../../../../d3/topojson.js"></script>
+<script>
+
+var width = 700,
+	height = 700;
+	
+var svg = d3.select("body").append("svg")
+	.attr("width", width)
+	.attr("height", height);
+
+
+var projection = d3.geo.mercator()
+						.center([107, 31])
+						.scale(600)
+    					.translate([width/2, height/2]);
+	
+var path = d3.geo.path()
+				.projection(projection);
+	
+	
+var color = d3.scale.category20();
+	
+	
+d3.json("china.topojson", function(error, toporoot) {
+	if (error) 
+		return console.error(error);
+	
+	//輸出china.topojson的物件
+	console.log(toporoot);
+	
+	//將TopoJSON物件轉換成GeoJSON，儲存在georoot中
+	var georoot = topojson.feature(toporoot,toporoot.objects.china);
+	
+	//輸出GeoJSON物件
+	console.log(georoot);
+	
+	//取得各省份的相鄰省份
+	var neighbors = topojson.neighbors(toporoot.objects.china.geometries);
+					
+	console.log(neighbors);
+	
+	var groups = svg.append("g");
+	
+	var paths = groups.selectAll("path")
+					.data( georoot.features )
+					.enter()
+					.append("path")
+					.attr("class","province")
+					.style("fill", "#ccc")
+					.attr("d", path );
+	
+	paths.each(function(d,i){
+			//為每一個元素加入相鄰省份的選取集
+			d.neighbors = d3.selectAll(
+				neighbors[i].map(function(j) {
+					return paths[0][j];
+				})
+			);
+		})
+		.on("mouseover",function(d,i){
+			//滑鼠移入後，變色
+			d3.select(this).style("fill","red");
+			d.neighbors.style("fill","steelblue");
+		})
+		.on("mouseout",function(d,i){
+			//滑鼠移出後，變回原來的彩色
+			d3.select(this).style("fill","#ccc");				
+			d.neighbors.style("fill", "#ccc");
+		});
+				
+});
+	
+	
+d3.xml("southchinasea.svg", function(error, xmlDocument) {
+	svg.html(function(d){
+		return d3.select(this).html() + xmlDocument.getElementsByTagName("g")[0].outerHTML;
+	});
+	
+	var gSouthSea = d3.select("#southsea");
+	
+	gSouthSea.attr("transform","translate(540,410)scale(0.5)")
+		.attr("class","southsea");
+
+});
+
+
+</script>
+		
+    </body>  
+</html>  

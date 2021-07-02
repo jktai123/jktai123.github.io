@@ -1,0 +1,39 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>7.1.5 ease</title>  
+  </head> 
+  <style>
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVG繪嚙踝蕭炾鴘綽蕭e嚙踝蕭
+var height = 500;	//SVG繪嚙踝蕭炾鴘綽蕭嚙踝蕭嚙?
+	
+var svg = d3.select("body")			//嚙踝蕭嚙?<body>
+			.append("svg")			//嚙箭<body>嚙踝蕭嚙稼嚙皚<svg>
+			.attr("width", width)	//嚙稽嚙緩<svg>嚙踝蕭嚙箴嚙踝蕭嚙豎抬蕭
+			.attr("height", height);//嚙稽嚙緩<svg>嚙踝蕭嚙踝蕭嚙踝蕭嚙豎抬蕭
+
+svg.append("rect")
+		.attr("fill","steelblue")
+		.attr("x",10)
+		.attr("y",10)
+		.attr("width",100)
+		.attr("height",30)
+		.transition()
+		.duration(2000)
+		.ease("cubic-in-out")
+		.attr("width",400)
+		.attr("fill", "red");
+			
+
+
+</script> 
+
+</body>
+
+</html> 

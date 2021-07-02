@@ -1,0 +1,40 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>7.1.1.3 �L��ɶ��M����</title>  
+  </head> 
+  <style>
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVGø��ϰ쪺�e��
+var height = 500;	//SVGø��ϰ쪺����
+	
+var svg = d3.select("body")			//���<body>
+			.append("svg")			//�b<body>���[�J<svg>
+			.attr("width", width)	//�]�w<svg>���e���ݩ�
+			.attr("height", height);//�]�w<svg>�������ݩ�
+
+var rect = svg.append("rect")
+				.attr("fill","steelblue")
+				.attr("x",10)
+				.attr("y",10)
+				.attr("width",100)
+				.attr("height",30);
+
+var rectTran = rect.transition()
+				.delay(500)
+				.duration(1000)
+				.ease("bounce")
+				.attr("width",400)
+				.attr("height", 230);
+
+
+			
+</script> 
+
+</body>
+</html>

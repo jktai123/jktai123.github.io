@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        .axis path, .axis line{
+            fill: none;
+            stroke: SlateGray;
+            shape-rendering: cirspEdges;
+        }
+        .axis text{
+            font-size: 11px;
+            fill: #999;
+        }
+         
+        path {
+            stroke: DodgerBlue;
+            stroke-width: 1;
+            fill: none;
+        }
+        .axis {
+            font-size: 11px;
+            fill: gray;
+        }
+
+        .x.axis line {
+        stroke: lightgrey;
+        }
+
+        .x.axis .minor {
+        stroke-opacity: .5;
+        }
+
+        .x.axis path {
+        stroke: #fafafa;
+        }
+
+        .y.axis line, .y.axis path {
+        fill: none;
+        stroke: lightgrey;
+        }
+        /* aaa */
+        path {
+    stroke: DodgerBlue;
+    stroke-width: 1;
+    fill: none;
+}
+.axis {
+    font-size: 11px;
+    fill: gray;
+}
+
+.x.axis line {
+  stroke: lightgrey;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  stroke: #fafafa;
+}
+
+.y.axis line, .y.axis path {
+  fill: none;
+  stroke: lightgrey;
+}
+.x.axis text{
+    display: none;
+}
+.demo{
+    position: relative;
+}
+#tooltip{
+    position: absolute;
+    max-width: 220px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0,0,0, .16);
+    pointer-events: none;
+    transition: opacity .2s;
+    opacity: 1;
+    font-size: 11px;
+}
+#tooltip.hidden{
+    opacity: 0;
+}
+.demo91 {
+  margin: 0;
+  background: #e3e122;
+  min-width: 960px;
+}
+
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+circle {
+  fill: none;
+  stroke-width: 2.5px;
+}
+ul{ font-size: 10px;}
+li{ display: inline-block;width: 140px;height: 40px;background-color: rgb(235, 235, 190);margin: 8px;font-size: 15px;text-align: center;line-height: 30px;}
+path {
+    stroke: white;
+}
+/*  */
+
+    </style>
+    <title>TreeView 1</title>
+</head>
+<body>
+    <!-- <p>AAAA</p> -->
+    <div>
+    
+    <li class="item1"><a href="https://wcc723.github.io/d3js/2014/10/18/Ironman-30-days-19/">D3.js 圈圈小效果</a></li>
+    <li class="item1"><a href="./D3.js 圈圈小效果.html">圈圈小效果_Example</a></li>
+    </div>
+    
+    <!-- <button class="btn">Click Me</button> -->
+    <li class="item1"><a href="https://wcc723.github.io/d3js/2014/10/19/Ironman-30-days-20/">超粘的Voronoi 繪圖</a></li>
+    <li class="item1"><a href="./d3_Voronoi.html">Voronoi例子V4</a></li>
+    <li class="item1"><a href="./d3_Voronoi2.html">Voronoi例子V3</a></li>
+    <li class="item1"><a href="https://wcc723.github.io/d3js/2014/10/20/Ironman-30-days-21/">Transition動態效果</a></li>
+    <li class="item1"><a href="./d3_Transition.html">動態效果例子</li>
+    <li class="item1"><a href="https://wcc723.github.io/d3js/2014/10/21/Ironman-30-days-22/">D3.js 資料數量增減</a></li>
+    <li class="item1"><a href="./d3_資料轉換.html">資料轉換例子</a></li>
+    <li class="item1"><a href="https://wcc723.github.io/d3js/2014/10/25/Ironman-30-days-26/">layout(OpenData)</a></li>
+    <li class="item1"><a href="https://data.gov.tw/">政府開放平台</a></li>
+    <li class="item1"><a href="./d3_Layout.html">layout例子</a></li>
+    <li class="item1"><a href="./d3_Json.html">Json例子</a></li>
+    <div class="demo9"></div>
+    </div>
+    <div class="demo8"><a href="https://wcc723.github.io/d3js/2014/10/17/Ironman-30-days-18/">D3.js 將資料繪製成折線圖</a>
+    
+    <div id="tooltip">
+        
+    </div>
+    </div>
+    <div class="demo7"><a href="https://wcc723.github.io/d3js/2014/10/15/Ironman-30-days-16/">D3.js 死亡率查詢？(1)</a><br><a href="https://statis.moi.gov.tw/micst/stmain.jsp?sys=100">內政部資料</a><br><a href="https://docs.google.com/spreadsheets/d/1hX3lqWLHFuwYiQeaBL0WevleUEOBAPKzshj2fJHogsM/edit#gid=1272070461"> GDrive </a><br><a href="https://wcc723.github.io/d3js/2014/10/16/Ironman-30-days-17/">Google 試算表發佈</a>
+    <div class="log"></div>
+    </div>
+    <div class="demo6"><a href="https://wcc723.github.io/d3js/2014/10/14/Ironman-30-days-15/">D3.js 折線圖(Line Chart)</a></div>
+    <div class="demo5"><a href="https://wcc723.github.io/d3js/2014/10/13/Ironman-30-days-14/">D3.js 軸線(Axis)</a></div>
+    <div class="demo4"><a href="https://wcc723.github.io/d3js/2014/10/12/Ironman-30-days-13/">D3.js 讀取CSV資料並繪製成長條圖</a></div>
+    <div class="demo3"><a href="https://wcc723.github.io/d3js/2014/10/11/Ironman-30-days-12/">D3.js 利用Excel建立資料(CSV)</a>
+     <a href="d3data/d3demoData141011.csv">d3data/d3demoData141011.csv</a></div>
+    <div class="demo2"><a href="https://wcc723.github.io/d3js/2014/10/10/Ironman-30-days-11/">D3.js 國慶日在家裡畫長條圖</a></div>
+    <div class="demo"><a href="https://ithelp.ithome.com.tw/articles/10158777">D3js 將資料投影到SVG上</a></div>
+    <div class="demo1"><a href="https://wcc723.github.io/d3js/2014/10/09/Ironman-30-days-10/">D3.js Scale 尺度</a> </div>
+    div>
+    <script>
+    
+        var canvas=d3.select('body')
+                    .append('svg')
+                    .attr('width',500)
+                    .attr('height',500)  ;
+        var diagonal=d3.svg.diagonal()
+                        .source({x:10,y:20})
+                        .target({x:300,y:300});
+
+        canvas.append('path')
+                    .attr('fill','none')            
+                    .attr('stroke','black')
+                    .attr('d',diagonal)
+
+
+
+// Demo9 Voronoi Diagram繪圖   ---- Loop 不停Disable
+var svgSize = {
+        w : 960,
+        h : 500
+    }
+
+    var hslValue = 3;
+
+    var vertices = d3.range(100).map(function(d) {
+        return [Math.random() * svgSize.w, Math.random() * svgSize.h];
+        //產生100個坐標，位置是隨機的
+    });
+
+    console.log(vertices)
+
+    var voronoi = d3.geom.voronoi() //套用voronoi，這段只有裁切區域
+        .clipExtent([[0,0], [svgSize.w , svgSize.h]])
+        //裁切voronoi區域
+
+    var svg = d3.select('.demo99').append('svg')
+        .attr('width', svgSize.w)
+        .attr('height', svgSize.h)
+        .on('mousemove', function() {
+            vertices[0] = d3.mouse(this);//殘忍地將第一個替換掉
+            redraw();
+            //將滑鼠的坐標帶入redraw
+        })
+
+    var path = svg.append('g').selectAll('path'); //等等要用path來畫間隔線
+
+    svg.selectAll('circle')
+        .data(vertices) //將剛剛產生的x,y插入
+        .enter().append('circle') //補上原點的位置
+        .attr('transform', function(d){ return 'translate(' + d + ')'; }) //位置坐標如資料
+        .attr('r', 1.5) //大小是1.5px
+
+    redraw()
+
+    function redraw(){
+        path = path.data(voronoi(vertices) , polygon)
+        // voronoi(vertices) 會傳回path 所需要的路徑坐標
+        // 然後用polygon function執行
+
+        path.exit().remove();
+        //如果多餘就移除
+
+        path.enter().append('path')
+            .attr('d', polygon) //調用下方的polygon函示
+            .style('fill', function(d, i){ return d3.hsl((120 + i * hslValue % 360),.6,.6)})
+
+        path.order(); //這段似乎有沒有都沒差...
+    }
+
+    function polygon(d) {
+        console.log('polygon--->'+d)
+        return "M" + d.join("L") + "Z";
+    }
+
+//Demo 8 D3.js 將資料繪製成折線圖  =====================================
+$(function() {
+ //https://spreadsheets.google.com/feeds/list/{key}/{sheet index}/public/values?alt=json
+var shPath = 'https://spreadsheets.google.com/feeds/list/',
+    // shKey = '1hX3lqWLHFuwYiQeaBL0WevleUEOBAPKzshj2fJHogsM',
+     //shKey = '1hX3lqWLHFuwYiQeaBL0WevleUEOBAPKzshj2fJHogsM',
+    shKey = '1Yk4nYrhbhWdsYA9gDaO4CHAQoknyakMOWJ5OtJgdbh4',
+    //shCallback = '/public/values?alt=json-in-script&callback=?',
+    shCallback = '/public/values?alt=json',
+    shList = [
+        {
+            'listKey': 1, //'od6',
+        },{
+            'listKey': 2 , //'ol1cvs7',
+        },{
+            'listKey': 3 , //'ol1cvs7',
+        },{
+            'listKey': 4 , //'ol1cvs7',
+        }
+        // ,{
+        //     'listKey': 3, //'objevh6',
+        // } //這部分是高雄縣市的合併資料
+        ]
+
+var url = shPath + shKey + '/' + shList + shCallback; //合併路徑
+var dataRemote = []; //建立空的陣列
+
+//讀入每一個資料表
+$.each(shList, function(i, list){
+    $.getJSON( shPath + shKey + '/' + list.listKey + shCallback)
+    .done(function (data) {     //如果成功
+        list.dataName = []
+        var entry = data.feed.entry //只取feed entry的部分
+        var title = data.feed.title.$t //資料頁的標題
+        dataRemote.push({ //存回陣列
+            'title': title,
+            'data': entry
+        }); //送回dataset
+        jsonDone(); //執行驗證
+    })
+    .fail(function(jqxhr, textStatus, error){
+        console.log('GG,沒戲唱了'); //失敗
+    });
+
+})
+
+
+//驗證資料跑完沒
+jsonDone = function(){
+    if (shList.length != dataRemote.length){
+        console.log('快好了'); //驗證未完成
+    } else if (shList.length == dataRemote.length){
+        console.log('好了', dataRemote); //驗證成功
+        dataset = dataRemote
+        runChart(); //繪製圖表
+    }
+};
+
+
+//真的開始畫圖了
+runChart = function(){
+
+    var margin = {top: 60, right: 40, bottom: 50, left: 60};
+    var w = 560 ; // 寬
+    var h = 300 ; // 高
+
+    console.log(dataset[0].data.length)
+
+    datatime = []; //將時間存成陣列，作為Xscale用處
+    $.each(dataset[0].data,function(i,d){
+        datatime.push(d.gsx$time.$t)
+    });
+    var xScale = d3.scale.linear().domain([0,dataset[0].data.length]).range([0,w])
+
+    var yScale = d3.scale.linear().domain([.2, .85]).range([h, 0]);
+    //Y的Scale就不另外寫，先直接設定值
+
+    // 增加一個line function，用來把資料轉為x, y
+    var line = d3.svg.line()
+        .x(function(d,i) {
+            return xScale(i + 1); //利用尺度運算資料索引，傳回x的位置
+        })
+        .y(function(d) {
+            return yScale(d.gsx$percent.$t); //利用尺度運算資料的值，傳回y的位置
+        });
+
+    //增加一個SVG元素
+    var svg = d3.select('.demo8').append('svg')
+        .attr('width', w + margin.left + margin.right) //將左右補滿
+        .attr('height', h + margin.top + margin.bottom) //上下補滿
+        .append('g') //增加一個群組g
+        .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    // var tooltip = d3.select('.demo8').append('div')
+	// 		.style('position', 'absolute')
+
+    // 增加x軸線，tickSize是軸線的垂直高度，-h會往上拉高
+    var xAxis = d3.svg.axis().scale(xScale).ticks(5).orient('bottom').tickSize(-h).tickSubdivide(true);
+    // SVG加入x軸線
+    svg.append('g')
+        .attr('class', 'x axis')
+        .attr('transform', 'translate(0,' + h + ')')
+        .call(xAxis);
+
+
+    // 建立y軸線，4個刻度，數字在左
+    var yAxisLeft = d3.svg.axis().scale(yScale).ticks(4).orient('left');
+    // SVG加入y軸線
+    svg.append('g')
+        .attr('class', 'y axis')
+        .attr('transform', 'translate(0,0)')
+        .call(yAxisLeft);
+
+    $.each(dataset,function(i,d){
+        svg.append('path').attr('d', line(d.data))
+            .style({
+                'stroke': d3.hsl((120 + 90*i), .6, .6),//d3.hsl是d3提供的顏色function
+                'stroke-width':1,
+            });//將每個資料繪製成折線，並且套用不同的色彩
+
+        svg.append('g').selectAll('circle').data(d.data).enter() //增加原點
+        .append('circle')
+        .attr({
+            'cx': function(d, i){return xScale(i + 1) },
+            'cy': function(d){return yScale(d.gsx$percent.$t)}, //x,y算法都類似line function
+            'r':'2px',
+            'class': 'dot' //這圓點主要是要給hover使用的
+        })
+        .style({
+            'fill': d3.hsl((120 + 90*i), .6, .6)//套用相同色彩
+        })
+
+        svg.append('g').append('text') //補上左上示意文字
+            .text(d.title)
+            .style({
+                'fill': d3.hsl((120 + 90*i), .6, .6),
+                'transform': 'translate(8px,'+ ((i * 15) + 12) //拉開間距
+                    +'px)',
+                'font-size':'12px'
+            })
+    });
+
+    showTips = function(id){ //這部分是要作為Hover用的資料
+        date = dataset[0].data[id].gsx$time.$t //時間取其中一份的即可
+        var html = ''
+        $.each(dataset, function(i, dataset){ //將資料定義，並回傳
+            title = dataset.title;
+            percent = dataset.data[id].gsx$percent.$t;
+            person = dataset.data[id].gsx$value.$t;
+            html = html + '<div><span>'+title+'</span> <span> '+person+'</span>人/<span> '+percent+'%</span></div>'
+        });
+        html = '<div>'+date+'</div>' + html;
+        return html; //回傳整理好的html
+    };
+
+    svg.selectAll('.dot').on('mouseover', function(d){
+    //d3 function，類似jquery，直接可以控制class
+        var xPos = parseFloat(d3.select(this).attr('cx')) + margin.left //截取點的位置
+        var yPos = parseFloat(d3.select(this).attr('cy')) + margin.top
+        //這一個目標(d)，裡面也包含了資料，所以d.gsx$id可以抓到這個點所包含的資料
+        var id = d.gsx$id.$t - 1 //抓取資料id
+
+        d3.select('#tooltip') //將div抓來用
+            .style({
+                'left': xPos + 'px',
+                'top': yPos + 'px'
+            })
+            .classed('hidden', false) //移除隱藏的class
+            .html(showTips(id)) //將剛剛的showTips function帶入
+    }).on('mouseout', function(d){ //如果移出的話
+        d3.select('#tooltip').classed('hidden', true); //補回剛剛的Class
+    });
+}
+
+});
+//Demo 7 Google 試算表發佈
+$(function(){
+    var shPath = 'https://spreadsheets.google.com/feeds/list/',
+    //shKey = '1hX3lqWLHFuwYiQeaBL0WevleUEOBAPKzshj2fJHogsM',
+    shKey = '1Yk4nYrhbhWdsYA9gDaO4CHAQoknyakMOWJ5OtJgdbh4',
+    shCallback = '/public/values?alt=json',
+    shList = '2'
+    //https://spreadsheets.google.com/feeds/list/{key}/{sheet index}/public/values?alt=json
+    var dataset = []
+    $.getJSON( shPath + shKey + '/' + shList + shCallback)
+    .done(function (data) {     //如果成功
+        var entry = data.feed.entry //只取feed entry的部分
+        var title = data.feed.title.$t
+        dataset.push({
+            'title': title,
+            'data': entry
+        }); //送回dataset
+        console.log(dataset)
+        $('.demo7 .log').text('success:' + dataset[0].title  + ',' + dataset[0].data[5].gsx$time.$t+','+JSON.stringify(dataset[0].data[5].content))
+
+    })
+    .fail(function(jqxhr, textStatus, error){
+        $('.demo7 .log').text('GG,沒戲唱了'); //失敗
+    });
+});
+//Demo 6 D3.js 折線圖(Line Chart) ----------------
+var margin = {top: 60, right: 40, bottom: 50, left: 60};
+var w = 580 ; // 寬
+var h = 300 ; // 高
+
+
+var dataset = []; //建立空的資料陣列
+var Num = 20
+for (var i=0; i < 50; i++){
+    var newNum = Num + (5 - Math.floor(Math.random() * 10));
+    dataset.push(newNum);
+    Num = newNum;
+}
+//隨機產生一組隨機的數字陣列，數字的值，每次加減不超過5
+//X是資料的數量，Y則是資料的值
+
+console.log(dataset)
+
+var Ymax = d3.max(dataset),
+    Ymin = d3.min(dataset);
+
+var xScale = d3.scale.linear().domain([0, dataset.length]).range([0, w]);
+
+var yScale = d3.scale.linear().domain([Ymin, Ymax]).range([h, 0]);
+
+
+// 增加一個line function，用來把資料轉為x, y
+var line = d3.svg.line()
+    .x(function(d,i) {
+        return xScale(i + 1); //利用尺度運算資料索引，傳回x的位置
+    })
+    .y(function(d) {
+        return yScale(d); //利用尺度運算資料的值，傳回y的位置
+    });
+
+//增加一個SVG元素
+var svg = d3.select('.demo6').append('svg')
+    .attr('width', w + margin.left + margin.right) //將左右補滿
+    .attr('height', h + margin.top + margin.bottom) //上下補滿
+    .append('g') //增加一個群組g
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+// 增加x軸線，tickSize是軸線的垂直高度，-h會往上拉高
+// tickSubdivide不清楚是什麼用處
+var xAxis = d3.svg.axis().scale(xScale).orient('bottom').tickSize(-h).tickSubdivide(true);
+// SVG加入x軸線
+svg.append('g')
+    .attr('class', 'x axis')
+    .attr('transform', 'translate(0,' + h + ')')
+    .call(xAxis);
+
+
+// 建立y軸線，4個刻度，數字在左
+var yAxisLeft = d3.svg.axis().scale(yScale).ticks(4).orient('left');
+// SVG加入y軸線
+svg.append('g')
+    .attr('class', 'y axis')
+    .attr('transform', 'translate(0,0)')
+    .call(yAxisLeft);
+
+svg.append('path').attr('d', line(dataset)); //將資料套用d3.svg.line()
+// Demo5 D3.js 軸線(Axis) -------------------
+var w = 600,h = 400,padding = 30;
+
+//random data
+var dataset = [];
+var numDataPoints = 30; //總共100個點
+var xRange = Math.random() * 500;
+var yRange = Math.random() * 1000;
+for (var i = 0; i < numDataPoints; i++){
+    var num1 = Math.floor(Math.random() * xRange);
+    var num2 = Math.floor(Math.random() * yRange);
+    dataset.push([num1,num2])
+}//和更早之前一樣，我們用假的資料來做範例
+console.table(dataset)
+
+
+var Xmax = d3.max(dataset, function(d){return d[0]}),
+    Xmin = d3.min(dataset, function(d){return d[0]}),
+    Ymax = d3.max(dataset, function(d){return d[1]}),
+    Ymin = d3.min(dataset, function(d){return d[1]})
+    //取得X,Y的最大及最小值
+
+var xScale = d3.scale.linear() //製作線性尺度
+    .domain([0, Xmax]) //輸入的範圍
+    .range([padding , w - padding]) //輸出的範圍
+
+
+var yScale = d3.scale.linear()
+    .domain([0, Ymax])
+    .range([ h - padding ,padding])
+
+
+
+
+var svg = d3.select('.demo5').append('svg').attr({'width': w,'height': h}) //增加SVG容器
+
+    svg.selectAll('circle').data(dataset).enter() //插入資料
+    .append('circle') //增加圓形物件
+    .attr({
+        'cx': function(d){return xScale(d[0])}, //利用尺度算出圓心x位置
+        'cy': function(d){return yScale(d[1])}, //同上算出y
+        'r': '2px', //圓心大小
+        'fill': 'black' //填色
+    });
+
+    svg.selectAll('text').data(dataset).enter() //插入資料
+    .append('text') //增加文字區塊
+    .text(function(d){ return d[0]+ ',' + d[1]}) //補上坐標文字
+    .attr({
+        'x': function(d){return xScale(d[0])},
+        'y': function(d){return yScale(d[1])},
+        'fill': 'red', //填滿紅色
+        'font-size': '10px' //文字大小
+    });
+
+//Axis
+var xAxis = d3.svg.axis().scale(xScale) //增加軸線物件，並套用尺度(x)
+    .orient("bottom") //標示位置
+    .ticks(6) //刻度數量
+
+var yAxis = d3.svg.axis().scale(yScale) //增加軸線物件，並套用尺度(y)
+    .orient("left") //標示位置
+    .ticks(10) //刻度數量
+
+//刻度化標籤，這範例不使用
+// var formatAsAxis = d3.format('.1%');
+// xAxis.tickFormat(formatAsAxis);
+//刻度化標籤
+
+
+svg.append('g').attr('class', 'axis') //增加一個群組並加上class="axis"
+    .attr('transform', 'translate(0, '+ (h - padding) +')') //移動到下方
+    .call(xAxis); //將軸線匯入
+
+svg.append('g').attr('class', 'axis')
+    .attr('transform', 'translate('+ (padding) +')', 0) //移動到左方
+    .call(yAxis);
+//Demo 4 D3.js 讀取CSV資料並繪製成長條圖< =======================================================
+dataPath = '/d3data/';
+dataFile = 'd3demoData141011.csv';
+dataUrl = dataPath + dataFile;
+//定義SVG的大小
+d3.csv(dataUrl, function(data){
+    console.debug(JSON.stringify(data));
+    dataset = data;
+
+    var w = 600,h = 250,padding = 30, barMargin = 2;
+    //定義寬高,padding等等值
+
+    var Ymax = d3.max(dataset, function(d){return d.value}),
+        Ymin = d3.min(dataset, function(d){return d.value});
+        //取得Y軸的最大值
+
+    var xScale = d3.scale.linear() //產生一個屬於X軸的線性尺度
+        .domain([0, dataset.length]) //傳入的值是原始資料的最小及最大值
+        .range([padding , w - padding])
+        //輸出的範圍是左邊的padd距離，到右邊的padding
+
+    var yScale = d3.scale.linear()
+        .domain([Ymin, Ymax])
+        .range([padding, h - padding])
+        //類似X軸的尺度
+    var yScale = d3.scale.linear()
+        .domain([Ymin, Ymax])
+        .range([padding, h - padding])
+        //類似X軸的尺度
+
+    var colorScale = d3.scale.linear()
+        .domain([Ymin, Ymax])
+        .range([0, 700])
+        //這次顏色都要用尺度來算
+
+    var barWidth = (w - padding*2) / dataset.length - barMargin;
+
+    var svg = d3.select('.demo4').append('svg').attr({'width': w,'height': h})
+        //接下來開始產生SVG
+
+    svg.selectAll('rect').data(dataset).enter() //和先前一樣，選取'circle'並把資料加入
+    .append('rect') // 增加圓到SVG內
+    .attr({    //加入屬性到圓
+        'x': function(d, i){return xScale(i)}, //利用尺度算出X的位置
+        'y': function(d){return h - yScale(d.value)}, //同理算出Y
+        'width': barWidth,
+        'height':function(d){return yScale(d.value)}, //同理算出Y
+        // 'r': function(d){return Math.sqrt(h - d[1])}, //圓的大小是高 - Y值的平方
+        'fill': function(d){
+            var color = 0.2 + colorScale(d.value) * 0.001;
+            return  d3.hsl(200 ,color, color); //利用尺度來算出顏色
+        },
+        'title': function(d){
+            return 'Name : ' + d.name;
+        }
+        //介紹一個顏色的function hsl，可以將顏色算出後轉成色碼
+        //格式 (360色相, 1彩度, 1明度)
+    });
+
+    svg.selectAll('text').data(dataset).enter() //補上資料數值
+    .append('text')
+    .text(function(d){ return d.value}) //將值寫到SVG上
+    .attr({
+        'x': function(d, i){return xScale(i) + barWidth/2}, //和上面相同，算出X、Y的位置
+        'y': function(d){return h - yScale(d.value) + 15},
+        'fill': 'red', //文字填滿為紅色
+        'text-anchor': 'middle',
+        'font-size': '10px' //Fill、font-size也可以用CSS寫喔～
+    });
+
+    svg.append('g').selectAll('text').data(dataset).enter() //這邊再多做一個人名顯示的區域
+    .append('text')
+    .text(function(d){ return d.name}) //寫入人名
+    .attr({
+        'x': function(d, i){return xScale(i) + barWidth/2}, //和上面相同，算出X、Y的位置
+        'y': function(d){return h - yScale(d.value) - 10},
+        'fill': 'SlateGray', //文字填滿為超漂亮灰色
+        'text-anchor': 'middle',
+        'font-size': '10px' //Fill、font-size也可以用CSS寫喔～
+    });
+
+});
+//Demo 3 D3.js 利用Excel建立資料(CSV)
+dataPath = '/d3data/'; //檔案路徑
+dataFile = 'd3demoData141011.csv'; //檔名
+dataUrl = dataPath + dataFile; //路徑加檔名
+//定義SVG的大小
+d3.csv(dataUrl, function(data){
+    console.table(data); //用table的方式在console呈現json
+    d3.select('.demo3').append('div').text(JSON.stringify(data)) //把json寫到.demo上
+});
+
+
+// Demo 2  D3.js 國慶日在家裡畫長條圖
+var w = 600,h = 250,padding = 30, barMargin = 2;
+//定義SVG的大小，但是只要定義直條的間距就好，寬度用算的就好
+
+var dataset = [];
+for (var i=0; i < 20; i++){
+    var Num1 = 5 + Math.floor(Math.random() * 255);
+    dataset.push(Num1);
+};
+console.log(dataset);
+//和先前一樣，產生一組隨機的資料
+
+var Ymax = d3.max(dataset, function(d){return d}),
+    Ymin = d3.min(dataset, function(d){return d})
+//這個函示可以取得資料的最大值、最小值
+
+var xScale = d3.scale.linear() //產生一個屬於X軸的線性尺度
+    .domain([0, dataset.length]) //傳入的值改為資料的數量
+    .range([padding , w - padding])
+    //輸出的範圍是左邊的padd距離，到右邊的padding
+
+var yScale = d3.scale.linear()
+    .domain([Ymin, Ymax])
+    .range([padding, h - padding])
+    //類似X軸的尺度
+
+var barWidth = (w - padding*2) / dataset.length - barMargin;
+//算出每一個bar的寬度
+
+var svg = d3.select('.demo2').append('svg').attr({'width': w,'height': h})
+//接下來開始產生SVG
+
+svg.selectAll('rect').data(dataset).enter() //和先前一樣，選取'circle'並把資料加入
+.append('rect') // 增加圓到SVG內
+.attr({    //加入屬性到圓
+    'x': function(d, i){return xScale(i)}, //利用尺度算出X的位置
+    'y': function(d){return h - yScale(d)}, //同理算出Y，但是要放在底部，所以要y-yScale(d)
+    'width': barWidth, //bar的寬度
+    'height':function(d){return yScale(d)}, //高度算法與Y相同
+    'fill': function(d){
+        var color = 0.1 + d * 0.003;
+        return  d3.hsl(200 ,color, color);
+    }
+    //顏色的function hsl，可以將顏色算出後轉成色碼
+    //格式 (360色相, 1彩度, 1明度)
+});
+
+svg.selectAll('text').data(dataset).enter() //補上資料數值
+.append('text')
+.text(function(d){ return d}) //將值寫到SVG上
+.attr({
+    'x': function(d, i){return xScale(i) + barWidth/2},
+    //和上面相同，算出X、Y的位置
+    'y': function(d){return h - yScale(d) + 15}, //數值放在bar 內
+    'fill': 'white', //文字填滿為白色
+    'text-anchor': 'middle', //文字置中
+    'font-size': '10px' //Fill、font-size也可以用CSS寫喔～
+});
+
+//   =============  Demo  
+        var w = 600;
+        var h = 250;
+
+        var dataset = [];
+        for (var i=0; i < 20; i++){
+            var Num1 = 5 + Math.floor(Math.random() * 480); //產生第一個數值
+            var Num2 = 5 + Math.floor(Math.random() * 230); //產生第二個數值
+            dataset.push([Num1, Num2]); //兩個合併成一個陣列
+        };
+        console.log(dataset); //檢查看看有沒有怪怪的
+
+        var svg = d3.select('.demo').append('svg').attr({'width': w,'height': h})
+        //產生一個SVG
+
+        svg.selectAll('circle').data(dataset).enter() //記得喔 data(dataset).enter() 把資料放入
+        .append('circle')
+        .attr({
+            'cx': function(d){return d[0] + 10}, //定義圓心的x，在第一個值
+            'cy': function(d){return d[1] + 10}, //定義圓心的y，在第二個值
+            'r': function(d){return Math.sqrt(h - d[1])}, //圓心的半徑，第二個值開平方
+            'fill': function(d){return d3.hsl(d[0] % 360, .6, .6 );}
+            //介紹一個顏色的function hsl，可以將顏色算出後轉成色碼
+            //格式 (360色相, 1彩度, 1明度)
+        });
+
+        svg.selectAll('text').data(dataset).enter() //補上資料數值
+        .append('text')
+        .text(function(d){ return d[0]+ ',' + d[1]}) //將值寫到SVG上
+        .attr({
+            'x': function(d){return d[0] + 10}, //和上面相同，算出X、Y的位置
+            'y': function(d){return d[1] + 10},
+            'fill': 'red', //文字填滿為紅色
+            'font-size': '10px' //Fill、font-size也可以用CSS寫喔～
+        });
+
+        //   =============  Demo1 https://ithelp.ithome.com.tw/articles/10158777  
+        var w = 600,h = 250,padding = 20;
+        //定義SVG的大小
+
+        var dataset = [];
+        for (var i=0; i < 20; i++){
+            var Num1 = 5 + Math.floor(Math.random() * 900);
+            var Num2 = 5 + Math.floor(Math.random() * 220);
+            dataset.push([Num1, Num2]);
+        };
+        console.log(dataset);
+        //和先前一樣，產生一組隨機的資料
+
+        var Xmax = d3.max(dataset, function(d){return d[0]}),
+            Xmin = d3.min(dataset, function(d){return d[0]}),
+            Ymax = d3.max(dataset, function(d){return d[1]}),
+            Ymin = d3.min(dataset, function(d){return d[1]})
+        //這個函示可以取得資料的最大值、最小值
+
+        var xScale = d3.scale.linear() //產生一個屬於X軸的線性尺度
+            .domain([Xmin, Xmax]) //傳入的值是原始資料的最小及最大值
+            .range([padding , w - padding])
+            //輸出的範圍是左邊的padd距離，到右邊的padding
+
+        var yScale = d3.scale.linear()
+            .domain([Ymin, Ymax])
+            .range([ h - padding ,padding])
+            //類似X軸的尺度
+
+        var svg = d3.select('.demo1').append('svg').attr({'width': w,'height': h})
+            //接下來開始產生SVG
+
+        svg.selectAll('circle').data(dataset).enter() //和先前一樣，選取'circle'並把資料加入
+        .append('circle') // 增加圓到SVG內
+        .attr({    //加入屬性到圓
+            'cx': function(d){return xScale(d[0])}, //利用尺度算出X的位置
+            'cy': function(d){return yScale(d[1])}, //同理算出Y
+            'r': function(d){return Math.sqrt(h - d[1])}, //圓的大小是高 - Y值的平方
+            'fill': function(d){return d3.hsl(d[0] % 360, .6, .6 );}
+            //介紹一個顏色的function hsl，可以將顏色算出後轉成色碼
+            //格式 (360色相, 1彩度, 1明度)
+        });
+
+        svg.selectAll('text').data(dataset).enter() //補上資料數值
+        .append('text')
+        .text(function(d){ return d[0]+ ',' + d[1]}) //將值寫到SVG上
+        .attr({
+            'x': function(d){return xScale(d[0])}, //和上面相同，算出X、Y的位置
+            'y': function(d){return yScale(d[1])},
+            'fill': 'red', //文字填滿為紅色
+            'font-size': '10px' //Fill、font-size也可以用CSS寫喔～
+        });
+    </script>
+    
+</body>
+</html>

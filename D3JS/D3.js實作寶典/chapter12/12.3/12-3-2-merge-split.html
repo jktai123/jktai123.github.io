@@ -1,0 +1,327 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>12.3.2 合並和分割</title>  
+  <style>
+
+
+  </style>
+  </head> 
+  <body>  
+		<script src="../../d3/d3.min.js" charset="utf-8"></script>  
+        <script>
+		
+		var width  = 600;	//SVG繪制區域的寬度
+		var height = 600;	//SVG繪制區域的高度
+			
+		var svg = d3.select("body")			//選取<body>
+					.append("svg")			//在<body>中加入<svg>
+					.attr("width", width)	//設定<svg>的寬度屬性
+					.attr("height", height);//設定<svg>的高度屬性
+		
+		//1.確定起始資料
+		var dataset = [ ["小米",60.8] , ["三星",58.4] , ["聯想",47.3] , ["蘋果",46.6] ,
+						["華為",41.3] , ["酷派",40.1] , ["其他",111.5] ];
+		
+		//2.轉換資料
+		var pie = d3.layout.pie()
+					.value(function(d){ return d[1]; });
+					
+		var piedata = pie(dataset);
+		
+		console.log(piedata);;	
+		
+		//3.繪制
+		
+		//字型大小
+		var fontsize = 14;
+		
+		//外半徑和內半徑
+		var outerRadius = 400 / 3;
+		var innerRadius = 0;
+
+		//餅狀圖的圓的圓心和半徑
+		var piecircle = { 
+			cx: width/2, 
+			cy: height/2, 
+			r: outerRadius
+		};
+		
+		//建立弧產生器
+		var arc = d3.svg.arc()
+						.innerRadius(innerRadius)
+						.outerRadius(outerRadius);
+		
+		var color = d3.scale.category20();
+
+		redraw();
+		
+		function redraw(){	//重繪函數
+
+			//取得update部分
+			var arcsUpdate = svg.selectAll(".arcGroup")
+					  .data(piedata,function(d){  return d.data[0]; });
+
+			//取得enter部分
+			var arcsEnter = arcsUpdate.enter();
+
+			//取得exit部分
+			var arcsExit = arcsUpdate.exit();
+
+			//1. update部分的處理辦法，設定新的屬性
+			arcsUpdate.call(setAttributes);
+
+			//2. enter部分的處理辦法
+			var newArcs = arcsEnter.append("g")
+							.attr("class","arcGroup");
+
+			//加入弧
+			newArcs.append("path")
+					.attr("class","arcPath");
+
+			//加入弧內文字
+			newArcs.append("text")
+					.attr("class","percent");
+
+			//加入弧外文字
+			newArcs.append("text")
+					.attr("class","company");
+
+			//加入連線文字的直線1
+			newArcs.append("line")
+					.attr("class","conLine1");
+
+			//加入連線文字的直線2
+			newArcs.append("line")
+					.attr("class","conLine2");
+
+			//設定屬性
+			newArcs.call(setAttributes);
+
+			//3. exit部分的處理辦法，移除元素
+			arcsExit.remove();
+		}
+
+
+		function setAttributes(arcs){	//設定弧的屬性
+
+			/*
+				為每一段弧加入三個資料：
+				circle - 餅狀圖所在的圓，其中包括cx、cy、r三個屬性
+				dx - x方向的相對偏移量，拖曳事件觸發時使用
+				dy - y方向的相對偏移量，拖曳事件觸發時使用
+			*/
+			arcs.each(function(d){
+				d.circle = piecircle;
+				d.dx = 0;
+				d.dy = 0;
+			});
+			
+			arcs.attr("transform",function(d){
+				return "translate("+ d.circle.cx +","+ d.circle.cy +")";
+			});
+			
+			//繪制弧
+			arcs.select(".arcPath")
+				.attr("fill",function(d,i){
+					return color(d.data[0]);	//設定弧的彩色
+				})
+				.attr("d",function(d){
+					return arc(d);	//使用弧產生器
+				});
+			
+			
+			//繪制弧內的文字
+			arcs.select(".percent")
+				.attr("transform",function(d){
+					var x = arc.centroid(d)[0] * 1.4;		//文字的x座標
+					var y = arc.centroid(d)[1] * 1.4;		//文字的y座標
+					return "translate(" + x + "," + y + ")";
+				})
+				.attr("text-anchor","middle")
+				.style("font-size",fontsize)
+				.text(function(d){
+					//計算市佔率的百分比
+					var percent = Number(d.value)/d3.sum(dataset,function(d){ return d[1]; }) * 100;
+					
+					//保留1位小數點，尾端加一個百分號傳回
+					return percent.toFixed(1) + "%";
+				});
+
+			
+			//繪制連線弧外文字的直線
+			arcs.select(".conLine1")
+				.style("stroke","black")
+				.attr("x1",function(d){ return arc.centroid(d)[0] * 2; })
+				.attr("y1",function(d){ return arc.centroid(d)[1] * 2; })
+				.attr("x2",function(d){ return arc.centroid(d)[0] * 2.2; })
+				.attr("y2",function(d){ return arc.centroid(d)[1] * 2.2; });
+				
+			//繪制連線弧外文字的直線
+			arcs.select(".conLine2")
+				.style("stroke","black")
+				.each(function(d){
+					d.textLine = {x1:0, y1:0, x2:0, y2:0};
+				})
+				.attr("x1",function(d){ 
+					d.textLine.x1 = arc.centroid(d)[0] * 2.2;
+					return d.textLine.x1; 
+				})
+				.attr("y1",function(d){ 
+					d.textLine.y1 = arc.centroid(d)[1] * 2.2;
+					return d.textLine.y1; 
+				})
+				.attr("x2",function(d){ 
+					var strLen = getPixelLength(d.data[0],fontsize) * 1.5;
+					var bx = arc.centroid(d)[0] * 2.2;
+					d.textLine.x2 =	bx >= 0 ? bx + strLen : bx - strLen;
+					return d.textLine.x2;
+				})
+				.attr("y2",function(d){
+					d.textLine.y2 =	arc.centroid(d)[1] * 2.2;
+					return d.textLine.y2; 
+				});
+				
+			//繪制弧外文字
+			arcs.select(".company")
+				.attr("transform",function(d){
+					var x = 0;
+					var y = 0;
+					x = ( d.textLine.x1 + d.textLine.x2 ) / 2;
+					y = d.textLine.y1;
+					y = y > 0 ? y + fontsize * 1.1 : y - fontsize * 0.4;
+					return "translate(" + x + "," + y + ")";
+				})
+				.style("text-anchor","middle")
+				.style("font-size",fontsize)
+				.text(function(d){
+					return d.data[0];
+				});
+
+			//弧的拖曳行為
+			var drag = d3.behavior.drag()
+				    	.origin(null)
+						.on("drag", dragmove)
+						.on("dragend",dragend);
+
+			//正在拖曳事件（drag）被觸發時的監聽器
+			function dragmove(d) {
+				d.dx += d3.event.dx;	//加滑鼠x方向的偏移量
+				d.dy += d3.event.dy;	//加滑鼠y方向的偏移量
+
+				//為被拖曳的弧的平移屬性設定新的值
+				d3.select(this)
+					.attr("transform","translate("+ ( d.dx + d.circle.cx ) + "," + 
+													( d.dy + d.circle.cy ) +")");
+			}
+
+			//拖曳結束事件（dragend）被觸發時的監聽器
+			function dragend(d,i) {
+
+				//計算被拖曳的元素到餅狀圖圓心距離的平方
+				var dis2 = d.dx * d.dx + d.dy * d.dy;
+				if( dis2 > d.circle.r * d.circle.r ){
+					//若果被拖到了餅狀圖之外
+
+					 /*
+					   移除原陣列dataset中的第i個元素（即被拖曳元素）
+					   被移除的元素儲存在movedData中
+					 */
+					var movedData = dataset.splice(i,1);
+
+					//重新呼叫佈局計算dataset陣列，結果儲存在piedata中
+					piedata = pie(dataset);
+
+					 //加入一個圓，用於表示被移出的弧
+					appendCircle(movedData[0]);
+
+					//重繪
+					redraw();
+				}
+			}
+
+			//所有弧呼叫上面定義的拖曳行為
+			arcs.call(drag);
+
+		}
+
+
+			var circleGroups = svg.append("g");
+
+			//已經被移出去的元素的拖曳行為
+			var dragCircle = d3.behavior.drag()
+				    			.origin(null)
+								.on("drag", dragCircleMove)
+								.on("dragend",dragCricleEnd);
+
+
+			function dragCircleMove(d) {
+				d.x = d3.event.sourceEvent.offsetX;
+				d.y = d3.event.sourceEvent.offsetY;
+
+				d3.select(this)
+					.attr("transform","translate("+ d.x + "," + d.y +")");
+			}
+
+
+			function dragCricleEnd(d,i) {
+				//到圓心距離的平方
+				var dis2 = ( d.x - piecircle.cx ) * ( d.x - piecircle.cx ) + 
+						   ( d.y - piecircle.cy ) * ( d.y - piecircle.cy );
+
+				if( dis2 < piecircle.r * piecircle.r  ){
+
+					dataset.push([d[0],d[1]]);
+
+					piedata = pie(dataset);
+
+					d3.select(this).remove();
+
+					redraw();
+				}
+			}
+
+
+			function appendCircle(data){
+
+					//為拖曳出來的圖形增加新元素
+					gCircle = circleGroups.append("g")
+							.datum(data)
+							.attr("class","movedArc")
+							.attr("transform","translate("+ d3.event.sourceEvent.offsetX + "," + d3.event.sourceEvent.offsetY +")")
+							.call(dragCircle);
+
+					gCircle.append("circle")
+							.attr("cx", 0)
+							.attr("cy", 0)
+							.attr("r", 20)
+							.style("fill",function(d){
+								return color(d[0]);
+							});
+
+					gCircle.append("text")
+							.attr("dx", "22px")
+							.attr("dy", ".4em")
+							.text(function(d){
+								return d[0];
+							});
+			}
+
+			
+
+		
+		function getPixelLength(str,fontsize){
+			var curLen = 0;
+			for(var i=0;i<str.length;i++){
+				var code = str.charCodeAt(i);
+				var pixelLen = code > 255 ? fontsize : fontsize/2;
+				curLen += pixelLen;
+			}
+			return curLen;
+		}
+
+		  
+        </script>  
+		
+    </body>  
+</html>  

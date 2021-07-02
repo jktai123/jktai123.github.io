@@ -1,0 +1,56 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>7.1.2.1 attr�MattrTween</title>  
+  </head> 
+  <style>
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVGø��ϰ쪺�e��
+var height = 500;	//SVGø��ϰ쪺����
+	
+var svg = d3.select("body")			//���<body>
+			.append("svg")			//�b<body>���[�J<svg>
+			.attr("width", width)	//�]�w<svg>���e���ݩ�
+			.attr("height", height);//�]�w<svg>�������ݩ�
+
+var rect = svg.append("rect")
+				.attr("fill","steelblue")
+				.attr("x",10)
+				.attr("y",10)
+				.attr("width",200)
+				.attr("height",30);
+
+var rectTran = rect.transition()
+					.duration(2000)
+					.attrTween("width",function(d, i, a) {
+							return function(t){
+								console.log(t);
+								console.log(a);
+								console.log(Number(a));
+								return Number(a) + t * 300;
+							}
+						}
+					)
+					.attr("fill", "red")
+					.style("fill", "yellow")
+					// .duration(2000)
+					.attrTween("height", function (d, i, a) {
+							return function (t) {
+								// console.log('Height');
+								// console.log(t);
+								// console.log(a);
+								// console.log(Number(a));
+								return Number(a) + t * 50;
+							}
+						}
+					);
+
+</script> 
+
+</body>
+</html>

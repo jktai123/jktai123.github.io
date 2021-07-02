@@ -1,0 +1,80 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>8.1.2 鍵碟互動</title>  
+  </head> 
+  <style>
+  
+.axis path,
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 400;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+
+var characters = ["A","S","D","F"];
+
+var rects = svg.selectAll("rect")
+				.data(characters)
+				.enter()
+				.append("rect")
+				.attr("x",function(d,i){ return 10 + i * 60; })
+				.attr("y",150)
+				.attr("width",55)
+				.attr("height",55)
+				.attr("rx",5)
+				.attr("ry",5)
+				.attr("fill","black");
+				
+var texts = svg.selectAll("text")
+				.data(characters)
+				.enter()
+				.append("text")
+				.attr("x",function(d,i){ return 10 + i * 60; })
+				.attr("y",150)
+				.attr("dx",10)
+				.attr("dy",25)
+				.attr("fill","white")
+				.attr("font-size",24)
+				.text(function(d){ return d; });
+				
+				
+d3.select("body")
+	.on("keydown",function(){
+		rects.attr("fill",function(d){
+			if( d == String.fromCharCode(d3.event.keyCode) ){
+				return "yellow";
+			}else{
+				return "black";
+			}
+		});
+	})
+	.on("keyup",function(){
+		rects.attr("fill","black");
+	});
+
+	
+</script> 
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>8.1.3 觸摸螢幕互動</title>  
+  </head> 
+  <style>
+  
+.axis path,
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 400;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+
+var rect = svg.append("rect")
+				.attr("x",220)
+				.attr("y",150)
+				.attr("width",100)
+				.attr("height",100)
+				.attr("fill","blue");
+			
+var circle = svg.append("circle")
+				.attr("cx",150)
+				.attr("cy",200)
+				.attr("r",50)
+				.attr("fill","blue")
+				.on("touchstart",function(){
+					d3.select(this).attr("fill","yellow");
+				})
+				.on("mouseover", function () {
+					d3.select(this).attr("fill", "yellow");
+				})
+				.on("mouseout", function () {
+					d3.select(this).attr("fill", "blue");
+				})
+				
+				.on("touchmove",function(){
+					var pos = d3.touches(this)[0];		//取得第一個觸摸點
+					d3.select(this)
+						.attr("cx",pos[0])		//觸摸點的x座標
+						.attr("cy",pos[1]);		//觸摸點的y座標
+				})
+				.on("mousemove", function () {
+		var pos = d3.mouse(this);		//取得第一個觸摸點
+		d3.select(this)
+			.attr("cx", pos[0])		//觸摸點的x座標
+			.attr("cy", pos[1]);		//觸摸點的y座標
+	})
+				.on("touchend",function(){
+					d3.select(this).attr("fill","blue");
+				});
+				
+
+	
+</script> 
+
+</body>
+
+</html>

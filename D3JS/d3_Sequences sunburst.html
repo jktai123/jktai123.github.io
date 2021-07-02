@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>d3_Sequences sunburst</title>
+    <!--引入google的一種字體樣式 -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <!--引進樣式文件 -->
+    <link rel="stylesheet" type="text/css" href="sequences.css" />
+    <style>
+      
+    </style>
+</head>
+<body>
+  
+    <div id="main">
+        <!-- 定義左上角頁面訪問序列的容器 -->
+        <div id="sequence"></div>
+        <!-- 定義光芒圖的容器 -->
+        <div id="chart">
+            <!-- 定義鼠標懸停時，解釋說明文字所在的容器 ,默認隱藏-->
+            <div id="explanation" style="visibility: hidden;">
+                <span id="percentage"></span><br />
+                of visits begin with this sequence of pages
+            </div>
+        </div>
+    </div>
+    <!--定義圖例所在容器 .以及切換是否顯示的按鈕-->
+    <div id="sidebar">
+        <input type="checkbox" id="togglelegend"> Legend<br />
+        <div id="legend" style="visibility: hidden;"></div>
+    </div>
+    <!--sequences.js文件中實現光芒圖各種細節 -->
+    <script type="text/javascript" src="sequences.js"></script>
+    <script type="text/javascript">
+        // Hack to make this example display correctly in an iframe on bl.ocks.org
+        d3.select(self.frameElement).style("height", "300px");
+    </script>
+    </body>
+</html>

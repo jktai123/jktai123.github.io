@@ -1,0 +1,51 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>5.2.2 彩色比例尺</title>  
+  </head> 
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+		var width = 2000;
+		var height = 600;
+		var dataset = d3.range(19);		//傳回[0,1,2,3,4,5]
+		var color = d3.scale.category20c();
+		
+		var svg = d3.select("body").append("svg")
+								.attr("width",width)
+								.attr("height",height);
+		
+		var circle = svg.selectAll("circle")
+						.data(dataset)
+						.enter()
+						.append("circle")
+						.attr("cx",function(d,i){
+							return 30 + i * 80;
+						})
+						.attr("cy",100)
+						.attr("r",30)
+						.attr("fill",function(d,i){
+							return color(i);
+						});
+						
+		var text = svg.selectAll("text")
+						.data(dataset)
+						.enter()
+						.append("text")
+						.attr("x",function(d,i){
+							return 30 + i * 80;
+						})
+						.attr("y",100)
+						.attr("dx",-30)
+						.attr("dy","3em")
+						.text(function(d,i){
+							return color(i);
+						});
+	
+</script> 
+
+</body>
+
+</html>

@@ -1,0 +1,541 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 自定義css */
+html,body{
+    width: 100%;
+	height: 100%;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "Segoe UI Semibold", "Segoe UI", "Lucida Grande";
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction:row-reverse;
+}
+
+.loader{
+	position:absolute;
+	left:50%;
+	top:50vh;
+	z-index:900;
+}
+.panel{
+	width: 25%;
+	height: 100%;
+	position:absolute;
+	top: 0;
+	left:0;
+	z-index: 99999;
+	background-color:white;
+	transition: all 0.5s;
+	box-shadow: 2px 0px 3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.panelClose{
+	margin-left:-25%;
+}
+
+@media(min-width:1024px) and (max-width:1200px){
+	.panel{
+		width:35%;
+	}
+	.panelClose{
+		margin-left:-35%;
+	}
+}
+
+@media(min-width:768px) and (max-width:1024px){
+	.panel{
+		width:40%;
+	}
+	.panelClose{
+		margin-left:-40%;
+	}
+}
+
+@media(max-width:768px){
+	.panel{
+		width:60%;
+	}
+	.panelClose{
+		margin-left:-60%;
+	}
+}
+
+@media(max-width:568px){
+	.panel{
+		width:80%;
+	}
+	.panelClose{
+		margin-left:-80%;
+	}
+}
+
+
+.panelTop{
+	height: 50%;
+	background-color:#63cf9c ;
+	position: relative;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top:-2%;
+	box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.3);
+	/* padding-top: -5%; */
+}
+
+@media(min-width:319px) and (max-width:395px){
+	.panelTop{
+		height: 55%;
+	}
+}
+
+
+.toggleBtn{
+	background-color:#63cf9c ;
+	position:absolute;
+	top:25%;
+	left:99%;
+	border-radius: 0 5px 5px 0;
+	cursor:pointer;
+	box-shadow: 4px 2px 3px 0px rgba(0, 0, 0, 0.25);
+}
+
+.taiwanMaskMapLogo{
+	width: 95%;
+	margin: 0 auto;
+	padding-bottom:10px;
+}
+
+@media(min-width:1024px){
+	.taiwanMaskMapLogo{
+		width: 75%;
+	}
+}
+
+@media(min-width:900px){
+	.taiwanMaskMapLogo{
+		width: 85%;
+	}
+}
+
+
+@media(min-width:414px) and (max-width:768px){
+	.taiwanMaskMapLogo{
+		width: 80%;
+	}
+}
+
+.toggleBtn svg{
+	height:20px;
+	padding:25px 17px;
+}
+
+.info{
+	display: flex;
+	justify-content: center;
+	padding-bottom:7px;
+}
+
+.infoWeek h2{
+	font-size: 24px;
+	font-weight: 500;
+	color:#072e00;
+}
+
+.todayDate{
+	font-size: 24px;
+	font-weight: 600;
+	color:#072e00;
+}
+
+.idBuyText{
+	display:flex;
+	justify-content: center;
+	padding-bottom:7px;
+}
+
+
+.idNumOdd, .idNumEven, .idNumAll{
+	text-align: justify;
+	display: none;
+}
+
+.idNumAll{
+	color:white;
+	font-size: 20px;
+	letter-spacing:1.2px;
+	font-weight: lighter;
+}
+
+.idNumAll span{
+	font-weight: 700;
+}
+
+.nextBuyDateText{
+	display:flex;
+	justify-content: center;
+}
+
+.nextBuyDate{
+	font-size:13px;
+	padding-bottom:15px;
+	color:#072e00;
+}
+
+.nextBuyDateNum{
+	color:yellow;
+	font-weight: bolder;
+}
+
+@media(min-width:320px) and (max-width:395px){
+	.todayDate{
+		font-size:125%;
+	}
+	.infoWeek h2{
+		font-size:125%;
+	}
+	.idNumAll{
+		font-size: 113%;
+		letter-spacing:0.5px;
+	}
+	.nextBuyDate{
+		font-size: 125%;		
+		line-height: 1.3em;
+		letter-spacing: 0.5px;
+		padding-left:7%;
+
+	}
+}
+
+@media(max-width:340px){
+	.todayDate{
+		font-size:120%;
+	}
+	.infoWeek h2{
+		font-size:120%;
+	}
+	.idNumAll{
+		font-size: 103%;
+		letter-spacing:0.5px;
+	}
+	.nextBuyDate{
+		font-size: 115%;
+		padding-left:7%;
+		line-height: 1.3em;
+		letter-spacing: 0.5px;
+	}
+}
+
+/* .idNumOdd span, .idNumEven span{
+	color: #FFF126;
+	font-size: 16pt;
+	font-weight: 900;
+} */
+
+/* .idNumAll span{
+	color: #FFF126;
+	font-size: 13pt;
+	font-weight: 900;
+} */
+
+.countyList option{
+	text-align: center;
+}
+.pharmacyList{
+	height: 50%;
+	overflow:auto;
+}
+
+@media(min-width:319px) and (max-width:395px){
+	.pharmacyList{
+		height: 45%;
+	}
+}
+
+.pharmacyTitle{
+width:90%;
+}
+.pharmacyList li{
+	font-size: 22px;
+	font-weight: 900;
+	color:#072e00;
+	border-left:solid 3.5px #072e00;
+}
+
+.pharmacyList li span{
+	padding-left: 8px;
+}
+
+.pharmacyList ul{
+	padding:20px 0 20px 0;
+	display: flex;
+	justify-content: center;
+	border-bottom: solid 0.5px #072e00;
+}
+
+.infoText{
+	color: #072e00;
+	padding-top: 15px;
+	
+}
+
+.noteText{
+	color: black;
+	padding-top: 12px;
+	font-size: 12px;
+	word-break: normal;
+}
+
+.maskContent:hover{
+	background:#dfdfdf;
+	cursor: pointer;
+}
+
+.panelMaskNum{
+	padding: 20px 0 10px 0; 
+	font-size: 20px;
+	display:flex;
+	justify-content: center;
+}
+
+.infoLayout{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.adultIcon,.kidIcon{
+	width:35px;
+	padding-right:3px;
+}
+
+.popupInfo p{
+	margin:0 !important;
+}
+
+.popupLayout{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+.popupInfo hr{
+	border:0.5px solid #072e00;
+}
+
+.popupTitle{
+	font-size: 20px;
+	font-weight: 900;
+	color:#072e00;
+}
+
+.popupTitle span{
+	padding-left: 5px;
+}
+
+.popupText{
+	color: #072e00;
+	padding-top: 5px;
+	font-size: 15px;
+}
+
+.popupNote{
+	padding-top: 5px;
+	font-size: 10px;
+	color: rgb(125, 125, 125);
+}
+
+.adultIconS,.kidIconS{
+	width:35px;
+	padding-right:3px;
+}
+
+.popupMaskNum{
+	margin:0 !important;
+}
+
+
+
+
+#map{
+    width: 100%;
+	height: 100%;
+}
+
+
+.GeoBtn{
+	background: white;
+	width: 26px;
+	height: 26px;
+	position: fixed;
+	top: 80px;
+	right: 11px;
+	z-index: 999;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 4px;
+	box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.25);
+	cursor:pointer;
+}
+
+.GeoBtn:hover{
+	background: rgb(230, 230, 230);
+}
+
+.GeoBtn img{
+	width:18px;
+}
+
+.pop-style{
+	font-size: 1.3em;
+}
+
+.popupBtn{
+	display:flex;
+	justify-content:flex-end;
+}
+
+.bg-sufficient{
+	color:white;
+	background-color: #63cf9c;
+	padding: 10px;
+	border-radius: 50px;
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+	margin-bottom:5px;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0,0.6);
+}
+
+.bg-insufficient{
+	color:white;
+	background-color: #FAB3A9;
+	padding: 10px;
+	border-radius: 50px;
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+	margin-bottom:5px;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0,0.6);
+}
+
+.bg-none{
+	color:white;
+	background-color: #B4BDC1;
+	padding: 10px;
+	border-radius: 50px;
+	display: inline-block;
+	width: 130px;
+	text-align: center;
+	margin-bottom:5px;
+	text-shadow: 1px 1px 4px rgba(0, 0, 0,0.6);
+}
+
+    .marker-cluster-small {
+		background-color: rgba(181, 226, 140, 0.6);
+		}
+	.marker-cluster-small div {
+		background-color: rgba(110, 204, 57, 0.6);
+		}
+
+	.marker-cluster-medium {
+		background-color: rgba(241, 211, 87, 0.6);
+		}
+	.marker-cluster-medium div {
+		background-color: rgba(240, 194, 12, 0.6);
+		}
+
+	.marker-cluster-large {
+		background-color: rgba(253, 156, 115, 0.6);
+		}
+	.marker-cluster-large div {
+		background-color: rgba(241, 128, 23, 0.6);
+		}
+
+	.marker-cluster {
+		background-clip: padding-box;
+		border-radius: 20px;
+		}
+	.marker-cluster div {
+		width: 30px;
+		height: 30px;
+		margin-left: 5px;
+		margin-top: 5px;
+
+		text-align: center;
+		border-radius: 15px;
+		font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+		}
+	.marker-cluster span {
+		line-height: 30px;
+		}
+
+	.container.leaflet-right {
+		right:0px;
+		}
+
+.areaList{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.countyList, .townList{
+	width:80%;
+	height: 30px;
+	border-radius: 5px;
+	border:1.3px solid #072e00;
+}
+
+.countyList{
+	margin-bottom:10px;
+}

@@ -1,0 +1,386 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    /* width: 1300px; */
+    width: 100%;
+    height: 100%;
+    margin: 20px auto 0 auto;
+    position: relative;
+    background-color: #73C0D8;
+    box-shadow: 0px 0px 3px #d8d8d8;
+}
+
+.title {
+    writing-mode: vertical-lr;
+    width: 863.95px;
+    height: 0px;
+    border-bottom: 628px solid #ffffff;
+    border-right: 540px solid transparent;
+
+}
+
+.titleEn {
+    position: absolute;
+    white-space: nowrap;
+    top: 320px;
+    left: 35px;
+    font-family: "Segoe UI";
+    font-size: 51px;
+    color: #666666;
+    letter-spacing: 0;
+}
+
+.titleCh {
+    position: absolute;
+    top: 91px;
+    left: 103px;
+    font-family: "Segoe UI";
+    font-size: 54px;
+    letter-spacing: 20px;
+    color: #666666;
+    writing-mode: vertical-lr;
+}
+
+.titleCh span {
+    color: #73C0D8;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    /* width: 980px;
+    height: 540px; */
+    border: 18px solid #333333;
+    border-radius: 17px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    /* left: 187px;
+    top: 47.52px; */
+    z-index: 1;
+    background-color: #E0E0D4;
+}
+
+.leftBar {
+    float: left;
+    border-right: 1px solid #666666;
+}
+
+.info {
+    width: 254px;
+    height: 92px;
+    background-color: #73C0D8;
+    z-index: 2;
+    position: relative;
+}
+
+.todayDay {
+    position: absolute;
+    font-size: 25px;
+    color: #ffffff;
+    top: 7.5px;
+    left: 9.43px;
+}
+
+.todayDate {
+    position: absolute;
+    right: 14.41px;
+    top: 10.21px;
+    font-size: 12px;
+    color: #ffffff;
+    font-family: "Segoe UI";
+}
+
+select {
+    background: #ffffff;
+    height: 30px;
+    bottom: 9px;
+    border: none;
+}
+
+.county {
+    position: absolute;
+    left: 7.5px;
+    width: 110px;
+}
+
+.town {
+    position: absolute;
+    right: 7.5px;
+    width: 110px;
+}
+
+.search {
+    position: absolute;
+    width: 240.37px;
+    height: 30.64px;
+    left: 9.43px;
+    top: 51.84px;
+    border-radius: 20px;
+}
+
+.info p {
+    position: absolute;
+    right: 8px;
+    bottom: 46.41px;
+    font-size: 10px;
+    color: #ffffff;
+    white-space: nowrap;
+    
+}
+
+.buyId {
+    color: yellow;
+    font-size: 12px;
+}
+
+.listMenu {
+    width: 254px;
+    height: 412px;
+    background-color: #ffffff;
+    overflow-y: auto;  /* 超出範圍的資料使用滾軸 */
+    overflow-x: hidden;
+}
+
+.listMenu li {
+    position: relative;
+    height: 121px;
+    width: 254px;
+    border-bottom: 1px solid #E0E0D4;
+}
+
+.name {
+    font-size: 14px;
+    color: #333333;
+    position: absolute;
+    left: 9px;
+    top: 7px;
+}
+
+.marker_icon {
+    height: 25px;
+    position: absolute;
+    left: 220px;
+    top: 5px;
+}
+
+.address {
+    position: absolute;
+    left: 9px;
+    bottom: 80px;
+    color: #666666;
+    font-size: 12px;
+    width: 245px; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+
+.phone {
+    position: absolute;
+    font-size: 12px;
+    color: #666666;
+    left: 9px;
+    bottom: 61px;
+}
+
+.openTime {
+    position: absolute;
+    left: 9px;
+    bottom: 39.4px;
+    font-size: 12px;
+    color: #666666;
+    width: 245px; 
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow:hidden;
+}
+
+.adultMask {
+    position: absolute;
+    left: 9px;
+    bottom: 7.15px;
+    width: 112.2px;
+    height: 25px;
+    background-color: #73C0D8;
+    border-radius: 20px;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding-left: 10px;
+    padding-top: 6px;
+}
+
+.adultMaskNumber {
+    position: absolute;
+    right: 11.35px;
+    top: 5px;
+    font-size: 14px;
+}
+
+.kidMask {
+    position: absolute;
+    right: 12px;
+    bottom: 7.15px;
+    width: 112.2px;
+    height: 25px;
+    background-color: #FFA573;
+    border-radius: 20px;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding-left: 10px;
+    padding-top: 6px;
+}
+
+.kidMaskNumber {
+    position: absolute;
+    right: 11px;
+    top: 5px;
+    font-size: 14px;
+}
+
+#map {
+    position: absolute;
+    width: 988px;
+    height: 504.5px;
+    /* width: 688px;
+    height: 504.5px; */
+    top: 0;
+    right: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* markerClusterGroup */
+
+.marker-cluster-small {
+    background: #FFE284;
+    box-shadow: 0 0 5px 5px #FFE284;
+}
+
+.marker-cluster-small div {
+    background: #FFD447;
+    box-shadow: 0 0 5px 5px #FFD447;
+}
+
+.marker-cluster-medium {
+    background: rgb(255, 192, 140);
+    box-shadow: 0 0 5px 5px rgb(255, 192, 140);
+}
+
+.marker-cluster-medium div {
+    background: rgb(255, 175, 100);
+    box-shadow: 0 0 5px 5px rgb(255, 175, 100);
+}
+
+.marker-cluster-large {
+    background: #CBF3F0;
+    box-shadow: 0 0 5px 5px #CBF3F0;
+}
+
+.marker-cluster-large div {
+    background: #78E2B8;
+    box-shadow: 0 0 5px 5px #78E2B8;
+}
+
+.marker-cluster {
+    border-radius: 999em;
+    background-clip: padding-box;
+    width: 35px;
+    height: 35px;
+}
+
+.marker-cluster div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-top: 5px;
+    border-radius: 999em;
+    text-align: center;
+    font-size: 12px;
+}
+
+.marker-cluster div span {
+    line-height: 30px;
+}
+
+.leaflet-popup-content h1 {
+    font-size: 20px;
+}
+
+.leaflet-popup-content p {
+    font-size: 14px;
+    margin: 5px;
+}
+
+
+.loadingImg {
+    position: absolute;
+    width: 1300px;
+    height: 630px;
+    z-index: 3;
+    background: url(./image/loading.gif);
+    background-repeat: no-repeat;
+    background-position: 380px 135px;
+    background-color: #FFFFFF;
+}
+
+.hidden {
+    display: none;
+}

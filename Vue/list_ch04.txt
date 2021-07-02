@@ -1,0 +1,527 @@
+﻿
+List 4-1
+{
+	"name": "vue",
+	"title": "Vue.js",
+	"version": "2.4.4",
+	"description": "Composable MVVM library.",
+	"main": "index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hughsk/envify.git"
+	},
+	"dependencies": {
+		"vue": "2.4.4"
+	},
+	"readme": "ERROR: No README data found!"
+}
+
+
+List 4-2
+{
+	"name": "vue",
+	"main": "index.js",
+	"license": "MIT",
+	"ignore": [
+		"package.json"
+	],
+	"dependencies": {
+		"vue": "2.4.4"
+	}
+}
+
+
+List 4-3
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<p id="msg">{{ message }}</p>
+</body>
+</html>
+
+
+List 4-4
+body {
+	color: #999;
+	padding: 5px 16px;
+	font-size: 14pt;
+	line-height: 150%;
+}
+h1 {
+	font-size: 24pt;
+}
+p {
+	font-size: 18pt;
+}
+
+
+List 4-5
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			message: 'this is Vue.js sample!'
+		}
+	})
+}
+
+
+List 4-6
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	<p>{{ message }}</p>
+	<input type="text" v-model="message">
+	</div>
+</body>
+
+
+List 4-7――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+		<p>{{ message }}</p>
+		<input type="text" v-model="text1">
+		<input type="button" v-on:click="doAction" value="click">
+	</div>
+</body>
+
+
+List 4-8――main.js
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			message: 'this is Vue.js sample!',
+			text1: ''
+		} ,
+		methods: {
+			doAction: function(){
+				var str = this.text1;
+				this.message = 'you typed: ' + str + '.';
+			}
+		}
+	})
+}
+
+
+List 4-9
+methods: {
+	doAction: function(){
+		var str = this.text1;
+		this.message = 'you typed: <span style="color:white;background:red">'
+			+ str + '</span>.';
+	}
+}
+
+
+List 4-10
+<p>{{{ message }}}</p>
+// 或
+<p v-html="message"></p>
+
+
+List 4-11
+<p>{{ message.toString(); }}</p>
+
+
+List 4-12
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			msgArray:[],
+			message: '',
+			text1: ''
+		} ,
+		created: function(){
+			this.msgArray.push('sample message.');
+			this.message = this.msgArray;
+		} ,
+		methods: {
+			doAction: function(){
+				this.msgArray.push(this.text1);
+				this.message = this.msgArray;
+			}
+		}
+	})
+}
+
+
+List 4-13
+<p>{{ message | json }}</p>
+
+
+List 4-14
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+		<p>{{ result }}</p>
+		<input type="text" v-model="number">
+	</div>
+</body>
+
+
+List 4-15
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			number: '0'
+		} ,
+		computed: {
+			result:function(){
+				var total = 0;
+				for(var i = 0;i <= this.number * 1;i++){
+					total += i;
+				}
+				return total;
+			}
+		}
+	})
+}
+
+
+List 4-16
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+		<p>未稅價格：<input type="text" v-model="woTax"></p>
+		<p>含稅價格：<input type="text" v-model="wTax"></p>
+	</div>
+</body>
+
+
+List 4-17
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			woTax: '0'
+		} ,
+		computed: {
+			wTax: {
+				get: function(){
+					return parseInt(this.woTax * 1.05);
+				},
+				set: function(val){
+					this.woTax = Math.ceil(val / 1.05);
+				}
+			}
+		}
+	})
+}
+
+
+List 4-18
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<p id="msg" v-bind:class="{'a':isA, 'b':isB}" v-on:click="change();">class操作範例。</p>
+</body>
+
+
+List 4-19
+.a {
+	color: red;
+	background: white;
+}
+.b {
+	color: white;
+	background: blue;
+}
+
+
+List 4-20
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			isA: true,
+			isB: false
+		} ,
+		methods: {
+			change: function(){
+				this.isA = !this.isA;
+				this.isB = !this.isB;
+			}
+		}
+	})
+}
+
+
+List 4-21
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div  id="msg">
+	<p v-bind:style="{'color':selF, 'background':selB}" 
+		v-on:click="change();">樣式操作範例。</p>
+
+	<p><select v-model="selF">
+		<option>white</option>
+		<option>black</option>
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+	</select>
+	<select v-model="selB">
+		<option>white</option>
+		<option>black</option>
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+	</select>
+	</p>
+	</div>
+</body>
+
+
+List 4-22
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			selF:'',
+			selB:'',
+		},
+		created: function(){
+			this.selF = 'red';
+			this.selB = 'white';
+		}
+	});
+}
+
+
+List 4-23――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	<p v-if="flg">操作訊息的顯示狀態。</p>
+
+	<divp><input type="checkbox" id="ck" v-model="flg">
+	<label for="ck">顯示</label></div>
+
+	</div>
+</body>
+
+
+List 4-24――main.js
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			flg:false
+		},
+		created: function(){
+			this.flg = true;
+		}
+	});
+}
+
+
+List 4-25
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	<p v-if="flg">操作訊息的顯示狀態。</p>
+	<p v-else>[ ※目前為隱藏狀態 ]</p>
+	<divp><input type="checkbox" id="ck" v-model="flg">
+	<label for="ck">顯示</label></div>
+	</div>
+</body>
+
+
+List 4-26――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+		<ul>
+			<li v-for="obj in data">
+				{{obj}}
+			</li>
+		</ul>
+	</div>
+</body>
+
+
+List 4-27――main.js
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			data:[
+				'Hello!',
+				'Welcome.',
+				'Good-bye...'
+			]
+		}
+	});
+}
+
+
+List 4-28――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	<ol>
+		<li v-for="obj in data">
+			{{obj}}
+		</li>
+	</ol>
+	<hr>
+		<select size="5" multiple v-model="data">
+			<option>Windows</option>
+			<option>macOS</option>
+			<option>Linux</option>
+			<option>Android</option>
+			<option>iOS</option>
+		</select>
+	</div>
+</body>
+
+
+List 4-29――main.js
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			data:[]
+		}
+	});
+}
+
+
+List 4-30――main.js
+Vue.component('my-component', {
+	template: '<p style="border:1px solid #ccc;">My Component</p>'
+})
+
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {}
+	});
+}
+
+
+List 4-31――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	<my-component></my-component>
+	</div>
+</body>
+
+
+List 4-32――main.js
+Vue.component('my-component', {
+	props: ['message'],
+	template: '<p style="border:1px solid #ccc;">{{message}}</p>'
+})
+
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			data:[]
+		}
+	});
+}
+
+
+List 4-33――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	<my-component message="您好！"></my-component>
+	</div>
+</body>
+
+
+List 4-34――main.js
+Vue.component('my-component', {
+	props: ['items'],
+	template: '#my-template'
+})
+
+
+List 4-35――index.html
+<template id="my-template">
+	<table>
+	<tr v-for="obj in items.split(',')">
+	<td style="border:1px solid #ccc;padding:0px 10px;">
+		{{obj}}</td>
+	</tr>
+	</table>
+</template>
+
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	
+	<my-component items="one,two,three"></my-component>
+
+	</div>
+</body>
+
+
+List 4-36――main.js
+Vue.directive('my-directive', {
+	bind: function(){
+		this.el.innerHTML = '<p>**bind now**</p>';
+	},
+	update: function (newValue, oldValue) {
+		this.el.innerHTML = '<p>' + oldValue + ' -> ' + newValue + '</p>';
+	},
+	unbind: function(){
+		this.el.innerHTML = '<p>**unbind**</p>';
+	},
+});
+
+function initial(){
+	
+	new Vue({
+		el: '#msg',
+		data: {
+			val:'',
+			message:'this is message!'
+		},
+		methods: {
+			myfunc:function() {
+				this.message = this.val;
+			}
+		}
+	});
+}
+
+
+List 4-37――index.html
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div id="msg">
+	
+	<div v-my-directive="message">ok.</div>
+
+	<input type="text" v-model="val">
+	<input type="button" v-on:click="myfunc();" value="click">
+	</div>
+</body>

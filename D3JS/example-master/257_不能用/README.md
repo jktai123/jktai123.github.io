@@ -1,0 +1,1 @@
+Demonstration about using cors proxy to help retrieve data in client side

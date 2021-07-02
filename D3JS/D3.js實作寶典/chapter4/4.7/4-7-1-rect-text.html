@@ -1,0 +1,67 @@
+<html>  
+  <head>  
+        <meta charset="big5">  
+        <title>4.7.1 矩形和文字</title>  
+  </head> 
+<body>
+4.7.1 矩形和文字
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var dataset = [50, 43, 120, 87, 99, 167, 142];
+
+var width  = 400;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+
+//外邊框
+var padding = { top: 20 , right: 20, bottom: 20, left: 20 };
+//矩形所占的寬度（內含空白），單位為像素
+var rectStep = 35;	
+//矩形所占的寬度（不內含空白），單位為像素
+var rectWidth = 30;
+
+var rect = svg.selectAll("rect")
+				.data(dataset)		//綁定資料
+				.enter()			//取得enter部分
+				.append("rect")	//加入rect元素，使其與綁定陣列的長度一致
+				.attr("fill","steelblue")		//設定彩色為steelblue
+				.attr("x", function(d,i){		//設定矩形的x座標
+					return padding.left + i * rectStep;
+				})
+				.attr("y", function(d){		//設定矩形的y座標
+					return height- padding.bottom - d;
+				})
+				.attr("width",rectWidth)		//設定矩形的寬度
+				.attr("height",function(d){	//設定矩形的高度
+					return d;
+				});
+				
+var text = svg.selectAll("text")
+				.data(dataset)			//綁定資料
+				.enter()				//取得enter部分
+				.append("text")			//加入text元素，使其與綁定陣列的長度一致
+				.attr("fill","white")
+				.attr("font-size","14px")
+				.attr("text-anchor","middle")
+				.attr("x", function(d,i){
+					return padding.left + i * rectStep;
+				})
+				.attr("y", function(d){
+					return height- padding.bottom - d;
+				})
+				.attr("dx",rectWidth/2)
+				.attr("dy","1em")
+				.text(function(d){
+					return d;
+				});
+	
+</script> 
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+﻿<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>3.4 繪制向量圖</title>  
+  </head> 
+<body>
+
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> 
+<script>  
+var width  = 400;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+			
+svg.append("circle")
+	.attr("cx","50px")
+	.attr("cy","50px")
+	.attr("r","50px")
+	.attr("fill","blue");
+	
+</script> 
+
+</body>
+
+</html>

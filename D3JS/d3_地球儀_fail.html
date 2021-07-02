@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+    <title>d3_地球儀</title>
+    <!--引入google的一種字體樣式 -->
+    <style type="text/css">
+        .node {
+            cursor: pointer;
+        }
+    
+        .overlay {
+            background-color: #EEE;
+        }
+    
+        .node circle {
+            fill: #fff;
+            stroke: steelblue;
+            stroke-width: 1.5px;
+        }
+    
+        .node text {
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+    
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1.5px;
+        }
+    
+        .templink {
+            fill: none;
+            stroke: red;
+            stroke-width: 3px;
+        }
+    
+        .ghostCircle.show {
+            display: block;
+        }
+    
+        .ghostCircle,
+        .activeDrag .ghostCircle {
+            display: none;
+        }
+    </style>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="//d3js.org/topojson.v1.min.js"></script>
+    <script src="//d3js.org/queue.v1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- <script src="dndTree.js"></script> -->
+</head>
+<body>
+   <svg width="800px" height="600px"></svg>
+<!-- <script type="text/javascript" src="http://d3js.org/topojson.v1.min.js"></script> -->
+<script>
+    // d3.json("world.json").then(function (world) {
+    d3.json("world.json", function (world) {
+        console.log('world:', world);
+        var countries = topojson.feature(world, world.objects.countries).features;
+        // console.log('world:',world);
+        console.log('countries:', countries);
+        var globalProjection = d3.geo.orthographic()
+            .scale(245).translate([400, 300]).clipAngle(90).precision(10);
+        var pathRenderer = d3.geo.path().projection(globalProjection);
+        console.log('pathRenderer:',pathRenderer);
+        // var globalprojection = d3.geoEqualEarth(),
+        //     path = d3.geoPath(globalprojection);
+        var color = d3.scale.category20();
+        d3.select("svg")
+            .data(countries)
+            // .selectAll("path")
+            .attr({
+                "d": pathRenderer,
+                "fill": function (d) {
+                    console.log('d:',d);
+                    console.log('d.id:', d.id);
+                    console.log('color(d.id):', color(d.id));
+                    return color(d.id);
+                    // return '#0ff';
+            }
+        });
+
+        d3.select("svg").call(
+            d3.behavior.drag()
+                .origin(function () {
+                    var r = globalProjection.rotate();
+                    return { x: r[0], y: -r[1] };
+                })
+                .on("drag", function () {
+                    var r = globalProjection.rotate();
+                    globalProjection.rotate([d3.event.x, -d3.event.y, r[2]]);
+                    d3.select("svg").selectAll("path").attr("d", pathRenderer);
+                })
+        );
+    });
+</script>
+    
+    </body>
+</html>

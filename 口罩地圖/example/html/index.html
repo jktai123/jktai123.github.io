@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<title>口罩地圖</title>
+	<link rel="stylesheet" type="text/css" href="../css/all.css">
+
+
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+</head>
+<body onload="startTime()">
+
+	 <div class="load">
+	 	<div class="load-cont d-flex justify-content-center flex-column text-center">
+
+	 	<div class="load_photo text-white">
+	 	<img src="../img/logo.png">
+	 	<h2 class="h1">口罩地圖</h2>
+	 	<p>幫您快速尋找您需要的</p>
+	 	</div>
+
+	 	<div class="wait">
+	 	<p>請稍等一下喔...</p>
+	 	</div>
+
+	 	</div>
+
+	 </div>
+
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
+  
+
+	<nav class="navbar navbar-light bg-transparent text-green">
+
+		<div class="nav-item d-flex align-items-center mr-auto">
+
+			<img class="ml-3" src="../img/logo.png" alt="口罩即時查" height="60" width="60">
+
+			<div class="ml-3">
+			<h1> 及時口罩 </h1>
+			<p>幫您快速尋找您需要的</p>
+			</div>
+
+		</div>
+
+
+		<div class="nav-item d-md-block d-sm-none">
+			<p class="jsdate date mb-1">mounth error</p>
+			<p class="jsweek week mb-0">week error</p>
+		</div>
+
+		<time class="nav-item ml-3 d-md-block d-sm-none">
+			<p class="jstime time display-3 pr-3">time error</p>
+		</time>
+
+	</nav>
+
+	<div class="row no-gutter w-100">
+
+		<div class="col-sm-6 col-md-4 col-xl-3 bg-w l_menu">
+
+			<form class="ml-3 mt-4 mb-3">
+
+			  <div class="form-row select">
+
+			    <div class="form-group col-md-6">
+
+			      <label for="citys">選擇縣市</label>
+
+			      <select class="form-control jscounty" id="citys" name="county">
+			      	<option selected>縣市</option>
+			      </select>
+		
+
+			    </div>
+
+			    <div class="form-group col-md-6">
+
+			      <label for="zones">選擇鄉鎮區</label>
+
+			      <select  class="form-control jstown" id="zones" name="district" required>
+			      	<option selected>鄉鎮區</option>
+			      </select>			    
+
+			    </div>
+
+			  </div>
+			 
+			</form>
+
+			<h2 class="whocanbuy ml-3 mb-4 text-right" data-toggle="tooltip" data-placement="bottom" title=""></h2>
+
+			
+		    <section class="content bg-w overflow-auto w-100 px-3 pt-3 mx-2"></section>
+					
+
+		</div>
+
+
+
+		<div class="col-sm-6 col-md-8 col-xl-9 px-0">
+
+			<div id="map"></div>	
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="../js/all.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>    
+
+
+</body>
+</html>

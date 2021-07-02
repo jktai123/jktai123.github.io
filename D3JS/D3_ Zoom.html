@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="oxxo.studio">
+    <meta name="copyright" content="oxxo.studio">
+    <title>SVG D3.js - 縮放行為 ( Zoom Behavior ) - demo03</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        #reset {
+            font-size: 20px;
+            margin: 10px 10px;
+        }
+    </style>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+
+            var w = 800;
+            var h = 400;
+
+            var x, y, s;
+
+            var data = [
+                { 'cx': 150, 'cy': 210, 'r': 50, 'fill': '#ff0000' },
+                { 'cx': 75, 'cy': 55, 'r': 40, 'fill': '#00cc00' },
+                { 'cx': 200, 'cy': 30, 'r': 30, 'fill': '#0000ff' },
+                { 'cx': 650, 'cy': 190, 'r': 70, 'fill': '#0099cc' },
+                { 'cx': 300, 'cy': 200, 'r': 30, 'fill': '#ff9900' }
+            ];
+
+            var zoom = d3.behavior.zoom()
+                .translate([0, 0])
+                .scaleExtent([1, 10])
+                .scale(1)
+                .on("zoom", zoomed);
+
+            function zoomed() {
+                x = d3.event.translate[0];
+                y = d3.event.translate[1];
+                s = d3.event.scale;
+                container.attr("transform", "translate(" + d3.event.translate + ") scale(" + d3.event.scale + ")");
+            }
+
+            var svg = d3.select('body')
+                .append('svg')
+                .attr({
+                    'width': w,
+                    'height': h
+                }).style({
+                    'border': '1px solid #000'
+                })
+                .call(zoom);
+
+            var container = svg.append('g');
+
+            container.append('g')
+                .selectAll('line')
+                .data(d3.range(0, w, 30))
+                .enter()
+                .append('line')
+                .attr({
+                    'x1': function (d) { return d; },
+                    'y1': 0,
+                    'x2': function (d) { return d; },
+                    'y2': h,
+                    'stroke': '#ddd',
+                    'fill': 'none'
+                });
+
+            container.append('g')
+                .selectAll('line')
+                .data(d3.range(0, h, 30))
+                .enter()
+                .append('line')
+                .attr({
+                    'x1': 0,
+                    'y1': function (d) { return d; },
+                    'x2': w,
+                    'y2': function (d) { return d; },
+                    'stroke': '#ddd',
+                    'fill': 'none'
+                });
+
+            container.append("g").selectAll('circle')
+                .data(data)
+                .enter()
+                .append('circle')
+                .attr({
+                    'cx': function (d) { return d.cx; },
+                    'cy': function (d) { return d.cy; },
+                    'r': function (d) { return d.r; },
+                    'fill': function (d) { return d.fill; }
+                })
+                .style({
+                    'cursor': 'pointer'
+                });
+
+            d3.selectAll('circle').on('click', function () {
+                var circle = d3.select(this);
+                circle.transition().duration(250).tween("zoom", function () {
+                    var r = this.getAttribute('r') * 1;
+                    var cx = this.getAttribute('cx') * 1;
+                    var cy = this.getAttribute('cy') * 1;
+                    var si = d3.interpolate(s, 4);
+                    var xi = d3.interpolate(x, (w - r) / 2 - 4 * cx);
+                    var yi = d3.interpolate(y, (h - r) / 2 - 4 * cy);
+                    return function (t) {
+                        svg.call(zoom.translate([xi(t), yi(t)]).scale(si(t)).event);
+                    }
+                });
+            });
+
+
+            d3.select('#reset').on('click', function () {
+                d3.transition().duration(250).tween("zoom", function () {
+                    var si = d3.interpolate(s, 1);
+                    var xi = d3.interpolate(x, 0);
+                    var yi = d3.interpolate(y, 0);
+                    return function (t) {
+                        svg.call(zoom.translate([xi(t), yi(t)]).scale(si(t)).event);
+                    }
+                });
+            });
+
+            svg.call(zoom.event);
+
+
+        }, false);
+    </script>
+</head>
+
+<body>
+    <button id="reset">reset</button><Br />
+</body>
+
+</html>

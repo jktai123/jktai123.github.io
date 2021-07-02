@@ -1,0 +1,197 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>12.5.1 開關</title>  
+  <style>
+
+  .node circle {
+    cursor: pointer;
+    fill: #fff;
+    stroke: steelblue;
+    stroke-width: 2px;
+  }
+
+  .node text {
+    font-size: 12px;
+  }
+
+  .link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 1.5px;
+  }
+
+  </style>
+  </head> 
+<body>
+<script src="../../d3/d3.min.js" charset="utf-8"></script>  
+<script>
+
+var width = 600;
+var height = 500;
+
+//邊界空白
+var padding = {left: 80, right:50, top: 20, bottom: 20 };
+
+var svg = d3.select("body")
+           .append("svg")
+	         .attr("width", width + padding.left + padding.right)
+	         .attr("height", height + padding.top + padding.bottom)
+           .append("g")
+           .attr("transform","translate("+ padding.left + "," + padding.top + ")");
+
+//樹狀圖佈局
+var tree = d3.layout.tree()
+            .size([height, width]);
+
+//對角線產生器
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+
+d3.json("learn.json",function(error,root){
+
+  //給第一個節點加入起始座標x0和x1
+  root.x0 = height / 2;
+  root.y0 = 0;
+
+  //以第一個節點為起始節點，重繪
+  redraw(root);
+
+  //重繪函數
+  function redraw(source){
+
+    /*
+    （1） 計算節點和連線的位置
+    */
+
+    //套用佈局，計算節點和連線
+    var nodes = tree.nodes(root);
+    var links = tree.links(nodes);
+
+    //重新計算節點的y座標
+    nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+    /*
+    （2） 節點的處理
+    */
+
+    //取得節點的update部分
+    var nodeUpdate = svg.selectAll(".node")
+                        .data(nodes, function(d){ return d.name; });
+
+    //取得節點的enter部分
+    var nodeEnter = nodeUpdate.enter();
+
+    //取得節點的exit部分
+    var nodeExit = nodeUpdate.exit();
+
+    //1. 節點的 Enter 部分的處理辦法
+    var enterNodes = nodeEnter.append("g")
+                    .attr("class","node")
+                    .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+                    .on("click", function(d) { toggle(d); redraw(d); });
+
+    enterNodes.append("circle")
+      .attr("r", 0)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+    enterNodes.append("text")
+        .attr("x", function(d) { return d.children || d._children ? -14 : 14; })
+        .attr("dy", ".35em")
+        .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+        .text(function(d) { return d.name; })
+        .style("fill-opacity", 0);
+
+
+    //2. 節點的 Update 部分的處理辦法
+    var updateNodes = nodeUpdate.transition()
+                        .duration(500)
+                        .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+    updateNodes.select("circle")
+      .attr("r", 8)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+    updateNodes.select("text")
+      .style("fill-opacity", 1);
+
+    //3. 節點的 Exit 部分的處理辦法
+    var exitNodes = nodeExit.transition()
+                      .duration(500)
+                      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+                      .remove();
+
+    exitNodes.select("circle")
+      .attr("r", 0);
+
+    exitNodes.select("text")
+      .style("fill-opacity", 0);
+
+    /*
+    （3） 連線的處理
+    */
+
+    //取得連線的update部分
+    var linkUpdate = svg.selectAll(".link")
+                        .data(links, function(d){ return d.target.name; });
+
+    //取得連線的enter部分
+    var linkEnter = linkUpdate.enter();
+
+    //取得連線的exit部分
+    var linkExit = linkUpdate.exit();
+
+    //1. 連線的 Enter 部分的處理辦法
+    linkEnter.insert("path",".node")
+          .attr("class", "link")
+          .attr("d", function(d) {
+              var o = {x: source.x0, y: source.y0};
+              return diagonal({source: o, target: o});
+          })
+          .transition()
+          .duration(500)
+          .attr("d", diagonal);
+
+    //2. 連線的 Update 部分的處理辦法
+    linkUpdate.transition()
+        .duration(500)
+        .attr("d", diagonal);
+
+    //3. 連線的 Exit 部分的處理辦法
+    linkExit.transition()
+          .duration(500)
+          .attr("d", function(d) {
+            var o = {x: source.x, y: source.y};
+            return diagonal({source: o, target: o});
+          })
+          .remove();
+
+
+    /*
+    （4） 將目前的節點座標儲存在變數x0、y0裡，以備更新時使用
+    */
+    nodes.forEach(function(d) {
+      d.x0 = d.x;
+      d.y0 = d.y;
+    });
+
+  }
+
+  //切換開關，d 為被點擊的節點
+  function toggle(d){
+    if(d.children){ //若果有子節點
+      d._children = d.children; //將該子節點儲存到 _children
+      d.children = null;  //將子節點設定為null
+    }else{  //若果沒有子節點
+      d.children = d._children; //從 _children 取回原來的子節點 
+      d._children = null; //將 _children 設定為 null
+    }
+  }
+
+});
+
+</script>
+		
+</body>  
+</html>  

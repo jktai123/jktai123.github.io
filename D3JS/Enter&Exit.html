@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Enter and Exit</title>
+</head>
+<body>
+    <!-- <p>AAAA</p> -->
+    <script>
+        var data=[10];
+        var canvas=d3.select('body')
+                    .append('svg')
+                    .attr('width',500)
+                    .attr('height',500)  ;
+         var circle1 = canvas.append('circle')
+                .attr('cx', 30)
+                .attr('cy', 200)
+                .attr('r', 20)
+                ; 
+        var circle2 = canvas.append('circle')
+                .attr('cx', 30)
+                .attr('cy', 100)
+                .attr('r', 20)
+                ; 
+        var circles=canvas.selectAll('circle')
+                    .data(data)
+                    .attr('fill', 'green')
+                    // .enter()
+                    .exit()
+                        // .append('circle')
+                        // .attr('cx',50)
+                        // .attr('cy',50)
+                        // .attr('r',20)
+                        .attr('fill', 'red');
+        circle2.transition()
+                .attr('cx',60)
+                .attr('cy',150)
+                .duration(1500)
+                .delay(2000)
+                .on("start", function () { d3.select(this).attr('fill', 'green'); })
+                
+                 
+                 ;
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"name": "vue",
+	"title": "Vue.js",
+	"version": "2.4.4",
+	"description": "Composable MVVM library.",
+	"main": "index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/hughsk/envify.git"
+	},
+	"dependencies": {
+		"vue": "2.4.4"
+	},
+	"readme": "ERROR: No README data found!"
+}

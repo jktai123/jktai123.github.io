@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>d3單色圖</title>
+    <style>
+      
+.brush .selection {
+  fill: none;
+}
+
+    </style>
+</head>
+<body>
+    
+<svg width="960" height="800">
+    <filter id="monochrome">
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+    </filter>
+    <defs>
+        <image id="image" width="100%" height="100%" xlink:href="http://bkimg.cdn.bcebos.com/pic/e850352ac65c1038a26f9366ba119313b07e8905"></image>
+    </defs>
+    <use id="monochrome-image" filter="url(#monochrome)" xlink:href="#image"></use>
+    <use id="color-image" xlink:href="#image"></use>
+</svg>
+    <script>
+    
+    var brush = d3.brush();
+
+    var svg = d3.select("svg");
+
+    svg.append("g")
+        .attr("class", "brush")
+        .call(brush)
+        .call(brush.move, [[307, 167], [611, 539]])
+        .select(".selection")
+        .attr("id", "brush-selection");
+
+    svg.append("clipPath")
+        .attr("id", "brush-clip")
+        .append("use")
+        .attr("xlink:href", "#brush-selection");
+
+    svg.select("#color-image")
+        .attr("clip-path", "url(#brush-clip)");
+    </script>
+    
+</body>
+</html>

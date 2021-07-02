@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>WMS example - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 800px;
+			height: 500px;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+<script type="text/javascript">
+
+	var map = L.map('map', {
+		center:[24.78449, 121.372423] , // [-17, -67],
+		zoom: 9
+	});
+
+	var basemaps = {
+		Topography: L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+			layers: 'TOPO-WMS'
+		}),
+		Topography2: L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+			layers: 'TOPO-OSM-WMS'
+		}),
+
+		Places: L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+			layers: 'OSM-Overlay-WMS'
+		}),
+
+		'Topography, then places': L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+			layers: 'TOPO-WMS,OSM-Overlay-WMS'
+		}),
+
+		'Places, then topography': L.tileLayer.wms('http://ows.mundialis.de/services/service?', {
+			layers: 'OSM-Overlay-WMS,TOPO-WMS'
+		})
+	};
+
+	L.control.layers(basemaps, {}, {collapsed: false}).addTo(map);
+
+	basemaps.Topography.addTo(map);
+
+</script>
+
+
+
+</body>
+</html>

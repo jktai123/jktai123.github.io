@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/topojson@3"></script> -->
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    
+    <title>d3台灣地圖
+
+    </title>
+    <style>
+      .counties {
+  fill:#33474e;
+}
+.counties :hover {
+  fill: #7f9ca7;
+  transition: 0.5s;
+}
+.county-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.5px;
+}
+
+    </style>
+</head>
+<body>
+   
+    <div id="app">
+        <svg width='500' height='500' style='border:1px solid #00000060;'>
+            <g class="counties"></g>
+            <path class="county-borders"></path>
+        </svg>
+    </div>
+    <script>
+    
+    let vm = new Vue({
+        el: "#app",
+        data: {
+            taiwanCountry: []
+        },
+        mounted() {
+            fetch('TWN_1081121.json').then(res => res.json()).then(result => {
+                console.log(result);
+                this.taiwanCountry = result
+                this.draw(this.taiwanCountry)
+            })
+        },
+        methods: {
+            draw(mapData) {
+                let svg = d3.select('svg')
+                let projection = d3.geoMercator()
+                    .center([123, 24])
+                    .scale(5500);
+                let path = d3.geoPath(projection);
+
+                d3.select('g.counties')
+                    .selectAll("path")
+                    .data(topojson.feature(mapData, mapData.objects["COUNTY_MOI_1081121"]).features)
+                    .enter().append("path")
+                    .attr("d", path);
+
+                d3.select('path.county-borders')
+                    .attr("d", path(topojson.mesh(mapData, mapData.objects["COUNTY_MOI_1081121"], function (a, b) { return a !== b; })));
+
+
+            }
+        }
+    });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,173 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>12.3.1 拖曳餅狀圖</title>  
+  <style>
+
+
+  </style>
+  </head> 
+  <body>  
+		<script src="../../d3/d3.min.js" charset="utf-8"></script>  
+        <script>
+		
+		var width  = 600;	//SVG繪制區域的寬度
+		var height = 600;	//SVG繪制區域的高度
+			
+		var svg = d3.select("body")			//選取<body>
+					.append("svg")			//在<body>中加入<svg>
+					.attr("width", width)	//設定<svg>的寬度屬性
+					.attr("height", height);//設定<svg>的高度屬性
+		
+		//1.確定起始資料
+		var dataset = [ ["小米",60.8] , ["三星",58.4] , ["聯想",47.3] , ["蘋果",46.6] ,
+						["華為",41.3] , ["酷派",40.1] , ["其他",111.5] ];
+		
+		//2.轉換資料
+		var pie = d3.layout.pie()
+					.value(function(d){ return d[1]; });
+						
+		var piedata = pie(dataset);
+
+		console.log(piedata);
+		
+		//3.繪制
+		
+		//字型大小
+		var fontsize = 14;
+		
+		//外半徑和內半徑
+		var outerRadius = 400 / 3;
+		var innerRadius = 0;
+		
+		//建立弧產生器
+		var arc = d3.svg.arc()
+						.innerRadius(innerRadius)
+						.outerRadius(outerRadius);
+		
+		var color = d3.scale.category20();
+		
+		//加入對應數目的弧群組，即<g>元素
+		var arcs = svg.selectAll("g")
+					  .data(piedata)		//綁定轉換後的資料piedata
+					  .enter()
+					  .append("g")
+					  .each(function(d){
+					  	d.dx = width/2;
+					  	d.dy = height/2;
+					  })
+					  .attr("transform","translate("+( width/2 )+","+ ( height/2 ) +")");
+		
+		//繪制弧
+		arcs.append("path")
+			.attr("fill",function(d,i){
+				return color(i);	//設定弧的彩色
+			})
+			.attr("d",function(d){
+				return arc(d);	//使用弧產生器
+			});
+		
+		
+		//繪制弧內的文字
+		arcs.append("text")
+			.attr("transform",function(d){
+				var x = arc.centroid(d)[0] * 1.4;		//文字的x座標
+				var y = arc.centroid(d)[1] * 1.4;		//文字的y座標
+				return "translate(" + x + "," + y + ")";
+			})
+			.attr("text-anchor","middle")
+			.style("font-size",fontsize)
+			.text(function(d){
+				//計算市佔率的百分比
+				var percent = Number(d.value)/d3.sum(dataset,function(d){ return d[1]; }) * 100;
+				
+				//保留1位小數點，尾端加一個百分號傳回
+				return percent.toFixed(1) + "%";
+			});
+
+		
+		//繪制連線弧外文字的直線
+		arcs.append("line")
+			.style("stroke","black")
+			.attr("x1",function(d){ return arc.centroid(d)[0] * 2; })
+			.attr("y1",function(d){ return arc.centroid(d)[1] * 2; })
+			.attr("x2",function(d){ return arc.centroid(d)[0] * 2.2; })
+			.attr("y2",function(d){ return arc.centroid(d)[1] * 2.2; });
+			
+		//繪制連線弧外文字的直線
+		arcs.append("line")
+			.style("stroke","black")
+			.each(function(d){
+				d.textLine = {x1:0, y1:0, x2:0, y2:0};
+			})
+			.attr("x1",function(d){ 
+				d.textLine.x1 = arc.centroid(d)[0] * 2.2;
+				return d.textLine.x1; 
+			})
+			.attr("y1",function(d){ 
+				d.textLine.y1 = arc.centroid(d)[1] * 2.2;
+				return d.textLine.y1; 
+			})
+			.attr("x2",function(d){ 
+				var strLen = getPixelLength(d.data[0],fontsize) * 1.5;
+				var bx = arc.centroid(d)[0] * 2.2;
+				d.textLine.x2 =	bx >= 0 ? bx + strLen : bx - strLen;
+				return d.textLine.x2;
+			})
+			.attr("y2",function(d){
+				d.textLine.y2 =	arc.centroid(d)[1] * 2.2;
+				return d.textLine.y2; 
+			});
+			
+		//繪制弧外文字
+		arcs.append("text")
+			.attr("transform",function(d){
+				var x = 0;
+				var y = 0;
+				x = ( d.textLine.x1 + d.textLine.x2 ) / 2;
+				y = d.textLine.y1;
+				y = y > 0 ? y + fontsize * 1.1 : y - fontsize * 0.4;
+				return "translate(" + x + "," + y + ")";
+			})
+			.style("text-anchor","middle")
+			.style("font-size",fontsize)
+			.text(function(d){
+				return d.data[0];
+			});
+			
+		
+		//4. 交談式
+		var drag = d3.behavior.drag()
+			    	.origin(null)
+					.on("drag", dragmove);
+
+
+		function dragmove(d) {
+			d.dx += d3.event.dx;
+			d.dy += d3.event.dy;
+			d3.select(this)
+				.attr("transform","translate("+d.dx+","+d.dy+")");
+		}
+
+
+		arcs.call(drag);
+
+		
+		function getPixelLength(str,fontsize){
+			var curLen = 0;
+			for(var i=0;i<str.length;i++){
+				var code = str.charCodeAt(i);
+				var pixelLen = code > 255 ? fontsize : fontsize/2;
+				curLen += pixelLen;
+			}
+			return curLen;
+		}
+
+
+
+
+		  
+        </script>  
+		
+    </body>  
+</html>  

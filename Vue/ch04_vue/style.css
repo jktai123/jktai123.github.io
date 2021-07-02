@@ -1,0 +1,24 @@
+body {
+	color: #a9d;
+	padding: 5px 16px;
+	font-size: 14pt;
+	line-height: 150%;
+}
+
+h1 {
+	font-size: 24pt;
+}
+
+p {
+	font-size: 17pt;
+}
+.a {
+	color: red;
+	background: white;
+}
+.b {
+	color: white;
+	background: blue;
+}
+
+

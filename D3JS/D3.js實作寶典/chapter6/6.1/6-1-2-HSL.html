@@ -1,0 +1,32 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>6.1.2 HSL彩色</title>  
+  </head> 
+  <style>
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+
+var hsl = d3.hsl(120,1.0,0.5);
+
+//傳回的物件中，h:120, s:1.0, l:0.714
+console.log( hsl.brighter() );
+
+//傳回的物件中，h:120, s:1.0, l:0.35
+console.log( hsl.darker() );
+
+//傳回的物件中，r:0, g:255, b:0
+console.log( hsl.rgb() );
+
+//輸出#00ff00
+console.log( hsl.toString() );
+
+</script> 
+
+</body>
+</html>

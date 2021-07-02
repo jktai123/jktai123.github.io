@@ -1,0 +1,14 @@
+{
+  "name": "@d3/animated-treemap",
+  "main": "e1f9d9f4b6eb38e7@485.js",
+  "version": "485.0.0",
+  "homepage": "https://observablehq.com/@d3/animated-treemap",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

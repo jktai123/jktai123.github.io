@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <title>Enter and Exit</title>
+</head>
+<body>
+    <!-- <p>AAAA</p> -->
+    <h1>Top Smart Phone</h1>
+    <ul class="items">
+        <li>iPhone 6</li>
+        <li>Galaxy S6</li>
+        <li>LG G3</li>
+        <li>Windows Phone</li>
+        <li>HTC One</li>
+    </ul>
+    <script>
+        var styles=[
+            {
+                'background':'red',
+                'color':'white',
+                'width':'35'
+            },
+            {
+                'background':'yellow',
+                'color':'black',
+                'width':'25'
+            },
+            {
+                'background':'green',
+                'color':'white',
+                'width':'20'
+            },
+            {
+                'background':'black',
+                'color':'white',
+                'width':'40'
+            },
+            {
+                'background':'orange',
+                'color':'white',
+                'width':'15'
+            }
+        ];
+        d3.selectAll('.items li')
+            .data(styles)
+            .style({
+                'font-size':'18px',
+                'padding': '6px',
+                'margins':'4px',
+                'list-style':'none',
+                'background': function (d){
+                    return d.background;
+                },
+                'color': function (d){
+                    return d.color;
+                },
+                'width': function (d){
+                    return d.width+'%';
+                }
+            })
+    </script>
+    
+</body>
+</html>

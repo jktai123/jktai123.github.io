@@ -1,0 +1,57 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>7.4.1 時鍾</title>  
+  </head> 
+  <style>
+  
+.time {
+	font-family: Cursive;
+	font-size: 80px;
+	stroke: rgb(3, 158, 248);
+	stroke-width: 1;
+}
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  	   
+
+var width  = 500;	//SVG繪制區域的寬度
+var height = 500;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+	
+var timeText = svg.append("text")
+					.attr("x",100)
+					.attr("y",100)
+					.attr('fill','#e0a')
+					.attr("class","time")
+					.text(getTimeString());
+
+setInterval(updateTime,1000);
+
+function updateTime(){
+	timeText.text(getTimeString());
+}
+			
+function getTimeString(){
+	var time = new Date();
+	var hours = time.getHours();
+	var minutes = time.getMinutes();
+	var seconds = time.getSeconds();
+	hours = hours < 10 ? "0" + hours : hours;
+	minutes = minutes < 10 ? "0" + minutes : minutes;
+	seconds = seconds < 10 ? "0" + seconds : seconds;
+	return hours + ":" + minutes + ":" + seconds;
+}
+			
+</script> 
+
+</body>
+
+</html>

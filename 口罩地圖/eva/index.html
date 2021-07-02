@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>口罩地圖</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <!-- <div class="loadingImg"></div> -->
+        <!-- <div class="title">
+            <h1 class="titleEn"><a href="https://project-maskmap-eva.surge.sh/">Mask Map</a></h1>
+            <h1 class="titleCh"><span>口罩</span>地圖</h1>
+        </div> -->
+        <div class="content clearfix">
+            <div id="map"></div>
+            <div class="leftBar">
+                <div class="info">
+                    <h2 class="todayDay"></h2>
+                    <h5 class="todayDate"></h5>
+                    <p>身分證末碼為 <span class="buyId"></span> 可購買</p>
+                    <select name="county" class="county">
+                    </select>
+                    <select name="town" class="town">
+                    </select>
+                </div>
+
+
+                <div class="listBox">
+                    <ul class="listMenu"></ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./all.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>8.3.1 拖曳</title>  
+  </head> 
+  <style>
+  
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 400;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+			
+var circles = [ { cx: 150, cy:200, r:30 },
+				{ cx: 250, cy:200, r:30 }];
+			
+var drag = d3.behavior.drag()		//建立一個拖曳行為
+				.origin(function(d,i){		//設定起點座標
+					return {x: d.cx ,y: d.cy } 	//起點座標為被拖曳物體的圓心座標
+				})
+				.on("dragstart", function(d){	//dragstart的監聽器	
+					console.log("拖曳開始");
+					d3.select(this)		//選取目前被拖曳的元素
+						//將d3.event.x給予值給被綁定的資料，再將cx屬性設定為該值
+						.attr("fill", 'red')	
+				})
+				.on("dragend", function(d){		//dragend的監聽器
+					console.log("拖曳結束");
+					d3.select(this)		//選取目前被拖曳的元素
+						//將d3.event.x給予值給被綁定的資料，再將cx屬性設定為該值
+						.attr("fill", 'blue');
+				})
+				.on("drag", function(d){		//drag的監聽器
+					console.log(d3.event);
+					d3.select(this)		//選取目前被拖曳的元素
+						//將d3.event.x給予值給被綁定的資料，再將cx屬性設定為該值
+						.attr("cx", d.cx = d3.event.x )
+						//將d3.event.y給予值給被綁定的資料，再將cy屬性設定為該值
+						.attr("cy", d.cy = d3.event.y );
+				}); 
+		
+svg.selectAll("circle")
+			.data(circles)		//綁定資料
+			.enter()
+			.append("circle")
+			.attr("cx",function(d){ return d.cx; })
+			.attr("cy",function(d){ return d.cy; })
+			.attr("r",function(d){ return d.r; })
+			.attr("fill","blue")
+			.call(drag);		//呼叫drag函數
+					
+	
+</script> 
+
+</body>
+
+</html>

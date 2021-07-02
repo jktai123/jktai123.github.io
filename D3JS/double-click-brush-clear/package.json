@@ -1,0 +1,14 @@
+{
+  "name": "@d3/double-click-brush-clear",
+  "main": "663f1a26cac5a5c3@103.js",
+  "version": "103.0.0",
+  "homepage": "https://observablehq.com/@d3/double-click-brush-clear",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

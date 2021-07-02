@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+#tooltip{
+    position: absolute;
+    max-width: 220px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px rgba(0,0,0, .16);
+    pointer-events: none;
+    transition: opacity .2s;
+    opacity: 1;
+    font-size: 11px;
+}
+#tooltip.hidden{
+    opacity: 0;
+}
+</style>
+<body>
+
+<!-- <svg width="960" height="500"></svg> -->
+<!--  <button class="update_btn">update資料</button> -->
+<div class="demo">
+<div id="tooltip">
+	<div class="name"></div>
+	<div class="value"></div>
+</div>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+var urld='https://data.epa.gov.tw/api/v1/stat_p_133?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json'
+urld='	https://data.epa.gov.tw/api/v1/stat_p_132?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json'
+$(function() {  
+
+//定義json 路徑
+var path = {
+    url: urld,
+    dataType: 'json',
+  }
+var data = "";
+var w = 450, h = 450;
+var svg = d3.select('.demo').append('svg') //插入SVG
+  .attr('width', w)
+  .attr('height', h);
+
+$.ajax(path)
+  .done(function (d) {   //如果成功
+    data = d;
+    console.log(data)
+    runChart('102年')
+  })
+  .fail(function(jqxhr, textStatus, error){
+    console.log('GG,沒戲唱了'); //失敗
+});
+
+runChart = function(filter){
+
+  var color = d3.scale.category10(); //D3 內存產生顏色的function
+  var pie = d3.layout.pie() //建立D3.layout pie物件
+    .sort(null)
+    .value(function(d) {return d.value2; });
+
+  var outerRadius = h / 2 , innerRadius = h / 4; //弧形的位置
+  var arc = d3.svg.arc()
+    .innerRadius(innerRadius)
+    .outerRadius(outerRadius) //定義內外圈位置
+
+  var arcs = svg.selectAll('g.arc')
+    .data(pie(dataFilter(data, filter))) //將資料放入pie
+    .enter()
+    .append('g') //塞好'g'
+    .attr('class', 'arc') //準備好Class
+    .attr('transform', 'translate(' + outerRadius + ',' + outerRadius + ')') //移動圓心的位置
+
+  arcs.append('path')
+    .attr('fill', function(d,i){
+      return color(i); //招喚前面的color function
+    })
+    .attr('d', arc) // 前面的 arc function
+    //需要 pie()所產生出來得值
+
+  arcs.append('text')
+    .attr('transform', function(d){
+      return 'translate('+ arc.centroid(d) +')';
+      //centroid()任何形狀的中心點
+    })
+    .attr('text-anchor', 'middle')
+    .text(function(d){
+      return  d.data.item2 + d.data.value2; //在每個形狀的中央插入文字
+    })
+    .attr('fill', 'white');
+
+  svg.selectAll('.arc').on('mouseover', function(d){ //滑鼠事件
+    mousePos = d3.mouse(this); //取得滑鼠座標
+    var xPos = mousePos[0] + outerRadius; //修正滑鼠座標
+    var yPos = mousePos[1] + outerRadius; //修正滑鼠座標
+
+    d3.select('#tooltip') //將Tooltip補上資料
+      .style({
+        'left': xPos + 'px', //加上位置
+        'top': yPos + 'px'
+      })
+      .classed('hidden', false)
+    d3.select('#tooltip .name').html(d.data.item2) //插入名稱
+    d3.select('#tooltip .value').html(d.data.value2 )
+  }).on('mouseout', function(d){
+    d3.select('#tooltip').classed('hidden', true) //切換顯示及隱藏
+  });
+
+};
+
+dataFilter = function(data, filter){ //過濾部分資料
+  var newData = [];
+  $.each(data.records, function(i,d){
+    
+    if (d.item1 == filter){
+      newData.push(d);
+      console.log(i,' aaaa--- ',d);
+    }
+  });
+  return newData
+};
+
+
+
+});
+
+
+</script>
+</body>

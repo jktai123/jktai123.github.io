@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>KittenLayer - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 800px;
+			height: 500px;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+<script type="text/javascript">
+
+	var map = L.map('map', {
+		crs: L.CRS.Simple,
+		center: [0, 0],
+		zoom: 5
+	});
+
+	L.TileLayer.Kitten = L.TileLayer.extend({
+		getTileUrl: function(coords) {
+			var i = Math.ceil( Math.random() * 10 );
+			return "https://placekitten.com/256/256?image="+ i;
+		},
+        getAttribution: function() {
+            return "<a href='https://placekitten.com/attribution.html'>PlaceKitten</a>"
+        }
+	});
+
+	L.tileLayer.kitten = function() {
+		return new L.TileLayer.Kitten();
+	}
+
+	map.addLayer( L.tileLayer.kitten() );
+	
+</script>
+
+
+
+</body>
+</html>

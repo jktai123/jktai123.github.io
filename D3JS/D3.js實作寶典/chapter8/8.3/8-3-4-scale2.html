@@ -1,0 +1,68 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>8.3.3 縮放2</title>  
+  </head> 
+  <style>
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 400;	//SVG繪制區域的寬度
+var height = 400;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+			
+var x = d3.scale.linear()
+    .domain([0, width])
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .domain([0, height])
+    .range([0, height]);
+			
+var circles = [ { cx: 150, cy:200, r:30 },
+				{ cx: 220, cy:200, r:30 },
+				{ cx: 150, cy:270, r:30 },
+				{ cx: 220, cy:270, r:30 }];
+		
+var zoom = d3.behavior.zoom()		//建立一個縮放行為
+			.x(x)
+			.y(y)
+			.scaleExtent([1, 10])	//設定縮放的範圍
+			.on("zoom", function(d){
+				console.log("x 的定義域：" + x.domain());
+				console.log("x 的值域：" + x.range());
+				console.log("y 的定義域：" + y.domain());
+				console.log("y 的值域：" + y.range());
+				d3.select(this).attr("transform", 
+					"translate(" + d3.event.translate + ")" +	//平移量
+					"scale(" + d3.event.scale + ")");	//縮放量
+			});
+			
+		
+var g = svg.append("g")
+			.call(zoom);
+		
+var circles = g.selectAll("circle")
+				.data(circles)
+				.enter()
+				.append("circle")
+				.attr("cx",function(d){ return d.cx; })
+				.attr("cy",function(d){ return d.cy; })
+				.attr("r",function(d){ return d.r; })
+				.attr("fill","black");
+				
+
+	
+</script> 
+
+</body>
+
+</html>

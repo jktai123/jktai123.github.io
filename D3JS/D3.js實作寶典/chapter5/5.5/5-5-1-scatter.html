@@ -1,0 +1,98 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>5.5.1 散點圖的製作</title>  
+  </head> 
+  <style>
+  
+.axis path,
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+//圓心資料
+var center = [[0.5,0.5],[0.7,0.8],[0.4,0.9],[0.11,0.32],[0.88,0.25],
+			   [0.75,0.12],[0.5,0.1],[0.2,0.3],[0.4,0.1],[0.6,0.7]];
+
+var width  = 500;	//SVG繪制區域的寬度
+var height = 500;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+			
+//x軸寬度
+var xAxisWidth = 300;
+
+//y軸寬度
+var yAxisWidth = 300;
+			
+//x軸比例尺
+var xScale = d3.scale.linear()
+				.domain([0, 1.2 * d3.max(center,function(d){ return d[0]; })])
+				.range([0,xAxisWidth]);
+
+//y軸比例尺
+var yScale = d3.scale.linear()
+				.domain([0, 1.2 * d3.max(center,function(d){ return d[1]; })])
+				.range([0,yAxisWidth]);			
+	
+//外邊框
+var padding = { top: 30 , right: 30, bottom: 30, left: 30 };
+
+//繪制圓
+var cirlce = svg.selectAll("circle")
+				.data(center)		//綁定資料
+				.enter()			//取得enter部分
+				.append("circle")	//加入circle元素，使其與綁定陣列的長度一致
+				.attr("fill","black")		//設定彩色為black
+				.attr("cx", function(d){		//設定圓心的x座標
+					return padding.left + xScale(d[0]);
+				})
+				.attr("cy", function(d){		//設定圓心的y座標
+					return height- padding.bottom - yScale(d[1]);
+				})
+				.attr("r", 5 );
+				
+
+var xAxis = d3.svg.axis()
+				.scale(xScale)
+				.orient("bottom")
+				.ticks(5);
+
+yScale.range([yAxisWidth,0]);
+				
+var yAxis = d3.svg.axis()
+				.scale(yScale)
+				.orient("left")
+				.ticks(5);
+				
+svg.append("g")
+		.attr("class","axis")
+		.attr("transform","translate(" + padding.left + "," + (height - padding.bottom) +  ")")
+		.call(xAxis);
+			
+svg.append("g")
+		.attr("class","axis")
+		.attr("transform","translate(" + padding.left + "," + (height - padding.bottom - yAxisWidth) +  ")")
+		.call(yAxis); 
+	
+</script> 
+
+</body>
+
+</html>

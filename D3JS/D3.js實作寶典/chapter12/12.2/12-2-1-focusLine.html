@@ -1,0 +1,245 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>12.2.1 聚合線圖的座標軸對齊線</title>  
+  <style>
+	.axis path,
+	.axis line{
+		fill: none;
+		stroke: black;
+		shape-rendering: crispEdges;
+	}
+	 
+	.axis text {
+		font-family: sans-serif;
+		font-size: 11px;
+	}
+
+	.overlay {
+		fill: none;
+		pointer-events: all;
+	}
+	
+	.focusCircle circle {
+		fill: black;
+		stroke: black;
+	}
+
+	.focusCircle text {
+		fill: black;
+		font-family: arial;
+		font-size: 12px;
+		text-anchor: begin;
+	}
+
+	.focusLine line {
+		stroke: black;
+		stroke-dasharray: 10,10;
+	}
+  </style>
+  </head> 
+<body>
+
+<script src="http://d3js.org/d3.v3.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVG繪制區域的寬度
+var height = 500;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+
+
+var dataset = [
+	{
+		country: "china",
+		gdp: [[2000,11920],[2001,13170],[2002,14550],
+			[2003,16500],[2004,19440],[2005,22870],
+			[2006,27930],[2007,35040],[2008,45470],
+			[2009,51050],[2010,59490],[2011,73140],
+			[2012,83860],[2013,103550]]
+	}
+];
+
+
+//外邊框
+var padding = { top: 50 , right: 50, bottom: 50, left: 50 };
+
+//計算GDP的最大值				
+var gdpmax = 0;
+for(var i = 0; i < dataset.length; i++){
+	var currGdp = d3.max( dataset[i].gdp , function(d) { return d[1]; } );
+	if( currGdp > gdpmax )
+		gdpmax = currGdp;
+}
+
+var xScale = d3.scale.linear()
+					.domain([2000,2013])
+					.range([ 0 , width - padding.left - padding.right ]);
+					
+var yScale = d3.scale.linear()
+					.domain([0,gdpmax * 1.1])
+					.range([ height - padding.top - padding.bottom , 0 ]);
+
+//建立一個直線產生器
+var linePath = d3.svg.line()
+				.x(function(d){ return xScale(d[0]); })
+				.y(function(d){ return yScale(d[1]); })
+				.interpolate("basis");
+
+//定義兩個彩色				
+var colors = [ d3.rgb(0,0,255) , d3.rgb(0,255,0) ];
+				
+//加入路徑
+svg.selectAll("path")	//選取<svg>中所有的<path>
+	.data(dataset)		//綁定資料
+	.enter()			//選取enter部分
+	.append("path")		//加入足夠數量的<path>元素
+	.attr("transform","translate(" + padding.left + "," +  padding.top  +")")
+	.attr("d", function(d){
+		return linePath(d.gdp);		//傳回直線產生器得到的路徑
+	})	
+	.attr("fill","none")
+	.attr("stroke-width",3)
+	.attr("stroke",function(d,i){
+		return colors[i];
+	});
+
+//焦點的元素
+var focusCircle = svg.append("g")
+      .attr("class", "focusCircle")
+      .style("display", "none");
+
+focusCircle.append("circle")
+      .attr("r", 4.5);
+
+focusCircle.append("text")
+      .attr("dx", 10)
+      .attr("dy", "1em");
+
+//對齊線的元素
+var focusLine = svg.append("g")
+				.attr("class", "focusLine")
+      			.style("display", "none");
+	
+var vLine = focusLine.append("line");
+var hLine = focusLine.append("line");
+
+	
+//加入一個透明的監視滑鼠事件用的矩形
+svg.append("rect")
+	.attr("class","overlay")
+	.attr("x", padding.left)
+	.attr("y", padding.top)
+	.attr("width",width - padding.left - padding.right)
+	.attr("height",height - padding.top - padding.bottom)
+	.on("mouseover", function() { 
+		focusCircle.style("display", null);
+		focusLine.style("display", null); 
+	})
+    .on("mouseout", function() { 
+    	focusCircle.style("display", "none"); 
+    	focusLine.style("display", "none"); 
+    })
+    .on("mousemove", mousemove);
+	
+function mousemove() {
+	/* 當滑鼠在透明矩形內滑動時呼叫 */
+	
+	//聚合線的源陣列
+	var data = dataset[0].gdp;
+	
+	//取得滑鼠相對於透明矩形左上角的座標，左上角座標為(0,0)
+	var mouseX = d3.mouse(this)[0] - padding.left;
+	var mouseY = d3.mouse(this)[1] - padding.top;
+    
+	//透過比例尺的反函數計算原資料中的值，例如x0為某個年份，y0為GDP值
+	var x0 = xScale.invert( mouseX );
+	var y0 = yScale.invert( mouseY );
+	
+	//對x0四捨五入，若果x0是2005.6，則傳回2006；若果是2005.2，則傳回2005
+	x0 = Math.round(x0);
+	
+	//查詢在原陣列中x0的值，並傳回索引號
+	var bisect = d3.bisector( function(d) { return d[0]; }).left;
+	var index = bisect(data, x0) ;
+
+	//從資料中取得年份和GDP值
+	var x1 = data[index][0];
+	var y1 = data[index][1];
+	
+	//分別用x軸和y軸的比例尺，計算焦點的位置
+	var focusX = xScale(x1) + padding.left;
+	var focusY = yScale(y1) + padding.top;
+	
+	//透過平移，使焦點搬移到指定位置
+	focusCircle.attr("transform","translate(" + focusX + "," + focusY + ")");
+	
+	//設定焦點的文字訊息
+	focusCircle.select("text").text( x1 + "年的GDP： " + y1 + "億美元");
+
+	//設定垂直對齊線的起點和終點
+	vLine.attr("x1", focusX)
+		.attr("y1",focusY)
+		.attr("x2",focusX)
+		.attr("y2",height - padding.bottom);
+
+	//設定水平對齊線的起點和終點
+	hLine.attr("x1", focusX)
+		.attr("y1",focusY)
+		.attr("x2",padding.left)
+		.attr("y2",focusY);
+}
+
+var markStep = 80;
+	
+var gMark = svg.selectAll(".gMark")
+				.data(dataset)
+				.enter()
+				.append("g")
+				.attr("transform",function(d,i){
+					return "translate(" + (padding.left + i * markStep)  + "," + ( height - padding.bottom + 40)  +")";
+				});
+	
+gMark.append("rect")
+		.attr("x",0)
+		.attr("y",0)
+		.attr("width",10)
+		.attr("height",10)
+		.attr("fill",function(d,i){ return colors[i]; });
+
+gMark.append("text")
+		.attr("dx",15)
+		.attr("dy",".5em")
+		.attr("fill","black")
+		.text(function(d){ return d.country; });		
+
+//x軸
+var xAxis = d3.svg.axis()
+				.scale(xScale)
+				.ticks(5)
+				.tickFormat(d3.format("d"))
+				.orient("bottom");
+	
+//y軸
+var yAxis = d3.svg.axis()
+				.scale(yScale)
+				.orient("left");
+				
+svg.append("g")
+		.attr("class","axis")
+		.attr("transform","translate(" + padding.left + "," + (height - padding.bottom) +  ")")
+		.call(xAxis);
+			
+svg.append("g")
+		.attr("class","axis")
+		.attr("transform","translate(" + padding.left + "," + padding.top +  ")")
+		.call(yAxis); 
+	
+
+</script> 
+
+</body>
+</html>

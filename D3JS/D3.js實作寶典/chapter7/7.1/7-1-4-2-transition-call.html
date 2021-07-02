@@ -1,0 +1,56 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>7.1.4.2 過渡的call</title>  
+  </head> 
+  <style>
+  .axis path,
+.axis line{
+	fill: none;
+	stroke: black;
+	shape-rendering: crispEdges;
+}
+ 
+.axis text {
+	font-family: sans-serif;
+	font-size: 11px;
+}
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVG繪制區域的寬度
+var height = 500;	//SVG繪制區域的高度
+	
+var svg = d3.select("body")			//選取<body>
+			.append("svg")			//在<body>中加入<svg>
+			.attr("width", width)	//設定<svg>的寬度屬性
+			.attr("height", height);//設定<svg>的高度屬性
+			
+var xScale = d3.scale.linear()
+				.domain([0,10])
+				.range([0,300]);
+				
+var xAxis = d3.svg.axis()
+				.scale(xScale)
+				.orient("bottom");
+				
+var g = svg.append("g")
+			.attr("class","axis")
+			.attr("transform","translate(50,200)")
+			.call(xAxis);
+
+xScale.domain([0,30]);
+			
+g.transition()
+	.duration(2000)
+	.call(xAxis);
+		
+
+</script> 
+
+</body>
+
+</html> 

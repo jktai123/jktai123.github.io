@@ -1,0 +1,64 @@
+<html>  
+  <head>  
+        <meta charset=big5"utf-8">  
+        <title>7.1.2.3 text�Mtween</title>  
+  </head> 
+  <style>
+  </style>
+<body>
+
+<script src="../../d3/d3.min.js" charset="utf-8"></script> 
+<script>  
+
+var width  = 500;	//SVGø��ϰ쪺�e��
+var height = 500;	//SVGø��ϰ쪺����
+	
+var svg = d3.select("body")			//���<body>
+			.append("svg")			//�b<body>���[�J<svg>
+			.attr("width", width)	//�]�w<svg>���e���ݩ�
+			.attr("height", height);//�]�w<svg>�������ݩ�
+
+var rect = svg.append("rect")
+				.attr("fill","steelblue")
+				.attr("x",10)
+				.attr("y",10)
+				.attr("width",100)
+				.attr("height",30);
+
+var rectTran = rect.transition()
+					.duration(2000)
+					.attrTween("width",
+						function(d, i, a) {
+							return function(t){
+								return Number(a) + t * 300;
+							}
+						}
+					)
+					.remove();
+					
+var text = svg.append("text")
+				.attr("fill","white")
+				.attr("x",100)
+				.attr("y",10)
+				.attr("dy","1.2em")
+				.attr("text-anchor","end")
+				.text(50);
+
+var initx = text.attr("x");
+var initText = text.text();
+
+var textTran = text.transition()
+					.duration(2000)
+					.tween("text",function(){
+						return function(t){
+							d3.select(this)
+								.attr("x",Number(initx) + t * 300)
+								.text(Math.floor(Number(initText) + t * 300));
+						}
+					})
+					;
+
+</script> 
+
+</body>
+</html>

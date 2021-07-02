@@ -1,0 +1,94 @@
+{
+"name":"如何研讀D3",
+"children":
+[
+	{ 
+	  "name":"預備知識" , 
+  	  "children":
+  	  [
+	  	  	{"name":"HTML & CSS" },
+	  	  	{"name":"JavaScript" },
+	  	  	{"name":"DOM" },
+	  	  	{"name":"SVG" }
+  	  ] 
+  	},
+  	
+	{ 
+		"name":"安裝" , 
+		"children":
+		[
+			{
+				"name":"記事本軟體",
+				"children":
+				[
+					{"name":"Notepad++"},
+					{"name":"EditPlus"},
+					{"name":"Sublime Text"}
+				]
+			},
+			{
+				"name":"伺服器軟體",
+				"children":
+				[
+					{"name":"Apache Http Server"},
+					{"name":"Tomcat"}
+				]
+			},
+			{"name":"下載D3.js"}
+		] 
+	},
+	
+	{ 
+		"name":"入門",
+		"children":
+		[
+			{
+				"name":"選取集",
+				"children":
+				[
+					{"name":"select"},
+					{"name":"selectAll"}
+				]
+			},
+			{
+				"name":"綁定資料",
+				"children":
+				[
+					{"name":"datum"},
+					{"name":"data"}
+				]
+			},
+			{"name":"加入移除元素"},
+			{
+				"name":"簡單圖形",
+				"children":
+				[
+					{"name":"柱形圖"},
+					{"name":"聚合線圖"},
+					{"name":"散點圖"}
+				]
+			},
+			{"name":"比例尺"},
+			{"name":"產生器"},
+			{"name":"過渡"}
+		] 
+	},
+	
+	{ 
+		"name":"進階" , 
+		"children":
+		[
+			{
+				"name":"佈局的套用",
+				"children":
+				[
+					{"name":"餅狀圖"},
+					{"name":"樹狀圖"},
+					{"name":"矩陣樹圖"}
+				]
+			},
+			{"name":"地圖"}
+		]
+	}
+]
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>d3線圖</title>
+    <style>
+        
+
+.xAxis path, .xAxis line, .yAxis path, .yAxis line{
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.xAxis text, .yAxis text {
+  font-family: sans-serif;
+  font-size: 11px;
+}
+    </style>
+</head>
+<body>
+   
+    <!-- <button type="button" onclick="getData()">
+        繪製圖表2
+    </button>
+    <button type="button" onclick="getData1()">
+        繪製圖表
+    </button> -->
+    
+    <script>
+      var width = 400
+        var height = 500
+        var padding = { top: 50, right: 50, bottom: 50, left: 50 }
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width)
+            .attr("height", height)
+
+    //    svg.append("rect")
+    //         .attr("stroke", "black")
+    //         .attr("stroke-width", 3)
+    //         .attr("fill", "green")
+    //         .attr("width", 100)
+    //         .attr("height", 100)
+    //         .attr("transform", "translate(10,10)")
+    //         .transition()
+    //         .attr("transform", "translate(50,50)")
+
+        var startWidth = 100
+        var endWidth = 300
+        d3.interval(function () {
+        // var svg = d3.select("body").append("svg")
+        //         .attr("width", 400)
+        //         .attr("height", 200)
+
+            svg
+                .append("rect")
+                .attr("fill", "steelblue")
+                .attr("x", 10)
+                .attr("y", 10)
+                .attr("width", startWidth)
+                .attr("height", 30)
+                
+                
+
+            svg.append("text")
+                .attr("fill", "white")
+                .attr("x", startWidth)
+                .attr("y", 10)
+                .attr("dy", "1.2em")
+                .attr("text-anchor", "end")
+                .text(startWidth)
+                
+                
+        d3.transition()
+                .duration(1500)
+                .tween("move", function () {
+                    return function (t) {
+                        var num = startWidth + t * (endWidth - startWidth) // t為0時等於startWidth，t為1時等於endWidth
+
+                        d3.select("rect")
+                            .attr("width", num)
+
+                        d3.select("text")
+                            .attr("x", num)
+                            .text(Math.floor(num))
+                    }
+                })
+               svg.append("rect")
+                    .attr("fill", "steelblue")
+                    .attr("x", 10)
+                    .attr("y", 10)
+                    .attr("width", 100)
+                    .attr("height", 30)
+                    .transition()
+                    .duration(1200)
+                    .ease(d3.easeBounce)
+                    .attr("fill", "red")
+                    .attr("width", 200)
+                    .attr("y", 100)
+                    .attr("x", 160)  
+                
+                    // .remove()
+
+                var interpolate = d3.interpolate('#f00', '#39e')
+                    console.log(interpolate(0.5)) // #994d77
+                    var interpolateRgb = d3.interpolateRgb('#f00', '#39e')
+                    console.log(interpolateRgb(0.5)) // #994d77
+                    var interpolate2 = d3.interpolate('blue', 'green')
+                    console.log(interpolate2(0.5)) // #004080
+                    var interpolateRgb2 = d3.interpolate('blue', 'green')
+                    console.log(interpolateRgb2(0.5)) // #004080
+                    var interpolate3 = d3.interpolate('hsl(120,0.5,0.5)', 'hsl(240,0.5,0.5)')
+                    console.log(interpolate3(0.5)) // #010101
+                    var interpolateRgb3 = d3.interpolateRgb('hsl(120,0.5,0.5)', 'hsl(240,0.5,0.5)')
+                    console.log(interpolateRgb3(0.5)) // #010101
+                    var interpolate4 = d3.interpolate(d3.rgb("blue"), d3.rgb("green"))
+                    console.log(interpolate4(0.5)) // #004080
+                    var interpolateRgb4 = d3.interpolateRgb(d3.rgb("blue"), d3.rgb("green"))
+                    console.log(interpolateRgb4(0.5)) // #004080
+                var interpolate = d3.interpolate(1, 49)
+                    console.log(interpolate(0.3)) // 15.399999999999999
+                    var interpolateN = d3.interpolateNumber(1, 49)
+                    console.log(interpolateN(0.3)) // 15.399999999999999
+                    var interpolateR = d3.interpolateRound(1, 49)
+                    console.log(interpolateR(0.3)) // 15
+                var interpolate = d3.interpolate("1", "49")
+                    console.log(interpolate(0.3)) // (字串) 15.399999999999999
+                    var interpolateN = d3.interpolateNumber("1", "49")
+                    console.log(interpolateN(0.3)) // (數字) 15.399999999999999
+                var interpolateS = d3.interpolateString(1, 49)
+                    console.log(interpolateS(0.5)) // (字串) 25
+                    var interpolateS2 = d3.interpolateString('Hello 10', 'world 20')
+                    console.log(interpolateS2(0.5)) // (字串) world 15
+                var interpolate = d3.interpolate([0, 1], [1, 50])
+                    console.log(interpolate(0.3)) // [0.3, 15.7]
+                    var interpolateS = d3.interpolateString([0, 1], [1, 50])
+                    console.log(interpolateS(0.3)) // 0.3,15.7
+                    var interpolateA = d3.interpolateArray([0, 1], [1, 50])
+                    console.log(interpolateA(0.3)) // [0.3, 15.7]
+                    var interpolateA2 = d3.interpolateArray([0, 1], [1, 50, 100])
+                    console.log(interpolateA2(0.3)) // [0.3, 15.7, 100]
+               svg.append("rect")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 3)
+                    .attr("fill", "yellow")
+                    .attr("width", 100)
+                    .attr("height", 100)
+                    .attr("transform", "translate(10,10)")
+                    .transition()
+                    .duration(1200)
+                    
+                    .attr("transform", "translate(150,50)")
+                    // .remove();
+
+                 }, 1200)
+                 ;
+
+    </script>
+    
+</body>
+</html>

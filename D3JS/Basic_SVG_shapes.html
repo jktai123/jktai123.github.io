@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Basic SVG shapes</title>
+</head>
+<body>
+    <button type="button" onclick="draw()">
+        繪製圖表
+    </button>
+    <button type="button" onclick="getData()">
+        繪製圖表2
+    </button>
+    <button type="button" onclick="getData2()">
+        繪製圖表3
+    </button>
+    <p>1</p>
+    <p>2</p>
+    
+    <h4>a</h4>
+    <h4>b</h4>
+    <h4>c</h4>
+    <!-- <p>AAAA</p> -->
+    <script>
+        // d3.select('body')
+        //     .append('h1')
+        //     .style('color','red')
+        //     .text('AAAABBB');
+        var data = [0.26, 0, 0.5, -0.8, 0.13, 0.9]
+
+            var result = data
+                .filter(function (d) {
+                    return d > 0;
+                })
+                .sort(function (a, b) {
+                    return a-b;
+                })
+                .map(function (d, i) {
+                    return (d * 100) + '%';
+                })
+
+            console.log(result);
+        // var dataSet = ["蘋果", "香蕉", "芭樂", "西瓜"]
+
+        //     var p = d3.select("body").selectAll("p")
+        //         console.log('p:',p);
+        //     p.data(dataSet)
+        //         .enter()
+        //         .append("p")
+        //         .text(function (d, i) {
+        //             console.log('d:',d);
+        //             console.log('p:', p);
+        //             return d + " " + i
+        //         })
+                
+    var dataSet = ["蘋果", "香蕉", "芭樂", "西瓜"]
+
+    var p = d3.select("body").selectAll("p")
+
+    var update = p.data(dataSet);
+    var enter = update.enter();
+    var exit = update.exit();
+
+    update
+        .text(function (d, i) {
+            console.log('Update d:',d,'i:',i);
+            return d + " " + i;
+
+        })
+
+    enter
+        .append("p")
+        .text(function (d, i) {
+            console.log('Enter d:', d, 'i:', i);
+            return d + " " + i
+        })
+
+    exit.remove()
+        var dataSet = [70, 130, 120, 95, 80, 170, 143,20]
+        var width = 400 // svg寬度
+            var height = 400 // svg寬度
+            var padding = {
+                top: 20,
+                right: 20,
+                bottom: 20,
+                left: 20
+            } // 內距
+            var graphicHeight = height - padding.top - padding.bottom // 圖表高度為svg高度扣掉內距
+            var rectStep = 35 // 各別長條圖的距離
+            var rectWidth = 30 // 長條圖的寬度
+            var maxValue = 200 // 數值最大值
+            var color = d3.scaleLinear()
+                    .domain([0, maxValue])
+                    .range(["red", 'blue']);
+            
+
+            var svg = d3.select("body")
+                    .append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+            var rect = svg.selectAll("rect")
+                    .data(dataSet)
+                    .enter()
+                    .append("rect")
+                    .attr("fill", "steelblue")
+                    
+                    .attr("x", function (d, i) {
+                        return padding.left + i * rectStep
+                    })
+                    .attr("y", function (d) {
+                        return height - padding.bottom - graphicHeight * (d / maxValue) // 畫面高度扣掉長條圖高度作為繪製長條圖的起點
+                    })
+                    .attr("width", rectWidth)
+                    .attr("height", function (d) {
+                        return graphicHeight * (d / maxValue) // 使用maxValue最大值作為畫面高度100%計算該筆資料佔畫面的百分比
+                    })    
+                var text = svg.selectAll("text")
+                        .data(dataSet)
+                        .enter()
+                        .append("text")
+                        .attr("fill", "white")
+                        .attr("font-size", "14px")
+                        .attr("text-anchor", "middle")
+                        .attr("x", function (d, i) {
+                            return padding.left + i * rectStep
+                        })
+                        .attr("y", function (d) {
+                            //return height - padding.bottom - d
+                            return height - padding.bottom - graphicHeight * (d / maxValue)
+                        })
+                        .attr("dx", rectWidth / 2)
+                        .attr("dy", "1em")
+                        .text(function (d) {
+                            return d
+                        })
+
+         function fillText(target) {
+            target.attr("fill", "white")
+                 .attr("font-size", "14px")
+                 .attr("text-anchor", "middle")
+                 .attr("x", function (d, i) {
+                     return padding.left + i * rectStep
+                 })
+                 .attr("y", function (d) {
+                     //return height - padding.bottom - d
+                     return height - padding.bottom - graphicHeight * (d / maxValue)
+                 })
+                 .attr("dx", rectWidth / 2)
+                 .attr("dy", "1em")
+                 .text(function (d) {
+                     return d
+                 })
+             
+         }
+         function fillRect(target) {
+                 var linear = d3.scaleLinear()
+                        .domain([0, maxValue])
+                        .range([0, graphicHeight])
+                target.attr("fill", "steelblue")
+                    .attr('fill', function (d) { return color(d); })
+                    .attr("x", function (d, i) {
+                        return padding.left + i * rectStep
+                    })
+                    .attr("y", function (d) {
+                        return height - padding.bottom - graphicHeight * (d / maxValue) // 畫面高度扣掉長條圖高度作為繪製長條圖的起點
+                    })
+
+                    .attr("width", rectWidth)
+                    .attr("x", function (d, i) {
+                        return padding.left + i * rectStep
+                    })
+                    .attr("y", function (d) {
+                        return height - padding.bottom - linear(d)
+                    })
+                    .attr("height", function (d) {
+                        return graphicHeight * (d / maxValue) // 使用maxValue最大值作為畫面高度100%計算該筆資料佔畫面的百分比
+                                        })
+                    .attr("height", function (d) {
+                        return linear(d)
+                    })
+            }
+            function draw() {
+                var updateRect = svg.selectAll("rect").data(dataSet)
+                var enterRect = updateRect.enter()
+                var exitRect = updateRect.exit()
+                var updateText = svg.selectAll("text").data(dataSet)
+                var enterText = updateText.enter()
+                var exitText = updateText.exit()
+
+                fillRect(updateRect)
+                fillRect(enterRect.append("rect"))
+                exitRect.remove()
+                fillText(updateText)
+                fillText(enterText.append("text"))
+                exitText.remove()
+            } 
+            function getData() {
+                    let arr = [0, 0, 0, 0, 0, 0, 0,0,0]
+                    dataSet = arr.map(function () {
+                        return Math.floor(Math.random() * 180) + 20
+                    })
+
+                    draw()
+                }
+            function getData2() {
+                    dataSet = []
+                    var rand = d3.randomNormal(90, 60)
+                    for (var i = 0; i < 8; i++) {
+                        var value = Math.round(rand())
+                        dataSet.push(value)
+                    }
+
+                    draw()
+                }
+
+
+        var dataSet1 = [10, 20, 8, 15, 35];
+
+            var min = d3.min(dataSet1);
+            var max = d3.max(dataSet1);
+
+            var linear = d3.scaleLinear()
+                .domain([min, max])
+                .range([0, 100])
+            //----------------------------------------------
+            var aa=50;
+                console.log('linear('+aa+'):',linear(aa));
+                console.log('linear():',linear(8));
+            dataSet
+                .sort((a,b)=>a-b)
+                .forEach(i => {
+                    console.log('linear ', i, linear(i));
+                }); 
+
+        var index = [0, 1, 2, 3, 4];
+            var color = ["red", "blue", "green", "yellow", "black"];
+
+            var ordinal = d3.scaleOrdinal()
+                .domain(index)
+                .range(color);
+        dataSet1.forEach(i => {console.log('Ordinal ',i,ordinal(i));
+                
+            });    
+        // var dataArray=[5,40,50,30];
+        // var width = 500;
+        // var height=500;
+        // var widthscale = d3.scaleLinear()
+        //                     .domain([0,60])
+        //                     .range([0,width]);
+        // var color = d3.scaleLinear()
+        //         .domain([0, 60])
+        //         .range(["red",  'yellow']);
+                
+        // var canvas =d3.select('body')
+        //                 .append('svg')
+        //                 .attr('width',width)
+        //                 .attr('height', height);
+        //  var bars = canvas.selectAll('rect')
+        //         .data(dataArray)
+        //         .enter()
+        //         .append('rect')
+        //         .attr('width', function (d) { return widthscale(d); })
+        //         .attr('height', 30)
+        //         .attr('fill', function (d) { return color(d); })
+        //         .attr('y', function (d, i) { return i * 40 });           
+        // var circle=canvas.append('circle')
+        //                     .attr('cx',250)
+        //                     .attr('cy',250)
+        //                     .attr('r',50)
+        //                     .attr('fill','red')
+        // var rect = canvas.append('rect')
+        //                     .attr('width', 200)
+        //                     .attr('height', 50)
+        //                     .attr('fill', 'yellow')
+        // var line = canvas.append('line')
+        //                     .attr('x1',0)
+        //                     .attr('y1',100)
+        //                     .attr('x2',400)
+        //                     .attr('y2',400)
+        //                     .attr('stroke','green')
+        //                     .attr('stroke-width', 10)
+      
+        
+                        
+    </script>
+    
+</body>
+</html>
