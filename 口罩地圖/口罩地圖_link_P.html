@@ -41,4 +41,13 @@
 <li class="item1"><a href="">口罩地圖</a> </li>
 <li class="item1"><a href="">口罩地圖</a> </li>
  </ul>
-<p>台北座標：[25.03, 121.55]</p
+<p>台北座標：[25.03, 121.55]</p>
+<p>
+osmMap.panTo([geometry.coordinates[1], geometry.coordinates[0]]); <br>
+osmMap.eachLayer((layer) => {<br>
+ // eslint-disable-next-line no-underscore-dangle<br>
+ if (layer._zIndex === item.zIndex) {<br>
+ layer.openPopup();<br>
+ }
+</p>
+ </div> </body> </html>
