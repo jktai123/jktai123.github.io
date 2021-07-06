@@ -15,9 +15,9 @@
   "author": "Daniel Shiffman",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.0.0",
-    "express": "^4.16.4",
+    "dotenv": "^8.6.0",
+    "express": "^4.17.1",
     "nedb": "^1.8.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.1"
   }
 }

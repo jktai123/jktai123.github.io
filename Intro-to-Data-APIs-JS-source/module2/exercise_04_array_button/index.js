@@ -10,6 +10,8 @@ const allData = [];
 app.post('/api', (request, response) => {
   const data = request.body;
   allData.push(data);
+  
   response.json(allData);
+  //allData.push('tttt');
   console.log(allData);
 });
