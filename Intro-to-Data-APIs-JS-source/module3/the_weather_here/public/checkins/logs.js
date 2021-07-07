@@ -16,15 +16,18 @@ async function getData() {
   for (item of data) {
     const marker = L.marker([item.lat, item.lon]).addTo(mymap);
     let txt = `The weather here at ${item.lat}&deg;,
-    ${item.lon}&deg; is ${item.weather.summary} with
-    a temperature of ${item.weather.temperature}&deg; C.`;
+    ${item.lon}&deg; is ${item.weather.condition.text} with
+    a temperature of ${item.weather.temp_c}&deg; C.`;
 
-    if (item.air.value < 0) {
+    /*if (item.air.value < 0) {
       txt += '  No air quality reading.';
-    } else {
-      txt += `  The concentration of particulate matter 
-    (${item.air.parameter}) is ${item.air.value} 
-    ${item.air.unit} last read on ${item.air.lastUpdated}`;
+    } else */
+     {
+    		
+      		
+      txt += ` 	<br/> The concentration of
+      CO is  (${item.weather.air_quality.co}) and  pm2.5: (${item.weather.air_quality.pm2_5}) pm10:(
+    ${item.weather.air_quality.pm10})<br/> last read on ${item.weather.last_updated}`;
     }
     marker.bindPopup(txt);
   }

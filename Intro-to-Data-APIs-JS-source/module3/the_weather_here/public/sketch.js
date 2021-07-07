@@ -5,6 +5,7 @@ if ('geolocation' in navigator) {
   navigator.geolocation.getCurrentPosition(async position => {
     let lat, lon, weather, air;
     try {
+    //	console.log(position);
       lat = position.coords.latitude;
       lon = position.coords.longitude;
       document.getElementById('latitude').textContent = lat.toFixed(2);
@@ -14,7 +15,7 @@ if ('geolocation' in navigator) {
       const json = await response.json();
       weather = json.weather.current;
       //air = json.air_quality.results[0].measurements[0];
-      air=weather.air_quality;
+     //air=weather.air_quality;
       document.getElementById('summary').textContent = weather.condition.text;
       document.getElementById('temp').textContent = weather.temp_c;
       document.getElementById('aq_parameter').textContent = weather.air_quality.co.toFixed(2);
@@ -27,7 +28,7 @@ if ('geolocation' in navigator) {
       document.getElementById('aq_value').textContent = 'NO READING';
     }
 
-    const data = { lat, lon, weather, air };
+    const data = { lat, lon, weather };
     const options = {
       method: 'POST',
       headers: {
