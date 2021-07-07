@@ -13,6 +13,7 @@ function draw() {
   background(50);
   lollipop(100, 100, 50);
   lollipop(300, 200, 150);
+  lollipop(400, 120, 100);
 }
 
 function lollipop(x, y, diameter) {

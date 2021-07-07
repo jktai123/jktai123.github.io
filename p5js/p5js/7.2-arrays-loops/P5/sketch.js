@@ -5,16 +5,16 @@
 // https://youtu.be/RXWO3mFuW-I
 // https://editor.p5js.org/codingtrain/sketches/ZnPevren
 
-var nums = [100, 25, 46, 72];
+var nums = [100, 25, 46, 72,15,90,60];
 
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(800, 400);
 }
 
 function draw() {
   background(0);
 
-  for (var i = 0; i < 4; i++) {
+  for (var i = 0; i < nums.length; i++) {
     stroke(255);
     fill(51);
     ellipse(i * 100 + 100, 200, nums[i], nums[i]);
