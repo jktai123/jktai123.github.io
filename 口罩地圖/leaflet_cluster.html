@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>KittenLayer - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+	<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" /> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"></link> 
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"></link> 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+
+
+	<style>
+		/* html, body {
+			height: 100%;
+			margin: 0;
+		}
+		#map {
+			width: 800px;
+			height: 500px;
+		} */
+		html,body{
+  width: 100%;
+  height: 100%;
+}
+#map { width: 100%;height: 100%; }
+.marker-cluster-small {
+		background-color: rgba(181, 226, 140, 0.6);
+		}
+	.marker-cluster-small div {
+		background-color: rgba(110, 204, 57, 0.6);
+		}
+
+	.marker-cluster-medium {
+		background-color: rgba(241, 211, 87, 0.6);
+		}
+	.marker-cluster-medium div {
+		background-color: rgba(240, 194, 12, 0.6);
+		}
+
+	.marker-cluster-large {
+		background-color: rgba(253, 156, 115, 0.6);
+		}
+	.marker-cluster-large div {
+		background-color: rgba(241, 128, 23, 0.6);
+		}
+
+	.marker-cluster {
+		background-clip: padding-box;
+		border-radius: 20px;
+		}
+	.marker-cluster div {
+		width: 30px;
+		height: 30px;
+		margin-left: 5px;
+		margin-top: 5px;
+
+		text-align: center;
+		border-radius: 15px;
+		font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+		}
+	.marker-cluster span {
+		line-height: 30px;
+		}
+	</style>
+
+	
+</head>
+<body>
+
+<div id='map'></div>
+
+<script type="text/javascript">
+
+var map = L.map('map', {
+    center: [22.604799,120.2976256],
+    zoom: 16
+});
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+var greenIcon = new L.Icon({
+  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+var data = [
+  {'name':'軟體園區1',lat:22.604799,lng:120.2976256},
+  {'name':'軟體園區2',lat:22.604799,lng:120.2976256},
+  {'name':'軟體園區3',lat:22.604799,lng:120.2976256},
+  {'name':'軟體園區4',lat:22.604799,lng:120.2976256},
+  {'name':'軟體園區5',lat:22.604799,lng:120.2976256},
+  {'name':'ikea01',lat:22.60,lng:120.30},
+  {'name':'ikea02',lat:22.60,lng:120.30},
+  {'name':'ikea03',lat:22.60,lng:120.30},
+  {'name':'ikea1',lat:22.6066728,lng:120.3015429},
+  {'name':'ikea2',lat:22.6066728,lng:120.3015429},
+  {'name':'ikea3',lat:22.6066728,lng:120.3015429},
+  {'name':'ikea4',lat:22.6066728,lng:120.3015429}
+]
+var markers = new L.MarkerClusterGroup().addTo(map);;
+
+
+
+
+for(let i =0;data.length>i;i++){
+  console.log(data[i].name)
+  markers.addLayer(L.marker([data[i].lat,data[i].lng], {icon: greenIcon}).bindPopup(`${data[i].name}`))
+  		;
+// add more markers here...
+  // L.marker().addTo(map)
+  //   )
+}
+map.addLayer(markers);
+
+	
+</script>
+
+
+
+</body>
+</html>

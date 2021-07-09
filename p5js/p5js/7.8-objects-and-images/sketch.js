@@ -60,7 +60,9 @@ class Bubble {
       py > this.y &&
       py < this.y + this.r
     ) {
-      this.kitten = flower; //random(kittens);
+      this.x=this.x+random(-50,50);
+      this.y=this.y+random(-100,100);
+      this.kitten =flower;// flower; //random(kittens);
     }
   }
 

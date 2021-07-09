@@ -55,7 +55,7 @@ class Bubble {
   show() {
     stroke(255);
     strokeWeight(4);
-    fill(this.brightness, 125);
-    ellipse(this.x, this.y, this.r * 2);
+    fill(this.brightness, 120);
+    ellipse(this.x, this.y, this.r * 2, this.r*1.5 );
   }
 }
