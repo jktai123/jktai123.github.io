@@ -103,11 +103,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // 設定icon
 // 建立icon群組圖層
-const icons = new L.MarkerClusterGroup().addTo(map);
+const icons = new L.MarkerClusterGroup({ disableClusteringAtZoom: 18 }).addTo(map);
 
 // 成人、兒童口罩都還有剩餘
 const greenIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -117,7 +117,7 @@ const greenIcon = new L.Icon({
 
 // 成人、兒童口罩皆售完
 const greyIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-grey.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -127,7 +127,7 @@ const greyIcon = new L.Icon({
 
 // 僅剩兒童口罩
 const redIcon = new L.Icon({
-    iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
     shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
@@ -261,17 +261,25 @@ town.addEventListener(`change`, function (e) {
 }, false);
 
 // icon點擊事件
-$(listMenu).delegate(`.marker_icon`, `click`, function (e) {
+//$(listMenu).delegate(`.marker_icon`, `click`, function (e) {
+$(listMenu).on( "click", function (e) {
     let tempdata = e.target.dataset.locate;
-    let tempName = e.target.dataset.name;
+    /*let tempName = e.target.dataset.name;
     let tempAdultNum = e.target.dataset.adult;
     let tempChildNum = e.target.dataset.child;
-    let tempAddress = e.target.dataset.address;
-    let str = tempdata.split(`,`);
+    let tempAddress = e.target.dataset.address; */
+    let str = tempdata.split(',');
     let numA = parseFloat(str[0]);
     let numB = parseFloat(str[1]);
     let location = [numA, numB];
     map.setView(location, 20);
+    icons.eachLayer(function (layer) {
+                const layerLatLng = layer.getLatLng();
+                if (layerLatLng.lat == numA && layerLatLng.lng == numB) {
+                  layer.openPopup();
+                }
+              });
+   /*           
     L.marker(location)
         .addTo(map)
         .bindPopup
@@ -283,8 +291,8 @@ $(listMenu).delegate(`.marker_icon`, `click`, function (e) {
             <p>兒童口罩：${tempChildNum}</p>
             
             `
-        )
-        .openPopup();
+        ) 
+        .openPopup(); */
 });
 
 

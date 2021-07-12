@@ -1,0 +1,4 @@
+$basicFontSize: 16px;
+@function fontSize($px) {
+    @return ($px / $basicFontSize) * 1rem;
+}

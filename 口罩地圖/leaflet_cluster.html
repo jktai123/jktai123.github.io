@@ -87,8 +87,10 @@ var map = L.map('map', {
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+const icon_url='https://raw.githubusercontent.com/clhuang224/F2E_2nd/master/W10_MaskMap/img/mark-blue.png';
 var greenIcon = new L.Icon({
-  iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  //iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+  iconUrl: icon_url,
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
@@ -109,7 +111,7 @@ var data = [
   {'name':'ikea3',lat:22.6066728,lng:120.3015429},
   {'name':'ikea4',lat:22.6066728,lng:120.3015429}
 ]
-var markers = new L.MarkerClusterGroup().addTo(map);;
+var markers = new L.MarkerClusterGroup().addTo(map);
 
 
 

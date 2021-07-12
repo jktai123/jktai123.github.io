@@ -1,0 +1,152 @@
+.sideBar {
+    font-family: $fontFamily;
+    width: calc(100% / 4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    > .sideBarHead {
+        background-color: #73C0D8;
+        padding: 1rem;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        > .sideBarHeadWeek {
+            font-size: fontSize(40px);
+            color: $white;
+        }
+        > .sideBarHeadData {
+            text-align: right;
+            line-height: 26px;
+            > .sideBarHeadDataDate {
+                font-size: fontSize(18px);
+                color: $white;
+            }
+            > .sideBarHeadDataId {
+                font-size: fontSize(14px);
+                color: $white;
+                font-weight: bold;
+                > span {
+                    font-size: fontSize(18px);
+                    color: $yellow;
+                    font-weight: bold;
+                }
+            }
+        }
+        > .sideBarHeadCity {
+            > .sideBarHeadCitySelect {
+                border-radius: 5px;
+                border: 1px solid $white;
+                padding: 0.3rem;
+                margin-top: 0.5rem;
+            }
+        }
+    }
+    > .sideBarSwitch {
+        display: flex;
+        width: 7%;
+        height: 10%;
+        background-color: #73C0D8;
+        position:  absolute;
+        left: 100%;
+        border-radius: 0 5px 5px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: fontSize(32px);
+        box-shadow: 0px 3px 6px #00000029;
+        > i {
+            color: $white;
+            cursor: pointer;
+        }
+    }
+    > .sideBarContent {
+        overflow-y: auto;
+        background-color: $white;
+        height: 83vh;
+        > .sideBarContentBox {
+            padding: 1rem;
+            border-bottom: 2px solid #D9D9D9;
+            cursor: pointer;
+            > .sideBarContentBoxTitle {
+                color: #333;
+                font-size: fontSize(20px);
+                font-weight: bold;
+            }
+            > .sideBarContentBoxData {
+                color: #666;
+                font-size: fontSize(16px);
+                line-height: 36px;
+                > span {
+                    display: flex;
+                }
+            }
+            > .sideBarContentBoxTitleCount {
+                display: inline-flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: stretch;
+                width: 100%;
+                > .countBox {
+                    font-size: fontSize(16px);
+                    color: $white;
+                    padding: 0.5rem 1rem;
+                    border-radius: 60px;
+                    font-weight: bold;
+                    width: 39%;
+                    justify-content: space-between;
+                    display: flex;
+                    align-items: center;
+                    > span:nth-child(2) {
+                        font-size: fontSize(20px);
+                    }
+                }
+                .countAdult {
+                    background-color: #73C0D8;
+                }
+                .countKid {
+                     background-color: #FFA573;
+                }
+                .countNone {
+                    background-color: #A5A5A5;
+                }
+            }
+        }
+    }
+}
+
+// 成人小孩口罩數量設計
+.countBox {
+    font-size: fontSize(16px);
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 60px;
+    font-weight: bold;
+    width: 39%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    > span:nth-child(2) {
+        font-size: fontSize(20px);
+    }
+}
+.countAdult {
+    background-color: #73C0D8;
+}
+.countKid {
+     background-color: #FFA573;
+}
+.countNone {
+    background-color: #A5A5A5;
+}
+
+.content {
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    overflow-y: hidden;
+}
