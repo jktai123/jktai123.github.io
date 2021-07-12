@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "Intro-to-Data-APIs-JS-source/module3/the_weather_here/",
+			"problemMatcher": [],
+			"label": "npm: start - Intro-to-Data-APIs-JS-source/module3/the_weather_here",
+			"detail": "node index.js"
+		}
+	]
+}
