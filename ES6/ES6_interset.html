@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://svn12.github.io/youtube/reset.css">
+    <link rel="stylesheet" href="https://svn12.github.io/youtube/link_P.css">
+    <title>ES6 Interset</title>
+    <style>
+    * {
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+        }
+
+    #root {
+        background: black;
+        overflow: scroll;
+        height: 500px;
+        }
+
+    h1 {
+        color: darkorange;
+        }
+
+    p {
+        color: white;
+        }
+
+    article {
+        width: 300px;
+        margin: 32px auto;
+        background: lightgray;
+        border-radius: 6px;
+        padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+  <div id="root">
+  <h1>Infinite Scroll with Intersection Observer API</h1>
+  <p>Try to scroll me!</p>
+  <div id="list"></div>
+  <div id="list-end"></div>
+  <!-- <div id="list"></div> -->
+</div>
+  <script>
+      // Elements
+    const root = document.querySelector('#root');
+    const list = document.querySelector('#list');
+    const listEnd = document.querySelector('#list-end');
+
+    // Render article
+    let articleCount = 0;
+    const appendArticle = () => {
+    const article = document.createElement('article');
+    const textNode = document.createTextNode(`${articleCount+1} ---> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    `);
+    article.appendChild(textNode);
+    list.appendChild(article);
+    articleCount++;
+    };
+
+    // Utility to load articles
+    const loadArticles = () => {
+    for (let i = 0; i < 3; ++i) {
+        appendArticle();
+    }
+    };
+
+    // Interception Handler
+    const callback = (entries, observer) => {
+    for (const entry of entries) {
+        console.log(entry);
+        // Load more articles;
+        if (entry.isIntersecting) {
+        if (articleCount < 13) {
+            loadArticles();        
+        } else {
+            observer.unobserve(listEnd);
+        }
+        }
+    }
+    }
+
+    // Observe the end of the list
+    const observer = new IntersectionObserver(callback, {
+    threshold: 0,
+    });
+    observer.observe(listEnd);
+
+    // Initial loads
+    loadArticles();
+    // var ary = ['Welcome', ' ', 'fooish', '.', 'com'];
+
+    // var concatStr = ary.reduce(function(str, el) {
+    //     return str + el+'--aaa---'+ el;
+    // }, '');
+    // console.log(concatStr);
+  </script>
+<!-- </div> -->
+</body>
+</html>

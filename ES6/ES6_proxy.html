@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://svn12.github.io/youtube/reset.css">
+    <link rel="stylesheet" href="https://svn12.github.io/youtube/link_P.css">
+    <title>ES6 Interset</title>
+    <style>
+    * {
+        font-family: Helvetica, Arial, sans-serif;
+        text-align: center;
+        }
+
+    #root1 {
+        background: black;
+        overflow: scroll;
+        height: 500px;
+        }
+
+    h1 {
+        color: darkorange;
+        }
+
+    p {
+        color: blueviolet;
+        }
+
+    article {
+        width: 300px;
+        margin: 32px auto;
+        background: lightgray;
+        border-radius: 6px;
+        padding: 16px;
+        }
+    </style>
+</head>
+
+<body>
+  <li class="item1"><a href="https://www.javascripttutorial.net/es6/javascript-proxy/">Source</a></li>
+  <div id="root">
+  <h1></h1>
+  <p>F12 Read Message</p>
+  <div id="list"></div>
+  <div id="list-end"></div>
+  <!-- <div id="list"></div> -->
+</div>
+  <script>
+    const user = {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'john.doe@example.com',
+    }
+    const handler = {
+        get(target, property) {
+            console.log(`Property ${property} has been read.`);
+            return target[property];
+        }
+    }
+    const proxyUser = new Proxy(user, handler);
+    console.log(proxyUser.firstName);
+    console.log(proxyUser.email);
+    console.log(proxyUser.lastName);
+    console.log('Setting & Read ---->');
+    proxyUser.lastName = 'William';
+    console.log('user.lastName-----',user.lastName);
+    console.log('proxyUser.lastName-----',proxyUser.lastName);
+    user.firstName = 'Jane';
+    console.log(proxyUser.firstName);
+console.log('Proxy Set Example----------->');
+    const user2 = {
+    firstName: 'John',
+    lastName: 'Doe',
+    age: 20
+}
+
+const handler2 = {
+    get(target, property) {
+        return property === 'fullName' ?
+            `${target.firstName} ${target.lastName}` :
+            target[property];
+    },
+     set(target, property, value) {
+        if (property === 'age') {
+            if (typeof value !== 'number') {
+                var error = new Error(`${value} Age must be a number.`);
+                console.log(error)          // Error: error message
+                // throw 'Age must be a number.'
+                //throw new Error('Age must be a number.');
+            } else
+            if (value < 18) {
+                var error = new Error(` The user(${value}) must be 18 or older.`);
+                console.log(error)          // Error: error message
+                // throw 'The user must be 18 or older.'
+                //throw new Error('The user must be 18 or older.')
+            }else{
+                target[property] = value;
+            }
+        }
+        
+    }
+};
+
+const proxyUser2 = new Proxy(user2, handler2);
+const proxyUser1 = new Proxy(user, handler2);
+console.log(proxyUser2.fullName);
+console.log(proxyUser1.fullName);
+console.log(user,user2);
+proxyUser2.age = 'foo';
+proxyUser2.age = '21';
+proxyUser2.age = 21;  
+console.log(user,user2);  
+proxyUser2.age = 16;   
+console.log(user,user2);  
+//  --- Apply
+const getFullName = function (user) {
+    return `${user.firstName} ${user.lastName}   ---- ${user.email}`;
+}
+
+
+const getFullNameProxy = new Proxy(getFullName, {
+    apply(target, thisArg, args) {
+        return target(...args).toUpperCase();
+    }
+});
+
+console.log(getFullNameProxy(user)); // 
+console.log(getFullNameProxy(user2)); // 
+console.log(user,user2);
+  </script>
+<!-- </div> -->
+</body>
+</html>

@@ -1,0 +1,335 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.sideBar {
+  font-family: "Segoe UI", "微軟正黑體", sans-serif;
+  width: calc(100% / 4);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.29);
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.sideBar > .sideBarHead {
+  background-color: #73C0D8;
+  padding: 1rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sideBar > .sideBarHead > .sideBarHeadWeek {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.sideBar > .sideBarHead > .sideBarHeadData {
+  text-align: right;
+  line-height: 26px;
+}
+
+.sideBar > .sideBarHead > .sideBarHeadData > .sideBarHeadDataDate {
+  font-size: 1.125rem;
+  color: #fff;
+}
+
+.sideBar > .sideBarHead > .sideBarHeadData > .sideBarHeadDataId {
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: bold;
+}
+
+.sideBar > .sideBarHead > .sideBarHeadData > .sideBarHeadDataId > span {
+  font-size: 1.125rem;
+  color: #FFF126;
+  font-weight: bold;
+}
+
+.sideBar > .sideBarHead > .sideBarHeadCity > .sideBarHeadCitySelect {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+}
+
+.sideBar > .sideBarSwitch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 7%;
+  height: 10%;
+  background-color: #73C0D8;
+  position: absolute;
+  left: 100%;
+  border-radius: 0 5px 5px 0;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  -webkit-box-shadow: 0px 3px 6px #00000029;
+          box-shadow: 0px 3px 6px #00000029;
+}
+
+.sideBar > .sideBarSwitch > i {
+  color: #fff;
+  cursor: pointer;
+}
+
+.sideBar > .sideBarContent {
+  overflow-y: auto;
+  background-color: #fff;
+  height: 83vh;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox {
+  padding: 1rem;
+  border-bottom: 2px solid #D9D9D9;
+  cursor: pointer;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitle {
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxData {
+  color: #666;
+  font-size: 1rem;
+  line-height: 36px;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxData > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitleCount {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitleCount > .countBox {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  font-weight: bold;
+  width: 39%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitleCount > .countBox > span:nth-child(2) {
+  font-size: 1.25rem;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitleCount .countAdult {
+  background-color: #73C0D8;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitleCount .countKid {
+  background-color: #FFA573;
+}
+
+.sideBar > .sideBarContent > .sideBarContentBox > .sideBarContentBoxTitleCount .countNone {
+  background-color: #A5A5A5;
+}
+
+.countBox {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  font-weight: bold;
+  width: 39%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countBox > span:nth-child(2) {
+  font-size: 1.25rem;
+}
+
+.countAdult {
+  background-color: #73C0D8;
+}
+
+.countKid {
+  background-color: #FFA573;
+}
+
+.countNone {
+  background-color: #A5A5A5;
+}
+
+.content {
+  width: 75%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow-y: hidden;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.placeDataBox {
+  font-family: "Segoe UI", "微軟正黑體", sans-serif;
+}
+
+.placeDataBox > .placeDataBoxTitle {
+  color: #333;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.placeDataBox > .placeDataBoxData {
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 24px;
+}
+
+.placeDataBox > .placeDataBoxData > span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.placeDataBox > .placeDataBoxCount {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  width: 100%;
+}
+
+.placeDataBox > .placeDataBoxCount > .countBox {
+  font-size: 0.875rem;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 60px;
+  font-weight: bold;
+  width: 39%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.placeDataBox > .placeDataBoxCount > .countBox > span:nth-child(2) {
+  font-size: 1.125rem;
+}
+/*# sourceMappingURL=all.css.map */
