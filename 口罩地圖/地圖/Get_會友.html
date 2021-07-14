@@ -12,20 +12,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
-  <link rel="stylesheet" href="all2.css">
+  <link rel="stylesheet" href="./css/all2.css">
 </head>
 <body>
   <aside class="side_nav">
     <div class="side_nav_header">
-      <h2>現在位置</h2>
-      <div class="search">
-        <input type="text" id="searchInput">
-        <div id="search">
-          <img src="./img/search.svg" alt="search" width="20">
-        </div>
-      </div>
-      <p>搜尋所在縣市、地址、周遭店家名稱等</p>
-      <div class="side_nav_select">
+      <h2>現在位置
+       <div class="side_nav_select">
         <button class="side_nav_option">
           <div>距離</div>
           <ul id="distance" data-type='distance'>
@@ -35,15 +28,24 @@
             <li data-option='0.4'>400 公尺內</li>
           </ul>
         </button>
-        <button class="side_nav_option">
+        <!-- <button class="side_nav_option">
           <div>需求口罩</div>
           <ul id="maskType" data-type='maskType'>
             <li class="active">全部</li>
             <li data-option="mask_adult">成人口罩</li>
             <li data-option="mask_child">兒童口罩</li>
           </ul>
-        </button>
+        </button> -->
       </div>
+      </h2>
+      <div class="search">
+        <input type="text" id="searchInput">
+        <div id="search">
+          <img src="./img/search.svg" alt="search" width="20">
+        </div>
+      </div>
+      <p>搜尋所在縣市、地址、周遭店家名稱等</p>
+     
       <div class="side_nav_date">
         <p>星期<span id="day">一</span>，</p>
         <p id="buyInfo">身分證末碼為<span>基數</span>可購買</p>
