@@ -3,6 +3,7 @@
   const returnBtn = document.querySelector('.return_position')
   const searchInput = document.getElementById('searchInput')
   const searchBtn = document.getElementById('search')
+  const selShtOption = document.getElementById('select_sh')
   const options = [...document.querySelectorAll('.side_nav_option li')]
   const infiniteOptions = {
     root: null,
@@ -12,7 +13,7 @@
   const observerInfinite = new IntersectionObserver(infiniteData, infiniteOptions)
   let [latitude, longitude] = await getPosition()
   // let infoData = await getMaskInfo()
-  let infoData = getData(await getData0())
+  // let infoData = getData(await getData0())
 
   const map = L.map('map').setView([latitude, longitude], 16).on('dragend', getAroundStore).on('zoomend', getAroundStore);
   const userIcon = L.icon({
@@ -22,6 +23,7 @@
   })
   L.marker([latitude, longitude], {icon: userIcon}).addTo(map);
   let markers = [], locationInfo = {data: []}, sideInfo, range, maskType, markerCluster, dataCount = 0
+  let sheet;
   const locationInfoProxy = new Proxy(locationInfo, {
     get(target, key){
       return target[key]
@@ -37,7 +39,7 @@
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
-
+  selShtOption.addEventListener('change', Render_new)
   returnBtn.addEventListener('click', resetPosition)
   searchInput.addEventListener('keydown', searchCustomStore)
   searchBtn.addEventListener('click', searchCustomStore)
@@ -118,15 +120,50 @@
   }
 
 
-  	function getData0(){
+  	function getData0(sht){
     return new Promise(resolve=>{
-      fetch('https://spreadsheets.google.com/feeds/list/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/1/public/values?alt=json')
+      fetch('https://spreadsheets.google.com/feeds/list/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/'+sht+'/public/values?alt=json')
         .then(res=>res.json())
         .then(json=>resolve(json.feed.entry))
         .catch(err=>console.log(err))
-    })
-  }
-  
+      })
+    }
+  function getData1(sht){
+    return new Promise(resolve=>{
+      fetch('https://spreadsheets.google.com/feeds/list/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/'+sht+'/public/values?alt=json')
+        .then(res=>res.json())
+        .then(json=>json.feed.entry)
+        .then(json=>{
+          const result = json.map(d=>{
+          const newObject = {
+              properties:{
+                  name:undefined,
+                  tel:undefined,
+                  address:undefined,
+                  phone:undefined},
+              geometry:{
+                coordinates:{
+                lat:undefined,
+                lng:undefined
+                }
+              } 
+              
+          }
+          const filledKey = ["name",	"phone",	"tel",	"address",	"geolng"	,"geolat"]
+          filledKey.forEach(key=>{
+            key.includes('geo')
+              ? newObject.geometry.coordinates[`${key.slice(3,key.length)}`] = d[`gsx$${key}`].$t
+            :newObject.properties[`${key}`] = d[`gsx$${key}`].$t
+          })
+          return newObject
+        })
+        // console.log(result);
+        return resolve(result);
+        })
+        .catch(err=>console.log(err))
+      })
+    }
+
   function getMaskInfo(){
     return new Promise(resolve=>{
       fetch('https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json')
@@ -173,11 +210,11 @@
         <p>${properties.address}</p>
       </div>
       <div class="info">
-        <img src="./img/local_phone-24px.svg" alt="phone">
+        <img src="./img/cell-phone.svg" height="24" alt="cellphone">
         <p>${properties.phone}</p>
       </div>
       <div class="info">
-        <img src="./img/access_time-24px.svg" alt="time">
+        <img src="./img/local_phone-24px.svg" alt="phone">
         <p>${properties.tel ? properties.tel : '暫無資料'}</p>
       </div>
       <div class="mask_status">
@@ -205,7 +242,8 @@
       markers.push(L.marker([coordinates['lat'], coordinates['lng']])
       .bindPopup(`
         <h2>${properties.name}</h2>
-        <p>${properties.address}</p>
+        <p><a href="https://www.google.com.tw/maps/place/${properties.address}" target="_blank">${properties.address}</a></p>
+        
         <p>手機 | ${properties.phone}</p>
         <p>電話 | ${properties.tel ? properties.tel : '暫無資料'}</p>
         <div class='mask_status'>
@@ -280,7 +318,46 @@
     map.panTo([latitude, longitude], 16)
     getAroundStore()
   }
-  getAroundStore()
-  getDateInfo()
+  function getSname(){
+    const api='https://script.google.com/macros/s/AKfycby2wc_EZaX2pcqBgCApZz5C2ZfYX09GNGJ6IFygOaxsTtYeBgnKmkpJqeNhAo8-A-pVnQ/exec';
+    const fname='https://docs.google.com/spreadsheets/d/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/edit?usp=sharing'//https://docs.google.com/spreadsheets/d/1jx9hL4CZuyET00_6LYbcz4d23WLv7iMsLbcPR3xqGbo/edit?usp=sharing';
+    const para_key='sheetUrl';
+    let url=api+'?'+para_key+'='+fname;
+    fetch( url )
+      .then( response => response.json() )
+      .then( response => {
+          // console.log(response);
+          $("#select_sh").empty();
+          // $('#select_sh').append($('<option>', { 
+          //       value: '',
+          //       text : "---請選擇----"
+          //          }));
+            response.forEach((item)=>{
+            console.log(item.id,item.Sname);
+            $('#select_sh').append($('<option>', { 
+                      value: item.id,
+                      text : item.Sname 
+            }))
+            } );
+          })
+    
 
+        }
+  //getDateInfo()
+  
+  async function Render_new(){
+    console.log(     $('#select_sh').val());
+    // console.log(infoData);   
+    infoData = await getData1($('#select_sh').val()); 
+    // console.log(infoData);   
+     getAroundStore();
+  }
+
+  getSname();
+
+  // let infoData = getData(await getData0(1))
+  let infoData = await getData1(1);
+  // console.log(infoData);
+  getAroundStore()
+  //getDateInfo()
 })()
