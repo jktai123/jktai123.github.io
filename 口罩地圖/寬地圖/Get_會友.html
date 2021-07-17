@@ -15,17 +15,15 @@
   <link rel="stylesheet" href="./css/all2.css">
 </head>
 <body>
-
+   <!-- <p class="switch1">switch</p> -->
+<!-- <main class="container" id='map'></main> -->
   <aside class="side_nav">
+    
     <div class="side_nav_header">
-      <a href="https://docs.google.com/spreadsheets/d/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/edit?usp=sharing">File</a>
-      <select id="select_sh" >
-           
-            
-      </select>
+      
       
        <div class="side_nav_select">
-        <button class="side_nav_option">
+        <!-- <button class="side_nav_option">
           <div>距離</div>
           <ul id="distance" data-type='distance'>
             <li class="active">可視範圍</li>
@@ -33,7 +31,7 @@
             <li data-option='0.8'>800 公尺內</li>
             <li data-option='0.4'>400 公尺內</li>
           </ul>
-        </button>
+        </button> -->
         <!-- <button class="side_nav_option">
           <div>需求口罩</div>
           <ul id="maskType" data-type='maskType'>
@@ -42,27 +40,39 @@
             <li data-option="mask_child">兒童口罩</li>
           </ul>
         </button> -->
+        
       </div>
+      <select id="select_sh"  >
+      </select>
+        <a href="https://docs.google.com/spreadsheets/d/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/edit?usp=sharing">Edit</a>
       
       <div class="search">
+        
         <input type="text" id="searchInput">
         <div id="search">
           <img src="./img/search.svg" alt="search" width="20">
         </div>
+        
       </div>
-      <p>搜尋所在縣市、地址、姓名等</p>
+      <p>搜尋姓名、電話、所在地址等</p>
      
       <div class="side_nav_date">
         <p>星期<span id="day">一</span>，</p>
         <p id="buyInfo">身分證末碼為<span>基數</span>可購買</p>
       </div>
       <span class="switch">
+        
         <i class="material-icons">keyboard_arrow_left</i>
       </span>
     </div>
     <div class="side_nav_container"></div>
+     
+    
   </aside>
-  <main class="container" id='map'></main>
+  
+ <main class="container" id='map'></main>
+
+  
   <span class="return_position">
     <img src="./img/gps-fixed-indicator.svg" alt="return">
   </span>

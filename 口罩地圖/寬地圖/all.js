@@ -286,8 +286,8 @@
       let value = searchInput.value.trim()
       if(value){
         setOptions()
-        locationInfoProxy.data = filterMaskType(infoData).filter(({properties: {address, name}}) => {
-          return address.indexOf(value) !== -1 || name.indexOf(value) !== -1
+        locationInfoProxy.data = filterMaskType(infoData).filter(({properties: {address, name,tel,phone}}) => {
+          return address.indexOf(value) !== -1 || name.indexOf(value) !== -1|| tel.indexOf(value) !== -1|| phone.indexOf(value) !== -1
         })
         let location = locationInfoProxy.data[0].geometry.coordinates
         map.panTo([location['lat'], location['lng']], 16)

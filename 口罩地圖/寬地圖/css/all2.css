@@ -28,6 +28,7 @@ body {
 }
 
 .side_nav {
+  
   width: 25%;
   max-width: 500px;
   min-width: 380px;
@@ -127,6 +128,7 @@ body {
   cursor: pointer;
   z-index: 999;
 }
+
 
 .side_nav_header .switch i {
   font-size: 16px;
@@ -345,7 +347,8 @@ body {
      object-fit: cover;
 }
 
-@media screen and (max-width: 479px) {
+
+ @media screen 	and (max-width: 575px) { 
   .side_nav {
     position: absolute;
     top: 0;
@@ -358,9 +361,14 @@ body {
   }
   .side_nav.active {
     left: 0;
+    
   }
   .side_nav_header .switch {
     display: block;
   }
 }
-/*# sourceMappingURL=all.css.map */
+/*# sourceMappingURL=all.css.map *  
+@media screen 	and (max-width: 576px) {
+}
+	and (max-width: 479px) 
+	left: 0;/
