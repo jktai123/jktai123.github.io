@@ -110,6 +110,7 @@
       }
       const filledKey = ["name",	"phone",	"tel",	"address",	"geolng"	,"geolat"]
       filledKey.forEach(key=>{
+         
       	 key.includes('geo')
           ? newObject.geometry.coordinates[`${key.slice(3,key.length)}`] = d[`gsx$${key}`].$t
          :newObject.properties[`${key}`] = d[`gsx$${key}`].$t
@@ -218,8 +219,7 @@
         <p>${properties.tel ? properties.tel : '暫無資料'}</p>
       </div>
       <div class="mask_status">
-        <div class="adult ${properties.mask_adult ? '' : 'no_mask'}">成人口罩 : <span>${properties.mask_adult}</span></div>
-        <div class="child ${properties.mask_child ? '' : 'no_mask'}">兒童口罩 : <span>${properties.mask_child}</span></div>
+        
       </div>
       `
       container.appendChild(div)
@@ -247,8 +247,7 @@
         <p>手機 | ${properties.phone}</p>
         <p>電話 | ${properties.tel ? properties.tel : '暫無資料'}</p>
         <div class='mask_status'>
-          <div class="adult ${properties.mask_adult ? '' : 'no_mask'}">成人口罩 : <span>${properties.mask_adult}</span></div>
-          <div class="child ${properties.mask_child ? '' : 'no_mask'}">兒童口罩 : <span>${properties.mask_child}</span></div>
+          
         </div>
         
       `, {
@@ -287,6 +286,7 @@
       if(value){
         setOptions()
         locationInfoProxy.data = filterMaskType(infoData).filter(({properties: {address, name,tel,phone}}) => {
+          console.log(address,name,tel,phone);
           return address.indexOf(value) !== -1 || name.indexOf(value) !== -1|| tel.indexOf(value) !== -1|| phone.indexOf(value) !== -1
         })
         let location = locationInfoProxy.data[0].geometry.coordinates
@@ -312,6 +312,7 @@
   }
   function filterMaskType(info){
     return info.filter( info => maskType ? info.properties[maskType] !== 0 : info)
+    // return info.filter( info =>info)
   }
   function resetPosition(){
     searchInput.value = ''
