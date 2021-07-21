@@ -84,13 +84,37 @@
   }
   function optionDistance(info){range = info}
   function optionMaskType(info){maskType = info}
-  function getPosition(){
+  
+  
+  function getPosition1(){
     return new Promise(resolve=>{
       navigator.geolocation.getCurrentPosition(position => {
         resolve([position.coords.latitude, position.coords.longitude])
       });
     })
   }
+
+  
+  function getPosition(){
+    return new Promise(resolve=>{
+      navigator.geolocation.getCurrentPosition(position => {
+        resolve([position.coords.latitude, position.coords.longitude])
+      },error =>{
+        resolve([25.02867, 121.516])
+      });
+    })
+  }
+  
+//   navigator.geolocation.getCurrentPosition(position => {
+//   console.log(position)
+// }, error => {
+// 	console.error(error)
+// })
+  
+  
+  
+  
+
    function getData(rawData){
     // let rawData =await getData0()
     const result = rawData.map(d=>{

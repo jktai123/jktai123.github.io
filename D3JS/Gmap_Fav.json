@@ -1,0 +1,5995 @@
+{
+  "type" : "FeatureCollection",
+  "features" : [ {
+    "geometry" : {
+      "coordinates" : [ 121.0624912, 24.8965969 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16168417178392930539",
+      "Location" : {
+        "Address" : "303台灣新竹縣湖口鄉中平路一段510號",
+        "Business Name" : "湖口好客文創園區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8965969",
+          "Longitude" : "121.0624912"
+        }
+      },
+      "Published" : "2020-10-04T10:13:10Z",
+      "Title" : "湖口好客文創園區",
+      "Updated" : "2020-10-04T10:13:10Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5303017, 25.0574833 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13889499279233661975",
+      "Location" : {
+        "Address" : "10491台灣台北市中山區吉林路125-3號",
+        "Business Name" : "饃膳坊陝西風味料理",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0574833",
+          "Longitude" : "121.5303017"
+        }
+      },
+      "Published" : "2020-08-08T09:56:58Z",
+      "Title" : "饃膳坊陝西風味料理",
+      "Updated" : "2020-08-08T09:56:58Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5376318, 25.2982758 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.298276,121.537632",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.2982758",
+          "Longitude" : "121.5376318"
+        }
+      },
+      "Published" : "2014-10-07T06:17:09Z",
+      "Title" : "25.298276,121.537632",
+      "Updated" : "2020-04-01T09:17:41Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5160350, 25.0285353 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3957819286418651397",
+      "Location" : {
+        "Address" : "100台灣台北市中正區重慶南路三段27巷4號",
+        "Business Name" : "台灣基督長老教會台北南門教會",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0285353",
+          "Longitude" : "121.5160350"
+        }
+      },
+      "Published" : "2019-12-09T09:35:10Z",
+      "Title" : "台灣基督長老教會台北南門教會",
+      "Updated" : "2019-12-09T09:35:10Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5121845, 25.0083808 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12876735136505223192",
+      "Location" : {
+        "Address" : "234台灣新北市永和區永平路67號",
+        "Business Name" : "永美雪花冰",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0083808",
+          "Longitude" : "121.5121845"
+        }
+      },
+      "Published" : "2019-05-24T12:40:57Z",
+      "Title" : "永美雪花冰",
+      "Updated" : "2019-05-24T12:40:57Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5123511, 25.0076217 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5885513296328430102",
+      "Location" : {
+        "Address" : "234台灣新北市永和區保平路18巷1號",
+        "Business Name" : "阿爸の芋圓",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0076217",
+          "Longitude" : "121.5123511"
+        }
+      },
+      "Published" : "2019-05-24T12:29:48Z",
+      "Title" : "阿爸の芋圓",
+      "Updated" : "2019-05-24T12:29:48Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5115660, 25.0083690 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=234%E6%96%B0%E5%8C%97%E5%B8%82%E6%B0%B8%E5%92%8C%E5%8D%80%E4%BF%9D%E5%B9%B3%E8%B7%AF18%E5%B7%B71%E8%99%9F&ftid=0x3442a9c2e0eaef6d:0x9520ff4cc3cefcbd",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0083690",
+          "Longitude" : "121.5115660"
+        }
+      },
+      "Published" : "2019-05-24T12:23:21Z",
+      "Title" : "234新北市永和區保平路18巷1號",
+      "Updated" : "2019-05-24T12:23:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5364800, 24.1748800 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=24.17488,120.53648000000001",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.1748800",
+          "Longitude" : "120.5364800"
+        }
+      },
+      "Published" : "2018-11-19T08:35:04Z",
+      "Title" : "24.17488,120.53648000000001",
+      "Updated" : "2019-04-09T02:46:32Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5352762, 24.1776382 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=434%E5%8F%B0%E4%B8%AD%E5%B8%82%E9%BE%8D%E4%BA%95%E5%8D%80%E8%88%8A%E8%BB%8A%E8%B7%AF7%E5%B7%B717%E8%99%9F&ftid=0x34693ff3bdd50269:0xf308a0962706bfdb",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.1776382",
+          "Longitude" : "120.5352762"
+        }
+      },
+      "Published" : "2019-04-09T02:45:42Z",
+      "Title" : "434台中市龍井區舊車路7巷17號",
+      "Updated" : "2019-04-09T02:45:42Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2478915, 22.8784398 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=829%E9%AB%98%E9%9B%84%E5%B8%82%E6%B9%96%E5%85%A7%E5%8D%80%E6%B0%91%E7%94%9F%E8%A1%97142%E8%99%9F1&ftid=0x346e0b568ef2abcb:0xc752418588e44c74",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "22.8784398",
+          "Longitude" : "120.2478915"
+        }
+      },
+      "Published" : "2019-01-22T03:16:07Z",
+      "Title" : "829高雄市湖內區民生街142號",
+      "Updated" : "2019-01-22T03:16:07Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.3201790, 23.3140130 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=730%E5%8F%B0%E5%8D%97%E5%B8%82%E6%96%B0%E7%87%9F%E5%8D%80%E6%B0%91%E6%97%8F%E8%B7%AF114%E5%B7%B743%E8%99%9F&ftid=0x346e85c209478955:0x1053291fcc16287e",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.3140130",
+          "Longitude" : "120.3201790"
+        }
+      },
+      "Published" : "2019-01-22T03:12:35Z",
+      "Title" : "730台南市新營區民族路114巷43號",
+      "Updated" : "2019-01-22T03:12:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5015572, 25.0207417 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=108%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E9%9D%92%E5%B9%B4%E8%B7%AF152%E5%B7%B720%E8%99%9F&ftid=0x3442a9b7e8e21cf9:0xadec8061b127f14",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0207417",
+          "Longitude" : "121.5015572"
+        }
+      },
+      "Published" : "2019-01-02T06:24:38Z",
+      "Title" : "108台北市萬華區青年路152巷20號",
+      "Updated" : "2019-01-02T06:24:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5446456, 24.1487449 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2175741026176933988",
+      "Location" : {
+        "Address" : "432台灣台中市大肚區永和街8號",
+        "Business Name" : "台灣基督長老教會大肚教會",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1487449",
+          "Longitude" : "120.5446456"
+        }
+      },
+      "Published" : "2018-12-30T01:14:23Z",
+      "Title" : "台灣基督長老教會大肚教會",
+      "Updated" : "2018-12-30T01:14:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5113406, 25.0254611 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E4%B8%AD%E8%8F%AF%E8%B7%AF%E4%BA%8C%E6%AE%B5467%E5%B7%B75-2%E8%99%9F&ftid=0x3442a9bdaace6ab3:0x4ca12ab7337ceafa",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0254611",
+          "Longitude" : "121.5113406"
+        }
+      },
+      "Published" : "2018-12-23T21:32:11Z",
+      "Title" : "100台北市中正區中華路二段467巷5-2號",
+      "Updated" : "2018-12-23T21:32:11Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9114006, 23.8657796 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9226610839149551672",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉中興路21號555號",
+        "Business Name" : "荳荳自行車Dou Dou Bike",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8657796",
+          "Longitude" : "120.9114006"
+        }
+      },
+      "Published" : "2018-09-22T01:26:09Z",
+      "Title" : "荳荳自行車Dou Dou Bike",
+      "Updated" : "2018-09-22T01:26:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4483857, 25.0647510 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.064751,121.448386",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0647510",
+          "Longitude" : "121.4483857"
+        }
+      },
+      "Published" : "2013-12-01T06:32:01Z",
+      "Title" : "25.064751,121.448386",
+      "Updated" : "2018-08-02T06:43:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2966237, 22.6143377 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10635368302540022939",
+      "Location" : {
+        "Address" : "802台灣高雄市苓雅區成功一路135巷26號",
+        "Business Name" : "信義醫療財團法人附設高雄市私立方舟養護之家",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.6143377",
+          "Longitude" : "120.2966237"
+        }
+      },
+      "Published" : "2018-05-30T01:38:10Z",
+      "Title" : "信義醫療財團法人附設高雄市私立方舟養護之家",
+      "Updated" : "2018-05-30T01:38:10Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5675858, 25.0803356 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.080336,121.567586",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0803356",
+          "Longitude" : "121.5675858"
+        }
+      },
+      "Published" : "2015-01-16T23:29:52Z",
+      "Title" : "25.080336,121.567586",
+      "Updated" : "2018-04-22T05:22:04Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5679191, 31.3105330 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=31.310533,120.567919",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "31.3105330",
+          "Longitude" : "120.5679191"
+        }
+      },
+      "Published" : "2013-10-05T21:37:43Z",
+      "Title" : "31.310533,120.567919",
+      "Updated" : "2018-01-17T06:40:54Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1369550, 30.2309270 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=30.230927,120.136955",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "30.2309270",
+          "Longitude" : "120.1369550"
+        }
+      },
+      "Published" : "2013-10-05T22:00:54Z",
+      "Title" : "30.230927,120.136955",
+      "Updated" : "2018-01-17T06:40:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5157215, 25.0530008 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1736169972342534850",
+      "Location" : {
+        "Address" : "103台灣台北市大同區重慶北路一段83巷41號",
+        "Business Name" : "浩翔玩具批發(奇樂玩具有限公司)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0530008",
+          "Longitude" : "121.5157215"
+        }
+      },
+      "Published" : "2018-01-14T12:58:04Z",
+      "Title" : "奇樂玩具有限公司",
+      "Updated" : "2018-01-14T12:58:04Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5015832, 25.0363781 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10283539322171824695",
+      "Location" : {
+        "Address" : "108台灣台北市萬華區康定路191號",
+        "Business Name" : "樂福蛋糕 Love Cake-萬華店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0363781",
+          "Longitude" : "121.5015832"
+        }
+      },
+      "Published" : "2017-10-05T22:47:27Z",
+      "Title" : "風和家say Cheese Cake-萬華店",
+      "Updated" : "2017-10-05T22:47:27Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5411750, 24.9911240 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=116%E5%8F%B0%E5%8C%97%E5%B8%82%E6%96%87%E5%B1%B1%E5%8D%80%E6%99%AF%E6%96%87%E8%A1%9752%E8%99%9F&ftid=0x3442aa00e995f3c3:0x84aeaf8f9bde6c0e",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.9911240",
+          "Longitude" : "121.5411750"
+        }
+      },
+      "Published" : "2017-10-05T22:02:59Z",
+      "Title" : "116台北市文山區景文街52號",
+      "Updated" : "2017-10-05T22:02:59Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5049605, 24.9929725 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=235%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E6%99%AF%E5%AE%89%E8%B7%AF191%E8%99%9F&ftid=0x346802772e09dc01:0x13327d1b334bd5b5",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.9929725",
+          "Longitude" : "121.5049605"
+        }
+      },
+      "Published" : "2017-10-05T22:02:47Z",
+      "Title" : "235新北市中和區景安路191號",
+      "Updated" : "2017-10-05T22:02:47Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5966669, 25.0938673 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.093867,121.596667",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0938673",
+          "Longitude" : "121.5966669"
+        }
+      },
+      "Published" : "2014-09-15T02:21:15Z",
+      "Title" : "25.093867,121.596667",
+      "Updated" : "2017-07-15T05:29:03Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 103.8420506, 1.2912564 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16717390201265988226",
+      "Location" : {
+        "Address" : "15 Merbau Rd, 新加坡 239032",
+        "Business Name" : "Robertson Quay Hotel",
+        "Country Code" : "SG",
+        "Geo Coordinates" : {
+          "Latitude" : "1.2912564",
+          "Longitude" : "103.8420506"
+        }
+      },
+      "Published" : "2017-06-14T09:11:26Z",
+      "Title" : "Robertson Quay Hotel",
+      "Updated" : "2017-06-14T09:11:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6944329, 24.3140240 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16648994849999250180",
+      "Location" : {
+        "Address" : "421台灣台中市后里區甲后路二段350號",
+        "Business Name" : "台糖月眉觀光糖廠",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.3140240",
+          "Longitude" : "120.6944329"
+        }
+      },
+      "Published" : "2017-04-03T00:11:32Z",
+      "Title" : "台糖月眉觀光糖廠",
+      "Updated" : "2017-04-03T00:11:32Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6849436, 23.9821085 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11144011937939961569",
+      "Location" : {
+        "Address" : "542台灣南投縣草屯鎮中正路788號",
+        "Business Name" : "草屯山葉",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9821085",
+          "Longitude" : "120.6849436"
+        }
+      },
+      "Published" : "2017-04-02T23:22:09Z",
+      "Title" : "YAMAHA YSP草屯山葉",
+      "Updated" : "2017-04-02T23:22:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2037179, 22.9962954 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9814531878836558527",
+      "Location" : {
+        "Address" : "700台灣台南市中西區民族路二段271號700",
+        "Business Name" : "劍橋飯店台南館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.9962954",
+          "Longitude" : "120.2037179"
+        }
+      },
+      "Published" : "2017-03-25T04:29:28Z",
+      "Title" : "劍橋飯店台南館",
+      "Updated" : "2017-03-25T04:29:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4251870, 24.9629160 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=24.962916,121.42518700000001",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.9629160",
+          "Longitude" : "121.4251870"
+        }
+      },
+      "Published" : "2017-03-04T07:33:07Z",
+      "Title" : "24.962916,121.42518700000001",
+      "Updated" : "2017-03-04T07:33:07Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9773311, 24.8009119 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14043945586534919231",
+      "Location" : {
+        "Address" : "300台灣新竹市東區",
+        "Business Name" : "新竹公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8009119",
+          "Longitude" : "120.9773311"
+        }
+      },
+      "Published" : "2017-02-28T05:07:01Z",
+      "Title" : "新竹公園",
+      "Updated" : "2017-02-28T05:07:01Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0242164, 24.7663480 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=300%E6%96%B0%E7%AB%B9%E5%B8%82%E6%9D%B1%E5%8D%80%E5%8A%9B%E8%A1%8C%E8%B7%AF&ftid=0x346849d801a27ca9:0x59c271fc7f58eca2",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.7663480",
+          "Longitude" : "121.0242164"
+        }
+      },
+      "Published" : "2017-02-28T05:06:38Z",
+      "Title" : "300新竹市東區力行路",
+      "Updated" : "2017-02-28T05:06:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.3077602, 23.3198181 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5404182912927396319",
+      "Location" : {
+        "Address" : "730台灣新營區長榮路二段112號",
+        "Business Name" : "台灣基督長老教會新生教會",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.3198181",
+          "Longitude" : "120.3077602"
+        }
+      },
+      "Published" : "2017-02-26T23:14:31Z",
+      "Title" : "新生基督長老教會牧師住宅",
+      "Updated" : "2017-02-26T23:14:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4187742, 25.0092469 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17879363460870542149",
+      "Location" : {
+        "Address" : "238台灣新北市樹林區中正路248巷7號",
+        "Business Name" : "台北區監理所",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0092469",
+          "Longitude" : "121.4187742"
+        }
+      },
+      "Published" : "2017-02-07T14:35:14Z",
+      "Title" : "台北區監理所",
+      "Updated" : "2017-02-07T14:35:14Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4749881, 25.0031172 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=235%E6%96%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%92%8C%E5%8D%80%E8%87%AA%E6%B2%BB%E8%A1%9730%E8%99%9F&ftid=0x3468029dc4e046d3:0xf0b46715e54f6c4f",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0031172",
+          "Longitude" : "121.4749881"
+        }
+      },
+      "Published" : "2017-02-03T07:31:34Z",
+      "Title" : "235新北市中和區自治街30號",
+      "Updated" : "2017-02-03T07:31:34Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6327210, 25.0645179 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=221%E6%96%B0%E5%8C%97%E5%B8%82%E6%B1%90%E6%AD%A2%E5%8D%80%E4%B8%AD%E8%88%88%E8%B7%AF144%E8%99%9F&ftid=0x345d534dea9274d1:0x8cb30f1e6119b065",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0645179",
+          "Longitude" : "121.6327210"
+        }
+      },
+      "Published" : "2017-01-31T23:29:00Z",
+      "Title" : "221新北市汐止區中興路144號",
+      "Updated" : "2017-01-31T23:29:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5112220, 25.0268360 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11336299076465892129",
+      "Location" : {
+        "Address" : "100台灣台北市中正區",
+        "Business Name" : "汀州路",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0268360",
+          "Longitude" : "121.5112220"
+        }
+      },
+      "Published" : "2017-01-30T23:36:39Z",
+      "Title" : "汀州路",
+      "Updated" : "2017-01-30T23:36:39Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5130293, 25.0273529 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E4%B8%89%E5%85%83%E8%A1%97234%E8%99%9F&ftid=0x3442a9bd4926bd11:0x74105594eff87473",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0273529",
+          "Longitude" : "121.5130293"
+        }
+      },
+      "Published" : "2017-01-30T23:32:33Z",
+      "Title" : "100台北市中正區三元街234號",
+      "Updated" : "2017-01-30T23:32:33Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5153944, 25.0289353 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13434251515239685816",
+      "Location" : {
+        "Address" : "100台灣台北市中正區",
+        "Business Name" : "寧波重慶路口",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0289353",
+          "Longitude" : "121.5153944"
+        }
+      },
+      "Published" : "2017-01-30T23:29:37Z",
+      "Title" : "寧波重慶路口",
+      "Updated" : "2017-01-30T23:29:37Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2122950, 22.9982980 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15526438992626605444",
+      "Location" : {
+        "Address" : "704台灣台南市北區",
+        "Business Name" : "國光客運北門站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.9982980",
+          "Longitude" : "120.2122950"
+        }
+      },
+      "Published" : "2017-01-28T21:16:50Z",
+      "Title" : "國光客運台南站",
+      "Updated" : "2017-01-28T21:16:50Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2260268, 22.9345608 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12145104175382394022",
+      "Location" : {
+        "Address" : "71755台灣台南市仁德區文華路二段66號",
+        "Business Name" : "奇美博物館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.9345608",
+          "Longitude" : "120.2260268"
+        }
+      },
+      "Published" : "2017-01-12T20:50:34Z",
+      "Title" : "奇美博物館",
+      "Updated" : "2017-01-12T20:50:34Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4807432, 23.4658718 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3149595085403961701",
+      "Location" : {
+        "Address" : "600台灣嘉義市東區",
+        "Business Name" : "蘭潭",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4658718",
+          "Longitude" : "120.4807432"
+        }
+      },
+      "Published" : "2017-01-10T06:42:38Z",
+      "Title" : "月影潭心",
+      "Updated" : "2017-01-10T06:42:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4691223, 23.4812961 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8292132840157317169",
+      "Location" : {
+        "Address" : "600台灣嘉義市東區公園街46號",
+        "Business Name" : "嘉義公園射日塔",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4812961",
+          "Longitude" : "120.4691223"
+        }
+      },
+      "Published" : "2017-01-10T06:42:18Z",
+      "Title" : "嘉義公園射日塔",
+      "Updated" : "2017-01-10T06:42:18Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1226617, 23.2644662 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13523730127625338602",
+      "Location" : {
+        "Address" : "727台灣台南市北門區舊埕200號",
+        "Business Name" : "水晶教堂",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.2644662",
+          "Longitude" : "120.1226617"
+        }
+      },
+      "Published" : "2017-01-10T06:38:54Z",
+      "Title" : "北門水晶教堂",
+      "Updated" : "2017-01-10T06:38:54Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1377206, 23.3366445 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16745260755696282943",
+      "Location" : {
+        "Address" : "625台灣嘉義縣布袋鎮虎尾寮132號",
+        "Business Name" : "好美里3D海洋世界戶外美術館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.3366445",
+          "Longitude" : "120.1377206"
+        }
+      },
+      "Published" : "2017-01-10T06:38:11Z",
+      "Title" : "3D彩繪村",
+      "Updated" : "2017-01-10T06:38:11Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2927165, 23.4731294 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7573201778218744011",
+      "Location" : {
+        "Address" : "612台灣嘉義縣太保市故宮大道888號",
+        "Business Name" : "國立故宮博物院南部院區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4731294",
+          "Longitude" : "120.2927165"
+        }
+      },
+      "Published" : "2017-01-10T06:34:51Z",
+      "Title" : "國立故宮博物院南部院區",
+      "Updated" : "2017-01-10T06:34:51Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4864464, 25.0160243 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4785093129438307539",
+      "Location" : {
+        "Address" : "235台灣新北市中和區環河西路三段200號",
+        "Business Name" : "大眾駕訓班",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0160243",
+          "Longitude" : "121.4864464"
+        }
+      },
+      "Published" : "2017-01-09T22:01:24Z",
+      "Title" : "大眾駕訓班",
+      "Updated" : "2017-01-09T22:01:24Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -0.1394400, 51.4958090 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=200238682721878501",
+      "Location" : {
+        "Address" : "Victoria St, Westminster, London SW1P 1LT英國",
+        "Business Name" : "西敏主教座堂",
+        "Country Code" : "GB",
+        "Geo Coordinates" : {
+          "Latitude" : "51.4958090",
+          "Longitude" : "-0.1394400"
+        }
+      },
+      "Published" : "2017-01-07T23:34:28Z",
+      "Title" : "西敏大教堂",
+      "Updated" : "2017-01-07T23:34:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ -1.5111148, 48.6360167 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E6%B3%95%E5%9C%8B%E8%81%96%E7%B1%B3%E6%AD%87%E7%88%BE%E5%B1%B1%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+50170&ftid=0x480ea8d6fa127f55:0x2f3e7d9af4bb9864",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "48.6360167",
+          "Longitude" : "-1.5111148"
+        }
+      },
+      "Published" : "2017-01-07T23:29:29Z",
+      "Title" : "聖米歇爾山",
+      "Updated" : "2017-01-07T23:29:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 12.4533890, 41.9029160 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E6%A2%B5%E8%92%82%E5%B2%A1%E9%82%AE%E6%94%BF%E7%BC%96%E7%A0%81:+00120&ftid=0x1325890a57d42d3d:0x94f9ab23a7eb0",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "41.9029160",
+          "Longitude" : "12.4533890"
+        }
+      },
+      "Published" : "2017-01-07T23:20:16Z",
+      "Title" : "梵蒂岡",
+      "Updated" : "2017-01-07T23:20:16Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 35.2296002, 31.7784813 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3243901649424024416",
+      "Location" : {
+        "Address" : "Jerusalem",
+        "Business Name" : "聖墓教堂",
+        "Country Code" : "IL",
+        "Geo Coordinates" : {
+          "Latitude" : "31.7784813",
+          "Longitude" : "35.2296002"
+        }
+      },
+      "Published" : "2017-01-07T23:08:55Z",
+      "Title" : "Church of the Holy Sepulchre",
+      "Updated" : "2017-01-07T23:08:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 35.3035460, 32.6996350 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E4%BB%A5%E8%89%B2%E5%88%97%E6%8B%BF%E6%92%92%E5%8B%92&ftid=0x151c4e7cf16c0fff:0xd2385b30c1275dd6",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "32.6996350",
+          "Longitude" : "35.3035460"
+        }
+      },
+      "Published" : "2017-01-07T22:58:28Z",
+      "Title" : "以色列拿撒勒",
+      "Updated" : "2017-01-07T22:58:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 35.2075288, 31.7043034 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15015216094277543452",
+      "Location" : {
+        "Address" : "Bethlehem",
+        "Business Name" : "聖誕教堂",
+        "Country Code" : "IL",
+        "Geo Coordinates" : {
+          "Latitude" : "31.7043034",
+          "Longitude" : "35.2075288"
+        }
+      },
+      "Published" : "2017-01-07T22:49:26Z",
+      "Title" : "Church of Nativity",
+      "Updated" : "2017-01-07T22:49:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 35.2345085, 31.7767189 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9488344438468473209",
+      "Location" : {
+        "Address" : "Jerusalem",
+        "Business Name" : "西牆",
+        "Country Code" : "IL",
+        "Geo Coordinates" : {
+          "Latitude" : "31.7767189",
+          "Longitude" : "35.2345085"
+        }
+      },
+      "Published" : "2017-01-07T22:37:54Z",
+      "Title" : "Western Wall",
+      "Updated" : "2017-01-07T22:37:54Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 33.9760480, 28.5559484 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14492431069506624223",
+      "Location" : {
+        "Address" : "Saint Catherine, South Sinai Governorate, 埃及",
+        "Business Name" : "聖凱瑟琳修道院",
+        "Country Code" : "EG",
+        "Geo Coordinates" : {
+          "Latitude" : "28.5559484",
+          "Longitude" : "33.9760480"
+        }
+      },
+      "Published" : "2017-01-07T22:35:09Z",
+      "Title" : "Saint Catherine's Monastery",
+      "Updated" : "2017-01-07T22:35:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4716564, 25.0064113 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11191221063028903226",
+      "Location" : {
+        "Address" : "235台灣新北市中和區中山路三段213號",
+        "Business Name" : "交通部公路總局公路人員訓練所",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0064113",
+          "Longitude" : "121.4716564"
+        }
+      },
+      "Published" : "2017-01-06T05:05:23Z",
+      "Title" : "交通部公路總局公路人員訓練所中山路教練場",
+      "Updated" : "2017-01-06T05:05:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4401651, 25.1724594 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.172459,121.440165",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.1724594",
+          "Longitude" : "121.4401651"
+        }
+      },
+      "Published" : "2014-10-07T14:25:31Z",
+      "Title" : "25.172459,121.440165",
+      "Updated" : "2017-01-05T05:28:14Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.2569690, 24.8688310 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=335%E6%A1%83%E5%9C%92%E5%B8%82%E5%A4%A7%E6%BA%AA%E5%8D%80%E7%9F%B3%E5%9C%92%E8%B7%AF560%E8%99%9F&ftid=0x34683d5ea74fabcd:0x45ccb4c9701350ff",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.8688310",
+          "Longitude" : "121.2569690"
+        }
+      },
+      "Published" : "2017-01-02T00:43:30Z",
+      "Title" : "335桃園市大溪區石園路560號",
+      "Updated" : "2017-01-02T00:43:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.2403294, 24.8426394 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12428704831341468337",
+      "Location" : {
+        "Address" : "325台灣桃園市龍潭區十一分路200號",
+        "Business Name" : "心蘭餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8426394",
+          "Longitude" : "121.2403294"
+        }
+      },
+      "Published" : "2017-01-01T15:11:00Z",
+      "Title" : "心蘭石門活魚餐廳",
+      "Updated" : "2017-01-01T15:11:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.2472446, 24.8428130 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9212685867735458531",
+      "Location" : {
+        "Address" : "325台灣桃園市龍潭區永福路136-1號",
+        "Business Name" : "采莊庭園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8428130",
+          "Longitude" : "121.2472446"
+        }
+      },
+      "Published" : "2017-01-01T13:29:42Z",
+      "Title" : "采莊庭園",
+      "Updated" : "2017-01-01T13:29:42Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8240530, 24.6855870 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=24.685587,121.824053",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.6855870",
+          "Longitude" : "121.8240530"
+        }
+      },
+      "Published" : "2013-02-05T23:05:22Z",
+      "Title" : "24.685587,121.824053",
+      "Updated" : "2016-12-31T05:22:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 135.8430120, 34.6850470 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17972930374069941334",
+      "Location" : {
+        "Address" : "Nara, 日本",
+        "Business Name" : "奈良公園",
+        "Country Code" : "JP",
+        "Geo Coordinates" : {
+          "Latitude" : "34.6850470",
+          "Longitude" : "135.8430120"
+        }
+      },
+      "Published" : "2016-12-06T09:10:49Z",
+      "Title" : "奈良公园",
+      "Updated" : "2016-12-06T09:10:49Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9322430, 23.8468260 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10878367772225559070",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉",
+        "Business Name" : "伊達邵",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8468260",
+          "Longitude" : "120.9322430"
+        }
+      },
+      "Published" : "2016-12-02T12:36:02Z",
+      "Title" : "伊達邵",
+      "Updated" : "2016-12-02T12:36:02Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9088507, 23.8656393 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16925043870416897338",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉中興路12巷25之1號25號",
+        "Business Name" : "美利達愛騎自行車租賃店",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8656393",
+          "Longitude" : "120.9088507"
+        }
+      },
+      "Published" : "2016-12-01T10:09:43Z",
+      "Title" : "美利達愛騎自行車租賃店",
+      "Updated" : "2016-12-01T10:09:43Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6380783, 24.1681383 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8464612069537071429",
+      "Location" : {
+        "Address" : "407台灣台中市西屯區朝馬路8號",
+        "Business Name" : "和欣客運朝馬轉運站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1681383",
+          "Longitude" : "120.6380783"
+        }
+      },
+      "Published" : "2016-11-05T21:25:15Z",
+      "Title" : "國光客運朝馬站",
+      "Updated" : "2016-11-05T21:25:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9010320, 23.8539800 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=747204516436140",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉中山路592號",
+        "Business Name" : "向山美利達租車休閒廣場",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8539800",
+          "Longitude" : "120.9010320"
+        }
+      },
+      "Published" : "2016-11-04T21:43:15Z",
+      "Title" : "向山美利達租車休閒廣場",
+      "Updated" : "2016-11-04T21:43:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9045910, 23.8425163 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12509568932629916766",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉",
+        "Business Name" : "月潭步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8425163",
+          "Longitude" : "120.9045910"
+        }
+      },
+      "Published" : "2016-11-04T15:42:23Z",
+      "Title" : "月潭步道",
+      "Updated" : "2016-11-04T15:42:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9054818, 23.8549373 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4389545699132842728",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉水社村",
+        "Business Name" : "向山懸臂式觀景台",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8549373",
+          "Longitude" : "120.9054818"
+        }
+      },
+      "Published" : "2016-11-04T15:40:57Z",
+      "Title" : "向山懸臂式觀景台(天空步道)",
+      "Updated" : "2016-11-04T15:40:57Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9319637, 23.8493773 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2236805755281054595",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉水秀街57號",
+        "Business Name" : "中華電信日月潭會館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8493773",
+          "Longitude" : "120.9319637"
+        }
+      },
+      "Published" : "2016-11-04T15:23:57Z",
+      "Title" : "中華電信日月潭會館",
+      "Updated" : "2016-11-04T15:23:57Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 139.7182286, 35.5621706 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11670208826285915599",
+      "Location" : {
+        "Address" : "5 Chome-19-12 Kamata, Ota City, Tokyo 144-0052日本",
+        "Business Name" : "東京蒲田相鐵FRESA INN",
+        "Country Code" : "JP",
+        "Geo Coordinates" : {
+          "Latitude" : "35.5621706",
+          "Longitude" : "139.7182286"
+        }
+      },
+      "Published" : "2016-09-01T06:09:44Z",
+      "Title" : "Sotetsu Fresa Inn Tokyo Kamata",
+      "Updated" : "2016-09-01T06:09:44Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 139.8613535, 35.6625089 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=6+Chome-20-3+Nishikasai,+Edogawa-ku,+T%C5%8Dky%C5%8D-to+134-0088%E6%97%A5%E6%9C%AC&ftid=0x601887e45cf22577:0x3da1ac030cd03ab9",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "35.6625089",
+          "Longitude" : "139.8613535"
+        }
+      },
+      "Published" : "2016-09-01T06:08:31Z",
+      "Title" : "6 Chome-20-3 Nishikasai, Edogawa-ku, Tōkyō-to 134-0088日本",
+      "Updated" : "2016-09-01T06:08:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4924320, 25.0016385 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4261056341298119368",
+      "Location" : {
+        "Address" : "235台灣新北市中和區中山路二段347號",
+        "Business Name" : "好市多Costco 中和店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0016385",
+          "Longitude" : "121.4924320"
+        }
+      },
+      "Published" : "2016-08-05T01:37:40Z",
+      "Title" : "好市多Costco 中和店",
+      "Updated" : "2016-08-05T01:37:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5585109, 25.2468820 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.246882,121.558511",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.2468820",
+          "Longitude" : "121.5585109"
+        }
+      },
+      "Published" : "2014-07-30T01:22:03Z",
+      "Title" : "25.246882,121.558511",
+      "Updated" : "2016-08-03T05:31:41Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2974029, 22.6273601 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7532898940592937996",
+      "Location" : {
+        "Address" : "801台灣高雄市前金區中華三路68號",
+        "Business Name" : "高雄市立大同醫院圖書室",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.6273601",
+          "Longitude" : "120.2974029"
+        }
+      },
+      "Published" : "2016-07-12T04:29:06Z",
+      "Title" : "高雄市立大同醫院圖書室",
+      "Updated" : "2016-07-12T04:29:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5158977, 25.0333656 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10149826437809341854",
+      "Location" : {
+        "Address" : "100台灣台北市中正區南昌路一段1號",
+        "Business Name" : "呦呦‧荷造場",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0333656",
+          "Longitude" : "121.5158977"
+        }
+      },
+      "Published" : "2016-07-10T11:24:58Z",
+      "Title" : "呦呦荷造場-呦呦餐廳",
+      "Updated" : "2016-07-10T11:24:58Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5041520, 31.1065710 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2663272210982070993",
+      "Location" : {
+        "Address" : "中國上海市閔行區",
+        "Business Name" : "英順達科技有限公司",
+        "Geo Coordinates" : {
+          "Latitude" : "31.1065710",
+          "Longitude" : "121.5041520"
+        }
+      },
+      "Published" : "2016-06-25T23:46:51Z",
+      "Title" : "英顺达科技有限公司",
+      "Updated" : "2016-06-25T23:46:51Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3960625, 31.1691384 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7084533368882300656",
+      "Location" : {
+        "Address" : "中國上海市徐汇区宜山路1295号",
+        "Business Name" : "英業達集團",
+        "Geo Coordinates" : {
+          "Latitude" : "31.1691384",
+          "Longitude" : "121.3960625"
+        }
+      },
+      "Published" : "2016-06-25T23:42:26Z",
+      "Title" : "英業達集團",
+      "Updated" : "2016-06-25T23:42:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1750710, 23.0691440 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=23.069144,120.175071",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.0691440",
+          "Longitude" : "120.1750710"
+        }
+      },
+      "Published" : "2015-02-27T03:18:16Z",
+      "Title" : "23.069144,120.175071",
+      "Updated" : "2016-06-13T05:18:10Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5713889, 25.2686111 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.268611,121.571389",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.2686111",
+          "Longitude" : "121.5713889"
+        }
+      },
+      "Published" : "2014-07-30T01:22:18Z",
+      "Title" : "25.268611,121.571389",
+      "Updated" : "2016-06-10T05:25:58Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4424758, 23.4975875 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15980833171727559658",
+      "Location" : {
+        "Address" : "600台灣嘉義市西區文化路716之1號",
+        "Business Name" : "福源肉粽店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4975875",
+          "Longitude" : "120.4424758"
+        }
+      },
+      "Published" : "2016-05-29T22:20:53Z",
+      "Title" : "福源肉粽店",
+      "Updated" : "2016-05-29T22:20:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5086980, 25.0402858 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8630527499922667496",
+      "Location" : {
+        "Address" : "100台灣台北市中正區長沙街一段20號",
+        "Business Name" : "台北國軍英雄館軍友餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0402858",
+          "Longitude" : "121.5086980"
+        }
+      },
+      "Published" : "2016-05-26T23:55:34Z",
+      "Title" : "台北國軍英雄館軍友餐廳",
+      "Updated" : "2016-05-26T23:55:34Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4456755, 25.1677103 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=6294279258493548486",
+      "Location" : {
+        "Address" : "251台灣新北市淡水區中正路",
+        "Business Name" : "淡水站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1677103",
+          "Longitude" : "121.4456755"
+        }
+      },
+      "Published" : "2016-05-25T02:42:03Z",
+      "Title" : "捷運淡水站",
+      "Updated" : "2016-05-25T02:42:03Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 114.3653410, 10.3778125 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=Itu+Aba+Island&ftid=0x33d39d3bdbc15705:0xc1d010c2960cbc06",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "10.3778125",
+          "Longitude" : "114.3653410"
+        }
+      },
+      "Published" : "2016-04-16T09:34:30Z",
+      "Title" : "Itu Aba Island",
+      "Updated" : "2016-04-16T09:34:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5026860, 25.0399030 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13446958891702999756",
+      "Location" : {
+        "Address" : "108台灣台北市萬華區貴陽街二段116號",
+        "Business Name" : "三味食堂",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0399030",
+          "Longitude" : "121.5026860"
+        }
+      },
+      "Published" : "2016-04-05T21:58:35Z",
+      "Title" : "三味食堂",
+      "Updated" : "2016-04-05T21:58:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8192249, 24.4611582 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2210066242394708390",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮",
+        "Business Name" : "朝陽國家步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.4611582",
+          "Longitude" : "121.8192249"
+        }
+      },
+      "Published" : "2016-04-04T03:01:30Z",
+      "Title" : "朝陽國家步道",
+      "Updated" : "2016-04-04T03:01:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3506816, 24.8139740 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5420556608567123672",
+      "Location" : {
+        "Address" : "336台灣桃園市復興區中正路2號",
+        "Business Name" : "角板山公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8139740",
+          "Longitude" : "121.3506816"
+        }
+      },
+      "Published" : "2016-03-12T03:51:14Z",
+      "Title" : "角板山公園",
+      "Updated" : "2016-03-12T03:51:14Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3112514, 24.9416499 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17476468578705367741",
+      "Location" : {
+        "Address" : "334台灣桃園市八德區興豐路1315號",
+        "Business Name" : "桃園八德埤塘生態公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9416499",
+          "Longitude" : "121.3112514"
+        }
+      },
+      "Published" : "2016-03-12T03:38:00Z",
+      "Title" : "桃園八德埤塘生態公園",
+      "Updated" : "2016-03-12T03:38:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7317909, 25.1252129 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5022828156748864139",
+      "Location" : {
+        "Address" : "204台灣基隆市安樂區崇德路129號",
+        "Business Name" : "獅球嶺隧道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1252129",
+          "Longitude" : "121.7317909"
+        }
+      },
+      "Published" : "2016-03-11T15:07:04Z",
+      "Title" : "獅球嶺隧道",
+      "Updated" : "2016-03-11T15:07:04Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4486529, 24.8254431 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10910414880023187383",
+      "Location" : {
+        "Address" : "237台灣新北市三峽區",
+        "Business Name" : "滿月圓森林遊樂區遊客中心",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8254431",
+          "Longitude" : "121.4486529"
+        }
+      },
+      "Published" : "2016-03-11T14:32:13Z",
+      "Title" : "滿月圓森林遊樂區遊客中心",
+      "Updated" : "2016-03-11T14:32:13Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5032638, 25.0395869 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5736813564415196347",
+      "Location" : {
+        "Address" : "108台灣台北市萬華區貴陽街二段94號",
+        "Business Name" : "台灣基督長老教會-艋舺教會",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0395869",
+          "Longitude" : "121.5032638"
+        }
+      },
+      "Published" : "2016-03-05T07:05:23Z",
+      "Title" : "長老基督教會艋舺教會",
+      "Updated" : "2016-03-05T07:05:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9786390, 24.8022804 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17476439699674088092",
+      "Location" : {
+        "Address" : "300台灣新竹市東區",
+        "Business Name" : "公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8022804",
+          "Longitude" : "120.9786390"
+        }
+      },
+      "Published" : "2016-03-04T22:44:52Z",
+      "Title" : "公園",
+      "Updated" : "2016-03-04T22:44:52Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4785810, 25.0606213 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=18381125360234099121",
+      "Location" : {
+        "Address" : "241台灣新北市三重區疏洪一路",
+        "Business Name" : "幸福水漾公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0606213",
+          "Longitude" : "121.4785810"
+        }
+      },
+      "Published" : "2016-02-25T22:55:31Z",
+      "Title" : "幸福水漾公園",
+      "Updated" : "2016-02-25T22:55:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0107548, 23.9210341 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14044573981815264996",
+      "Location" : {
+        "Address" : "545台灣南投縣埔里鎮武界路51-3號",
+        "Business Name" : "中坑瀑布",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9210341",
+          "Longitude" : "121.0107548"
+        }
+      },
+      "Published" : "2016-02-24T09:19:59Z",
+      "Title" : "埔里中坑瀑布",
+      "Updated" : "2016-02-24T09:19:59Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0670245, 23.8817668 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1361221140393551752",
+      "Location" : {
+        "Address" : "546台灣南投縣仁愛鄉武界林道",
+        "Business Name" : "發電廠",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8817668",
+          "Longitude" : "121.0670245"
+        }
+      },
+      "Published" : "2016-02-24T09:17:23Z",
+      "Title" : "發電廠",
+      "Updated" : "2016-02-24T09:17:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0596670, 23.9157521 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=546%E5%8D%97%E6%8A%95%E7%B8%A3%E4%BB%81%E6%84%9B%E9%84%89%E6%AD%A6%E7%95%8C%E6%B0%B4%E5%BA%AB&ftid=0x3468daa30f4ae133:0x36d524e77bacc240",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.9157521",
+          "Longitude" : "121.0596670"
+        }
+      },
+      "Published" : "2016-02-24T09:15:16Z",
+      "Title" : "武界水庫",
+      "Updated" : "2016-02-24T09:15:16Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0161504, 24.9856611 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1899461646611229443",
+      "Location" : {
+        "Address" : "327台灣桃園市新屋區",
+        "Business Name" : "永安海濱公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9856611",
+          "Longitude" : "121.0161504"
+        }
+      },
+      "Published" : "2016-02-12T06:18:15Z",
+      "Title" : "永安海濱公園",
+      "Updated" : "2016-02-12T06:18:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3751679, 24.7906349 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15260975441260528599",
+      "Location" : {
+        "Address" : "336台灣桃園市復興區",
+        "Business Name" : "小烏來瀑布",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.7906349",
+          "Longitude" : "121.3751679"
+        }
+      },
+      "Published" : "2016-02-10T02:41:52Z",
+      "Title" : "小烏來瀑布風景區",
+      "Updated" : "2016-02-10T02:41:52Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3751678, 24.7906361 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7928669764200720522",
+      "Location" : {
+        "Address" : "336台灣桃園市復興區4-6號",
+        "Business Name" : "小烏來天空步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.7906361",
+          "Longitude" : "121.3751678"
+        }
+      },
+      "Published" : "2016-02-10T02:39:38Z",
+      "Title" : "小烏來天空步道",
+      "Updated" : "2016-02-10T02:39:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6580014, 23.8748031 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=23.874803176057288,120.6580014154315",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.8748031",
+          "Longitude" : "120.6580014"
+        }
+      },
+      "Published" : "2016-02-10T01:10:34Z",
+      "Title" : "23.874803176057288,120.6580014154315",
+      "Updated" : "2016-02-10T01:10:34Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4089865, 22.7307878 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16088708442249168864",
+      "Location" : {
+        "Address" : "840台灣高雄市大樹區學城路一段10號",
+        "Business Name" : "義大遊樂世界",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.7307878",
+          "Longitude" : "120.4089865"
+        }
+      },
+      "Published" : "2016-02-08T22:45:52Z",
+      "Title" : "義大遊樂世界",
+      "Updated" : "2016-02-08T22:45:52Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1059687, 23.1554185 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=6888026831317869062",
+      "Location" : {
+        "Address" : "724台灣台南市七股區鹽埕里69號1樓",
+        "Business Name" : "七股台灣鹽博物館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.1554185",
+          "Longitude" : "120.1059687"
+        }
+      },
+      "Published" : "2016-02-08T22:11:23Z",
+      "Title" : "Taiwan Salt Museum",
+      "Updated" : "2016-02-08T22:11:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8133473, 24.2029452 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=24.202945,120.813347",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.2029452",
+          "Longitude" : "120.8133473"
+        }
+      },
+      "Published" : "2015-02-12T09:39:48Z",
+      "Title" : "24.202945,120.813347",
+      "Updated" : "2016-02-06T05:56:57Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1606244, 23.0015093 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11177395365903707633",
+      "Location" : {
+        "Address" : "708台灣台南市安平區國勝路82號",
+        "Business Name" : "安平古堡",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.0015093",
+          "Longitude" : "120.1606244"
+        }
+      },
+      "Published" : "2016-02-01T23:09:52Z",
+      "Title" : "Anping Old Fort",
+      "Updated" : "2016-02-01T23:09:52Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2856620, 22.9246400 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=161659397133814247",
+      "Location" : {
+        "Address" : "711台灣台南市歸仁區歸仁大道100號",
+        "Business Name" : "台南高鐵站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.9246400",
+          "Longitude" : "120.2856620"
+        }
+      },
+      "Published" : "2016-02-01T22:49:16Z",
+      "Title" : "High Speed Rail Tainan Station",
+      "Updated" : "2016-02-01T22:49:16Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1597835, 23.0034467 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13377410734569808598",
+      "Location" : {
+        "Address" : "708台灣台南市安平區古堡街108號",
+        "Business Name" : "英商德記洋行（台灣開拓史料蠟像館）",
+        "Geo Coordinates" : {
+          "Latitude" : "23.0034467",
+          "Longitude" : "120.1597835"
+        }
+      },
+      "Published" : "2016-02-01T14:49:45Z",
+      "Title" : "Old Tait & Co. Merchant House",
+      "Updated" : "2016-02-01T14:49:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1534640, 22.9969310 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1787035555054132434",
+      "Location" : {
+        "Address" : "708台灣台南市安平區同平路127巷16弄1號",
+        "Business Name" : "風車童話 故事館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.9969310",
+          "Longitude" : "120.1534640"
+        }
+      },
+      "Published" : "2016-02-01T14:48:44Z",
+      "Title" : "台灣咖啡文化館(安平休閒文化)",
+      "Updated" : "2016-02-01T14:48:44Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1563263, 23.0025611 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1726197720478484592",
+      "Location" : {
+        "Address" : "708台灣台南市安平區古堡街196號",
+        "Business Name" : "夕遊-出張所",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.0025611",
+          "Longitude" : "120.1563263"
+        }
+      },
+      "Published" : "2016-02-01T14:45:26Z",
+      "Title" : "夕游出张所",
+      "Updated" : "2016-02-01T14:45:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2539882, 22.8781992 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1208762483058247197",
+      "Location" : {
+        "Address" : "821台灣高雄市路竹區",
+        "Business Name" : "大湖火車站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.8781992",
+          "Longitude" : "120.2539882"
+        }
+      },
+      "Published" : "2016-01-31T23:21:28Z",
+      "Title" : "Dahu Station",
+      "Updated" : "2016-01-31T23:21:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8896441, 25.1202362 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.1202362,121.88964409999998",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.1202362",
+          "Longitude" : "121.8896441"
+        }
+      },
+      "Published" : "2016-01-10T23:39:55Z",
+      "Title" : "25.1202362,121.88964409999998",
+      "Updated" : "2016-01-10T23:39:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4561950, 25.0026560 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=220%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E8%B2%B4%E8%88%88%E8%B7%AF101%E8%99%9F&ftid=0x346802af68358e61:0x49b6b575ffb526e7",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0026560",
+          "Longitude" : "121.4561950"
+        }
+      },
+      "Published" : "2015-10-19T02:14:54Z",
+      "Title" : "220新北市板橋區貴興路101號",
+      "Updated" : "2015-10-19T02:14:54Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5408470, 24.9961809 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=116%E5%8F%B0%E5%8C%97%E5%B8%82%E6%96%87%E5%B1%B1%E5%8D%80%E7%BE%85%E6%96%AF%E7%A6%8F%E8%B7%AF%E5%85%AD%E6%AE%B5140%E8%99%9F&ftid=0x3442aa03b8c0f3c1:0x4b8a8e86efa6a566",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.9961809",
+          "Longitude" : "121.5408470"
+        }
+      },
+      "Published" : "2015-10-17T01:03:17Z",
+      "Title" : "116台北市文山區羅斯福路六段140號",
+      "Updated" : "2015-10-17T01:03:17Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5152472, 25.0322424 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10655491072176781303",
+      "Location" : {
+        "Address" : "100台灣台北市中正區南海路15號",
+        "Business Name" : "臺北教師會館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0322424",
+          "Longitude" : "121.5152472"
+        }
+      },
+      "Published" : "2015-09-29T09:21:16Z",
+      "Title" : "Taipei Teachers Hostel",
+      "Updated" : "2015-09-29T09:21:16Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5342181, 25.0237161 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10259628644986318171",
+      "Location" : {
+        "Address" : "106台灣台北市大安區新生南路三段30號",
+        "Business Name" : "公務人力發展中心福華國際文教會館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0237161",
+          "Longitude" : "121.5342181"
+        }
+      },
+      "Published" : "2015-09-29T09:14:25Z",
+      "Title" : "Howard Civil Service International House, Taipei City",
+      "Updated" : "2015-09-29T09:14:25Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4542167, 25.0231796 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=220%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%96%B0%E5%8C%97%E5%B8%82%E6%9D%BF%E6%A9%8B%E5%8D%80%E4%B8%AD%E6%AD%A3%E8%B7%AF435%E8%99%9F&ftid=0x3442a80e556f9685:0x823279309b728a46",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0231796",
+          "Longitude" : "121.4542167"
+        }
+      },
+      "Published" : "2015-09-24T14:58:22Z",
+      "Title" : "220台灣新北市板橋區中正路435號",
+      "Updated" : "2015-09-24T14:58:22Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5308150, 25.0141310 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1896976595445390217",
+      "Location" : {
+        "Address" : "100台灣台北市中正區",
+        "Business Name" : "自來水博物館(太子學舍)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0141310",
+          "Longitude" : "121.5308150"
+        }
+      },
+      "Published" : "2015-09-23T06:43:56Z",
+      "Title" : "自來水博物館(太子學舍)",
+      "Updated" : "2015-09-23T06:43:56Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5303176, 25.0138243 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11597447677522148422",
+      "Location" : {
+        "Address" : "100台灣台北市中正區思源街16號",
+        "Business Name" : "水源會館 公館店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0138243",
+          "Longitude" : "121.5303176"
+        }
+      },
+      "Published" : "2015-09-17T03:40:07Z",
+      "Title" : "水源福利會館",
+      "Updated" : "2015-09-17T03:40:07Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4080887, 24.8312397 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13119632650810786990",
+      "Location" : {
+        "Address" : "台灣",
+        "Business Name" : "東眼山國家森林遊樂區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8312397",
+          "Longitude" : "121.4080887"
+        }
+      },
+      "Published" : "2015-07-17T02:11:23Z",
+      "Title" : "東眼山森林遊樂區",
+      "Updated" : "2015-07-17T02:11:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.1137768, 24.5060408 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14525612727042435114",
+      "Location" : {
+        "Address" : "365台灣苗栗縣泰安鄉",
+        "Business Name" : "觀霧國家森林遊樂區遊客中心",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5060408",
+          "Longitude" : "121.1137768"
+        }
+      },
+      "Published" : "2015-07-17T01:54:15Z",
+      "Title" : "觀霧國家森林遊樂區遊客中心",
+      "Updated" : "2015-07-17T01:54:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5457570, 25.0207390 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14459308223054100010",
+      "Location" : {
+        "Address" : "106台灣台北市大安區辛亥路三段55號",
+        "Business Name" : "臺北大安運動中心",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0207390",
+          "Longitude" : "121.5457570"
+        }
+      },
+      "Published" : "2015-07-13T14:54:17Z",
+      "Title" : "Taipei DaAn Sports Center",
+      "Updated" : "2015-07-13T14:54:17Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 23.7293599, 37.9839170 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E5%B8%8C%E8%87%98%E9%9B%85%E5%85%B8&ftid=0x14a1bd1f067043f1:0x2736354576668ddd",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "37.9839170",
+          "Longitude" : "23.7293599"
+        }
+      },
+      "Published" : "2015-06-27T03:07:29Z",
+      "Title" : "希臘雅典",
+      "Updated" : "2015-06-27T03:07:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 21.6305896, 39.7217044 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8153676780058456831",
+      "Location" : {
+        "Address" : "Kalabaka 422 00希臘",
+        "Business Name" : "邁泰奧拉",
+        "Country Code" : "GR",
+        "Geo Coordinates" : {
+          "Latitude" : "39.7217044",
+          "Longitude" : "21.6305896"
+        }
+      },
+      "Published" : "2015-06-27T03:07:07Z",
+      "Title" : "Meteora",
+      "Updated" : "2015-06-27T03:07:07Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 25.4615092, 36.3931562 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=Santorini,+%E5%B8%8C%E8%87%98&ftid=0x1499ce86adfd9ff7:0xb2a761f740d68afc",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "36.3931562",
+          "Longitude" : "25.4615092"
+        }
+      },
+      "Published" : "2015-06-27T03:06:24Z",
+      "Title" : "Santorini",
+      "Updated" : "2015-06-27T03:06:24Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 25.3992302, 37.4349647 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=37.434964684094865,25.399230234324932",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "37.4349647",
+          "Longitude" : "25.3992302"
+        }
+      },
+      "Published" : "2015-06-27T03:05:39Z",
+      "Title" : "37.434964684094865,25.399230234324932",
+      "Updated" : "2015-06-27T03:05:39Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8728457, 24.2829494 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=24.282949,120.872846",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.2829494",
+          "Longitude" : "120.8728457"
+        }
+      },
+      "Published" : "2014-09-15T03:02:11Z",
+      "Title" : "24.282949,120.872846",
+      "Updated" : "2015-06-25T08:41:46Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5140100, 25.0437159 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E6%87%B7%E5%AF%A7%E8%A1%9770%E8%99%9F&ftid=0x3442a90cab0434cf:0xfa78e08f23281296",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0437159",
+          "Longitude" : "121.5140100"
+        }
+      },
+      "Published" : "2015-06-17T02:32:09Z",
+      "Title" : "100台北市中正區懷寧街70號",
+      "Updated" : "2015-06-17T02:32:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5336710, 25.0254200 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E6%BA%AB%E5%B7%9E%E8%A1%9711%E5%B7%B72%E8%99%9F&ftid=0x3442a98656ee3f73:0xc6e2135edb945e2b",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0254200",
+          "Longitude" : "121.5336710"
+        }
+      },
+      "Published" : "2015-06-10T06:48:40Z",
+      "Title" : "106台北市大安區溫州街11巷2號",
+      "Updated" : "2015-06-10T06:48:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5137617, 25.0457010 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1174056091795400445",
+      "Location" : {
+        "Address" : "100台灣台北市中正區開封街一段14巷2號",
+        "Business Name" : "劉山東牛肉麵",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0457010",
+          "Longitude" : "121.5137617"
+        }
+      },
+      "Published" : "2015-05-30T21:39:30Z",
+      "Title" : "劉山東牛肉麵",
+      "Updated" : "2015-05-30T21:39:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5137590, 25.0458419 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=100%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E6%AD%A3%E5%8D%80%E9%96%8B%E5%B0%81%E8%A1%97%E4%B8%80%E6%AE%B514%E5%B7%B72%E8%99%9F&ftid=0x3442a90cd144b5b9:0xc3dff2db09693dfe",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0458419",
+          "Longitude" : "121.5137590"
+        }
+      },
+      "Published" : "2015-05-30T21:39:18Z",
+      "Title" : "100台北市中正區開封街一段14巷2號",
+      "Updated" : "2015-05-30T21:39:18Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5210189, 24.9964804 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=234%E6%96%B0%E5%8C%97%E5%B8%82%E6%B0%B8%E5%92%8C%E5%8D%80%E6%B0%91%E7%94%9F%E8%B7%AF46%E5%B7%B756%E8%99%9F%E6%84%9B%E8%B2%B7&ftid=0x3442a9e234199b51:0x40b9bb5441ad07e6",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.9964804",
+          "Longitude" : "121.5210189"
+        }
+      },
+      "Published" : "2015-05-20T22:32:29Z",
+      "Title" : "234新北市永和區民生路46巷56號",
+      "Updated" : "2015-05-20T22:32:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5200042, 25.0103168 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12103585076118818888",
+      "Location" : {
+        "Address" : "234台灣新北市永和區豫溪街137-3號",
+        "Business Name" : "橘元日本料理",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0103168",
+          "Longitude" : "121.5200042"
+        }
+      },
+      "Published" : "2015-05-16T13:01:35Z",
+      "Title" : "橘元日本料理",
+      "Updated" : "2015-05-16T13:01:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5107183, 25.1373401 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2465829962954234928",
+      "Location" : {
+        "Address" : "112台灣台北市北投區中山路30號之10號",
+        "Business Name" : "地熱谷",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1373401",
+          "Longitude" : "121.5107183"
+        }
+      },
+      "Published" : "2015-05-01T22:13:00Z",
+      "Title" : "Thermal Valley",
+      "Updated" : "2015-05-01T22:13:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5057526, 25.1371098 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4971742955333720190",
+      "Location" : {
+        "Address" : "112台灣台北市北投區中山路3-1號",
+        "Business Name" : "凱達格蘭文化館(北投神社原址)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1371098",
+          "Longitude" : "121.5057526"
+        }
+      },
+      "Published" : "2015-05-01T22:10:59Z",
+      "Title" : "凱達格蘭文化館",
+      "Updated" : "2015-05-01T22:10:59Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6136601, 23.8851605 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13095685580945041820",
+      "Location" : {
+        "Address" : "511台灣彰化縣社頭鄉",
+        "Business Name" : "清水岩森林遊樂區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8851605",
+          "Longitude" : "120.6136601"
+        }
+      },
+      "Published" : "2015-04-26T22:43:58Z",
+      "Title" : "清水岩森林遊樂區",
+      "Updated" : "2015-04-26T22:43:58Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2609110, 23.0028361 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=710%E5%8F%B0%E5%8D%97%E5%B8%82%E6%B0%B8%E5%BA%B7%E5%8D%80%E5%A4%A7%E7%81%A3%E8%B7%AF764%E5%B7%B7105%E8%99%9F&ftid=0x346e712f09c2c22f:0x828cfc1de2b5f18",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.0028361",
+          "Longitude" : "120.2609110"
+        }
+      },
+      "Published" : "2015-04-24T21:59:13Z",
+      "Title" : "710台南市永康區大灣路764巷105號",
+      "Updated" : "2015-04-24T21:59:13Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1942430, 23.0427170 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=709%E5%8F%B0%E5%8D%97%E5%B8%82%E5%AE%89%E5%8D%97%E5%8D%80%E5%AE%89%E4%B8%AD%E8%B7%AF%E4%B8%80%E6%AE%B5705%E5%B7%B73%E5%BC%8414%E8%99%9F&ftid=0x346e77a3309a0773:0x953ffd7f9cffc6d",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.0427170",
+          "Longitude" : "120.1942430"
+        }
+      },
+      "Published" : "2015-04-24T21:54:38Z",
+      "Title" : "709台南市安南區安中路一段705巷3弄14號",
+      "Updated" : "2015-04-24T21:54:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5674500, 25.0277010 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=110%E5%8F%B0%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80%E8%8E%8A%E6%95%AC%E8%B7%AF423%E5%B7%B74%E5%BC%8420%E8%99%9F&ftid=0x3442abb30e385409:0x46b239a1b40462f8",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0277010",
+          "Longitude" : "121.5674500"
+        }
+      },
+      "Published" : "2015-04-16T09:58:10Z",
+      "Title" : "110台北市信義區莊敬路423巷4弄20號",
+      "Updated" : "2015-04-16T09:58:10Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5336739, 25.1276355 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3559046057961112028",
+      "Location" : {
+        "Address" : "111台灣台北市士林區中山北路七段",
+        "Business Name" : "天母古道親山步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1276355",
+          "Longitude" : "121.5336739"
+        }
+      },
+      "Published" : "2015-04-13T10:53:35Z",
+      "Title" : "天母古道",
+      "Updated" : "2015-04-13T10:53:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5069087, 25.0387766 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8091214759513543660",
+      "Location" : {
+        "Address" : "108台灣台北市萬華區中華路一段192號",
+        "Business Name" : "皇家帝國麻辣火鍋吃到飽",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0387766",
+          "Longitude" : "121.5069087"
+        }
+      },
+      "Published" : "2015-04-05T00:04:20Z",
+      "Title" : "皇家帝國麻辣火鍋",
+      "Updated" : "2015-04-05T00:04:20Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5616235, 25.0253584 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12463228950487890024",
+      "Location" : {
+        "Address" : "110台灣台北市信義區吳興街250號",
+        "Business Name" : "臺北醫學大學",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0253584",
+          "Longitude" : "121.5616235"
+        }
+      },
+      "Published" : "2015-03-26T15:18:40Z",
+      "Title" : "Taipei Medical University",
+      "Updated" : "2015-03-26T15:18:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1540958, 22.9988990 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=708%E5%8F%B0%E5%8D%97%E5%B8%82%E5%AE%89%E5%B9%B3%E5%8D%80%E5%AE%89%E5%B9%B3%E8%B7%AF986%E8%99%9F&ftid=0x346dd8a8db235dcb:0xc40de4e12fae36e3",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "22.9988990",
+          "Longitude" : "120.1540958"
+        }
+      },
+      "Published" : "2015-03-23T23:28:22Z",
+      "Title" : "708台南市安平區安平路986號",
+      "Updated" : "2015-03-23T23:28:22Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2490008, 23.0430171 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12778712956660858505",
+      "Location" : {
+        "Address" : "710台灣台南市永康區中正北路345巷8號",
+        "Business Name" : "台南商務會館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.0430171",
+          "Longitude" : "120.2490008"
+        }
+      },
+      "Published" : "2015-03-22T00:37:11Z",
+      "Title" : "台南商務會館",
+      "Updated" : "2015-03-22T00:37:11Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5392806, 24.0795711 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14044335775252877499",
+      "Location" : {
+        "Address" : "500台灣彰化縣彰化市長安街144號",
+        "Business Name" : "阿璋肉圓",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.0795711",
+          "Longitude" : "120.5392806"
+        }
+      },
+      "Published" : "2015-03-08T01:18:32Z",
+      "Title" : "阿璋肉圓",
+      "Updated" : "2015-03-08T01:18:32Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4576797, 23.4749317 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14904929470084183081",
+      "Location" : {
+        "Address" : "600台灣嘉義市東區和平路107號",
+        "Business Name" : "和平嘉義火雞肉飯",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4749317",
+          "Longitude" : "120.4576797"
+        }
+      },
+      "Published" : "2015-03-08T01:16:55Z",
+      "Title" : "和平雞肉飯",
+      "Updated" : "2015-03-08T01:16:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5494438, 24.0786231 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8221600309318038030",
+      "Location" : {
+        "Address" : "500台灣彰化縣彰化市溫泉路31號",
+        "Business Name" : "八卦山大佛寺",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.0786231",
+          "Longitude" : "120.5494438"
+        }
+      },
+      "Published" : "2015-03-08T01:10:29Z",
+      "Title" : "彰化八卦山大仏寺",
+      "Updated" : "2015-03-08T01:10:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6977381, 24.0847660 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17228313771325373842",
+      "Location" : {
+        "Address" : "412台灣台中市大里區成功路9號",
+        "Business Name" : "台中市警察局霧峰分局成功派出所",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.0847660",
+          "Longitude" : "120.6977381"
+        }
+      },
+      "Published" : "2015-03-08T01:08:45Z",
+      "Title" : "Taichung City Police Bureau",
+      "Updated" : "2015-03-08T01:08:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7688463, 24.8302761 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12826352488611806346",
+      "Location" : {
+        "Address" : "262台灣宜蘭縣礁溪鄉德陽路80巷3號",
+        "Business Name" : "春和大飯店日式大浴池",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8302761",
+          "Longitude" : "121.7688463"
+        }
+      },
+      "Published" : "2015-02-27T14:43:36Z",
+      "Title" : "春和大飯店日式大浴池",
+      "Updated" : "2015-02-27T14:43:36Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7760185, 24.8394545 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14953456862705080100",
+      "Location" : {
+        "Address" : "262台灣宜蘭縣礁溪鄉白石腳路157巷1號",
+        "Business Name" : "跑馬古道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8394545",
+          "Longitude" : "121.7760185"
+        }
+      },
+      "Published" : "2015-02-27T11:53:49Z",
+      "Title" : "跑馬古道",
+      "Updated" : "2015-02-27T11:53:49Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6241734, 24.1268515 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9959934905427426390",
+      "Location" : {
+        "Address" : "408台灣台中市南屯區鎮和巷11號",
+        "Business Name" : "天順宮",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1268515",
+          "Longitude" : "120.6241734"
+        }
+      },
+      "Published" : "2015-02-22T00:07:53Z",
+      "Title" : "天順宮",
+      "Updated" : "2015-02-22T00:07:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.7337207, 24.1775552 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=406%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80%E6%9D%B1%E5%B1%B1%E8%B7%AF%E4%B8%80%E6%AE%B5383%E5%B7%B7&ftid=0x3469183f40fce227:0x21a2070536d41e0f",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.1775552",
+          "Longitude" : "120.7337207"
+        }
+      },
+      "Published" : "2015-02-21T23:43:31Z",
+      "Title" : "406台灣台中市北屯區東山路一段383巷",
+      "Updated" : "2015-02-21T23:43:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6403028, 24.1626492 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7816441999807792363",
+      "Location" : {
+        "Address" : "407025台灣台中市西屯區惠來路二段101號",
+        "Business Name" : "臺中國家歌劇院 National Taichung Theater",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1626492",
+          "Longitude" : "120.6403028"
+        }
+      },
+      "Published" : "2015-02-21T22:38:51Z",
+      "Title" : "台中大都會歌劇院",
+      "Updated" : "2015-02-21T22:42:43Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6633131, 24.1411864 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17478117239366709148",
+      "Location" : {
+        "Address" : "403台灣台中市西區五權西路一段2號",
+        "Business Name" : "國立臺灣美術館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1411864",
+          "Longitude" : "120.6633131"
+        }
+      },
+      "Published" : "2015-02-21T22:36:38Z",
+      "Title" : "National Taiwan Museum of Fine Arts",
+      "Updated" : "2015-02-21T22:36:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6005539, 24.1788952 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11845054683318388813",
+      "Location" : {
+        "Address" : "407台灣台中市西屯區台灣大道四段1727號",
+        "Business Name" : "路思義教堂",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1788952",
+          "Longitude" : "120.6005539"
+        }
+      },
+      "Published" : "2015-02-21T22:36:05Z",
+      "Title" : "Luce Memorial Chapel",
+      "Updated" : "2015-02-21T22:36:05Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5003837, 23.7688407 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12605583349849576589",
+      "Location" : {
+        "Address" : "647台灣雲林縣莿桐鄉",
+        "Business Name" : "雲林花海莿桐孩沙里",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.7688407",
+          "Longitude" : "120.5003837"
+        }
+      },
+      "Published" : "2015-02-18T23:17:07Z",
+      "Title" : "孩沙里花海",
+      "Updated" : "2015-02-18T23:17:07Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.3072094, 22.6235455 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=800%E9%AB%98%E9%9B%84%E5%B8%82%E6%96%B0%E8%88%88%E5%8D%80%E6%96%B0%E7%94%B0%E8%B7%AF54%E8%99%9F&ftid=0x346e04851710cf0d:0x3e8348af59654fd7",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "22.6235455",
+          "Longitude" : "120.3072094"
+        }
+      },
+      "Published" : "2015-02-18T21:59:36Z",
+      "Title" : "800高雄市新興區新田路54號",
+      "Updated" : "2015-02-18T21:59:36Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2905163, 22.6242979 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5094978994556246540",
+      "Location" : {
+        "Address" : "801台灣高雄市前金區民生二路202號20樓",
+        "Business Name" : "國賓川菜廳- 高雄國賓大飯店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.6242979",
+          "Longitude" : "120.2905163"
+        }
+      },
+      "Published" : "2015-02-17T01:58:04Z",
+      "Title" : "(高雄國賓大飯店)川菜廳",
+      "Updated" : "2015-02-17T01:58:04Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6343310, 24.1578410 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=408%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8D%97%E5%B1%AF%E5%8D%80%E9%BB%8E%E6%98%8E%E8%B7%AF%E4%BA%8C%E6%AE%B5658%E8%99%9F&ftid=0x34693def29e59835:0x298fd336537e0159",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.1578410",
+          "Longitude" : "120.6343310"
+        }
+      },
+      "Published" : "2015-02-17T00:51:06Z",
+      "Title" : "408台中市南屯區黎明路二段658號",
+      "Updated" : "2015-02-17T00:51:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.3942343, 22.8829617 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8092819058034118535",
+      "Location" : {
+        "Address" : "823台灣高雄市田寮區崇德里",
+        "Business Name" : "月世界泥火山",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "22.8829617",
+          "Longitude" : "120.3942343"
+        }
+      },
+      "Published" : "2015-02-17T00:46:28Z",
+      "Title" : "月世界泥火山",
+      "Updated" : "2015-02-17T00:46:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0024962, 24.1805572 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8112493722482680861",
+      "Location" : {
+        "Address" : "424台灣台中市和平區東關路一段200之8號",
+        "Business Name" : "八仙山國家森林遊樂區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1805572",
+          "Longitude" : "121.0024962"
+        }
+      },
+      "Published" : "2015-02-14T11:53:16Z",
+      "Title" : "八仙山国家森林遊楽区",
+      "Updated" : "2015-02-14T11:53:16Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5498100, 24.3119510 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=207608892990589433",
+      "Location" : {
+        "Address" : "436台灣台中市清水區美堤街",
+        "Business Name" : "高美濕地",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.3119510",
+          "Longitude" : "120.5498100"
+        }
+      },
+      "Published" : "2015-02-12T09:41:18Z",
+      "Title" : "Gaomei Wetland",
+      "Updated" : "2015-02-12T09:41:18Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5401710, 24.0859482 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4450633145979826636",
+      "Location" : {
+        "Address" : "500台灣彰化縣彰化市彰美路一段1號",
+        "Business Name" : "彰化扇形車庫",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.0859482",
+          "Longitude" : "120.5401710"
+        }
+      },
+      "Published" : "2015-02-12T09:40:21Z",
+      "Title" : "彰化扇形車庫",
+      "Updated" : "2015-02-12T09:40:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6844762, 24.1448185 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1174973244459044923",
+      "Location" : {
+        "Address" : "404台灣台中市北區雙十路一段65號",
+        "Business Name" : "臺中公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1448185",
+          "Longitude" : "120.6844762"
+        }
+      },
+      "Published" : "2015-02-12T09:40:06Z",
+      "Title" : "Taichung Park",
+      "Updated" : "2015-02-12T09:40:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8123238, 24.1896784 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1580328779544874050",
+      "Location" : {
+        "Address" : "426台灣台中市新社區協中街23號",
+        "Business Name" : "新社莊園古堡",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.1896784",
+          "Longitude" : "120.8123238"
+        }
+      },
+      "Published" : "2015-02-12T09:39:43Z",
+      "Title" : "新社莊園",
+      "Updated" : "2015-02-12T09:39:43Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5988161, 24.2078278 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1842679528460921389",
+      "Location" : {
+        "Address" : "407台灣台中市西屯區都會園路1215巷140號",
+        "Business Name" : "都會公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.2078278",
+          "Longitude" : "120.5988161"
+        }
+      },
+      "Published" : "2015-02-12T09:39:09Z",
+      "Title" : "Taichung Metropolitan Park",
+      "Updated" : "2015-02-12T09:39:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.3948468, 24.0684557 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7754330870528410418",
+      "Location" : {
+        "Address" : "505台灣彰化縣鹿港鎮鹿工南四路30號",
+        "Business Name" : "臺灣玻璃館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.0684557",
+          "Longitude" : "120.3948468"
+        }
+      },
+      "Published" : "2015-02-12T09:38:25Z",
+      "Title" : "台灣玻璃館",
+      "Updated" : "2015-02-12T09:38:25Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6315992, 23.9084478 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1406576746988992341",
+      "Location" : {
+        "Address" : "540台灣南投縣南投市猴探井街300號",
+        "Business Name" : "猴探井天空之橋",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9084478",
+          "Longitude" : "120.6315992"
+        }
+      },
+      "Published" : "2015-02-12T09:37:48Z",
+      "Title" : "天空之橋(猴探井天梯)",
+      "Updated" : "2015-02-12T09:37:48Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4807772, 23.9515531 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1222615428723243186",
+      "Location" : {
+        "Address" : "514台灣彰化縣溪湖鎮彰水路二段762號",
+        "Business Name" : "溪湖糖廠",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9515531",
+          "Longitude" : "120.4807772"
+        }
+      },
+      "Published" : "2015-02-12T09:37:08Z",
+      "Title" : "渓湖糖廠",
+      "Updated" : "2015-02-12T09:37:08Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4544970, 23.7053530 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15225590676424566798",
+      "Location" : {
+        "Address" : "632台灣雲林縣虎尾鎮光復路2號",
+        "Business Name" : "伊莉特美妝小白宮",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.7053530",
+          "Longitude" : "120.4544970"
+        }
+      },
+      "Published" : "2015-02-12T09:34:57Z",
+      "Title" : "興隆毛巾觀光工廠",
+      "Updated" : "2015-02-12T09:34:57Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.5570154, 23.5787816 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14896495199344113546",
+      "Location" : {
+        "Address" : "603台灣嘉義縣梅山鄉梅仔山9-1號",
+        "Business Name" : "梅山公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.5787816",
+          "Longitude" : "120.5570154"
+        }
+      },
+      "Published" : "2015-02-12T09:32:53Z",
+      "Title" : "Meishan Park",
+      "Updated" : "2015-02-12T09:32:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4841740, 23.4681944 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10054523198283599224",
+      "Location" : {
+        "Address" : "600台灣嘉義市東區學府路300號",
+        "Business Name" : "國立嘉義大學",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4681944",
+          "Longitude" : "120.4841740"
+        }
+      },
+      "Published" : "2015-02-12T09:32:45Z",
+      "Title" : "National Chiayi University",
+      "Updated" : "2015-02-12T09:32:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1373384, 23.4514662 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2293830777025448017",
+      "Location" : {
+        "Address" : "614台灣嘉義縣東石鄉168縣道34號",
+        "Business Name" : "東石漁港",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4514662",
+          "Longitude" : "120.1373384"
+        }
+      },
+      "Published" : "2015-02-12T09:31:12Z",
+      "Title" : "東石漁港",
+      "Updated" : "2015-02-12T09:31:12Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1195825, 23.5034833 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8479547948881896423",
+      "Location" : {
+        "Address" : "614台灣嘉義縣東石鄉",
+        "Business Name" : "鰲鼓濕地 - 西堤",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.5034833",
+          "Longitude" : "120.1195825"
+        }
+      },
+      "Published" : "2015-02-12T09:30:57Z",
+      "Title" : "鰲鼓湿地",
+      "Updated" : "2015-02-12T09:30:57Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.2994700, 23.4802450 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5840293385037553944",
+      "Location" : {
+        "Address" : "615台灣嘉義縣六腳鄉工廠村1號",
+        "Business Name" : "蒜頭糖廠蔗埕文化園區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4802450",
+          "Longitude" : "120.2994700"
+        }
+      },
+      "Published" : "2015-02-12T09:29:02Z",
+      "Title" : "Suantou Zhecheng Cultural Park",
+      "Updated" : "2015-02-12T09:29:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4520443, 23.4857577 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17348345739749407186",
+      "Location" : {
+        "Address" : "600台灣嘉義市東區林森西路2號",
+        "Business Name" : "阿里山森林鐵路車庫園區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.4857577",
+          "Longitude" : "120.4520443"
+        }
+      },
+      "Published" : "2015-02-12T09:28:11Z",
+      "Title" : "嘉義車庫園區",
+      "Updated" : "2015-02-12T09:28:11Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6959218, 23.5041909 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15678294438816506858",
+      "Location" : {
+        "Address" : "604台灣嘉義縣竹崎鄉",
+        "Business Name" : "奮起湖風景區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.5041909",
+          "Longitude" : "120.6959218"
+        }
+      },
+      "Published" : "2015-02-12T08:15:35Z",
+      "Title" : "奮起湖風景區",
+      "Updated" : "2015-02-12T08:15:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.7005044, 23.5064295 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E5%98%89%E7%BE%A9%E7%B8%A3%E5%A5%AE%E8%B5%B7%E6%B9%96&ftid=0x346ec2cd5a7fd375:0x1252e107857bcd2e",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.5064295",
+          "Longitude" : "120.7005044"
+        }
+      },
+      "Published" : "2015-02-11T08:50:15Z",
+      "Title" : "奮起湖",
+      "Updated" : "2015-02-11T08:50:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1362648, 23.0028705 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3580320445387321017",
+      "Location" : {
+        "Address" : "709台灣台南市安南區四草大道118號",
+        "Business Name" : "台江國家公園管理處行政中心",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.0028705",
+          "Longitude" : "120.1362648"
+        }
+      },
+      "Published" : "2015-01-15T01:52:38Z",
+      "Title" : "Taijiang National Park",
+      "Updated" : "2015-01-15T01:52:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.3497035, 22.6723031 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5262947380646479039",
+      "Location" : {
+        "Address" : "814台灣高雄市仁武區仁勇路400 號",
+        "Business Name" : "中華電信學院高雄所",
+        "Geo Coordinates" : {
+          "Latitude" : "22.6723031",
+          "Longitude" : "120.3497035"
+        }
+      },
+      "Published" : "2015-01-15T01:48:55Z",
+      "Title" : "中華電信股份有限公司電信訓練所",
+      "Updated" : "2015-01-15T01:48:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8140101, 23.9327702 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3840996316682109443",
+      "Location" : {
+        "Address" : "541台灣南投縣中寮鄉瀧林巷14號",
+        "Business Name" : "肖楠巨木林",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9327702",
+          "Longitude" : "120.8140101"
+        }
+      },
+      "Published" : "2015-01-07T08:19:25Z",
+      "Title" : "肖楠巨木林",
+      "Updated" : "2015-01-07T08:19:25Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8167255, 23.9423699 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1515111633577994757",
+      "Location" : {
+        "Address" : "541台灣南投縣中寮鄉瀧林巷",
+        "Business Name" : "南投龍鳳瀑布",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9423699",
+          "Longitude" : "120.8167255"
+        }
+      },
+      "Published" : "2015-01-07T08:19:20Z",
+      "Title" : "龍鳳瀑布(雌雄瀑布)",
+      "Updated" : "2015-01-07T08:19:20Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.7619300, 23.9333751 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16336593545414366518",
+      "Location" : {
+        "Address" : "541台灣南投縣中寮鄉竹坪巷40號",
+        "Business Name" : "爽文國中",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9333751",
+          "Longitude" : "120.7619300"
+        }
+      },
+      "Published" : "2015-01-07T08:18:47Z",
+      "Title" : "Nantou Shung-Wen Junior High School",
+      "Updated" : "2015-01-07T08:18:47Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6366001, 24.9295934 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4695277961199921863",
+      "Location" : {
+        "Address" : "223台灣新北市石碇區",
+        "Business Name" : "千島湖",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9295934",
+          "Longitude" : "121.6366001"
+        }
+      },
+      "Published" : "2015-01-02T03:38:18Z",
+      "Title" : "千島湖",
+      "Updated" : "2015-01-02T03:38:18Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.2403074, 24.8372759 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5672821344023491193",
+      "Location" : {
+        "Address" : "325台灣桃園市龍潭區文化路1號",
+        "Business Name" : "玉蘭活魚餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8372759",
+          "Longitude" : "121.2403074"
+        }
+      },
+      "Published" : "2015-01-02T03:37:33Z",
+      "Title" : "玉蘭活魚餐庁",
+      "Updated" : "2015-01-02T03:37:33Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8262086, 24.6043900 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13399226101589350507",
+      "Location" : {
+        "Address" : "356台灣苗栗縣後龍鎮356",
+        "Business Name" : "豐富",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6043900",
+          "Longitude" : "120.8262086"
+        }
+      },
+      "Published" : "2014-12-30T02:56:33Z",
+      "Title" : "Fengfu station",
+      "Updated" : "2014-12-30T02:56:33Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8235487, 24.6011288 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=356苗栗縣後龍鎮新港路116號&ftid=0x3469ac34d3b04853:0x17dc56078dbfdf1a",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.6011288",
+          "Longitude" : "120.8235487"
+        }
+      },
+      "Published" : "2014-12-30T02:56:08Z",
+      "Title" : "356苗栗縣後龍鎮新港路116號",
+      "Updated" : "2014-12-30T02:56:08Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8013275, 24.4710787 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15693361635637674336",
+      "Location" : {
+        "Address" : "366台灣苗栗縣銅鑼鄉龍泉15號",
+        "Business Name" : "客家大院",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.4710787",
+          "Longitude" : "120.8013275"
+        }
+      },
+      "Published" : "2014-12-30T02:22:44Z",
+      "Title" : "客家大院",
+      "Updated" : "2014-12-30T02:22:44Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.7819969, 24.3882167 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17917053017054364310",
+      "Location" : {
+        "Address" : "367台灣苗栗縣三義鄉88號",
+        "Business Name" : "舊山線鐵道自行車-勝興站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.3882167",
+          "Longitude" : "120.7819969"
+        }
+      },
+      "Published" : "2014-12-30T02:22:04Z",
+      "Title" : "勝興火車站",
+      "Updated" : "2014-12-30T02:22:04Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.7738356, 24.3584335 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5631059357175512895",
+      "Location" : {
+        "Address" : "367台灣苗栗縣三義鄉龍騰村9-5號",
+        "Business Name" : "龍騰斷橋(魚藤坪斷橋)",
+        "Geo Coordinates" : {
+          "Latitude" : "24.3584335",
+          "Longitude" : "120.7738356"
+        }
+      },
+      "Published" : "2014-12-30T02:20:21Z",
+      "Title" : "龍騰斷橋",
+      "Updated" : "2014-12-30T02:20:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6608080, 24.9907256 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=974149207520140481",
+      "Location" : {
+        "Address" : "223台灣新北市石碇區",
+        "Business Name" : "石碇老街",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9907256",
+          "Longitude" : "121.6608080"
+        }
+      },
+      "Published" : "2014-12-01T10:14:17Z",
+      "Title" : "石碇老街",
+      "Updated" : "2014-12-01T10:14:17Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6590142, 24.9906097 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3066866287879466591",
+      "Location" : {
+        "Address" : "223台灣新北市石碇區石碇西街15號",
+        "Business Name" : "石碇國小",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9906097",
+          "Longitude" : "121.6590142"
+        }
+      },
+      "Published" : "2014-12-01T10:13:35Z",
+      "Title" : "Shiding Elementary School",
+      "Updated" : "2014-12-01T10:13:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6516180, 25.0057670 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12199102107571541502",
+      "Location" : {
+        "Address" : "223台灣新北市石碇區",
+        "Business Name" : "雙溪口",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0057670",
+          "Longitude" : "121.6516180"
+        }
+      },
+      "Published" : "2014-12-01T10:12:03Z",
+      "Title" : "雙溪口",
+      "Updated" : "2014-12-01T10:12:03Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5874722, 25.0363972 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5005682678066472293",
+      "Location" : {
+        "Address" : "110台灣台北市信義區福德街251巷36號",
+        "Business Name" : "四獸山市民森林碑",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0363972",
+          "Longitude" : "121.5874722"
+        }
+      },
+      "Published" : "2014-11-28T15:03:53Z",
+      "Title" : "四獸山市民森林碑",
+      "Updated" : "2014-11-28T15:03:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6072921, 25.0563397 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4835990911427106576",
+      "Location" : {
+        "Address" : "11579台灣台北市南港區興中路29號",
+        "Business Name" : "臺北市立南港高級工業職業學校",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0563397",
+          "Longitude" : "121.6072921"
+        }
+      },
+      "Published" : "2014-10-17T10:10:30Z",
+      "Title" : "Nangang Vocational High School",
+      "Updated" : "2014-10-17T10:10:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0136553, 24.8306754 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=302新竹縣竹北市光明一路&ftid=0x346836eb7421b011:0x69969c480bee9324",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.8306754",
+          "Longitude" : "121.0136553"
+        }
+      },
+      "Published" : "2014-10-10T10:15:26Z",
+      "Title" : "302新竹縣竹北市光明一路",
+      "Updated" : "2014-10-10T10:15:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4393000, 25.1728240 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5077630957905924612",
+      "Location" : {
+        "Address" : "251台灣新北市淡水區",
+        "Business Name" : "重建街口",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1728240",
+          "Longitude" : "121.4393000"
+        }
+      },
+      "Published" : "2014-10-07T14:31:12Z",
+      "Title" : "重建街口",
+      "Updated" : "2014-10-07T14:31:12Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4417640, 25.1756660 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17495546698459709227",
+      "Location" : {
+        "Address" : "251台灣新北市淡水區",
+        "Business Name" : "北淡水",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1756660",
+          "Longitude" : "121.4417640"
+        }
+      },
+      "Published" : "2014-10-07T14:30:06Z",
+      "Title" : "北淡水[新巴士]",
+      "Updated" : "2014-10-07T14:30:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4431077, 25.1706089 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16465853888502227719",
+      "Location" : {
+        "Address" : "251台灣新北市淡水區",
+        "Business Name" : "永樂巷口(中山市場)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1706089",
+          "Longitude" : "121.4431077"
+        }
+      },
+      "Published" : "2014-10-07T14:29:26Z",
+      "Title" : "永樂巷口(中山市場)",
+      "Updated" : "2014-10-07T14:29:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6457403, 25.2253258 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=601874953216473139",
+      "Location" : {
+        "Address" : "208台灣新北市金山區磺港路171-2號",
+        "Business Name" : "獅頭山公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.2253258",
+          "Longitude" : "121.6457403"
+        }
+      },
+      "Published" : "2014-10-07T05:46:55Z",
+      "Title" : "Shitoushan Park",
+      "Updated" : "2014-10-07T05:46:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5373170, 25.2878830 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=253新北市石門區燈台口&ftid=0x3442b5d5574893c9:0xd43cb48c4a689fae",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.2878830",
+          "Longitude" : "121.5373170"
+        }
+      },
+      "Published" : "2014-10-07T05:43:51Z",
+      "Title" : "新北市石門區燈台口",
+      "Updated" : "2014-10-07T05:43:51Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5191243, 25.2832984 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3682404743203647792",
+      "Location" : {
+        "Address" : "253台灣新北市石門區下員坑路33之6號",
+        "Business Name" : "北海岸觀音山國家風景區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.2832984",
+          "Longitude" : "121.5191243"
+        }
+      },
+      "Published" : "2014-10-07T05:42:35Z",
+      "Title" : "North Coast & Guanyinshan National Scenic Area Administration",
+      "Updated" : "2014-10-07T05:42:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5077887, 25.2806381 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11387321004324745074",
+      "Location" : {
+        "Address" : "252台灣新北市三芝區",
+        "Business Name" : "麟山鼻步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.2806381",
+          "Longitude" : "121.5077887"
+        }
+      },
+      "Published" : "2014-10-07T05:42:21Z",
+      "Title" : "麟山鼻步道",
+      "Updated" : "2014-10-07T05:42:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3130861, 24.9940998 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3671935174139780025",
+      "Location" : {
+        "Address" : "330台灣桃園市桃園區民生路208號",
+        "Business Name" : "台灣基督長老教會桃園教會",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9940998",
+          "Longitude" : "121.3130861"
+        }
+      },
+      "Published" : "2014-09-27T21:52:06Z",
+      "Title" : "基督教長老教會",
+      "Updated" : "2014-09-27T21:52:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8676300, 24.2853080 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4578457736524455986",
+      "Location" : {
+        "Address" : "423台灣台中市東勢區",
+        "Business Name" : "東勢林場",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.2853080",
+          "Longitude" : "120.8676300"
+        }
+      },
+      "Published" : "2014-09-15T02:59:45Z",
+      "Title" : "東勢林場",
+      "Updated" : "2014-09-15T02:59:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5909639, 25.0976972 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17866530408538313680",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區碧山路39號",
+        "Business Name" : "峰碧山圓覺寺",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0976972",
+          "Longitude" : "121.5909639"
+        }
+      },
+      "Published" : "2014-09-15T02:19:13Z",
+      "Title" : "圓覺寺",
+      "Updated" : "2014-09-15T02:19:13Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5945882, 25.0975497 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7222472370884559111",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區大湖街131巷59號",
+        "Business Name" : "圓覺瀑布",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0975497",
+          "Longitude" : "121.5945882"
+        }
+      },
+      "Published" : "2014-09-15T02:18:42Z",
+      "Title" : "円覚瀑布",
+      "Updated" : "2014-09-15T02:18:42Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5985295, 25.0888948 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8272522438940794800",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區大湖山莊街底號",
+        "Business Name" : "內湖大溝溪親水步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0888948",
+          "Longitude" : "121.5985295"
+        }
+      },
+      "Published" : "2014-09-15T02:18:18Z",
+      "Title" : "内湖大溝渓親水歩道",
+      "Updated" : "2014-09-15T02:18:18Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7506415, 25.1332947 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16007811567550880631",
+      "Location" : {
+        "Address" : "202台灣基隆市中正區壽山路",
+        "Business Name" : "基隆中正公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1332947",
+          "Longitude" : "121.7506415"
+        }
+      },
+      "Published" : "2014-09-08T03:43:37Z",
+      "Title" : "Jhongjheng Park",
+      "Updated" : "2014-09-08T03:43:37Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7229432, 25.0628655 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16079895862469306991",
+      "Location" : {
+        "Address" : "206台灣基隆市七堵區",
+        "Business Name" : "姜子寮山步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0628655",
+          "Longitude" : "121.7229432"
+        }
+      },
+      "Published" : "2014-09-07T21:28:06Z",
+      "Title" : "姜子寮山歩道",
+      "Updated" : "2014-09-07T21:28:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7169530, 25.0700627 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3615915307454768934",
+      "Location" : {
+        "Address" : "206台灣基隆市七堵區",
+        "Business Name" : "泰安瀑布",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0700627",
+          "Longitude" : "121.7169530"
+        }
+      },
+      "Published" : "2014-09-07T21:26:21Z",
+      "Title" : "泰安瀑布",
+      "Updated" : "2014-09-07T21:26:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4569850, 25.0426030 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=242新北市新莊區長青街20號&ftid=0x3442a87acb44ee95:0x6c69c651b7925cb4",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0426030",
+          "Longitude" : "121.4569850"
+        }
+      },
+      "Published" : "2014-08-08T07:16:58Z",
+      "Title" : "242新北市新莊區長青街20號",
+      "Updated" : "2014-08-08T07:16:58Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5250393, 25.0844575 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13438201813445564687",
+      "Location" : {
+        "Address" : "111台灣台北市士林區中山北路五段65號",
+        "Business Name" : "劍潭站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0844575",
+          "Longitude" : "121.5250393"
+        }
+      },
+      "Published" : "2014-08-04T13:05:42Z",
+      "Title" : "Jiantan station",
+      "Updated" : "2014-08-04T13:05:42Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5567600, 25.2389600 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9701584197750344010",
+      "Location" : {
+        "Address" : "253台灣新北市石門區",
+        "Business Name" : "青山瀑布",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.2389600",
+          "Longitude" : "121.5567600"
+        }
+      },
+      "Published" : "2014-07-30T01:22:09Z",
+      "Title" : "青山瀑布",
+      "Updated" : "2014-07-30T01:22:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5220560, 25.0082010 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7430200782332833261",
+      "Location" : {
+        "Address" : "234台灣新北市永和區福和路124號",
+        "Business Name" : "金銀座港式粉麵茶餐廳",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0082010",
+          "Longitude" : "121.5220560"
+        }
+      },
+      "Published" : "2014-07-21T02:35:31Z",
+      "Title" : "金銀座港式粉面茶餐庁",
+      "Updated" : "2014-07-21T02:35:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5463690, 25.0453260 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=105台北市松山區八德路二段366巷67-5號&ftid=0x3442abdb6d0ccfe3:0xdbb60755d2f0de55",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0453260",
+          "Longitude" : "121.5463690"
+        }
+      },
+      "Published" : "2014-06-23T03:57:06Z",
+      "Title" : "105台北市松山區八德路二段366巷67-5號",
+      "Updated" : "2014-06-23T03:57:06Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5103030, 25.0288249 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=100台北市中正區和平西路二段98巷6號&ftid=0x3442a9a3315eab1b:0x57a3acd80a0cc7c2",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0288249",
+          "Longitude" : "121.5103030"
+        }
+      },
+      "Published" : "2014-05-27T01:19:19Z",
+      "Title" : "100台北市中正區和平西路二段98巷6號",
+      "Updated" : "2014-05-27T01:19:19Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5545759, 25.0333703 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=106台北市大安區信義路四段273號&ftid=0x3442abcbfa6cbb21:0xba56abc7e4ccf595",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0333703",
+          "Longitude" : "121.5545759"
+        }
+      },
+      "Published" : "2014-05-15T10:07:11Z",
+      "Title" : "106台北市大安區信義路四段273號",
+      "Updated" : "2014-05-15T10:07:11Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.2874784, 24.8851861 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11436606234164527986",
+      "Location" : {
+        "Address" : "335台灣桃園市大溪區和平路",
+        "Business Name" : "大溪老街",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8851861",
+          "Longitude" : "121.2874784"
+        }
+      },
+      "Published" : "2014-05-12T07:47:36Z",
+      "Title" : "大溪老街",
+      "Updated" : "2014-05-12T07:47:36Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3489803, 24.8163001 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13170559518561100720",
+      "Location" : {
+        "Address" : "336台灣桃園市復興區",
+        "Business Name" : "角板山行館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8163001",
+          "Longitude" : "121.3489803"
+        }
+      },
+      "Published" : "2014-05-12T07:43:23Z",
+      "Title" : "角板山行館",
+      "Updated" : "2014-05-12T07:43:23Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5610340, 25.0372280 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15999708593898650649",
+      "Location" : {
+        "Address" : "110台灣台北市信義區仁愛路四段506號",
+        "Business Name" : "都一處 仁愛店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0372280",
+          "Longitude" : "121.5610340"
+        }
+      },
+      "Published" : "2014-05-09T21:15:30Z",
+      "Title" : "北平都一處",
+      "Updated" : "2014-05-09T21:15:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4960234, 25.0019983 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1571171382203674994",
+      "Location" : {
+        "Address" : "235台灣新北市中和區中山路二段295號B1",
+        "Business Name" : "家樂福中和店 Carrefour Jong Ho Store",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0019983",
+          "Longitude" : "121.4960234"
+        }
+      },
+      "Published" : "2014-04-21T14:05:17Z",
+      "Title" : "Carrefour",
+      "Updated" : "2014-04-21T14:05:17Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6890652, 23.9092654 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11386330456348887285",
+      "Location" : {
+        "Address" : "540台灣南投縣南投市民族路189號",
+        "Business Name" : "南投聞吔香火鍋牛排館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9092654",
+          "Longitude" : "120.6890652"
+        }
+      },
+      "Published" : "2014-04-18T07:33:08Z",
+      "Title" : "南投聞也香火鍋牛排館",
+      "Updated" : "2014-04-18T07:33:08Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6931972, 23.9069840 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17079608399173404431",
+      "Location" : {
+        "Address" : "540台灣南投縣南投市果稟路105號2樓",
+        "Business Name" : "南島婚宴會館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9069840",
+          "Longitude" : "120.6931972"
+        }
+      },
+      "Published" : "2014-04-18T07:29:58Z",
+      "Title" : "大象牛排",
+      "Updated" : "2014-04-18T07:32:05Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6888406, 23.9094564 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17124034871799878894",
+      "Location" : {
+        "Address" : "54058台灣南投縣南投市民族路200號",
+        "Business Name" : "清水主題餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9094564",
+          "Longitude" : "120.6888406"
+        }
+      },
+      "Published" : "2014-04-18T07:21:00Z",
+      "Title" : "清水主題餐廳",
+      "Updated" : "2014-04-18T07:21:00Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6857440, 23.9093961 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=540南投縣南投市民權街126號&ftid=0x3469318ba21923a5:0x648a292174d2b87b",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "23.9093961",
+          "Longitude" : "120.6857440"
+        }
+      },
+      "Published" : "2014-04-14T23:56:55Z",
+      "Title" : "540南投縣南投市民權街126號",
+      "Updated" : "2014-04-14T23:56:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6936180, 23.9212280 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8801725105663010703",
+      "Location" : {
+        "Address" : "540台灣南投縣南投市",
+        "Business Name" : "教師新村",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9212280",
+          "Longitude" : "120.6936180"
+        }
+      },
+      "Published" : "2014-04-14T22:21:27Z",
+      "Title" : "教師新村",
+      "Updated" : "2014-04-14T22:21:27Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6879631, 23.9093747 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4903601376746101389",
+      "Location" : {
+        "Address" : "540台灣南投縣南投市民族路232號",
+        "Business Name" : "富邦大飯店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.9093747",
+          "Longitude" : "120.6879631"
+        }
+      },
+      "Published" : "2014-04-14T15:58:50Z",
+      "Title" : "FuhBang Hotel",
+      "Updated" : "2014-04-14T15:58:50Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.8261689, 24.3327781 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9362990235179368398",
+      "Location" : {
+        "Address" : "369台灣苗栗縣卓蘭鎮號",
+        "Business Name" : "花露農場 Flower Home",
+        "Geo Coordinates" : {
+          "Latitude" : "24.3327781",
+          "Longitude" : "120.8261689"
+        }
+      },
+      "Published" : "2014-04-11T05:15:21Z",
+      "Title" : "花露休閒農場",
+      "Updated" : "2014-04-11T05:15:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6055660, 24.9902960 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7809372149518918581",
+      "Location" : {
+        "Address" : "222台灣新北市深坑區",
+        "Business Name" : "炮子崙步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9902960",
+          "Longitude" : "121.6055660"
+        }
+      },
+      "Published" : "2014-04-07T07:41:43Z",
+      "Title" : "砲子崙歩道",
+      "Updated" : "2014-04-07T07:41:43Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4542000, 25.0657020 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8292064981233928004",
+      "Location" : {
+        "Address" : "248台灣新北市五股區",
+        "Business Name" : "五權三五工路口",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0657020",
+          "Longitude" : "121.4542000"
+        }
+      },
+      "Published" : "2013-12-28T00:03:18Z",
+      "Title" : "元福",
+      "Updated" : "2014-01-07T08:34:27Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5171935, 25.0493080 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3070305487468032646",
+      "Location" : {
+        "Address" : "103台灣台北市大同區承德路一段1號京站時尚廣場4樓",
+        "Business Name" : "饗食天堂 台北京站店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0493080",
+          "Longitude" : "121.5171935"
+        }
+      },
+      "Published" : "2013-12-01T09:03:15Z",
+      "Title" : "饗食天堂-京站店",
+      "Updated" : "2013-12-01T09:03:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8602567, 25.1220277 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1307528613332844705",
+      "Location" : {
+        "Address" : "224台灣新北市瑞芳區",
+        "Business Name" : "濂洞國小",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1220277",
+          "Longitude" : "121.8602567"
+        }
+      },
+      "Published" : "2013-11-30T00:07:43Z",
+      "Title" : "Liándòng Elementary School",
+      "Updated" : "2013-11-30T00:07:43Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5566480, 25.0346960 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=106%E5%8F%B0%E5%8C%97%E5%B8%82%E5%A4%A7%E5%AE%89%E5%8D%80%E5%BB%B6%E5%90%89%E8%A1%97255%E8%99%9F&ftid=0x3442abc9749b7b23:0x14eab92e56f87373",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0346960",
+          "Longitude" : "121.5566480"
+        }
+      },
+      "Published" : "2013-11-28T01:05:29Z",
+      "Title" : "106台北市大安區延吉街255號",
+      "Updated" : "2013-11-28T01:05:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8806229, 24.9151497 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16160372562945497944",
+      "Location" : {
+        "Address" : "261台灣宜蘭縣頭城鎮濱海路四段36號",
+        "Business Name" : "東森海洋温泉酒店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9151497",
+          "Longitude" : "121.8806229"
+        }
+      },
+      "Published" : "2013-10-18T03:51:28Z",
+      "Title" : "東森海洋溫泉酒店",
+      "Updated" : "2013-11-08T05:36:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.0662900, 30.2680560 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17523145415615171979",
+      "Location" : {
+        "Address" : "中國浙江省杭州市西湖区天目山路518号",
+        "Business Name" : "西溪濕地",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.2680560",
+          "Longitude" : "120.0662900"
+        }
+      },
+      "Published" : "2013-10-05T23:11:15Z",
+      "Title" : "西溪國家濕地公園",
+      "Updated" : "2013-10-05T23:11:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1491630, 30.1800160 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14079598083058612385",
+      "Location" : {
+        "Address" : "中國浙江省杭州市滨江区东信大道868号 邮政编码: 310053",
+        "Business Name" : "杭州龍禧福朋喜來登酒店",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.1800160",
+          "Longitude" : "120.1491630"
+        }
+      },
+      "Published" : "2013-10-05T22:08:17Z",
+      "Title" : "杭州龍禧福朋喜來登酒店",
+      "Updated" : "2013-10-05T22:08:17Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4388907, 30.2359486 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2164782393492182842",
+      "Location" : {
+        "Address" : "Xiaoshan District, Hangzhou, Zhejiang, 中國",
+        "Business Name" : "杭州蕭山國際機場",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.2359486",
+          "Longitude" : "120.4388907"
+        }
+      },
+      "Published" : "2013-10-05T22:03:55Z",
+      "Title" : "杭州蕭山國際機場",
+      "Updated" : "2013-10-05T22:03:55Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1496950, 30.2315677 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3731032873515014509",
+      "Location" : {
+        "Address" : "中國浙江省杭州市西湖区南山路15号 邮政编码: 310007",
+        "Business Name" : "雷峰塔",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.2315677",
+          "Longitude" : "120.1496950"
+        }
+      },
+      "Published" : "2013-10-05T21:58:37Z",
+      "Title" : "雷峰塔",
+      "Updated" : "2013-10-05T21:58:37Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1624720, 30.2505450 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8033320726523266589",
+      "Location" : {
+        "Address" : "Shangcheng District, Hangzhou, Zhejiang, 中國",
+        "Business Name" : "杭州西湖",
+        "Geo Coordinates" : {
+          "Latitude" : "30.2505450",
+          "Longitude" : "120.1624720"
+        }
+      },
+      "Published" : "2013-10-05T21:58:16Z",
+      "Title" : "杭州西湖",
+      "Updated" : "2013-10-05T21:58:16Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.1727740, 30.2371160 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16386035052131615661",
+      "Location" : {
+        "Address" : "中國浙江省杭州市上城区元宝街18号",
+        "Business Name" : "胡雪岩故居",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.2371160",
+          "Longitude" : "120.1727740"
+        }
+      },
+      "Published" : "2013-10-05T21:55:46Z",
+      "Title" : "胡雪巖故居",
+      "Updated" : "2013-10-05T21:55:46Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.4894570, 30.7479390 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1567318361398106677",
+      "Location" : {
+        "Address" : "中國浙江省嘉兴市桐乡市隆源路383号",
+        "Business Name" : "烏鎮西柵",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.7479390",
+          "Longitude" : "120.4894570"
+        }
+      },
+      "Published" : "2013-10-05T21:53:56Z",
+      "Title" : "烏鎮西柵",
+      "Updated" : "2013-10-05T21:53:56Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4925350, 31.2257490 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=上海黃浦區城隍廟 中華人民共和國邮政编码: 200010&ftid=0x35b2708a963b4715:0x1bb45f7700757e40",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "31.2257490",
+          "Longitude" : "121.4925350"
+        }
+      },
+      "Published" : "2013-10-05T21:50:56Z",
+      "Title" : "中華人民共和國上海黃浦區城隍廟",
+      "Updated" : "2013-10-05T21:50:56Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4517410, 31.2780530 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2937973412509575180",
+      "Location" : {
+        "Address" : "中國上海市闸北区共和新路2266",
+        "Business Name" : "時空之旅售票處",
+        "Geo Coordinates" : {
+          "Latitude" : "31.2780530",
+          "Longitude" : "121.4517410"
+        }
+      },
+      "Published" : "2013-10-05T21:49:15Z",
+      "Title" : "時空之旅售票處",
+      "Updated" : "2013-10-05T21:49:15Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4997553, 31.2396889 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11087053920226576469",
+      "Location" : {
+        "Address" : "中國上海市浦东新区陆家嘴金融贸易区世纪大道1号",
+        "Business Name" : "東方明珠電視塔",
+        "Geo Coordinates" : {
+          "Latitude" : "31.2396889",
+          "Longitude" : "121.4997553"
+        }
+      },
+      "Published" : "2013-10-05T21:47:26Z",
+      "Title" : "東方明珠塔",
+      "Updated" : "2013-10-05T21:47:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4746670, 31.2210040 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4036534289644863446",
+      "Location" : {
+        "Address" : "中國上海市黄浦区太仓路181弄新天地北里5号2楼",
+        "Business Name" : "石庫門shikuman",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.2210040",
+          "Longitude" : "121.4746670"
+        }
+      },
+      "Published" : "2013-10-05T21:46:09Z",
+      "Title" : "石庫門shikuman",
+      "Updated" : "2013-10-05T21:46:09Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4688980, 31.2088120 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1239140183371215247",
+      "Location" : {
+        "Address" : "中國上海市黄浦区打浦桥泰康路210弄号",
+        "Business Name" : "Tianzifang",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.2088120",
+          "Longitude" : "121.4688980"
+        }
+      },
+      "Published" : "2013-10-05T21:44:27Z",
+      "Title" : "田子坊",
+      "Updated" : "2013-10-05T21:44:27Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.7126236, 31.3195477 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14537686589333126038",
+      "Location" : {
+        "Address" : "中國江苏省苏州市吴中区旺墩路268号",
+        "Business Name" : "圓融時代廣場",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.3195477",
+          "Longitude" : "120.7126236"
+        }
+      },
+      "Published" : "2013-10-05T21:41:50Z",
+      "Title" : "圓融時代廣場",
+      "Updated" : "2013-10-05T21:41:50Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6947551, 31.3115396 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=中華人民共和國蘇州吳中區金雞湖&ftid=0x35b3a63ef54a507b:0x8d0310fdda905876",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "31.3115396",
+          "Longitude" : "120.6947551"
+        }
+      },
+      "Published" : "2013-10-05T21:39:54Z",
+      "Title" : "金雞湖",
+      "Updated" : "2013-10-05T21:39:54Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6296480, 31.3208020 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1100750966935579362",
+      "Location" : {
+        "Address" : "中國江苏省苏州市姑苏区园林路23号",
+        "Business Name" : "獅子林",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.3208020",
+          "Longitude" : "120.6296480"
+        }
+      },
+      "Published" : "2013-10-05T21:35:45Z",
+      "Title" : "獅子林",
+      "Updated" : "2013-10-05T21:35:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6277910, 31.3228790 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15935996452682391147",
+      "Location" : {
+        "Address" : "中國江苏省苏州市姑苏区东北街204号",
+        "Business Name" : "蘇州博物館",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.3228790",
+          "Longitude" : "120.6277910"
+        }
+      },
+      "Published" : "2013-10-05T21:35:30Z",
+      "Title" : "蘇州博物館",
+      "Updated" : "2013-10-05T21:35:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.6119560, 31.2912210 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=757402903983215439",
+      "Location" : {
+        "Address" : "中國江苏省苏州市沧浪区盘胥路798号",
+        "Business Name" : "古運河碼頭",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.2912210",
+          "Longitude" : "120.6119560"
+        }
+      },
+      "Published" : "2013-10-05T21:22:45Z",
+      "Title" : "古運河碼頭",
+      "Updated" : "2013-10-05T21:22:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.0593424, 30.2578494 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1848187316566240223",
+      "Location" : {
+        "Address" : "中國浙江省杭州市西湖区天目山路518号西溪国家湿地公园",
+        "Business Name" : "Xixi Resort Hangzhou",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "30.2578494",
+          "Longitude" : "120.0593424"
+        }
+      },
+      "Published" : "2013-10-05T21:06:28Z",
+      "Title" : "西溪度假酒店",
+      "Updated" : "2013-10-05T21:06:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.4878708, 31.2578543 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=10676291246432158000",
+      "Location" : {
+        "Address" : "中國上海市虹口区四平路59号 邮政编码: 200080",
+        "Business Name" : "上海虹口三至喜來登酒店",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.2578543",
+          "Longitude" : "121.4878708"
+        }
+      },
+      "Published" : "2013-10-03T03:30:53Z",
+      "Title" : "上海虹口三至喜來登酒店",
+      "Updated" : "2013-10-03T03:30:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.1440990, 31.4629910 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14749056957669358396",
+      "Location" : {
+        "Address" : "中國江苏省苏州市太仓市上海东路288号",
+        "Business Name" : "喜來登大酒店",
+        "Country Code" : "CN",
+        "Geo Coordinates" : {
+          "Latitude" : "31.4629910",
+          "Longitude" : "121.1440990"
+        }
+      },
+      "Published" : "2013-10-02T22:11:43Z",
+      "Title" : "太倉寶龍福朋酒店",
+      "Updated" : "2013-10-02T22:11:43Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3309308, 25.0017706 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15666623089730298236",
+      "Location" : {
+        "Address" : "330台灣桃園市桃園區公園路42號",
+        "Business Name" : "虎頭山公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0017706",
+          "Longitude" : "121.3309308"
+        }
+      },
+      "Published" : "2013-09-20T06:39:47Z",
+      "Title" : "虎頭山公園",
+      "Updated" : "2013-09-20T06:39:47Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5620686, 25.0258112 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=18158711574013956643",
+      "Location" : {
+        "Address" : "11031台灣台北市信義區吳興街250號",
+        "Business Name" : "MrJ 義法廚房北醫店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0258112",
+          "Longitude" : "121.5620686"
+        }
+      },
+      "Published" : "2013-09-19T08:37:49Z",
+      "Title" : "Mr.J義法廚房II",
+      "Updated" : "2013-09-19T08:37:49Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5536528, 25.0231533 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=14181963374856405666",
+      "Location" : {
+        "Address" : "106台灣台北市大安區",
+        "Business Name" : "捷運六張犁站(和平)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0231533",
+          "Longitude" : "121.5536528"
+        }
+      },
+      "Published" : "2013-09-19T08:30:18Z",
+      "Title" : "捷運六張犁站",
+      "Updated" : "2013-09-19T08:30:18Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5724147, 25.0821395 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=114台北市內湖區內湖路一段437巷7號&ftid=0x3442ac65e89fe765:0xc00712c0ac6a6b18",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0821395",
+          "Longitude" : "121.5724147"
+        }
+      },
+      "Published" : "2013-07-21T10:24:34Z",
+      "Title" : "114台北市內湖區內湖路一段437巷7號",
+      "Updated" : "2013-07-21T10:24:34Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0091874, 24.8390713 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3789360137549103003",
+      "Location" : {
+        "Address" : "302台灣新竹縣竹北市和平街59號",
+        "Business Name" : "竹北車站",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8390713",
+          "Longitude" : "121.0091874"
+        }
+      },
+      "Published" : "2013-07-20T05:20:44Z",
+      "Title" : "竹北火車站",
+      "Updated" : "2013-07-20T05:20:44Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0041358, 24.8369051 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9581350019919277907",
+      "Location" : {
+        "Address" : "302台灣新竹縣竹北市中央路3號",
+        "Business Name" : "國立竹北高級中學",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8369051",
+          "Longitude" : "121.0041358"
+        }
+      },
+      "Published" : "2013-07-20T05:20:30Z",
+      "Title" : "竹北高中",
+      "Updated" : "2013-07-20T05:20:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.0100631, 24.8363819 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17889361827662704928",
+      "Location" : {
+        "Address" : "302台灣新竹縣竹北市中正東路366號",
+        "Business Name" : "台灣基督長老教會竹北教會",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8363819",
+          "Longitude" : "121.0100631"
+        }
+      },
+      "Published" : "2013-07-20T05:18:19Z",
+      "Title" : "竹北長老教會",
+      "Updated" : "2013-07-20T05:18:19Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5518998, 25.0812084 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11405955013024102167",
+      "Location" : {
+        "Address" : "10466台灣台北市中山區",
+        "Business Name" : "頂廚國宴",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0812084",
+          "Longitude" : "121.5518998"
+        }
+      },
+      "Published" : "2013-03-02T09:47:31Z",
+      "Title" : "頂廚國宴",
+      "Updated" : "2013-03-02T09:47:31Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8158161, 24.6729935 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5142356001773124599",
+      "Location" : {
+        "Address" : "268台灣宜蘭縣五結鄉親河路二段2號",
+        "Business Name" : "冬山河親水公園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6729935",
+          "Longitude" : "121.8158161"
+        }
+      },
+      "Published" : "2013-02-15T14:51:08Z",
+      "Title" : "冬山河親水公園",
+      "Updated" : "2013-02-15T14:51:08Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7723580, 24.6842780 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=528896047753047288",
+      "Location" : {
+        "Address" : "265台灣宜蘭縣羅東鎮中正北路118號",
+        "Business Name" : "羅東林業文化園區",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6842780",
+          "Longitude" : "121.7723580"
+        }
+      },
+      "Published" : "2013-02-15T14:38:08Z",
+      "Title" : "羅東林業文化園區",
+      "Updated" : "2013-02-15T14:38:08Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8661191, 24.5831900 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=15666268034979814897",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮海邊路111號",
+        "Business Name" : "富美活海鮮餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5831900",
+          "Longitude" : "121.8661191"
+        }
+      },
+      "Published" : "2013-02-15T13:05:12Z",
+      "Title" : "富美活海鮮",
+      "Updated" : "2013-02-15T13:05:12Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8447970, 24.5958700 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=7862405713250887552",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮中山路一段252號",
+        "Business Name" : "宜蘭縣政府警察局蘇澳分局蘇澳派出所",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5958700",
+          "Longitude" : "121.8447970"
+        }
+      },
+      "Published" : "2013-02-15T12:58:30Z",
+      "Title" : "蘇澳分局",
+      "Updated" : "2013-02-15T12:58:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8667597, 24.5765079 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=8037788256901019083",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮蘇花公路",
+        "Business Name" : "南方澳觀景臺",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5765079",
+          "Longitude" : "121.8667597"
+        }
+      },
+      "Published" : "2013-02-15T01:17:30Z",
+      "Title" : "昭安觀景台",
+      "Updated" : "2013-02-15T01:17:30Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6429468, 25.0141303 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9205226774913084450",
+      "Location" : {
+        "Address" : "223台灣新北市石碇區隆盛里八分寮45號",
+        "Business Name" : "新北市立石碇高級中學",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0141303",
+          "Longitude" : "121.6429468"
+        }
+      },
+      "Published" : "2013-02-12T02:57:44Z",
+      "Title" : "石碇高中",
+      "Updated" : "2013-02-12T02:57:44Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6212100, 25.0392840 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=115%E5%8F%B0%E7%81%A3%E5%8F%B0%E5%8C%97%E5%B8%82%E5%8D%97%E6%B8%AF%E5%8D%80%E8%88%8A%E8%8E%8A%E8%A1%97%E4%B8%80%E6%AE%B5166%E8%99%9F&ftid=0x3442ab494a7598f1:0x3fe8b12ecc17556d",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0392840",
+          "Longitude" : "121.6212100"
+        }
+      },
+      "Published" : "2013-02-12T02:55:33Z",
+      "Title" : "115台灣台北市南港區舊莊街一段166號",
+      "Updated" : "2013-02-12T02:55:33Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.3084017, 24.3458506 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2865833809455497278",
+      "Location" : {
+        "Address" : "424台灣台中市和平區武陵路3之1號",
+        "Business Name" : "武陵農場楓林小館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.3458506",
+          "Longitude" : "121.3084017"
+        }
+      },
+      "Published" : "2013-02-06T08:17:35Z",
+      "Title" : "武陵農場",
+      "Updated" : "2013-02-06T08:17:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8724396, 24.5790357 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=9956839992494910879",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮造船路108號",
+        "Business Name" : "海洋20M海景咖啡館",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5790357",
+          "Longitude" : "121.8724396"
+        }
+      },
+      "Published" : "2013-02-06T01:25:01Z",
+      "Title" : "海洋20M",
+      "Updated" : "2013-02-06T02:55:45Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8705989, 24.5772293 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13396385771259048953",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮",
+        "Business Name" : "宜蘭內埤情人灣",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5772293",
+          "Longitude" : "121.8705989"
+        }
+      },
+      "Published" : "2013-02-06T01:24:14Z",
+      "Title" : "宜蘭情人灣",
+      "Updated" : "2013-02-06T01:24:14Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8701356, 24.5765384 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5925277771881735663",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮學府路",
+        "Business Name" : "內埤海灘",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5765384",
+          "Longitude" : "121.8701356"
+        }
+      },
+      "Published" : "2013-02-06T01:24:10Z",
+      "Title" : "內埤海灣",
+      "Updated" : "2013-02-06T01:24:10Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8697490, 24.5858020 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E5%8D%97%E6%96%B9%E6%BE%B3%E5%A4%A7%E6%A9%8B&ftid=0x3467e9c56df40375:0x6656868336ed2f4d",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.5858020",
+          "Longitude" : "121.8697490"
+        }
+      },
+      "Published" : "2013-02-06T01:22:47Z",
+      "Title" : "270宜蘭縣蘇澳鎮南方澳大橋",
+      "Updated" : "2013-02-06T01:22:47Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5636467, 24.6687927 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=24.668793,121.563647",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.6687927",
+          "Longitude" : "121.5636467"
+        }
+      },
+      "Published" : "2013-02-06T01:20:26Z",
+      "Title" : "24.668793,121.563647",
+      "Updated" : "2013-02-06T01:20:26Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8684393, 24.5825552 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16655998549084808717",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮漁港路35號",
+        "Business Name" : "海邊食堂",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5825552",
+          "Longitude" : "121.8684393"
+        }
+      },
+      "Published" : "2013-02-05T23:15:11Z",
+      "Title" : "豆腐岬17",
+      "Updated" : "2013-02-05T23:15:11Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7682201, 24.6773245 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4324029279617770153",
+      "Location" : {
+        "Address" : "265台灣宜蘭縣羅東鎮興東路與號 民權路口",
+        "Business Name" : "羅東夜市",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6773245",
+          "Longitude" : "121.7682201"
+        }
+      },
+      "Published" : "2013-02-05T23:13:34Z",
+      "Title" : "羅東觀光夜市",
+      "Updated" : "2013-02-05T23:13:34Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7921070, 24.6362970 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E5%AE%9C%E8%98%AD%E7%B8%A3%E5%86%AC%E5%B1%B1%E9%84%89%E5%86%AC%E5%B1%B1%E7%81%AB%E8%BB%8A%E7%AB%99&ftid=0x3467e6345fb7d7a7:0xcfe81568b0b2a8a8",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.6362970",
+          "Longitude" : "121.7921070"
+        }
+      },
+      "Published" : "2013-02-05T23:12:25Z",
+      "Title" : "冬山火車站",
+      "Updated" : "2013-02-05T23:12:25Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7594213, 24.6245913 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3312089590855053487",
+      "Location" : {
+        "Address" : "269台灣宜蘭縣冬山鄉新寮路500號",
+        "Business Name" : "仁山植物園",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6245913",
+          "Longitude" : "121.7594213"
+        }
+      },
+      "Published" : "2013-02-05T23:11:40Z",
+      "Title" : "仁山植物園",
+      "Updated" : "2013-02-05T23:11:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8707310, 24.5847960 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E5%8D%97%E6%96%B9%E6%BE%B3&ftid=0x3467e9c4e1111667:0xee0f8ae6c5560eab",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "24.5847960",
+          "Longitude" : "121.8707310"
+        }
+      },
+      "Published" : "2013-02-05T23:10:02Z",
+      "Title" : "南方澳",
+      "Updated" : "2013-02-05T23:10:02Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8487956, 24.5964960 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=4849351861650406941",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮冷泉路6-4號",
+        "Business Name" : "阿里史冷泉公共浴室",
+        "Geo Coordinates" : {
+          "Latitude" : "24.5964960",
+          "Longitude" : "121.8487956"
+        }
+      },
+      "Published" : "2013-02-05T23:08:41Z",
+      "Title" : "阿里史冷泉公共浴室",
+      "Updated" : "2013-02-05T23:08:41Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.8467939, 24.6035689 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=11367278301771454939",
+      "Location" : {
+        "Address" : "270台灣宜蘭縣蘇澳鎮",
+        "Business Name" : "宜蘭七星嶺步道",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6035689",
+          "Longitude" : "121.8467939"
+        }
+      },
+      "Published" : "2013-02-05T23:07:29Z",
+      "Title" : "七星嶺步道",
+      "Updated" : "2013-02-05T23:07:29Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7316022, 24.6450916 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=3894386400078012466",
+      "Location" : {
+        "Address" : "269台灣宜蘭縣冬山鄉環湖路",
+        "Business Name" : "梅花湖",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6450916",
+          "Longitude" : "121.7316022"
+        }
+      },
+      "Published" : "2013-02-05T23:04:44Z",
+      "Title" : "梅花湖風景區",
+      "Updated" : "2013-02-05T23:04:44Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7446102, 24.6011819 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17551561953903515462",
+      "Location" : {
+        "Address" : "269台灣宜蘭縣冬山鄉新寮二路",
+        "Business Name" : "新寮瀑布",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.6011819",
+          "Longitude" : "121.7446102"
+        }
+      },
+      "Published" : "2013-02-05T23:03:53Z",
+      "Title" : "新寮瀑布",
+      "Updated" : "2013-02-05T23:03:53Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5484713, 24.9962181 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=6902625197306962285",
+      "Location" : {
+        "Address" : "11686台灣台北市文山區景華街150巷21號",
+        "Business Name" : "景興國小",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.9962181",
+          "Longitude" : "121.5484713"
+        }
+      },
+      "Published" : "2013-02-03T00:41:27Z",
+      "Title" : "台北市立景興國民小學圖書館",
+      "Updated" : "2013-02-04T01:02:42Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5548008, 25.0837472 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=16396885716623595376",
+      "Location" : {
+        "Address" : "10466台灣台北市中山區植福路8號",
+        "Business Name" : "典華幸福機構(大直店)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0837472",
+          "Longitude" : "121.5548008"
+        }
+      },
+      "Published" : "2013-02-01T09:31:40Z",
+      "Title" : "典華",
+      "Updated" : "2013-02-01T09:31:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7708345, 24.8204253 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=13752588789075909372",
+      "Location" : {
+        "Address" : "262台灣宜蘭縣礁溪鄉中山路一段218號",
+        "Business Name" : "礁溪包子、饅頭專賣店",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.8204253",
+          "Longitude" : "121.7708345"
+        }
+      },
+      "Published" : "2012-12-31T04:42:42Z",
+      "Title" : "礁溪包子鰻頭專賣店",
+      "Updated" : "2013-01-14T12:27:21Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5955080, 25.1039070 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=%E5%8F%B0%E5%8C%97%E5%B8%82%E5%85%A7%E6%B9%96%E5%8D%80&ftid=0x3442ad1d6008117f:0x3f7809e98488657",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.1039070",
+          "Longitude" : "121.5955080"
+        }
+      },
+      "Published" : "2012-12-29T01:02:35Z",
+      "Title" : "114台北市內湖區石崁",
+      "Updated" : "2012-12-29T01:02:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5896073, 25.0999786 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=25.099979,121.589607",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0999786",
+          "Longitude" : "121.5896073"
+        }
+      },
+      "Published" : "2012-12-29T01:01:35Z",
+      "Title" : "25.099979,121.589607",
+      "Updated" : "2012-12-29T01:01:35Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.6048599, 25.1000959 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=959336788709374951",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區大湖街137號",
+        "Business Name" : "內湖觀光草莓園",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1000959",
+          "Longitude" : "121.6048599"
+        }
+      },
+      "Published" : "2012-12-29T01:01:28Z",
+      "Title" : "內湖觀光草莓園",
+      "Updated" : "2012-12-29T01:01:28Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5885270, 25.1023430 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=1702347413982292745",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區碧山路38-2號",
+        "Business Name" : "莓圃休閒農園 餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1023430",
+          "Longitude" : "121.5885270"
+        }
+      },
+      "Published" : "2012-12-29T01:01:24Z",
+      "Title" : "莓圃觀光休閒農園",
+      "Updated" : "2012-12-29T01:01:24Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5896186, 25.1057282 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=5183961961646482056",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區",
+        "Business Name" : "恆光禪寺",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.1057282",
+          "Longitude" : "121.5896186"
+        }
+      },
+      "Published" : "2012-12-29T01:00:40Z",
+      "Title" : "恆光禪寺",
+      "Updated" : "2012-12-29T01:00:40Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5871111, 25.0991708 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=2472935009115046971",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區碧山路",
+        "Business Name" : "白石湖吊橋",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0991708",
+          "Longitude" : "121.5871111"
+        }
+      },
+      "Published" : "2012-12-29T00:58:52Z",
+      "Title" : "白石湖吊橋",
+      "Updated" : "2012-12-29T00:58:52Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5877104, 25.0970740 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=17194701141988275437",
+      "Location" : {
+        "Address" : "114台灣台北市內湖區碧山路24號",
+        "Business Name" : "碧山巖開漳聖王廟",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0970740",
+          "Longitude" : "121.5877104"
+        }
+      },
+      "Published" : "2012-12-29T00:56:37Z",
+      "Title" : "碧山巖開漳聖王廟",
+      "Updated" : "2012-12-29T00:56:37Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5334420, 25.0602180 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?q=104%E5%8F%B0%E7%81%A3%E5%8F%B0%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%9D%BE%E6%B1%9F%E8%B7%AF281%E8%99%9F",
+      "Location" : {
+        "Geo Coordinates" : {
+          "Latitude" : "25.0602180",
+          "Longitude" : "121.5334420"
+        }
+      },
+      "Published" : "2012-11-28T15:51:38Z",
+      "Title" : "104台灣台北市中山區松江路281號",
+      "Updated" : "2012-11-28T15:51:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.5333489, 25.0564886 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12610128918806362896",
+      "Location" : {
+        "Address" : "10491台灣台北市中山區松江路185號",
+        "Business Name" : "滿堂紅頂級麻辣鴛鴦鍋(松江店)",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "25.0564886",
+          "Longitude" : "121.5333489"
+        }
+      },
+      "Published" : "2012-11-16T07:39:38Z",
+      "Title" : "滿堂紅頂級麻辣鴛鴦火鍋",
+      "Updated" : "2012-11-16T07:39:38Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9347392, 23.8522485 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12667545901207637842",
+      "Location" : {
+        "Address" : "555台灣南投縣魚池鄉中正路102號",
+        "Business Name" : "日月潭纜車",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8522485",
+          "Longitude" : "120.9347392"
+        }
+      },
+      "Published" : "2012-11-13T22:19:08Z",
+      "Title" : "日月潭纜車站",
+      "Updated" : "2012-11-13T22:19:08Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 120.9478302, 23.8691502 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=6309477748438353094",
+      "Location" : {
+        "Address" : "55544台灣南投縣魚池鄉金天巷45號",
+        "Business Name" : "九族文化村",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "23.8691502",
+          "Longitude" : "120.9478302"
+        }
+      },
+      "Published" : "2012-11-13T22:18:22Z",
+      "Title" : "九族文化村",
+      "Updated" : "2012-11-13T22:18:22Z"
+    },
+    "type" : "Feature"
+  }, {
+    "geometry" : {
+      "coordinates" : [ 121.7624228, 24.7553965 ],
+      "type" : "Point"
+    },
+    "properties" : {
+      "Google Maps URL" : "http://maps.google.com/?cid=12228580495327131396",
+      "Location" : {
+        "Address" : "260台灣宜蘭縣宜蘭市東港路48-5號",
+        "Business Name" : "凱恩斯岩燒餐廳",
+        "Country Code" : "TW",
+        "Geo Coordinates" : {
+          "Latitude" : "24.7553965",
+          "Longitude" : "121.7624228"
+        }
+      },
+      "Published" : "2012-11-10T22:42:16Z",
+      "Title" : "凱恩斯岩燒餐廳",
+      "Updated" : "2012-11-10T22:42:16Z"
+    },
+    "type" : "Feature"
+  } ]
+}
