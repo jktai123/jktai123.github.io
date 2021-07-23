@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue this介紹</title>
+</head>
+<body>
+    <div id="app">
+    <h1>攝氏/華氏轉換計算機</h1>
+    <input type="text" placeholder="輸入攝氏溫度" v-model="celsius">
+    <br>
+    <span>攝氏溫度{{celsius}} 換算過的華氏溫度：{{fahrenheit}}</span>
+    </div>
+    <br>
+    <div id="app1">
+        現在時間(分:秒) :{{now.min}}:{{now.sec}}
+        <br>
+        路人A體脂肪：<input type="text" v-model="a">
+        <br>
+        路人B體脂肪：<input type="text" v-model="b">
+        <br>
+        BMI：<input type="text" v-model="BMI">
+        <br>
+        
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data:{
+                celsius: 0
+            },
+            computed:{
+                fahrenheit : function(){
+                return this.celsius * 9/5 + 32;
+                }
+            }
+        })
+        var app1 = new Vue({
+            el:'#app1',
+            data:{
+                a:0,
+                b:0,
+                BMI: 20
+            },
+            computed:{
+                now: function () {
+                    let total = this.a+this.b;
+                    var d = new Date();
+                    return {sec:d.getSeconds(),min:d.getMinutes()}
+                }
+            }
+            })
+    </script>
+</body>
+</html>

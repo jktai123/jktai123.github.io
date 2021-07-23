@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue this介紹</title>
+</head>
+<body>
+    <div id="app">
+    <h2>台幣匯率轉換計算機</h2>
+    輸入台幣：<input type="text" v-model="NT">
+    
+    <ul>
+      <li>日幣：{{japan}}</li>
+      <li>美金：{{US}}</li>
+      
+    </ul>
+    
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+            NT:10
+            },
+            computed:{
+                japan: function(){
+                return 'NT'+this.NT*0.2713
+                },
+                US: function(){
+                return 'NT'+this.NT*30.687
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue this介紹</title>
+</head>
+<body>
+    <div class="test">
+  
+        {{content}}
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var apiURL = 'https://api.github.com/repos/vuejs/vue/commits?per_page=3&sha=master';
+        var myVue = new Vue({
+            el: ".test",
+            data: {
+                a: "A內容",
+                content: null
+                },
+            beforeCreate: function () {
+                // console.log(this.a);
+                console.log('屬性未載入前'+this.a);
+            
+            },
+            created: function () {
+                // console.log(this.a);
+                
+                console.log("資料 $data 已可取得，但 $el 屬性還未被建立"+this.a);
+            },
+            beforeMount: function () {
+                console.log("還沒抓到 el 資料"+this.a);
+            },
+            
+            mounted: function () {
+            
+                console.log("已掛上 DOM，並取得 el 資料"+this.a);
+            },
+        
+            methods: {
+                greet: function () {
+                    console.log("123");
+                }
+            }
+        })
+    </script>
+</body>
+</html>

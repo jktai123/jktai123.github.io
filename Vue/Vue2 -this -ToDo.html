@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue this介紹</title>
+</head>
+<body>
+    <div class="app">
+        <input type="text" placeholder="請輸入代辦事項" 
+                @keyup.enter="addTodo(newTodo)" v-model="newTodo">
+        <h2>事項列表</h2>
+        <ul >
+            <li v-for="todo in todos" v-bind:class="{ active: todo.completed }">
+            <input  type="checkbox" v-model="todo.completed">
+            {{todo.content}}
+            - <a href="#" @click.prevent="removeTodo(todo)">刪除</a>
+            </li>
+        </ul><br>
+        <h3>Data Contents</h3>
+        <pre>
+        {{this.todos}}
+        </pre>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: '.app',
+            data:{
+                todos:[],
+                newTodo:''
+            },
+            methods:{
+                addTodo: function(todo){
+                this.todos.push({content:todo,completed: false})
+                },
+                removeTodo: function(todo){
+                this.todos.splice(this.todos.indexOf(todo), 1);
+                }
+            }
+            })
+    </script>
+</body>
+</html>

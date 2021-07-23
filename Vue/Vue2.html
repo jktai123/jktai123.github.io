@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue2 介紹</title>
+</head>
+<body>
+    <div id="app1">
+        {{message}}
+        <div class="doc" >
+            {{score*2}}
+        </div>
+        <div v-if='loading'>{{loading}}  Correct Loading</div>
+        <div v-show='loading'>Show Loading</div>
+        <h2>What is your score?</h2>
+        <input type="text" v-model='score'>
+        <div v-if='score>=60'>{{score}} Great Pass the Test</div>
+        <div v-else='score<60'>{{score}} Fail to pass the test</div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        var app=new Vue({
+            el:'#app1',
+            data:{
+                message:'Hello World',
+                score:70,
+                loading: true
+
+            }
+        })
+    </script>
+</body>
+</html>
