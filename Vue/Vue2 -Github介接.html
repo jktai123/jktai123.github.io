@@ -27,7 +27,7 @@
         </li>
     </ul>
 
-
+    輸入User：<input type="text" v-model="user">
     <h3>ALl reposity of <a :href="commits2[0].owner.html_url" target="_blank">
 
     {{commits2[0].owner.login}}</a></h3>
@@ -47,14 +47,15 @@
     <script>
         var apiURL = 'https://api.github.com/repos/vuejs/vue/commits?per_page=10&sha=';
         // var apiURL='https://api.github.com/repos/jktai123/jktai123/commits?per_page=10&sha='
-        var apiURL2='https://api.github.com/users/jktai123/repos'
+        // var apiURL2='https://api.github.com/users/jktai123/repos'
         var demo = new Vue({
         el: '#demo',
         data: {
             branches: ['master' , 'dev' ,'hotfix','2.6','model-warn'],// 'stable'],
             currentBranch: 'master',
             commits: null,
-            commits2: null
+            commits2: null,
+            user: 'jktai123'
         },
 
         created: function () {
@@ -63,7 +64,8 @@
         },
 
         watch: {
-            currentBranch: 'fetchData'
+            currentBranch: 'fetchData',
+            user:'fetchData2'
         },
         methods: {
             fetchData: function () {
@@ -79,6 +81,7 @@
             fetchData2: function () {
             var xhr = new XMLHttpRequest()
             var self = this
+            let apiURL2='https://api.github.com/users/'+this.user+'/repos'
             xhr.open('GET', apiURL2 )
             xhr.onload = function () {
                 self.commits2 = JSON.parse(xhr.responseText)
