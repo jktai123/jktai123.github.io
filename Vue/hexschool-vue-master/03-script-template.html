@@ -23,6 +23,10 @@
   <div id="app">
     <my-component></my-component>
   </div>
+  <div id="app2">
+    <my-component></my-component>
+    <my-component></my-component>
+  </div>
 
   <script type="text/x-template" id="my-component">
     <div class="component">A custom component of Vue!</div>
@@ -37,6 +41,9 @@
     // create a root instance
     new Vue({
       el: '#app'
+    });
+    new Vue({
+      el: '#app2'
     });
   </script>
 

@@ -28,7 +28,8 @@
     </ul>
 
     輸入User：<input type="text" v-model="user">
-    Update<input type="checkbox" id="checkbox" v-model="upd_flag">
+    <button v-on:click="fetchData2">Fetch</button>
+    <!-- Update<input type="checkbox" id="checkbox" v-model="upd_flag"> -->
     <h3>ALl reposity of <a :href="commits2[0].owner.html_url" target="_blank">
 
     {{commits2[0].owner.login}}</a></h3>
@@ -57,7 +58,7 @@
             commits: null,
             commits2: null,
             user: 'jktai123',
-            upd_flag:true
+            // upd_flag:true
         },
 
         created: function () {
@@ -69,7 +70,7 @@
         watch: {
             currentBranch: 'fetchData',
             // user:'fetchData2',
-            upd_flag:'fetchData2'
+            // upd_flag:'fetchData2'
         },
         methods: {
             fetchData: function () {
@@ -83,7 +84,7 @@
             xhr.send()
             },
             fetchData2: function () {
-            if(this.upd_flag){
+            // if(this.upd_flag){
             var xhr = new XMLHttpRequest()
             var self = this
             let apiURL2='https://api.github.com/users/'+this.user+'/repos'
@@ -93,7 +94,7 @@
                 console.log(self.commits2[0].html_url)
             }
             xhr.send()
-            }
+            // }
             }
         }
       })

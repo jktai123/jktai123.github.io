@@ -22,9 +22,11 @@
 
   <div id="app">
     <my-component></my-component>
+    <my-component1></my-component1>
     <my-component></my-component>
     <my-component></my-component>
     <my-component></my-component>
+    <my-component1></my-component1>
   </div>
 <img src="https://picsum.photos/200/300/?random=1">
 
@@ -34,11 +36,11 @@
       el: '#app',
       components: {
         // register
-        'my-component1': {
+        'my-component': {
           template: '<div class="component">A custom component of Vue!</div>'
           
         },
-        'my-component': {
+        'my-component1': {
           template: '<img src="https://picsum.photos/600/400/?random=1">'
 
         }

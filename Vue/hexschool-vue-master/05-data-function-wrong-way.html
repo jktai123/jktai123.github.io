@@ -36,7 +36,8 @@
     Vue.component('my-component', {
       template: '<div class="component"> <span> {{ count }}</span> - <button @click="count++">add</button></div>',
       data: function() {
-        return {count:0};
+        return {count:0};    //correct
+        // return data;    /// wrong
       }
     });
 
