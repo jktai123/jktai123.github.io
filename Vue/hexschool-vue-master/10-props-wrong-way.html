@@ -32,14 +32,25 @@
   <script>
 
     Vue.component('my-component', {
-      template: '<div class="component"> <span> {{ count }}</span> - <button @click="count++">add</button></div>',
-      props: ['count']
+      // template: '<div class="component"> <span> {{ count.num }}</span> - <button @click="count.num++">add</button></div>',
+      template: '<div class="component"> <span> {{ c }}</span> - <button @click="c++">add</button></div>',
+      props: ['count'],
+      data()
+        {
+        return{
+          c: this.count.num
+        }
+      }
+      
     });
 
     new Vue({
       el: '#app',
       data:{
-        counts: 0
+        counts: {
+          num:0
+        }
+        
       }
     });
   </script>

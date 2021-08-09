@@ -20,12 +20,14 @@
 <body>
 
   <div id="app">
-    <my-component :prop-a="msg"></my-component>
+    <my-component :prop-b="msg" :prop-d="num" :prop-f="num"></my-component>
   </div>
 
   <script type="text/x-template" id="my-component">
     <div class="component">
-      {{ propD }}
+      {{ propD }} </br>
+      {{ propB }} </br>
+      {{ propF }}
     </div>
   </script>
 
@@ -44,7 +46,7 @@
         propD: {
           // 數字型別，且有預設值
           type: Number,
-          default: 100
+          default: 1000
         },
         propE: {
           // Object 型別，代表可接受的是個物件或陣列的型別
@@ -74,7 +76,8 @@
     new Vue({
       el: '#app',
       data: {
-        msg: 123
+        msg: "Message parent",
+        num:99
       }
     });
   </script>
