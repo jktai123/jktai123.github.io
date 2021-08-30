@@ -154,35 +154,43 @@
       })
     }
   function getData1(sht){
+    const urlf=`https://sheets.googleapis.com/v4/spreadsheets/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/values/${sht}?alt=json&key=${config.apiKey}`
+    console.log(`Sht--->  ${sht}
+    ${urlf}`)
+
     return new Promise(resolve=>{
-      fetch('https://spreadsheets.google.com/feeds/list/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/'+sht+'/public/values?alt=json')
+      // fetch('https://spreadsheets.google.com/feeds/list/19poyY7deDjxwYXhQArrSNm4xK7L0ZIsCT-ieLw-CI5c/'+sht+'/public/values?alt=json')
+      fetch(urlf)
         .then(res=>res.json())
-        .then(json=>json.feed.entry)
+        .then(json=>json.values)
         .then(json=>{
           const result = json.map(d=>{
+          if(d[0]!="name"){
           const newObject = {
               properties:{
-                  name:undefined,
-                  tel:undefined,
-                  address:undefined,
-                  phone:undefined},
+                  name:d[0],
+                  tel:d[1],
+                  address:d[2],
+                  phone:d[3]},
               geometry:{
                 coordinates:{
-                lat:undefined,
-                lng:undefined
+                lat:parseFloat(d[5]),
+                lng:parseFloat(d[4])
                 }
               } 
               
           }
-          const filledKey = ["name",	"phone",	"tel",	"address",	"geolng"	,"geolat"]
-          filledKey.forEach(key=>{
-            key.includes('geo')
-              ? newObject.geometry.coordinates[`${key.slice(3,key.length)}`] = d[`gsx$${key}`].$t
-            :newObject.properties[`${key}`] = d[`gsx$${key}`].$t
-          })
-          return newObject
+          // const filledKey = ["name",	"phone",	"tel",	"address",	"geolng"	,"geolat"]
+          // filledKey.forEach(key=>{
+          //   key.includes('geo')
+          //     ? newObject.geometry.coordinates[`${key.slice(3,key.length)}`] = d[`gsx$${key}`].$t
+          //   :newObject.properties[`${key}`] = d[`gsx$${key}`].$t
+          // })
+          
+          return newObject}
         })
-        // console.log(result);
+        result.shift();
+        console.log(result);
         return resolve(result);
         })
         .catch(err=>console.log(err))
@@ -371,9 +379,11 @@
   //getDateInfo()
   
   async function Render_new(){
-    console.log(     $('#select_sh').val());
-    // console.log(infoData);   
-    infoData = await getData1($('#select_sh').val()); 
+    console.log('Sel Text--->'+    $("#select_sh").find("option:selected").text());// $('#select_sh').val());
+    console.log('val'+$('#select_sh').val());
+    // console.log(infoData); 
+      
+    infoData = await getData1($("#select_sh").find("option:selected").text());//$('#select_sh').val()); 
     // console.log(infoData);   
      getAroundStore();
   }
@@ -381,8 +391,9 @@
   getSname();
 
   // let infoData = getData(await getData0(1))
-  let infoData = await getData1(1);
-  // console.log(infoData);
+  const defaultsht='會友通信錄'//$('#select_sh').get(0).options[1].text 
+  let infoData = await getData1(defaultsht);
+  console.log('infoData --->'+infoData.length);
   getAroundStore()
   //getDateInfo()
 })()
