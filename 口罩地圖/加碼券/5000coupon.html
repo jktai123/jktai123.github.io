@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>加碼券店家地圖 - 振興五倍券暨加碼券店家視覺化地圖搜尋工具</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="加碼券店家地圖 - 振興五倍券暨加碼券店家視覺化地圖搜尋工具"/>
+    <meta property="og:description" content="有別於各部會所提供的表格資料可能讓大家在閱讀上不方便，於是就另外做了地圖版來幫助大家查詢"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://fii.bengkuei.me/5000coupon/public/img/tw5000CouponMap.jpg"/>
+    <meta property="og:url" content="https://fii.bengkuei.me/5000coupon/"/>
+    <meta property="fb:app_id" content="297804655518509"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css" integrity="sha512-kq3FES+RuuGoBW3a9R2ELYKRywUEQv0wvPTItv3DSGqjpbNtGWVdvT8qwdKkqvPzT93jp8tSF4+oN4IeTEIlQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style type="text/css">
+      @import  url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+      body{
+        font-family: 'Noto Sans TC', sans-serif;
+        line-height: 2;
+        font-weight: 300;
+      }
+      #share-buttons img {
+        width: 35px;
+        padding: 5px;
+        border: 0;
+        box-shadow: 0;
+        display: inline;
+      }
+      .footer {
+        /*position: absolute;*/
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Set the fixed height of the footer here */
+        line-height: 60px; /* Vertically center the text there */
+        background-color: #f5f5f5;
+      }
+      .select2 {
+        width:100%!important;
+      }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXDD6DN4XL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FXDD6DN4XL');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="https://fii.bengkuei.me/5000coupon/">加碼券店家地圖</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <!-- <li class="nav-item">
+            <a class="nav-link" href="https://www.facebook.com/just.bk.me/" target="_blank">Just.崩潰 (臉書)</a>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="mailto:justbk.1234@gmail.com">寫信給作者</a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <p class="lead">
+        <!-- <div class="alert alert-warning" role="alert"> 有別於各部會所提供的表格資料可能讓大家在閱讀上不方便，於是就另外做了地圖版來幫助大家查詢</div> -->
+                <div>
+          <button type="button" class="btn btn-danger btn-lg mt-2" data-toggle="modal" data-target="#lottoryModal">中籤速查</button>
+          <button type="button" class="btn btn-info d-md-none d-sm-block mt-2" data-toggle="modal" data-target="#iconModal">圖示說明</button>
+          <button type="button" class="btn btn-success mt-2" data-toggle="modal" data-target="#sourceModal">資料來源</button>
+          <button type="button" class="btn btn-warning mt-2" data-toggle="modal" data-target="#helpModal">使用說明</button>
+          <button type="button" class="btn btn-secondary mt-2" data-toggle="modal" data-target="#versionModal">更新紀錄</button>
+        </div>
+        <div class="d-none d-sm-block">
+          <small> 圖示說明
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" class="img-fluid w-auto"> 好食券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png" class="img-fluid w-auto"> 國旅券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" class="img-fluid w-auto"> 藝FUN券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png" class="img-fluid w-auto"> 動滋券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png" class="img-fluid w-auto"> i原券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png" class="img-fluid w-auto"> 農遊券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" class="img-fluid w-auto"> 客庄券</li>
+              <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png" class="img-fluid w-auto"> 該店適用兩張券以上</li>
+            </ul>
+          </small>
+        </div>
+      </p>
+      <p class="lead">
+        <!-- <div class="fb-share-button" data-href="https://fii.bengkuei.me/5000coupon/" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffii.bengkuei.me%2F5000coupon%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">分享</a></div> -->
+      </p>
+      <p class="lead">
+        <div class="chart-container">
+          <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                      <form action="/5000coupon/" method="post">
+                        <div class="row">
+                          <div class="col">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="checkbox" id="q4" name="q4" value="digit">
+                              <label class="form-check-label" for="q4">持數位五倍券</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col mt-2">
+                            <select class="form-control" id="q3" name="q3[]" multiple required="">
+                              <option value="1">好食券</option>
+                              <option value="2">國旅券</option>
+                              <option value="3">i原券</option>
+                              <option value="4">農遊券</option>
+                              <option value="5">藝FUN券</option>
+                              <option value="6">動滋券</option>
+                              <option value="7">客庄券</option>
+                              <option value="8">地方創生券</option>
+                            </select>
+                          </div>
+                          <div class="col mt-2">
+                            <label for="q1" class=" sr-only">選擇景點或縣市</label>
+                            <select class="form-control" id="q1" name="q1" required="">
+                                                                                                                                                      <option disabled="">請選擇縣市</option>
+                              <option value="25.1324216,121.7394049">基隆市</option>
+                              <option value="25.0478356,121.5163623">臺北市</option>
+                              <option value="25.0146105,121.4639254">新北市</option>
+                              <option value="24.9893400,121.3139215">桃園市</option>
+                              <option value="24.801466,120.9710733">新竹市</option>
+                              <option value="24.8275297,121.013351">新竹縣</option>
+                              <option value="24.5700934,120.8224664">苗栗縣</option>
+                              <option value="24.1368091,120.6847893">臺中市</option>
+                              <option value="24.0816793,120.5385138">彰化縣</option>
+                              <option value="23.9025263,120.6903987">南投縣</option>
+                              <option value="23.7115980,120.5411485">雲林縣</option>
+                              <option value="23.4795080,120.4416333">嘉義市</option>
+                              <option value="23.4590882,120.2929955">嘉義縣</option>
+                              <option value="22.9972343,120.211936">臺南市</option>
+                              <option value="22.6381377,120.3030577">高雄市</option>
+                              <option value="22.6687109,120.4863529">屏東縣</option>
+                              <option value="22.7560393,121.1515531">臺東縣</option>
+                              <option value="23.9926029,121.6013431">花蓮縣</option>
+                              <option value="24.7547529,121.7576013">宜蘭縣</option>
+                              <option value="23.5703573,119.5664855">澎湖縣</option>
+                              <option value="24.4371463,118.3190948">金門縣</option>
+                              <option value="26.1579194,119.9519146">連江縣</option>
+                            </select>
+                          </div>
+                          <div class="col mt-2">
+                            <label for="q2" class="sr-only">設定搜尋範圍</label>
+                            <select class="form-control" id="q2" name="q2" required="">
+                              <option disabled="">搜尋範圍</option>
+                              <option value="0.5" selected>500公尺以內</option>
+                              <option value="1">1公里以內</option>
+                              <option value="2" selected>2公里以內</option>
+                                                          </select>
+                          </div>
+                          <div class="col mt-2">
+                            <button type="submit" class="btn btn-primary">搜尋</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="card-body" style="padding: 0px">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <small id="passwordHelpBlock" class="form-text text-muted">
+            <ul class="list-unstyled">
+              <li>資料僅供參考，原則上一週更新一次名單
+                <ul>
+                  <li>振興五倍券官網 <a href="https://5000.gov.tw/" target="_blank">https://5000.gov.tw/</a></li>
+                  <li>目前筆數 9184 總筆數 11148 完成率 82.38%</li>
+                  <li>地方創生券則因官網尚未提供店家名單</li>
+                </ul>
+              </li>
+                          </ul>
+          </small>
+          <div class="table-responsive">
+          </div>
+        </div>
+      </p>
+    </div>
+    <div class="modal fade" id="iconModal" tabindex="-1" role="dialog" aria-labelledby="iconModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="iconModalLabel">圖示說明</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                                          <ul class="list-group">
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" class="img-fluid w-auto"> 好食券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png" class="img-fluid w-auto"> 國旅券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-blue.png" class="img-fluid w-auto"> 藝FUN券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-orange.png" class="img-fluid w-auto"> 動滋券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png" class="img-fluid w-auto"> i原券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-gold.png" class="img-fluid w-auto"> 農遊券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" class="img-fluid w-auto"> 客庄券</li>
+                  <li class="list-group-item"><img src="https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-black.png" class="img-fluid w-auto"> 該店適用兩張券以上</li>
+                </ul>
+                                    </div>
+                  </div>
+      </div>
+    </div>
+    <div class="modal fade" id="sourceModal" tabindex="-1" role="dialog" aria-labelledby="sourceModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sourceModalLabel">資料來源</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                                          <ul class="list-group">
+                  <li class="list-group-item">好食券 <a href="https://foodlover.tw/" target="_blank">https://foodlover.tw/</a></li>
+                  <li class="list-group-item">國旅券 <a href="https://1000.taiwan.net.tw/" target="_blank">https://1000.taiwan.net.tw/</a></li>
+                  <li class="list-group-item">i原券 <a href="https://explorethesun.tw/cipshop/" target="_blank">https://explorethesun.tw/cipshop/</a></li>
+                  <li class="list-group-item">農遊券 <a href="https://888.coa.gov.tw/" target="_blank">https://888.coa.gov.tw/</a></li>
+                  <li class="list-group-item">藝FUN券 <a href="https://artsfunnext.moc.gov.tw/" target="_blank">https://artsfunnext.moc.gov.tw/</a></li>
+                  <li class="list-group-item">動滋券 <a href="https://500.gov.tw/" target="_blank">https://500.gov.tw/</a></li>
+                  <li class="list-group-item">客庄券 <a href="http://www.hakka500.tw/" target="_blank">http://www.hakka500.tw/</a></li>
+                  <li class="list-group-item">地方創生券 <a href="https://www.twrr.ndc.gov.tw/" target="_blank">https://www.twrr.ndc.gov.tw/</a></li>
+                </ul>
+                                    </div>
+                  </div>
+      </div>
+    </div>
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="helpModalLabel">使用說明</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                                          <ul class="list-group">
+                  <li class="list-group-item">查詢結果僅供參考，<B>建議消費前先詢問店家可接受的加碼券種類及能接受支付工具有哪些</B></li>
+                  <li class="list-group-item">依加碼券區分圖示顏色，點擊下去後會出現名稱、連絡電話、地址、適用加碼券及支付方式</li>
+                  <li class="list-group-item">可以藉由<span class="text-primary">拖曳地圖動作</span>來即時載入所拖曳的地點附近其他店家資料</li>
+                  <li class="list-group-item"><span class="text-warning">約有 20% 左右</span>店家資料待處理</li>
+                </ul>
+                                    </div>
+                  </div>
+      </div>
+    </div>
+    <div class="modal fade" id="versionModal" tabindex="-1" role="dialog" aria-labelledby="versionModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="versionModalLabel">更新紀錄</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                                          <ul> 2021.10.16
+                  <li>店家資訊新增 <span class="text-danger">支付方式</span> 資訊</li>
+                  <li>搜尋選項增加 <span class="text-danger">是否持數位五倍券</span></li>
+                  <li>新增 <span class="text-danger">中籤速查</span> 功能，並可將結果複製到搜尋條件上</li>
+                </ul>
+                <ul> 2021.10.17
+                  <li>新增 <span class="text-danger">客庄券</span> 店家資料</li>
+                  <li>新增 <span class="text-danger">定位偵測</span> </li>
+                </ul>
+                <ul> 2021.10.18
+                  <li>更新 <span class="text-danger">好食券</span> 部分店家資料</li>
+                </ul>
+                                    </div>
+                  </div>
+      </div>
+    </div>
+    <div class="modal fade" id="lottoryModal" tabindex="-1" role="dialog" aria-labelledby="lottoryModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="lottoryModalLabel">中籤速查</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="f">
+              <div class="form-group">
+                <label for="n" class="col-form-label">請輸入身份證字號末2碼或末3碼</label>
+                <input type="text" class="form-control" id="n" name="n" maxlength=3 required>
+                <small id="HelpBlock" class="form-text text-muted">
+                  <p>須依照五倍券官網所公佈的號碼格式寫法才查的到，例如「8」得寫成「08」、「81」不等於「081」，完整中籤獎號名單 <a href="https://vhpi.5000.gov.tw/" target="_blank">https://vhpi.5000.gov.tw/</a></p>
+                </small>
+              </div>
+            </form>
+            <div class="lottory_result"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" id="copy">複製結果到搜尋上</button>
+            <button type="button" class="btn btn-secondary" id="submit">查詢</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v12.0&appId=259754061318019&autoLogAppEvents=1" nonce="0wWp0yrR"></script>
+    <footer class="footer">
+      <div class="container text-right">
+        <span class="text-muted">2021 Just.崩潰 製作</span>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script type="text/javascript">
+      let map, markersLayer, lat, lng, coupon, used_digit
+
+      function mapicon(color) {
+        return new L.Icon({
+          iconUrl: 'https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-'+color+'.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41]
+        })
+      }
+      
+      used_digit = 'no'
+
+      jQuery(document).ready(function($) {
+        if (used_digit == 'yes') {
+          $('#q4').prop("checked", true)
+        } else {
+          $('#q4').prop("checked", false)
+        }
+        
+        $("#q4").click(function() {
+          if ($('#q4').prop("checked")) {
+            const v = $("#q3").select2('data')
+            let vv = []
+            v.forEach(e => {
+              vv.push(e.id)
+            })
+            // const a = [2,3,4,5,6,7]
+            const a = vv
+            a.push(1)
+            $('#q3').val(a)
+            $('#q3').trigger('change')
+          } else {
+            detachedMember = $('#q3 option[value="1"]').detach()
+            const newCoupon = new Option('好食券', 1, false, false)
+            $('#q3').append(newCoupon).trigger('change')
+          }
+        })
+
+        $('#q1, #q2, #q3').select2({
+          theme: "bootstrap",
+        })
+        
+        $('#q1').val('25.0478356,121.5163623')
+        $('#q2').val(1)
+        
+        $('#q3').val([2,3,4,5,6,7]) // Select the option with a value of 'US'
+        $('#q1, #q2, #q3').trigger('change') // Notify any JS components that the value changed
+
+        $('#submit').on('click', function(e) {
+            e.preventDefault()
+            $.ajax({
+                type: "POST",
+                url: 'https://fii.bengkuei.me/5000coupon/get/qq',
+                data: $('#f').serialize(),
+                success: function(response) {
+                    const res = JSON.parse(response)
+
+                    let content = '', a = [], b = '', c = []
+                    for (let i = 0; i < res.length; i++) {
+                      for (let j = 0; j < 8; j++) {
+                        const e = res[i][j];
+                        if (e[2] !== false) {
+                          c.push('<b><mark>' + e[0] + '</mark><small>第' + e[3] + '週</small></b>')
+                          b += e[1] + ','
+                        } else {
+                          a.push(e[2])
+                        }
+                      }
+                    }
+                    
+                    if (a.length % 8 == 0) {
+                      content = '目前尚未抽到任一張加碼券'
+                      $('#copy').hide()
+                    } else {
+                      content = '<p>所輸入的尾數目前抽中的加碼券有：' + c.toString() + '</p><p>結果僅供參考，由於每人每週最多中籤1次，每種券別僅能中籤1次，實際上能否領取，其資格認定則視各券是否先後中籤為主</p><p><span class="bb" data-b='+b.substr(0, (b.length -1))+'></span></p>'
+                      $('#copy').show()
+                    }
+                    $('.lottory_result').html(content)
+                },
+                error: function() {
+                    alert('連線錯誤')
+                }
+            })
+            return false
+        })
+      })
+
+      $('#lottoryModal').on('shown.bs.modal', function (e) {
+        $('#n').val('')
+        $('.lottory_result').html('')
+        $('#copy').hide()
+      })
+
+      $('#lottoryModal .modal-footer #copy').on('click', function(event) {
+        const bb = $('.bb').attr('data-b')
+        $('#q3').val(bb.split(',')) // Select the option with a value of 'US'
+        $('#q3').trigger('change')
+      })
+
+      const options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+      }
+
+      function success(pos) {
+        const crd = pos.coords
+        // console.log('Your current position is:')
+        // console.log('Latitude : ' + crd.latitude)
+        // console.log('Longitude: ' + crd.longitude)
+        // console.log('More or less ' + crd.accuracy + ' meters.')
+
+        lat = crd.latitude
+        lng = crd.longitude
+        // console.log(2,3,4,5,6,7)
+        coupon = '2,3,4,5,6,7'
+        used_digit = 'no'
+
+        const option = new Option("系統偵測", lat + ',' + lng)
+        option.selected = true
+        // option.disabled = true
+
+        $("#q1").append(option)
+        $("#q1").trigger("change")
+
+        map = L.map('map').setView([lat, lng], 15)
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '<a href="https://facebook.com/just.bk.me" target="_blank">Just.崩潰</a>',
+          maxZoom: 18,
+        }).addTo(map)
+        const marker = L.marker([lat, lng], {
+          icon: mapicon('grey')
+        }).bindTooltip('我的位置')
+        marker.addTo(map)
+        markersLayer = new L.LayerGroup()
+
+        loadMarkers(map, markersLayer, lat, lng, coupon)
+        map.on('drag', function(e) {
+          markersLayer.clearLayers()
+        })
+
+        map.on('dragend', function(e) {
+          new_lat = this.getCenter().lat
+          new_lng = this.getCenter().lng
+          markersLayer.clearLayers()
+          loadMarkers(map, markersLayer, new_lat, new_lng, coupon)
+        })
+
+        $(window).on('orientationchange pageshow resize', function () {
+            $("#map").height($(window).height())
+            map.invalidateSize()
+        }).trigger('resize')
+      }
+
+      function error(err) {
+        console.warn('ERROR(' + err.code + '): ' + err.message)
+        lat = 25.0478356
+        lng = 121.5163623
+        // console.log(2,3,4,5,6,7)
+        coupon = '2,3,4,5,6,7'
+        used_digit = 'no'
+
+        map = L.map('map').setView([lat, lng], 16)
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '<a href="https://facebook.com/just.bk.me" target="_blank">Just.崩潰</a>',
+          maxZoom: 18,
+        }).addTo(map)
+
+        // const marker = L.marker([lat, lng], {
+        //   icon: mapicon("red")
+        // })
+        
+        // marker.addTo(map)
+        markersLayer = new L.LayerGroup()
+
+        loadMarkers(map, markersLayer, lat, lng, coupon)
+        map.on('drag', function(e) {
+          markersLayer.clearLayers()
+        })
+
+        map.on('dragend', function(e) {
+          new_lat = this.getCenter().lat
+          new_lng = this.getCenter().lng
+          markersLayer.clearLayers()
+          loadMarkers(map, markersLayer, new_lat, new_lng, coupon)
+        })
+
+        $(window).on('orientationchange pageshow resize', function () {
+            $("#map").height($(window).height())
+            map.invalidateSize()
+        }).trigger('resize')
+      }
+
+      navigator.geolocation.getCurrentPosition(success, error, options)
+	    function loadMarkers(map, markersLayer, pos_lat, pos_lng, coupon) {
+	      markersLayer.clearLayers()
+	      $.ajax({
+	          type: 'POST',
+	          dataType: 'json',
+	          data: {lat: pos_lat, lng: pos_lng, dist: 1, coupon: coupon},
+	          url: 'https://fii.bengkuei.me/5000coupon/get/poi',
+	          success: function (data) {
+	              const obj = data
+	              const totalLocations = obj.length
+	              let array = [] = obj
+	              for (let i = 0; i < array.length; i++) {
+                    let icon 
+                    let phone = array[i].phone
+                    let name = array[i].name
+                    let address = array[i].address
+                    let url = array[i].url
+                    let coupon = array[i].coupon.substr(0, (array[i].coupon.length -1))
+                    let payment_info = array[i].payment_info
+
+                    let lat = array[i].lat, lng = array[i].lng
+                    
+                    if (coupon == '好食券') {
+                      icon = mapicon("green")
+                    } else if (coupon == '國旅券') {
+                      icon = mapicon("yellow")
+                    } else if (coupon == '藝FUN券') {
+                      icon = mapicon("blue")
+                    } else if (coupon == '動滋券') {
+                      icon = mapicon("orange")
+                    } else if (coupon == 'i原券') {
+                      icon = mapicon("violet")
+                    } else if (coupon == '農遊券') {
+                      icon = mapicon("gold")
+                    } else if (coupon == '客庄券') {
+                      icon = mapicon("red")
+                    } else {
+                      icon = mapicon("black")
+                    }
+
+                    let html, link
+                    if (url === null || url == '') {
+                      link = name
+                    } else {
+                      link = '<a href=' + url + ' target=\'_blank\'>' + name + '</a>'
+                    }
+
+                    let payment
+                    if (payment_info === null || payment_info == '') {
+                      payment = '待補充'
+                    } else {
+                      if (coupon == '農遊券') {
+                        payment = payment_info.substr(0, (array[i].payment_info.length -1))
+                      } else {
+                        payment = payment_info
+                      }
+                    }
+
+                    if (phone === null) {
+                      html = '<p><h4>' + link + '</h4></p><p>電話：待補充</p><p>地址：' + address + '</p><p><h5>適用加碼券：' + coupon + '</h5></p><p><h5>支付方式：' + payment + '</h5></p>'
+                    } else {
+                      html = '<p><h4>' + link + '</h4></p><p>電話：' + phone + '</p><p>地址：' + address + '</p><p><h5>適用加碼券：' + coupon + '</h5></p><p><h5>支付方式：' + payment + '</h5></p>'
+                    }
+
+	                  const marker = new L.marker([parseFloat(lat), parseFloat(lng)], {
+	                      icon: icon
+	                  }).bindPopup(html).addTo(map)
+	              }
+	          }
+	      })
+	    }
+    </script>
+      </body>
+</html>

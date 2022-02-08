@@ -42,6 +42,7 @@
       async function getData() {
         // const response = await fetch('testdata.csv');
         const response = await fetch('ZonAnn.Ts+dSST.csv');
+        
         const data = await response.text();
         const years = [];
         const temps = [];

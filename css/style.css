@@ -46,11 +46,13 @@ ul li{
 
 .logo h1 a{
 	display:block;
-	width:256px;
-	height:147px;
-	background:url(../images/gonzo.png) no-repeat;
+	width:600px;
+	height:50px;
+	background:url(../images/fullscreen/4.png) ;
+	background-size:50px 50px;
 	margin:0 auto;
 	text-indent:-99999px;
+	
 }
 
 .navigation{
