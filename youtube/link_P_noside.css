@@ -1,5 +1,14 @@
 ul{ font-size: 10px;}
-li{ display: inline-block;width: 140px;height: 40px;background-color: rgb(235, 235, 190);margin: 8px;font-size: 15px;text-align: center;line-height: 30px;}
+li{ display: inline-block;
+		width: 140px;height: 40px;
+		background-color: rgb(235, 235, 190);
+		margin: 10px;
+		font-size: 18px;
+		color: blue;
+		text-align: center;
+		font-weight: bold;
+		line-height: 40px;
+	}
 a  {text-decoration: none; color:darkblue}
 iframe { width : 1000px; height: 500px ; }
 
