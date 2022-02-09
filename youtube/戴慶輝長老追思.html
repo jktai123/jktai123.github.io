@@ -17,8 +17,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   background-image: url('../doc/戴慶輝遺像.jpg');
   min-height: 100%;
 }
+img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);}
 .mySlides {display: none;}
-/*img {vertical-align: middle;}*/
+ img {vertical-align: middle; width:100%;}
 
 /* Slideshow container */
 .slideshow-container {
@@ -33,7 +35,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  top: 8px;
+  background-color: purple;
+  bottom:0px;
   width: 100%;
   text-align: center;
 }
@@ -65,9 +68,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.s;
+  -webkit-animation-duration: 1.5 s;
   animation-name: fade;
-  animation-duration: 1.s;
+  animation-duration: 1.5 s;
 }
 
 @-webkit-keyframes fade {
@@ -237,24 +240,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <!-- End Contact Section -->
   </div>  
   
-  <!-- slideshow -->
+  <!-- slideshow style="width:100%"-->
   <div class="slideshow-container">
 
 <div class="mySlides fade">
-  
-  <img src="https://lh3.googleusercontent.com/ZFeGs72Tq__kS7xuUhdpjHjKYHNaYuG1EhSM_ClYqU6Q7-XQPzh7yqIhsz4Og_JSlOLryeZ5B_5uxFjHOoAMLm7CBspPl6iLi-6GV4tw8MS0mFU0sW9r2Gpu9Oy4hmpbo1HQ1Cm1Aw=w1920-h1080" style="width:100%">
+  <img src="https://lh3.googleusercontent.com/ZFeGs72Tq__kS7xuUhdpjHjKYHNaYuG1EhSM_ClYqU6Q7-XQPzh7yqIhsz4Og_JSlOLryeZ5B_5uxFjHOoAMLm7CBspPl6iLi-6GV4tw8MS0mFU0sW9r2Gpu9Oy4hmpbo1HQ1Cm1Aw=w1920-h1080" >
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
-  
-  <img src="../doc/2019_戴家.jpg" style="width:100%">
+  <img src="../doc/2019_戴家.jpg" >
   <div class="text">2019_戴家</div>
 </div>
 
 <div class="mySlides fade">
-  
-  <img src="../doc/1963_戴家.jpg" style="width:100%">
+  <img src="../doc/1963_戴家.jpg" ">
   <div class="text">1963_戴家</div>
 </div>
 
