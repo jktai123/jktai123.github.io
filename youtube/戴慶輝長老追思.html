@@ -225,9 +225,11 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   <!-- slideshow style="width:100%"-->
   <div class="slideshow-container">
 
+
+
+<button onclick="toggle_show_slide()" id='toggle'>自動</button>
+<button onclick="show_next_Slide()">></button>
 <h2 id='photo_text'>精選照片</h2> 
-
-
 <div class="mySlides fade">
   <img src="../doc/2019_戴家.jpg" >
   
@@ -263,7 +265,9 @@ $(document).ready(function() {
   
 })
 let slideIndex = 0;
+let ishow=true;
 const photo_text=['2019_戴家','1963_戴家']
+let myTimeout;
 const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';  //新聖詩連結
 const a = {
 		
@@ -296,22 +300,37 @@ function  R_Url(){
 }
 
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
- // var dots = document.getElementsByClassName("dot");
+function show_next_Slide() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+ 
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex > slides.length) {slideIndex = 1}   
+  slides[slideIndex-1].style.display = "block"; 
+  $("#photo_text").text('精選照片--'+photo_text[slideIndex-1]);
   
-  slides[slideIndex-1].style.display = "block";  
- 
- $("#photo_text").text('精選照片--'+photo_text[slideIndex-1]);
-  setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 
+function toggle_show_slide(){
+	if(ishow){
+		clearTimeout(myTimeout);
+		ishow=false;
+		$("#toggle").text('手動');
+	}else
+	{
+		
+		showSlides();
+		ishow=true;
+		$("#toggle").text('自動')
+	}
+}
+function showSlides() {
+		show_next_Slide();
+		myTimeout = setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
 
 function openNav() {
   document.getElementById("mySidebar").style.width = "60%";
