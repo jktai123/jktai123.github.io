@@ -307,6 +307,7 @@ function  R_Url(){
 		let txt1;
 		$.each(data, function (i, item) {
 			if(i!=0){
+				if(item[0]=='') return false;
 			    txt1=`<div class="mySlides fade">
 					<img src="${item[1]}" >
 					<div class="text">${item[0]}</div>
