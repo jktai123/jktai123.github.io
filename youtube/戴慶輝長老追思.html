@@ -226,7 +226,7 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   <div class="slideshow-container">
 
 
-
+<button onclick="show_pre_Slide()"><</button>
 <button onclick="toggle_show_slide()" id='toggle'>自動</button>
 <button onclick="show_next_Slide1()">></button>
 <h2 id='photo_text'></h2> 
@@ -321,7 +321,20 @@ function show_next_Slide1() {
 	
 }
 
-
+function show_pre_Slide() {
+  clearTimeout(myTimeout);
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+ 
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex--;
+  if (slideIndex ==0) {slideIndex = slides.length}   
+  slides[slideIndex-1].style.display = "block"; 
+  $("#photo_text").text(photo_text[slideIndex-1]);
+  
+}
 function toggle_show_slide(){
 	
 	{
