@@ -228,8 +228,8 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 
 
 <button onclick="toggle_show_slide()" id='toggle'>自動</button>
-<button onclick="show_next_Slide()">></button>
-<h2 id='photo_text'>精選照片</h2> 
+<button onclick="show_next_Slide1()">></button>
+<h2 id='photo_text'></h2> 
 <div class="mySlides fade">
   <img src="../doc/2019_戴家.jpg" >
   
@@ -310,9 +310,17 @@ function show_next_Slide() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}   
   slides[slideIndex-1].style.display = "block"; 
-  $("#photo_text").text('精選照片--'+photo_text[slideIndex-1]);
+  $("#photo_text").text(photo_text[slideIndex-1]);
   
 }
+function show_next_Slide1() {
+	clearTimeout(myTimeout);
+	ishow=false;
+	$("#toggle").text('手動');
+	show_next_Slide();
+	
+}
+
 
 function toggle_show_slide(){
 	if(ishow){
