@@ -265,8 +265,8 @@ $(document).ready(function() {
   
 })
 let slideIndex = 0;
-let ishow=true;
-const photo_text=['2019_戴家','1963_戴家']
+
+const photo_text=['90歲全家福','1963全家福']
 let myTimeout;
 const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';  //新聖詩連結
 const a = {
@@ -316,23 +316,19 @@ function show_next_Slide() {
 function show_next_Slide1() {
 	clearTimeout(myTimeout);
 	ishow=false;
-	$("#toggle").text('手動');
+	//$("#toggle").text('手動');
 	show_next_Slide();
 	
 }
 
 
 function toggle_show_slide(){
-	if(ishow){
-		clearTimeout(myTimeout);
-		ishow=false;
-		$("#toggle").text('手動');
-	}else
+	
 	{
-		
+		clearTimeout(myTimeout);
 		showSlides();
 		ishow=true;
-		$("#toggle").text('自動')
+	//	$("#toggle").text('自動')
 	}
 }
 function showSlides() {
