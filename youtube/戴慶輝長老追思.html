@@ -9,8 +9,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body, h1,h2,h3,h4,h5,h6,table {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 .bgimg {
   background-position: center;
@@ -31,7 +32,7 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   margin: auto;
 }
 
-/* Caption text    #f2f2f2*/
+/* Caption text    */
 .text {
   color: #ffffe6;
   font-size: 15px;
@@ -42,6 +43,22 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   width: 100%;
   text-align: center;
 }
+table {
+  
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  font-size: 20px;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -89,6 +106,7 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
 </style>
 <body>
 
@@ -129,20 +147,74 @@ img1 {-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
    <h1 class="w3-jumbo"><b>故戴慶輝長老</b></h1>
    <h1 class="w3-jumbo"><b>追思禮拜</b></h1>
    <h2><b> 2月19日(六)10:30</b></h2><br>
-   <h2 ><b><a href='https://goo.gl/maps/yn99ddqQmFLWiCt87'><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i></a>於德生教會 高雄市新興區德生街54號</b></h2>
+   <h2 ><b><a href='https://goo.gl/maps/yn99ddqQmFLWiCt87'>
+		<i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>
+			</a>於德生教會 高雄市新興區德生街54號</b></h2>
     <h3>生1929.12.18 歿2022.2.1</h3>
 	<li class="item1"><a href="https://www.youtube.com/watch?v=2hvCWZ_qTG8">追思影片</a> </li>
 	
 	<li class="item1"><a href="https://www.slideshare.net/secret/tH7rCrqXFJu9DE">偉大的爸爸</a> </li>
 	<li class="item1"><a href="https://youtu.be/ky71t5zpOqo">90歲生日慶</a> </li>
-	<li class="item1"><a href="#精選照片">精選照片</a> </li>
+	<li class="item1" onclick="openNav()">目錄 </li>
 	
    
     <!-- <button class="w3-button w3-light-grey w3-padding-large w3-margin-top">
       <i class="fa fa-download"></i> Download Resume
     </button>!-->
   </header>
-
+ 
+ <div class="w3-padding-32 w3-content" id="行程"> 
+        
+  <table class="table">
+    <thead>
+      <tr>
+        
+        <th>禮拜名稱</th>
+        <th>時間</th>
+        <th>地點</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        
+        <td>入殮禮拜</td>
+        <td>2/19(六)早上7:10~7:40</td>
+        
+        <td><a href='../doc/祭拜區.jpg'>高雄殯儀館送行祭拜區(圖)</a>
+			<a href='https://goo.gl/maps/H4yU5Bdg54pTkiX79'><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i></a>
+			
+			</td>
+      </tr>
+	   <tr>
+        
+        <td>火化禮拜</td>
+        <td>2/19(六)早上7:40~7:50</td>
+        <td>高雄殯儀館火化場
+			<a href='https://goo.gl/maps/H4yU5Bdg54pTkiX79'><i class="bi bi-building"></i></i></a>
+		</td>
+        
+      </tr>
+	   <tr>
+        <td>追思禮拜</td>
+        <td>2/19(六)早上10:30~11:40</td>
+        <td>德生教會
+		<a href='https://goo.gl/maps/yn99ddqQmFLWiCt87'><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i></a>
+		</td>
+      </tr>
+	   <tr>
+        <td>安葬禮拜</td>
+        <td>2/19(六))中午12:30~13:00
+		</td>
+        <td>基督教橄欖園
+		<a href='https://goo.gl/maps/D56uXzAhyHTbAhmq7'><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i></a>
+		</td>
+      </tr>
+	   
+    </tbody>
+  </table>
+  </div>
+ 
   <!-- Portfolio Section !-->
   <div class="w3-padding-32 w3-content" id="訃聞">
   
