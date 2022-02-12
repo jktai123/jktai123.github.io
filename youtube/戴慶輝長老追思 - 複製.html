@@ -4,15 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="link_P_noside.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-
-  
-  
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style>
 body, h1,h2,h3,h4,h5,h6,table {font-family: "Montserrat", sans-serif}
@@ -249,7 +245,7 @@ tr:nth-child(even) {
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="故人略歷">
-    <h2>故人略歷</h2>  
+    <h2>故人略歷</h2>
     <hr class="w3-opacity">
     <h4>&emsp;&emsp;慶輝長老於主後1929年12月18日，誕生於台中霧峰庄尖後小村落，一個田產豐富的信主務農家庭，父親戴粗皮，母親李阿昌，育有五男五女共10人，慶輝排行第五。因二伯父戴德膝下無子，於6歲時過繼登記為養子，瞬間割捨原生家庭親情，入籍大肚鄉龍東村茄投，12歲養父戴德因農務時不慎跌落山谷身亡，慶輝即離開未信主的養父母家，重回親生父母親懷抱，重享天倫之樂！</h4>
 	<h4>&emsp;&emsp;
@@ -289,24 +285,22 @@ tr:nth-child(even) {
    <!-- End 故人略歷 Section -->
   </div>
  
-<div class="w3-content w3-justify w3-text-grey w3-padding-32" id="年表">	
+<div class="w3-padding-32 w3-content" id="年表">	
 <h2>故人大事年表</h2>
 <img src="../doc/年表.png" style="width:100%">
     
   <!-- End 年表 Section -->
   </div>
 
- <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="精選照片">
+ <div class="w3-padding-32 w3-content" id="精選照片">
   
   <!-- slideshow style="width:100%"-->
-  
+  <div class="slideshow-container">
 
-<div class="slideshow-container">
-<div class="w3-bar">
-<button class="w3-bar-item w3-button w3-light-blue w3-hover-purple" onclick="show_pre_Slide()"><</button>
-<button class="w3-bar-item w3-button w3-light-blue w3-hover-purple" onclick="toggle_show_slide()" id='toggle'>自動</button>
-<button class="w3-bar-item w3-button w3-light-blue w3-hover-purple" onclick="show_next_Slide1()">></button>
-</div>
+
+<button onclick="show_pre_Slide()"><</button>
+<button onclick="toggle_show_slide()" id='toggle'>自動</button>
+<button onclick="show_next_Slide1()">></button>
 <h2 id='photo_text'></h2> 
 
 </div>
@@ -335,7 +329,24 @@ tr:nth-child(even) {
 
 <!-- END PAGE CONTENT -->
 
+<div class="w3-padding-32 w3-content" id="查聖詩聖經">
+<div id="fixed-div" > 
+<form >
+	
+   <!-- <select id="select_url" onchange="Google_sht_R()">   -->
+	
+	<select id="select_url" onchange="RGsheet()">
 
+    </select>
+</form>
+</div>
+<div id="fixed-div2" >
+<p id="T2" style="display: none;"> </p>
+<br><br>
+<p id="show"  > </p>
+</div>
+
+</div>
 <script>
 // Open and close sidebar
 
@@ -355,11 +366,16 @@ const a = {
 		
 		sheetUrl:fmain,
 		sheetTag: 'photo', //'Test'
-		//key:1
+		key:1
 		};
-
+const a1= {
+		
+		sheetUrl:fmain,
+		sheetTag: '禮拜資料', //'Test'
+		key:1
+		};
 const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
-//const RSheet2Json_APIV5='https://script.google.com/macros/s/AKfycbwFUIATzqJ3aaUP0TjLsA7WuHp9SG21RGdQ3AAFhw1lWSSSYGjQjdbC3rRfEn9Z3RPFrA/exec'
+const RSheet2Json_APIV5='https://script.google.com/macros/s/AKfycbwFUIATzqJ3aaUP0TjLsA7WuHp9SG21RGdQ3AAFhw1lWSSSYGjQjdbC3rRfEn9Z3RPFrA/exec'
 const ArrKey=[]
 function  R_Url(){
   
@@ -383,12 +399,86 @@ function  R_Url(){
 		});
 		
 		
-	
+	$.get(RSheet2Json_APIV2, a1, function (data) {    
+	  
+		$("#select_url").empty();
+		
+		$.each(data, function (i, item) {
+			if(i!=0){
+				keys=item[3].split(",")
+				keys.forEach((val)=>{
+					key=val.trim();
+					if(!ArrKey.includes(key)){
+						$('#select_url').append($('<option>', { 
+							value: key,
+							text : key 
+						}));
+						ArrKey.push(key);
+						}
+					})
+				
+			}
+		});
+		RGsheet();
+		});
 
 
 }
 
+function RGsheet(){
+	 
+	document.getElementById("show").innerHTML = '讀取資料 ---- ' +document.getElementById("select_url").value ;
+	let $show = $('#show');
+	
+	$.get(RSheet2Json_APIV5, a1, function (data) {    
+	  
+		
+		let heads=[];
+		for(head in data[0]){
+			heads.push(data[0][head]);
+		}
+		// console.log(heads.length);
 
+		let txt='';
+		txt += '<table  class="table  table-hover "> <thead><tr>';
+		// heads.forEach(el=>console.log(el));
+		heads.forEach(function(e){
+			txt += "<th align='center'>" + e + "</th>";
+
+		})
+		
+		txt+="</tr></thead><tbody>";
+		// console.log(txt);
+
+		for (x in data) {
+			if(x!="0" && data[x][3].includes(document.getElementById("select_url").value )){
+			txt += "<tr>";
+			heads.forEach(function(item,e){
+			if(e==0){
+				txt += "<td>" + data[x][e].slice(0,10) + "</td>";
+				}else
+				if(e==1){
+					txt += `<td> <a href="${data[x][e+1]}"> ${data[x][e]}</a> </td>`;
+				}else
+					{
+					txt += "<td>" + data[x][e] + "</td>";
+					}
+			})
+			txt += "</tr>";
+			}
+		}
+		txt += "</tbody></table>"
+		document.getElementById("show").innerHTML = txt;
+
+
+		var arr = [];
+		for (var i = 0; i < (a.endRow - a.row + 1); i++) {
+			arr[i] = d.splice(0, (a.endCol - a.col + 1));
+			$show.append(arr[i] + '<br/>');
+		}
+		
+	   });
+	}
 function show_next_Slide() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
