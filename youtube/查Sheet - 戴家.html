@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>查Sheet</title>
+
+    <style> 
+            .container {  display: flex;}
+            </style>
+
+</head>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	 input,select{
+            margin: 0px;
+            display: inline;
+            font-size: 18px;
+        }
+
+        /* label {display:inline;} */
+        /* input {display:inline;} */
+        button {
+            font-size: 16px;
+        }
+	#fixed-div {
+	  position: fixed;
+	  top: 100;
+	  left: 0;
+	  right: 0;
+	  overflow-x:auto;
+	/*  height: 60px;*/
+	 
+	}
+    table {
+	  border-collapse: collapse;
+	  border-spacing: 0;
+	  width: 100%;
+	  border: 1px solid #ddd;
+	}
+
+	th, td {
+	  text-align: left;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2}
+    
+</style>
+<script>
+$(document).ready(function() {
+  var shtUrl='"https://docs.google.com/spreadsheets/d/1jx9hL4CZuyET00_6LYbcz4d23WLv7iMsLbcPR3xqGbo/edit?usp=sharing"'
+ // GSname(shtUrl);
+  R_Url();
+})
+
+function RGsheet(){
+	 
+	document.getElementById("show").innerHTML = '讀取資料 ---- ' +document.getElementById("select_sh").value ;
+	var $show = $('#show');
+	var shURL= 'https://docs.google.com/spreadsheets/d/1yt3EfSIVBi-NOvoeqwEtp-DcnIODM9LK84alJLh9JJI/edit?usp=sharing';
+	// console.log(shURL);
+	var a = {
+		sheetUrl:document.getElementById("select_url").value ,
+		sheetTag: document.getElementById("select_sh").value  //'Test'
+		};
+	const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
+	const RSheet2Json_API='https://script.google.com/macros/s/AKfycbwsHjkAvTx37IrpVzf07FVVHmVz0HqRGQ-__ucipLl2o-_U1C2yH0t-5ADrCevDO4RFfg/exec';
+	$.get(RSheet2Json_APIV2, a, function (data) {    
+	   
+		var heads=[];
+		for(head in data[0]){
+			heads.push(data[0][head]);
+		}
+		// console.log(heads.length);
+
+		var txt='';
+		txt += '<table  class="table  table-hover "> <thead><tr>';
+		// heads.forEach(el=>console.log(el));
+		heads.forEach(function(e){
+			txt += "<th align='center'>" + e + "</th>";
+
+		})
+		
+		txt+="</tr></thead><tbody>";
+		// console.log(txt);
+
+		for (x in data) {
+			if(x!="0"){
+			txt += "<tr>";
+			// console.log(x);
+			// console.log(data[x]);
+			heads.forEach(function(item,e){
+			txt += "<td>" + data[x][e] + "</td>";
+
+			})
+			txt += "</tr>";
+			}
+		}
+		txt += "</tbody></table>"
+		document.getElementById("show").innerHTML = txt;
+
+
+		var arr = [];
+		for (var i = 0; i < (a.endRow - a.row + 1); i++) {
+			arr[i] = d.splice(0, (a.endCol - a.col + 1));
+			$show.append(arr[i] + '<br/>');
+		}
+		
+	   });
+	}
+function Google_sht_R(){
+	GSname(document.getElementById("select_url").value    );
+	document.getElementById("file_href").href =document.getElementById("select_url").value
+	}	
+function  GSname(shtUrl){
+  
+  var select_sh=$('#select_sh').val();
+  var a = {
+	sheetUrl:shtUrl
+                    };
+   $.get('https://script.google.com/macros/s/AKfycby2wc_EZaX2pcqBgCApZz5C2ZfYX09GNGJ6IFygOaxsTtYeBgnKmkpJqeNhAo8-A-pVnQ/exec', a, function (data) {
+                $("#select_sh").empty();
+                
+                $('#select_sh').append($('<option>', { 
+                      value: '',
+                      text : `---請選擇---- ${$("#select_url option:selected").text()} `
+                      }));
+                       
+                data = JSON.parse(data);
+                $.each(data, function (i, item) {
+                    $('#select_sh').append($('<option>', { 
+                      value: item.Sname,
+                      text : item.Sname 
+                }));
+				});
+                   
+                });
+  
+}
+function  R_Url(){
+  const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';
+  var a = {
+		sheetUrl:fmain,
+		sheetTag: 'Main' //'Test'
+		};
+	const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
+	/*
+	const url=`${RSheet2Json_APIV2}?sheetUrl=${fmain}+sheetTag=Main`;
+	//const url='https://api.wheretheiss.at/v1/satellites/25544'
+	console.log(url);
+	
+	fetch(url)
+		//.then(response => response.json()) 
+		.then(function(response) {
+			console.log(response);
+			return response.json();
+		})
+		.then(function(myJson) {
+			console.log(myJson);
+		});
+	*/
+	$.get(RSheet2Json_APIV2, a, function (data) {    
+	   
+	//	console.log(data);
+		$("#select_url").empty();
+		
+		$.each(data, function (i, item) {
+			if(i!=0){
+				$('#select_url').append($('<option>', { 
+				  value: item[1],
+				  text : item[0] 
+				}));
+			}
+		});
+		Google_sht_R();
+		});
+
+}
+</script>
+<body>
+<div id="fixed-div" > 
+<form >
+    
+	<a href="" id="file_href" target="_blank">File</a>
+    <select id="select_url" onchange="Google_sht_R()">
+
+    </select>
+    Sheet:
+    <select id="select_sh" onchange="RGsheet()";>
+	<!--  <option value="" selected="selected">請選擇Sheet</option>  -->
+    <option value="List">List</option>
+            
+</select>
+</form>
+</div>
+<div id="fixed-div2" >
+<p id="T2" style="display: none;"> </p>
+<br><br>
+<p id="show" > </p>
+</div>
+
+
+
+</body>
+</html>
