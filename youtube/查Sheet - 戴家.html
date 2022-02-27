@@ -44,6 +44,8 @@
 	  border-spacing: 0;
 	  width: 100%;
 	  border: 1px solid #ddd;
+	  overflow-x:scroll;
+	  overflow-y:scroll;
 	}
 
 	th, td {
@@ -52,33 +54,16 @@
 	}
 
 	tr:nth-child(even){
-		/* background-color: #f2f2f2 */
+		/* background-color: #f2f2f2 
+		overflow-y: scroll;
+		display: block;
+		*/
 		 background-color: lightblue;
 		}
 	table thead {
         background-color: orange;
       }
-	table tbody {
-        display: block;
-        height: 400px;
-        overflow-y: scroll;
-      }  
-	 
-	 table tr {
-        width: 100%;
-        display: table;
-      }
 	
-    table tbody {
-        /* firefox */
-        scrollbar-width: none;
-        /* ie10+ */
-        -ms-overflow-style: none;
-      }
-      /* chrome safari */
-      table tbody::-webkit-scrollbar {
-        display: none;
-      }
     
 </style>
 <script>
