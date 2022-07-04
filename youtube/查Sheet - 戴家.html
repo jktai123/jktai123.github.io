@@ -7,8 +7,10 @@
 	 <!-- 
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <script src="../js/JK_JS.js"></script>
 	 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	
     <title>查Sheet</title>
 
     <style> 
@@ -100,8 +102,12 @@ function RGsheet(){
 		txt += '<table  class="table  table-hover "> <thead><tr>';
 		// heads.forEach(el=>console.log(el));
 		heads.forEach(function(e){
+			if(e.length>=20 && ((new Date(e))!="Invalid Date")){
+				txt += "<td>" + (new Date(e)).toLocaleDateString() + "</td>";
+			}else
+			{
 			txt += "<th align='center'>" + e + "</th>";
-
+			}
 		})
 		
 		txt+="</tr></thead><tbody>";
@@ -113,8 +119,12 @@ function RGsheet(){
 			// console.log(x);
 			// console.log(data[x]);
 			heads.forEach(function(item,e){
-			txt += "<td>" + data[x][e] + "</td>";
-
+			if(data[x][e].length>=20 && ((new Date(data[x][e]))!="Invalid Date")){
+				txt += "<td>" + (new Date(data[x][e])).toLocaleDateString() + "</td>";
+			}else
+				{
+				txt += "<td>" + data[x][e] + "</td>";
+				}
 			})
 			txt += "</tr>";
 			}
