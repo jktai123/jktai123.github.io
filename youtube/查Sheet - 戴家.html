@@ -88,25 +88,27 @@ function RGsheet(){
 		sheetUrl:document.getElementById("select_url").value ,
 		sheetTag: document.getElementById("select_sh").value  //'Test'
 		};
+	const RSheet2Json_API_link=	'https://script.google.com/macros/s/AKfycbzNfl10XRckFQjzyUrzeQXS_aJf7C39_V-k-UqKKuucjC0iEMJ5hkT0oCK-F-B-c10TcQ/exec'
 	const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
 	const RSheet2Json_API='https://script.google.com/macros/s/AKfycbwsHjkAvTx37IrpVzf07FVVHmVz0HqRGQ-__ucipLl2o-_U1C2yH0t-5ADrCevDO4RFfg/exec';
-	$.get(RSheet2Json_APIV2, a, function (data) {    
+	$.get(RSheet2Json_API_link, a, function (data) {    
 	   
 		var heads=[];
 		for(head in data[0]){
-			heads.push(data[0][head]);
+			heads.push(data[0][head].Text);
 		}
 		// console.log(heads.length);
 
 		var txt='';
 		txt += '<table  class="table  table-hover "> <thead><tr>';
 		// heads.forEach(el=>console.log(el));
-		heads.forEach(function(e){
-			if(e.length>=20 && ((new Date(e))!="Invalid Date")){
-				txt += "<td>" + (new Date(e)).toLocaleDateString() + "</td>";
+		heads.forEach(function(e1){
+		    
+			if(e1.length>=20 && ((new Date(e1))!="Invalid Date")){
+				txt += "<td>" + (new Date(e1)).toLocaleDateString() + "</td>";
 			}else
 			{
-			txt += "<th align='center'>" + e + "</th>";
+			txt += "<th align='center'>" + e1 + "</th>";
 			}
 		})
 		
@@ -119,12 +121,21 @@ function RGsheet(){
 			// console.log(x);
 			// console.log(data[x]);
 			heads.forEach(function(item,e){
-			if(data[x][e].length>=20 && ((new Date(data[x][e]))!="Invalid Date")){
-				txt += "<td>" + (new Date(data[x][e])).toLocaleDateString() + "</td>";
-			}else
-				{
-				txt += "<td>" + data[x][e] + "</td>";
+			if(data[x][e].Text.length>=20 && ((new Date(data[x][e].Text))!="Invalid Date")){
+				txt += "<td>" + (new Date(data[x][e].Text)).toLocaleDateString() + "</td>";
 				}
+			else{
+				if(data[x][e].Link==null){
+					aa="<a>";
+				}
+				else
+				{
+			    aa=`<a href="${data[x][e].Link}" target=_blank>`
+				}
+				txt += "<td>"+aa+ data[x][e].Text+"</a></td>";
+			     
+				}
+				
 			})
 			txt += "</tr>";
 			}
