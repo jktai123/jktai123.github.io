@@ -7,8 +7,8 @@
 	 <!-- 
 	 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="js/JK_JS.js"></script>	
-	-->
+	 <script src="../js/JK_JS.js"></script>
+	 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	
     <title>查Sheet</title>
@@ -18,6 +18,7 @@
             </style>
 
 </head>
+
 
 
 
@@ -61,23 +62,20 @@
 		/* background-color: #f2f2f2 
 		overflow-y: scroll;
 		display: block;
-		position: fixed;
-		top: 30;
 		*/
 		 background-color: lightblue;
 		}
-	thead {
+	table thead {
         background-color: orange;
-		
-			  
       }
+	
+    
 </style>
 <script>
 $(document).ready(function() {
   var shtUrl='"https://docs.google.com/spreadsheets/d/1jx9hL4CZuyET00_6LYbcz4d23WLv7iMsLbcPR3xqGbo/edit?usp=sharing"'
  // GSname(shtUrl);
   R_Url();
-  
 })
 
 function RGsheet(){
@@ -93,11 +91,11 @@ function RGsheet(){
 	const RSheet2Json_API_link=	'https://script.google.com/macros/s/AKfycbzNfl10XRckFQjzyUrzeQXS_aJf7C39_V-k-UqKKuucjC0iEMJ5hkT0oCK-F-B-c10TcQ/exec'
 	const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
 	const RSheet2Json_API='https://script.google.com/macros/s/AKfycbwsHjkAvTx37IrpVzf07FVVHmVz0HqRGQ-__ucipLl2o-_U1C2yH0t-5ADrCevDO4RFfg/exec';
-	$.get(RSheet2Json_APIV2, a, function (data) {    
+	$.get(RSheet2Json_API_link, a, function (data) {    
 	   
 		var heads=[];
 		for(head in data[0]){
-			heads.push(data[0][head]);
+			heads.push(data[0][head].Text);
 		}
 		// console.log(heads.length);
 
@@ -123,12 +121,18 @@ function RGsheet(){
 			// console.log(x);
 			// console.log(data[x]);
 			heads.forEach(function(item,e){
-			if(data[x][e].length>=20 && ((new Date(data[x][e]))!="Invalid Date")){
-				txt += "<td>" + (new Date(data[x][e])).toLocaleDateString() + "</td>";
+			if(data[x][e].Text.length>=20 && ((new Date(data[x][e].Text))!="Invalid Date")){
+				txt += "<td>" + (new Date(data[x][e].Text)).toLocaleDateString() + "</td>";
 				}
 			else{
-				
-				txt += "<td>"+ data[x][e]+"</td>";
+				if(data[x][e].Link==null){
+					aa="<a>";
+				}
+				else
+				{
+			    aa=`<a href="${data[x][e].Link}" target=_blank>`
+				}
+				txt += "<td>"+aa+ data[x][e].Text+"</a></td>";
 			     
 				}
 				
@@ -178,7 +182,7 @@ function  GSname(shtUrl){
   
 }
 function  R_Url(){
-   const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';
+  const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';
   // 父喪禮整合  ---Main
   var a = {
 		sheetUrl:fmain,
@@ -217,15 +221,12 @@ function  R_Url(){
 		});
 
 }
-
-
 </script>
 <body>
 <div id="fixed-div" > 
 <form >
     
 	<a href="" id="file_href" target="_blank">File</a>
-	
     <select id="select_url" onchange="Google_sht_R()">
 
     </select>
@@ -234,8 +235,7 @@ function  R_Url(){
 	<!--  <option value="" selected="selected">請選擇Sheet</option>  -->
     <option value="List">List</option>
             
-	</select>
-	
+</select>
 </form>
 </div>
 <div id="fixed-div2" >
