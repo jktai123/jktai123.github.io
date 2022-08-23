@@ -23,19 +23,22 @@
 
 
 <style type="text/css">
-	 input,select{
+	form {  display: float;
+		
+	}
+	input,select{
             margin: 0px;
-            display: inline;
+          /*  display: inline;*/
             font-size: 18px;
         }
 
         /* label {display:inline;} */
         /* input {display:inline;} */
-        button {
+    button {
             font-size: 16px;
         }
 	#fixed-div {
-	  position: fixed;
+	  position: fixed; 
 	  top: 100;
 	  left: 0;
 	  right: 0;
@@ -43,6 +46,7 @@
 	/*  height: 60px;*/
 	 
 	}
+	
     table {
 	  border-collapse: collapse;
 	  border-spacing: 0;
@@ -56,6 +60,7 @@
 	  text-align: left;
 	  padding: 8px;
 	}
+	
 	th{
 	 background: yellow;
 	 position: sticky;
@@ -76,6 +81,59 @@
 		
 			  
       }
+	/*the container must be positioned relative:*/
+		.autocomplete {
+		  position: relative;
+		  display: inline-block; 
+		}
+
+		input {
+		  border: 1px solid transparent;
+		  background-color: #f1f1f1;
+		  padding: 10px;
+		  font-size: 16px;
+		}
+
+		input[type=text] {
+		  background-color: #f1f1f1;
+		  width: 100%;
+		}
+
+		input[type=submit] {
+		  background-color: DodgerBlue;
+		  color: #fff;
+		  cursor: pointer;
+		}
+
+		.autocomplete-items {
+		  position: absolute;
+		  border: 1px solid #d4d4d4;
+		  border-bottom: none;
+		  border-top: none;
+		  z-index: 99;
+		  /*position the autocomplete items to be the same width as the container:*/
+		  top: 100%;
+		  left: 0;
+		  right: 0;
+		}
+
+		.autocomplete-items div {
+		  padding: 10px;
+		  cursor: pointer;
+		  background-color: #fff; 
+		  border-bottom: 1px solid #d4d4d4; 
+		}
+
+		/*when hovering an item:*/
+		.autocomplete-items div:hover {
+		  background-color: #e9e9e9; 
+		}
+
+		/*when navigating through the items using the arrow keys:*/
+		.autocomplete-active {
+		  background-color: DodgerBlue !important; 
+		  color: #ffffff; 
+		}  
 </style>
 <script>
 $(document).ready(function() {
@@ -84,35 +142,77 @@ $(document).ready(function() {
   R_Url();
   
 })
-
+	const RSheet2Json_APIV6='https://script.google.com/macros/s/AKfycbz-Q9lP3QXasQwyCT6pegSR7eu23AQUKTkd3iv5WcZLvoxIaH0m41_W0av5Ncc3LTwoQw/exec'
+	const isValidUrl1 = urlString=> {
+	  	var urlPattern = new RegExp('^(https?:\\/\\/)?'+ // validate protocol
+	    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // validate domain name
+	    '((\\d{1,3}\\.){3}\\d{1,3}))'+ // validate OR ip (v4) address
+	    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // validate port and path
+	    '(\\?[;&a-z\\d%_.~+=-]*)?'+ // validate query string
+	    '(\\#[-a-z\\d_]*)?$','i'); // validate fragment locator
+	  return !!urlPattern.test(urlString);
+	}
+	const isValidUrl = urlString=> {
+      try { 
+      	return Boolean(new URL(urlString)); 
+      }
+      catch(e){ 
+      	return false; 
+      }
+	}
 function RGsheet(){
-	 
+	 //  讀   Sheet data
+	
+	const selsh=document.getElementById("select_sh").value;
+	if((selsh.indexOf("----")>0) || (selsh=='')) return;
 	document.getElementById("show").innerHTML = '讀取資料 ---- ' +document.getElementById("select_sh").value ;
+	
+	
 	var $show = $('#show');
 	var shURL= 'https://docs.google.com/spreadsheets/d/1yt3EfSIVBi-NOvoeqwEtp-DcnIODM9LK84alJLh9JJI/edit?usp=sharing';
 	// console.log(shURL);
+	const detail=($('#order').is(':checked'));
+	
 	var a = {
 		sheetUrl:document.getElementById("select_url").value ,
-		sheetTag: document.getElementById("select_sh").value  //'Test'
+		sheetTag: document.getElementById("select_sh").value , //'Test'
+		
 		};
+	if(detail){
+		a = {
+		sheetUrl:document.getElementById("select_url").value ,
+		sheetTag: document.getElementById("select_sh").value , //'Test'
+		key:document.getElementById("orderno").value
+		};
+	}
 	const RSheet2Json_API_link=	'https://script.google.com/macros/s/AKfycbzNfl10XRckFQjzyUrzeQXS_aJf7C39_V-k-UqKKuucjC0iEMJ5hkT0oCK-F-B-c10TcQ/exec'
 	const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
 	const RSheet2Json_API='https://script.google.com/macros/s/AKfycbwsHjkAvTx37IrpVzf07FVVHmVz0HqRGQ-__ucipLl2o-_U1C2yH0t-5ADrCevDO4RFfg/exec';
-	$.get(RSheet2Json_APIV2, a, function (data) {    
-	   
-		var heads=[];
+	const RSheet2Json_APIV5='https://script.google.com/macros/s/AKfycbwFUIATzqJ3aaUP0TjLsA7WuHp9SG21RGdQ3AAFhw1lWSSSYGjQjdbC3rRfEn9Z3RPFrA/exec'
+
+	$.get(RSheet2Json_APIV6, a, function (data) {    
+	   if(document.getElementById("select_sh").value==a.sheetTag){
+		let heads=[];
+		let hd_cnt=0;
 		for(head in data[0]){
 			heads.push(data[0][head]);
+			if(data[0][head]==""){
+				hd_cnt++;
+				
+			}
 		}
+		if(hd_cnt<=1){
+				document.getElementById("query").style.display = "inline";
+				}
 		// console.log(heads.length);
 
-		var txt='';
+		let txt='';
 		txt += '<table  class="table  table-hover "> <thead><tr>';
 		// heads.forEach(el=>console.log(el));
 		heads.forEach(function(e1){
-		    
-			if(e1.length>=20 && ((new Date(e1))!="Invalid Date")){
-				txt += "<td>" + (new Date(e1)).toLocaleDateString() + "</td>";
+		    let Dt=new Date(e1);
+			if(e1.length>=20 && (Dt)!="Invalid Date"){
+				txt += "<td>" + Dt.toLocaleDateString()+ Dt.toLocaleTimeString() + "</td>";
 			}else
 			{
 			txt += "<th align='center'>" + e1 + "</th>";
@@ -128,84 +228,105 @@ function RGsheet(){
 			// console.log(x);
 			// console.log(data[x]);
 			heads.forEach(function(item,e){
-			if(data[x][e].length>=20 && ((new Date(data[x][e]))!="Invalid Date")){
-				txt += "<td>" + (new Date(data[x][e])).toLocaleDateString() + "</td>";
-				}
-			else{
+				const buf=data[x][e];
+				if(isValidUrl(buf)){
+					txt +=`<td> <a href="${buf}" target=_blank>${buf}</a></td>`
 				
-				txt += "<td>"+ data[x][e]+"</td>";
-			     
-				}
-				
-			})
-			txt += "</tr>";
+					//txt += "<td>"+aa+ buf+"</a></td>";
+				}else
+				{
+				if(buf.length>=20 && ((new Date(buf))!="Invalid Date")){
+					txt += "<td>" + (new Date(buf)).toLocaleDateString() + "</td>";
+					}
+				else{
+					if(Number.isFinite(buf)&&!Number.isInteger(buf)){
+						txt += "<td>"+ buf.toLocaleString(0,{ minimumFractionDigits: 2,maximumFractionDigits: 2});+"</td>";
+					}else{
+						txt += "<td>"+ buf+"</td>";
+						}
+					}
+				}	
+				})
+				txt += "</tr>";
 			}
 		}
 		txt += "</tbody></table>"
 		document.getElementById("show").innerHTML = txt;
 
 
-		var arr = [];
-		for (var i = 0; i < (a.endRow - a.row + 1); i++) {
+		let arr = [];
+		for (let i = 0; i < (a.endRow - a.row + 1); i++) {
 			arr[i] = d.splice(0, (a.endCol - a.col + 1));
 			$show.append(arr[i] + '<br/>');
 		}
-		
-	   });
+	
+		testRD(a); //2022/8/14
+	}
+   });
 	}
 function Google_sht_R(){
 	GSname(document.getElementById("select_url").value    );
 	document.getElementById("file_href").href =document.getElementById("select_url").value
 	}	
+function RGsheet1(){
+	document.getElementById("orderno").value=0;
+	document.getElementById("query").style.display = "none";
+	
+	RGsheet();
+	
+	
+	}	
+function query_order(){
+    const detail=($('#order').is(':checked'));
+	const x = document.getElementById("orderno");
+	if(detail){
+			x.style.display = "inline";
+			x.value=0;
+		  } else {
+			x.style.display = "none";
+		  }
+	RGsheet();
+	}
+	
+	
+	
 function  GSname(shtUrl){
   
   var select_sh=$('#select_sh').val();
   var a = {
 	sheetUrl:shtUrl
                     };
+	$("#select_sh").empty();	
+	document.getElementById("query").style.display = "none";
+	document.getElementById("show").innerHTML = '';
    $.get('https://script.google.com/macros/s/AKfycby2wc_EZaX2pcqBgCApZz5C2ZfYX09GNGJ6IFygOaxsTtYeBgnKmkpJqeNhAo8-A-pVnQ/exec', a, function (data) {
-                $("#select_sh").empty();
                 
+          if(document.getElementById("select_url").value==a.sheetUrl){      
                 $('#select_sh').append($('<option>', { 
                       value: '',
                       text : `---請選擇---- ${$("#select_url option:selected").text()} `
-                      }));
+				  }));
                        
                 data = JSON.parse(data);
                 $.each(data, function (i, item) {
                     $('#select_sh').append($('<option>', { 
                       value: item.Sname,
                       text : item.Sname 
-                }));
+					}));
+				
 				});
-                   
-                });
-  
+			}   
+		});
+			
 }
 function  R_Url(){
-   const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';
+ const fmain='https://docs.google.com/spreadsheets/d/1mFNjF-DNAirIx4ki2nG_5nkV1fe-dCudoEs-atfoAKo/edit?usp=sharing';
   // 父喪禮整合  ---Main
   var a = {
 		sheetUrl:fmain,
 		sheetTag: 'Main' //'Test'
 		};
-	const RSheet2Json_APIV2='https://script.google.com/macros/s/AKfycbz64VaqfqXVBwcFfDgDfehn947foLoeEOD6WXsvu3BNcXK6ZgTxjQAbzsIqSWmptLAo/exec'
-	/*
-	const url=`${RSheet2Json_APIV2}?sheetUrl=${fmain}+sheetTag=Main`;
-	//const url='https://api.wheretheiss.at/v1/satellites/25544'
-	console.log(url);
-	
-	fetch(url)
-		//.then(response => response.json()) 
-		.then(function(response) {
-			console.log(response);
-			return response.json();
-		})
-		.then(function(myJson) {
-			console.log(myJson);
-		});
-	*/
-	$.get(RSheet2Json_APIV2, a, function (data) {    
+	$.get(RSheet2Json_APIV6, a, function (data) {    
 	   
 	//	console.log(data);
 		$("#select_url").empty();
@@ -222,28 +343,330 @@ function  R_Url(){
 		});
 
 }
+//-----------------------------  New Added 2022/8/14
+function        Query_Tel2(){
+                
+                var findString = document.getElementById('location-input').value;
+                // console.log(findString);
+                if(findString.length>0){
+                    
+                if(findString=='!'){ findString = '';}
+                document.getElementById("show").innerHTML = '查詢 "*' + findString+'*" 中 ....';
+                var $show = $('#show');
+               // var shURL= document.getElementById("selShurl").options[document.getElementById("selShurl").selectedIndex].value;
+                // console.log(shURL);
+				
+                var a = {
+                    // sheetUrl: 'https://docs.google.com/spreadsheets/d/1LSHeADB2hF_-lNlimwA2WF2Oi7M7GWEAI3v68hTWcBo/edit?usp=sharing',
+                    // sheetUrl: 'https://docs.google.com/spreadsheets/d/1gT1hvm-q9qsfhHmh14wNlCLEvIEP3x7JjDpK6qp4VRA/edit?usp=sharing',
+                    //sheetUrl:shURL,
+                    //sheetTag: 'List',
+					sheetUrl:document.getElementById("select_url").value ,
+					sheetTag: document.getElementById("select_sh").value , //'Test'
+                    findSting: findString
+                    };
+				const Search_API='https://script.google.com/macros/s/AKfycbyqALYgYmkOq61OVNBD5M0dcSWP0Ims1LD5CzwrGnF-tIxdTRdqFfDmzXHBCX9YbL5MMg/exec';
+                $.get(Search_API, a, function (data) {    
+                //$.get('https://script.google.com/macros/s/AKfycbx-smoEvM6pV4tRuQJio9iPC3SQBtSZO4aSUvYtpjwKuZQD6_Ey/exec', a, function (data) {
+                    if(data.length==2){
+                        document.getElementById("show").innerHTML = '查無資料 請重新輸入再查詢';
+                    }
+                    else  if (data.length==0){ 
+                        document.getElementById("show").innerHTML = 'sheet Name 須為 "List"';}
+                    else {
+
+                    // console.log(data.length);
+                    // console.log(data);
+                    data = JSON.parse(data);
+                    var heads=[];
+                    for(head in data[0]){
+                        heads.push(head);
+                    }
+                    // console.log(heads.length);
+
+                    var txt='';
+                    txt += '<table  class="table  table-hover "> <thead><tr>';
+                    // heads.forEach(el=>console.log(el));
+                    heads.forEach(function(e){
+                        txt += "<th>" + e + "</th>";
+
+                    })
+                    
+                    txt+="</tr></thead><tbody>";
+                    // console.log(txt);
+					for (x in data) {
+						if(x!="01"){
+						txt += "<tr>";
+						// console.log(x);
+						// console.log(data[x]);
+						heads.forEach(function(e){
+						 const buf=data[x][e];
+						//console.log('-------->',x,item ,data[x][item]);
+							if(isValidUrl(buf)){
+								txt +=`<td> <a href="${buf}" target=_blank>${buf}</a></td>`
+					
+							}else{
+							if(buf.length>=20 && ((new Date(buf))!="Invalid Date")){
+								txt += "<td>" + (new Date(buf)).toLocaleDateString() + "</td>";
+								}
+							else{
+								let par=parseFloat(buf)
+								if(Number.isFinite(par)&&!Number.isInteger(par)){
+									txt += "<td>"+ par.toLocaleString(0,{ minimumFractionDigits: 2,maximumFractionDigits: 2});+"</td>";
+								}else{
+									txt += "<td>"+ buf+"</td>";
+									}
+								}
+								
+							}
+							})
+							txt += "</tr>";
+							}
+					}
+						
+					
+					
+					
+					
+					
+/*
+                    for (x in data) {
+                        txt += "<tr>";
+                        // console.log(x);
+                        // console.log(data[x]);
+                        heads.forEach(function(e){
+						
+                        txt += "<td>" + data[x][e] + "</td>";
+
+                        })
+                        txt += "</tr>";
+                        // txt += "<tr><td>" + data[x].Name + "</td><td>"+ data[x].手機 +"</td></tr>";
+                    }
+					*/
+                    txt += "</tbody></table>"
+                    document.getElementById("show").innerHTML = txt;
+
+
+                    var arr = [];
+                    for (var i = 0; i < (a.endRow - a.row + 1); i++) {
+                        arr[i] = d.splice(0, (a.endCol - a.col + 1));
+                        $show.append(arr[i] + '<br/>');
+                    }
+                    }
+
+                });
+            };
+        }
+		//---------------
+		function autocomplete_CH(inp, arr) {
+		// -----------------------
+		  /*the autocomplete function takes two arguments,
+		  the text field element and an array of possible autocompleted values:*/
+		  var currentFocus;
+		  /*execute a function when someone writes in the text field:*/
+		  inp.addEventListener("input", function(e) {
+			  let start_pos,mmatch,a, b, i, val = this.value;
+			  /*close any already open lists of autocompleted values*/
+			  closeAllLists();
+			  if (!val) { return false;}
+			  currentFocus = -1;
+			  /*create a DIV element that will contain the items (values):*/
+			  a = document.createElement("DIV");
+			  a.setAttribute("id", this.id + "autocomplete-list");
+			  a.setAttribute("class", "autocomplete-items");
+			  /*append the DIV element as a child of the autocomplete container:*/
+			  this.parentNode.appendChild(a);
+			  /*for each item in the array...*/
+			  //console.log(val);
+			  for (i = 0; i < arr.length; i++) {
+				/*check if the item starts with the same letters as the text field value:
+				if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {  
+				mmatch=arr[i].toUpperCase().match(val.toUpperCase())*/
+				
+				mmatch=arr[i].match(val);
+				//console.log(i,arr[i]);
+				//console.log(mmatch);
+				if (mmatch ) {
+				  start_pos=mmatch?.index;
+				  /*create a DIV element for each matching element:*/
+				  b = document.createElement("DIV");
+				  /*make the matching letters bold:*/
+				  if(start_pos==0){
+					b.innerHTML = "<strong>" + arr[i].substr(start_pos, val.length) + "</strong>";
+					b.innerHTML += arr[i].substr(val.length);
+				  }else
+				  {
+					b.innerHTML = arr[i].substr(0,start_pos);
+					b.innerHTML += "<strong>" + arr[i].substr(start_pos, val.length) + "</strong>";
+					b.innerHTML += arr[i].substr(start_pos+val.length);
+				  }
+				  
+				  /*insert a input field that will hold the current array item's value:*/
+				  b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+				 // b.innerHTML = arr[i]+"<input type='hidden' value='" + arr[i] + "'>";
+				  /*execute a function when someone clicks on the item value (DIV element):*/
+				  b.addEventListener("click", function(e) {
+					  /*insert the value for the autocomplete text field:*/
+					  inp.value = this.getElementsByTagName("input")[0].value;
+					  Query_Tel2();
+					  /*close the list of autocompleted values,
+					  (or any other open lists of autocompleted values:*/
+					  closeAllLists();
+				  });
+				  a.appendChild(b);
+				}
+			  }
+		  });
+		  /*execute a function presses a key on the keyboard:*/
+		  inp.addEventListener("keydown", function(e) {
+			  var x = document.getElementById(this.id + "autocomplete-list");
+			  if (x) x = x.getElementsByTagName("div");
+			  if (e.keyCode == 40) {
+				/*If the arrow DOWN key is pressed,
+				increase the currentFocus variable:*/
+				currentFocus++;
+				/*and and make the current item more visible:*/
+				addActive(x);
+			  } else if (e.keyCode == 38) { //up
+				/*If the arrow UP key is pressed,
+				decrease the currentFocus variable:*/
+				currentFocus--;
+				/*and and make the current item more visible:*/
+				addActive(x);
+			  } else if (e.keyCode == 13) {
+				/*If the ENTER key is pressed, prevent the form from being submitted,*/
+				e.preventDefault();
+				if (currentFocus > -1) {
+				  /*and simulate a click on the "active" item:*/
+				  if (x) x[currentFocus].click();
+				}
+			  }
+		  });
+		  
+
+		  function addActive(x) {
+			/*a function to classify an item as "active":*/
+			if (!x) return false;
+			/*start by removing the "active" class on all items:*/
+			removeActive(x);
+			if (currentFocus >= x.length) currentFocus = 0;
+			if (currentFocus < 0) currentFocus = (x.length - 1);
+			/*add class "autocomplete-active":*/
+			x[currentFocus].classList.add("autocomplete-active");
+		  }
+		  function removeActive(x) {
+			/*a function to remove the "active" class from all autocomplete items:*/
+			for (var i = 0; i < x.length; i++) {
+			  x[i].classList.remove("autocomplete-active");
+			}
+		  }
+		  function closeAllLists(elmnt) {
+			/*close all autocomplete lists in the document,
+			except the one passed as an argument:*/
+			var x = document.getElementsByClassName("autocomplete-items");
+			for (var i = 0; i < x.length; i++) {
+			  if (elmnt != x[i] && elmnt != inp) {
+				x[i].parentNode.removeChild(x[i]);
+			  }
+			}
+		  }
+		  /*execute a function when someone clicks in the document:*/
+		  document.addEventListener("click", function (e) {
+			  closeAllLists(e.target);
+		  });
+		}
+		async function testRD(a){
+			$('input[type="text"]').val('');
+			
+			
+			tt= await getJSON(	RSheet2Json_APIV6,a).then(function(data) {
+						//console.log(data);
+						return  data;
+						})
+			//console.log(tt);
+			/*
+			let arr=[];
+				for(t in tt){
+					if( arr.indexOf(tt[t][0]) <0){
+					arr.push(tt[t][0]);
+					}
+				}
+			arr.shift();
+			*/
+			let arr=[];
+			let col_len=tt[0].length;
+			let row_len=tt.length;
+			
+			for (j=0;j<col_len;j++){
+				for(i=1;i<row_len;i++){
+				let	elem=tt[i][j].toString();
+						if(elem!=""){
+							if( arr.indexOf(elem) <0){
+								arr.push(elem);
+							}
+						}
+				}
+			}
+				
+			autocomplete_CH(document.getElementById("location-input"), arr);
+			//return tt;	
+		};
+
+		async function getJSON(urlptr,para) {
+			try {
+				  var url = new URL(urlptr);
+				  for (let k in para) { url.searchParams.append(k, para[k]); }
+				  
+				 
+				  const response = await fetch(url);
+				  //let myText = await response.json();//JSON.parse(myObject);// myObject.text();JSON.parse(data)
+				  return response.json();// myObject.text();JSON.parse(data)
+				} catch (error) {
+				   return(error);
+				}
+		  
+			}
+			
 
 
 </script>
 <body>
-<div id="fixed-div" > 
+<div id="fixed-div2" > 
 <form >
     
 	<a href="" id="file_href" target="_blank">File</a>
 	
     <select id="select_url" onchange="Google_sht_R()">
-
+	
     </select>
     Sheet:
-    <select id="select_sh" onchange="RGsheet()";>
-	<!--  <option value="" selected="selected">請選擇Sheet</option>  -->
-    <option value="List">List</option>
-            
+    <select id="select_sh" onchange="RGsheet1()">
+	<input type="number" id="orderno" oninput="RGsheet()" value=0 style="display: none;" >
+	
+	<div id="query" style="display: none;" >
+			<label for="text">查詢&nbsp:&nbsp</label>
+			<div  class="autocomplete" >
+			
+			<input autocomplete="off" type="text"  class="form-control" placeholder="關鍵字" id="location-input" />
+			</div>
+			
+			<button id="btnClickMe" type="button" class="btn  btn-primary "  onclick="Query_Tel2()" > 查詢</button>
+		</div>
+	<!--  <option value="" selected="selected">請選擇Sheet</option> 
+	   style="display: none;" 
+	<input id="btnClickMe" type="button" value="查詢"  >
+	
+    <option value="List">List </option>
+    <input type="checkbox" id="order" onchange="query_order()" > 排序  
+	
+	-->
 	</select>
 	
 </form>
+
 </div>
 <div id="fixed-div2" >
+
 <p id="T2" style="display: none;"> </p>
 <br><br>
 <p id="show" > </p>
