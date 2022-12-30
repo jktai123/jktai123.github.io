@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,38 +30,43 @@
             text-align: center;
             font-size: 0px;
         }
+
         .nav {
             background-color: #fa0;
             list-style-type: none;
             text-align: center;
             margin: 0;
-            color:darkorchid;
+            color: darkorchid;
             padding: 0;
-            }
-       
+        }
 
-        .nav li   {
+
+        .nav li {
             /* display: inline-block;
             font-size: 20px;
             padding: 20px; */
-            color:darkblue;
+            color: darkblue;
             text-decoration: none;
             display: inline-block;
             padding: 10px 20px;
             background-color: #fa0;
             font-size: 16px;
-            }
+        }
+
         a:visited {
-             color: darkblue;
-            }
-         .nav li a    {
-             text-decoration: none;
-         }   
-         .nav li a:hover   {
+            color: darkblue;
+        }
+
+        .nav li a {
+            text-decoration: none;
+        }
+
+        .nav li a:hover {
             /* color:crimson; */
             transition: 2s;
             background-color: rgb(235, 5, 5);
         }
+
         /* .dropbtn {
   background-color: #4CAF50;
   color: white;
@@ -70,125 +76,146 @@
   cursor: pointer;
 } */
 
-/* .dropdown {
+        /* .dropdown {
   position: relative;
   display: inline-block;
 } */
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  text-align: left;
-  z-index: 1;
-}
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            z-index: 1;
+        }
 
-.dropdown-content a {
-  color: darkblue;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
+        .dropdown-content a {
+            color: darkblue;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
 
-.dropdown-content a:hover  {background-color: #f1f1f1}
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
 
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
     </style>
 </head>
+
 <body>
     <div class="menu">
-    <ul class="nav">
-        <li><a target="_self" href="Restrant.html">餐廳</a></li>
-        <li><a target="_self" href="https://svn12.github.io/stock/Qmy.html">股票資訊</a></li>
-        <li><a target="_self" href="https://javascript30.com/">JS_30Day</a></li>
-        <li><a target="_self" href="picture.html">圖</a></li>
-        <li><a target="_self" href="webdev_res.html">開發資源</a></li>
-        <li><a href="https://svn12.github.io/youtube/%E6%9F%A5%E8%81%96%E7%B6%93_link_P.html">聖經</a></li>
-       
-		<li>
-			
-			<div class="dropdown"> 解題網站
-			 <div class="dropdown-content">
-                <a target="_blank" href="https://leetcode.com/explore/">Leetcode</a>
-                <a target="_blank" href="https://www.codewars.com/">CodeWars</a>
-				<a target="_blank" href="https://en.wikipedia.org/wiki/Code_golf">Code Golf</a>
-				<a target="_blank" href="https://medium.com/schaoss-blog/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%80%91%E5%88%B7%E9%A1%8C%E5%88%B7%E8%B5%B7%E4%BE%86-codewars-%E5%88%B7%E9%A1%8C%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-13a89e8e7736">CodeWars 刷題心得</a>
-			 </div>
-			</div>
-        </li>
-        <!-- <li><a target="_blank" href="BootStrap.html">BootStrap</a></li> -->
-        <li><div class="dropdown">
-            <!-- <button class="dropbtn"> -->
-                Learn
-            <!-- </button> -->
-            <div class="dropdown-content">
-                <a target="_blank" href="BootStrap.html">BootStrap</a>
-                
-                
-                <a href="./Vue/Vue_index_link_P.html">Vue</a>
-                <a href="./口罩地圖/口罩地圖_link_P.html">口罩地圖</a>
-                <a href="./口罩地圖/leaflet.html">leaflet</a>
-                <a href="https://www.freecodecamp.org/chinese-traditional/learn">FreeCodeCamp</a>
-                <a href="./D3JS/d3_index_link_P.html">D3JS學習</a>
-                <a href="./p5js/p5js_index_link_P.html">P5JS</a>
-                <a href="./ES6/ES6_index.html">ES6</a>
-                <a href="./Intro-to-Data-APIs-JS-source/DataAPi_link_P.html">DataApi</a>
-                <a href="./RWB/RWB_index_link_P.html">RWB</a>
-				<a href="./web-speech-api/speech.html">Speech</a>
+        <ul class="nav">
+            <li><a target="_self" href="Restrant.html">餐廳</a></li>
+            <li><a target="_self" href="https://svn12.github.io/stock/Qmy.html">股票資訊</a></li>
+            <li><a target="_self" href="picture.html">圖</a></li>
+            <li><a target="_self" href="webdev_res.html">開發資源</a></li>
+            <li><a href="https://svn12.github.io/youtube/%E6%9F%A5%E8%81%96%E7%B6%93_link_P.html">聖經</a></li>
+            <!-- <li><a target="_self" href="https://javascript30.com/">JS_30Day</a></li> -->
+            <li>
 
-                <a href="./Sample_Template/Template_index_link_P.html">Sample_Template</a>
-				<a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs">Express_Nodejs</a>
-				
-            </div>
-        </div>
-        </li>
-		<li>
-            <div class="dropdown">
-                <!-- <button class="dropbtn"> -->
-                人工智慧
-                <!-- </button> -->
-                <div class="dropdown-content">
-				
-                    <a target="_blank" href="https://www.w3schools.com/ai/default.asp">W3學校AI</a>
-					<a target="_blank" href="https://playground.tensorflow.org/">Tensor遊樂園</a>
-					
-                    <a target="_blank" href="youtube/ml_scan.html">Image分辨</a>
-                    <a target="_blank" href="https://mofanpy.com/tutorials/machine-learning/ML-intro/">莫烦机器学习</a>
-                    <a target="_blank" href="https://numpy.org/doc/stable/reference/">NUMPY</a>
-                    <a target="_blank" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html">Pandas</a>
-                    
-                    <a target="_blank" href="<a target="_blank" href="https://matplotlib.org/1.5.3/users/beginner.html">Matplot</a>
-                    <a target="_blank" href="https://svn12.github.io/youtube/JK_Collect_link_P.html">SVN12</a>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="dropdown">
-                <!-- <button class="dropbtn"> -->
-                Youtube
-                <!-- </button> -->
-                <div class="dropdown-content">
-                    <a target="_blank" href="youtube/CHrous.html">詩歌蒐集</a>
-                    <a target="_blank" href="youtube/child.html">兒童專輯</a>
-                    <a target="_blank" href="youtube/news.html">直播新聞</a>
-                    <a target="_blank" href="youtube/table1t.html">戴家婚禮</a>
-                    <a target="_blank" href="youtube/KTV_collection.html">KTV</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </div>
-        </li>
-        <!-- <li><a href="#contact">Contact Us</a></li> -->
-    </ul>
+                <div class="dropdown"> JS_30Day
+                    <div class="dropdown-content">
 
-</div>
+                        <a target="_blank" href="https://courses.wesbos.com/account">MyCount</a>
+                        <a target="_blank" href="https://github.com/wesbos/JavaScript30">Github</a>
+                        <a target="_blank"
+                            href="https://youtube.com/playlist?list=PLEfh-m_KG4dYbxVoYDyT_fmXZHnuKg2Fq">Alex 宅幹嘛</a>
+                        <a target="_blank" href="https://javascript30.com/">JS_30Day</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="dropdown"> 解題網站
+                    <div class="dropdown-content">
+                        <a target="_blank" href="https://leetcode.com/explore/">Leetcode</a>
+                        <a target="_blank" href="https://www.codewars.com/">CodeWars</a>
+                        <a target="_blank" href="https://en.wikipedia.org/wiki/Code_golf">Code Golf</a>
+                        <a target="_blank"
+                            href="https://medium.com/schaoss-blog/%E5%B7%A5%E7%A8%8B%E5%B8%AB%E5%80%91%E5%88%B7%E9%A1%8C%E5%88%B7%E8%B5%B7%E4%BE%86-codewars-%E5%88%B7%E9%A1%8C%E5%BF%83%E5%BE%97%E5%88%86%E4%BA%AB-13a89e8e7736">CodeWars
+                            刷題心得</a>
+                    </div>
+                </div>
+            </li>
+            <!-- <li><a target="_blank" href="BootStrap.html">BootStrap</a></li> -->
+            <li>
+                <div class="dropdown">
+                    <!-- <button class="dropbtn"> -->
+                    Learn
+                    <!-- </button> -->
+                    <div class="dropdown-content">
+                        <a target="_blank" href="BootStrap.html">BootStrap</a>
+
+
+                        <a href="./Vue/Vue_index_link_P.html">Vue</a>
+                        <a href="./口罩地圖/口罩地圖_link_P.html">口罩地圖</a>
+                        <a href="./口罩地圖/leaflet.html">leaflet</a>
+                        <a href="https://www.freecodecamp.org/chinese-traditional/learn">FreeCodeCamp</a>
+                        <a href="./D3JS/d3_index_link_P.html">D3JS學習</a>
+                        <a href="./p5js/p5js_index_link_P.html">P5JS</a>
+                        <a href="./ES6/ES6_index.html">ES6</a>
+                        <a href="./Intro-to-Data-APIs-JS-source/DataAPi_link_P.html">DataApi</a>
+                        <a href="./RWB/RWB_index_link_P.html">RWB</a>
+                        <a href="./web-speech-api/speech.html">Speech</a>
+
+                        <a href="./Sample_Template/Template_index_link_P.html">Sample_Template</a>
+                        <a
+                            href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs">Express_Nodejs</a>
+
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <!-- <button class="dropbtn"> -->
+                    人工智慧
+                    <!-- </button> -->
+                    <div class="dropdown-content">
+
+                        <a target="_blank" href="https://www.w3schools.com/ai/default.asp">W3學校AI</a>
+                        <a target="_blank" href="https://playground.tensorflow.org/">Tensor遊樂園</a>
+
+                        <a target="_blank" href="youtube/ml_scan.html">Image分辨</a>
+                        <a target="_blank" href="https://mofanpy.com/tutorials/machine-learning/ML-intro/">莫烦机器学习</a>
+                        <a target="_blank" href="https://numpy.org/doc/stable/reference/">NUMPY</a>
+                        <a target="_blank"
+                            href="https://pandas.pydata.org/pandas-docs/stable/getting_started/tutorials.html">Pandas</a>
+
+                        <a target="_blank" href="<a target=" _blank"
+                            href="https://matplotlib.org/1.5.3/users/beginner.html">Matplot</a>
+                        <a target="_blank" href="https://svn12.github.io/youtube/JK_Collect_link_P.html">SVN12</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <!-- <button class="dropbtn"> -->
+                    Youtube
+                    <!-- </button> -->
+                    <div class="dropdown-content">
+                        <a target="_blank" href="youtube/CHrous.html">詩歌蒐集</a>
+                        <a target="_blank" href="youtube/child.html">兒童專輯</a>
+                        <a target="_blank" href="youtube/news.html">直播新聞</a>
+                        <a target="_blank" href="youtube/table1t.html">戴家婚禮</a>
+                        <a target="_blank" href="youtube/KTV_collection.html">KTV</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+            </li>
+            <!-- <li><a href="#contact">Contact Us</a></li> -->
+        </ul>
+
+    </div>
 
     <!-- <div class="menu">
         <a target="_self" href="Restrant.html">餐廳</a>
@@ -205,4 +232,5 @@
         <a href="#">link</a>
     </div> -->
 </body>
+
 </html>
