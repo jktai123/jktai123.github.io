@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懷念父親聲音</title>
+</head>
+
+<body>
+    <h1>懷念父親聲音</h1>
+    <div id="song"></div>
+
+    <!-- <figure>
+        <figcaption>Listen to the T-Rex:</figcaption>
+        <audio controls
+            src="https://onedrive.live.com/download?cid=F85AB9D746215FED&resid=F85AB9D746215FED%2113151&authkey=AMVBSHGtG_7BZ1M">
+
+        </audio>
+    </figure> -->
+    <script>
+        const song_name = [
+            '20031026_南投金婚_發紅包'
+            , '19870715寬蘭結婚主婚人致詞'
+           ];
+        const song_onedrv = [
+            '<iframe src="https://onedrive.live.com/embed?cid=F85AB9D746215FED&resid=F85AB9D746215FED%2113160&authkey=APS6M-rd31L8mBE" width="98" height="120" frameborder="0" scrolling="no"></iframe>'
+            , '<iframe src="https://onedrive.live.com/embed?cid=F85AB9D746215FED&resid=F85AB9D746215FED%2113159&authkey=AOoA1iU4ER_9Mzk" width="98" height="120" frameborder="0" scrolling="no"></iframe>'
+            ];
+
+        
+        const song = document.querySelector('#song');
+        let audios = '';
+        song_name.forEach((item, index) => {
+            audios += `<figcaption>${item}</figcaption>
+        <audio controls
+            src="${/src="(.*)" w/.exec(song_onedrv[index])[1].replace('embed', 'download')}">
+            // src="${/src="(.*)" w/.exec(song_onedrv[index])[1].replace('https','http').replace('embed', 'download')}">
+
+        </audio>`;
+        });
+        // show.innerHTML=temp;
+        song.innerHTML = audios;
+            // const node = document.createTextNode(temp);
+            // para.appendChild(node);
+    </script>
+</body>
+
+</html>
