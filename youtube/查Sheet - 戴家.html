@@ -12,10 +12,10 @@
 
 <body>
 	<div id="fixed-div1">
-		
+
 		<a href="" id="file_href" target="_blank">File</a>
 
-		
+
 		<select id="select_url" onchange="Google_sht_R()">
 		</select>
 		Sheet:
@@ -106,7 +106,7 @@
 		th {
 			background: yellow;
 			position: sticky;
-			top: 3em;
+			top: 0em;
 			/* Don't forget this, required for the stickiness */
 			box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 		}
@@ -186,11 +186,14 @@
 	</style>
 	<script>
 		const RSheet2Json_APIV6 = 'https://script.google.com/macros/s/AKfycbz-Q9lP3QXasQwyCT6pegSR7eu23AQUKTkd3iv5WcZLvoxIaH0m41_W0av5Ncc3LTwoQw/exec';
-		$(document).ready(function () {
-			// var shtUrl = '"https://docs.google.com/spreadsheets/d/1jx9hL4CZuyET00_6LYbcz4d23WLv7iMsLbcPR3xqGbo/edit?usp=sharing"';
-			// GSname(shtUrl);
-			R_Url();
+		// $(document).ready(function () {
+		// 	// var shtUrl = '"https://docs.google.com/spreadsheets/d/1jx9hL4CZuyET00_6LYbcz4d23WLv7iMsLbcPR3xqGbo/edit?usp=sharing"';
+		// 	// GSname(shtUrl);
+		// 	R_Url();
 
+		// });
+		document.addEventListener("DOMContentLoaded", () => {
+			R_Url();
 		});
 		let All_data = [];
 		var input = document.getElementById('location-input');
