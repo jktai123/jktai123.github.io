@@ -1,5 +1,13 @@
+readme.txt
+github.bat
+*.xlsx
+
+*.py
+*.xlsm
+.tmp.*
+.vscode
 Intro-to-Data-APIs-JS-source/module3/the_weather_here/.env
 Intro-to-Data-APIs-JS-source/module3/the_weather_here/node_modules/
 Sample_Template/
 Intro-to-Data-APIs-JS-source/module3/the_weather_here/database.db
-¤f¸n¦a¹Ï/pharmacies-master/
+ï¿½fï¿½nï¿½aï¿½ï¿½/pharmacies-master/
