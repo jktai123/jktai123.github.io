@@ -1,7 +1,7 @@
 readme.txt
 github.bat
 *.xlsx
-
+._*
 *.py
 *.xlsm
 .tmp.*
