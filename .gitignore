@@ -2,6 +2,7 @@ readme.txt
 github.bat
 *.xlsx
 ._*
+.DS)Store
 *.py
 *.xlsm
 .tmp.*
