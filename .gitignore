@@ -1,14 +1,49 @@
+# 原有自訂忽略規則
 readme.txt
 github.bat
 *.xlsx
+*.xlsm
+*.py
+.tmp.*
 ._*
 .DS_Store
-*.py
-*.xlsm
-.tmp.*
-.vscode
-Intro-to-Data-APIs-JS-source/module3/the_weather_here/.env
-Intro-to-Data-APIs-JS-source/module3/the_weather_here/node_modules/
-Sample_Template/
-Intro-to-Data-APIs-JS-source/module3/the_weather_here/database.db
 **/.DS_Store
+Sample_Template/
+
+# 專案依賴 (全域)
+node_modules/
+jspm_packages/
+web_modules/
+
+# 敏感資料與憑證 (高風險)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.secret
+*.key
+*.pem
+*.cert
+credentials.json
+client_secret.json
+
+# 資料庫檔案
+*.db
+*.sqlite
+
+# 系統垃圾檔案
+Thumbs.db
+Desktop.ini
+**/._*
+
+# 編輯器設定
+.vscode/
+.idea/
+*.suo
+*.workspace
+
+# 暫存與日誌
+*.log
+tmp/
+temp/
