@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日靈修 2026-08-10 | 擊敗歌利亞</title>
+  <meta name="description" content="撒母耳記上 17:41-58 | 擊敗歌利亞：靠著萬軍之耶和華的名 | HEAR 靈修心得 + 視覺圖卡" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07091a;
+      --surface: rgba(255,255,255,0.035);
+      --border: rgba(255,255,255,0.07);
+      --gold: #d4a843;
+      --gold-dim: rgba(212,168,67,0.15);
+      --accent: #8b9de8;
+      --text: #e8e8f2;
+      --muted: #6a6a8a;
+      --serif: 'Noto Serif TC', Georgia, serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(139,157,232,0.12), transparent),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(212,168,67,0.06), transparent);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      padding: 52px 24px 40px;
+      position: relative;
+    }
+    .header::after {
+      content: '';
+      display: block;
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 24px auto 0;
+    }
+    .header .eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 6vw, 38px);
+      color: var(--gold);
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .header .ref {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+    }
+    .header .ref a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139,157,232,0.3);
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+    .header .ref a:hover { border-color: var(--accent); }
+
+    /* ── Section wrapper ── */
+    .wrap { max-width: 480px; margin: 0 auto; padding: 0 20px; }
+    .wrap-wide { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── Carousel ── */
+    .carousel-section { padding: 0 20px; }
+    .carousel-outer {
+      max-width: 360px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .carousel-track {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px var(--border);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .slide { min-width: 100%; }
+    .slide img {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      display: block;
+      border-radius: 24px;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10,10,30,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+    .nav:hover { background: rgba(212,168,67,0.15); border-color: var(--gold); transform: translateY(-50%) scale(1.05); }
+    .nav.prev { left: -24px; }
+    .nav.next { right: -24px; }
+
+    .dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--muted); cursor: pointer;
+      transition: background 0.3s, transform 0.3s, width 0.3s;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.4); }
+
+    .chip-row {
+      display: flex; gap: 8px; justify-content: center;
+      flex-wrap: wrap; margin-top: 14px;
+    }
+    .chip {
+      font-size: 11px; padding: 5px 14px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--muted); cursor: pointer;
+      transition: all 0.2s; letter-spacing: 0.5px;
+    }
+    .chip.active { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+    /* ── Insight banner ── */
+    .insight {
+      max-width: 480px; margin: 40px auto 0; padding: 0 20px;
+    }
+    .insight-box {
+      background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(139,157,232,0.05));
+      border: 1px solid rgba(212,168,67,0.2);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .insight-box .label { font-size: 10px; letter-spacing: 3px; color: var(--gold); margin-bottom: 8px; text-transform: uppercase; }
+    .insight-box p { font-family: var(--serif); font-size: 15px; line-height: 1.8; color: #ccc; }
+
+    /* ── Section headers ── */
+    .section { margin-top: 56px; }
+    .section-label {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 24px;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border));
+    }
+    .section-label::after { background: linear-gradient(90deg, var(--border), transparent); }
+
+    /* ── Scripture table ── */
+    .scripture-block { display: flex; flex-direction: column; gap: 16px; }
+    .verse {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      transition: border-color 0.2s;
+    }
+    .verse:hover { border-color: rgba(212,168,67,0.25); }
+    .verse-num {
+      font-size: 11px; letter-spacing: 2px; color: var(--gold);
+      font-weight: 600; margin-bottom: 10px;
+    }
+    .verse-row { display: flex; gap: 10px; margin-bottom: 6px; align-items: flex-start; }
+    .verse-row:last-child { margin-bottom: 0; }
+    .lang-tag {
+      flex-shrink: 0;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 2px 8px; border-radius: 6px; margin-top: 2px;
+    }
+    .lang-tag.han { background: rgba(139,157,232,0.15); color: var(--accent); }
+    .lang-tag.ro { background: rgba(212,168,67,0.12); color: var(--gold); }
+    .verse-text { font-size: 13.5px; line-height: 1.85; color: #bbbbd0; }
+
+    /* ── HEAR cards ── */
+    .hear-grid { display: flex; flex-direction: column; gap: 14px; }
+    .hear-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .hear-card:hover { border-color: rgba(212,168,67,0.3); transform: translateY(-1px); }
+    .hear-tag {
+      font-size: 10px; letter-spacing: 2.5px; font-weight: 700;
+      color: var(--gold); margin-bottom: 10px; text-transform: uppercase;
+    }
+    .hear-title {
+      font-family: var(--serif); font-size: 17px; font-weight: 700;
+      color: var(--text); margin-bottom: 12px; line-height: 1.5;
+    }
+    .hear-body { font-size: 13.5px; line-height: 1.9; color: #aaa; }
+    .hear-body strong { color: #ddd; font-weight: 600; }
+    .hear-body ul { padding-left: 18px; }
+    .hear-body li { margin-bottom: 8px; }
+    .prayer {
+      font-family: var(--serif); font-style: italic;
+      font-size: 13.5px; line-height: 2.1; color: #c0c0dc;
+      border-left: 2px solid var(--gold);
+      padding-left: 18px; margin-top: 4px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; margin-top: 72px;
+      padding: 0 20px;
+      color: var(--muted); font-size: 12px; line-height: 2;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile polish ── */
+    @media (max-width: 500px) {
+      .nav.prev { left: -16px; }
+      .nav.next { right: -16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="eyebrow">2026 · 08 · 10 · 一 · 每日靈修</div>
+    <h1>擊敗歌利亞<br>靠著萬軍之耶和華的名</h1>
+    <div class="ref">
+      <a href="https://bible.fhl.net/NUI/_rwd/#/bible/撒上17:41-58" target="_blank">
+        撒母耳記上 17:41-58 ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel-section">
+    <div class="carousel-outer">
+      <div class="carousel-track">
+        <div class="slides" id="slides">
+          <div class="slide"><img src="20260810_1I_isometric.jpg" alt="3D等角摘要" loading="eager" /></div>
+          <div class="slide"><img src="20260810_2H_claymation.jpg" alt="黏土心智圖" loading="lazy" /></div>
+          <div class="slide"><img src="20260810_3B_glassmorphism.jpg" alt="玻璃風金句卡" loading="lazy" /></div>
+        </div>
+      </div>
+      <button class="nav prev" onclick="move(-1)" aria-label="上一張">‹</button>
+      <button class="nav next" onclick="move(1)" aria-label="下一張">›</button>
+    </div>
+
+    <div class="chip-row">
+      <button class="chip active" onclick="goTo(0)">① 等角摘要</button>
+      <button class="chip" onclick="goTo(1)">② 心智圖</button>
+      <button class="chip" onclick="goTo(2)">③ 金句卡</button>
+    </div>
+    <div class="dots">
+      <div class="dot active" onclick="goTo(0)"></div>
+      <div class="dot" onclick="goTo(1)"></div>
+      <div class="dot" onclick="goTo(2)"></div>
+    </div>
+  </div>
+
+  <!-- Insight -->
+  <div class="insight">
+    <div class="insight-box">
+      <div class="label">今日洞察</div>
+      <p>爭戰的勝敗在於耶和華。巨人靠的是刀槍與盾牌，我們迎戰只憑那曾將萬有踐踏在腳下的「萬軍之耶和華的名」。</p>
+    </div>
+  </div>
+
+  <!-- Scripture -->
+  <div class="wrap-wide">
+    <div class="section">
+      <div class="section-label">雙版本經文對照</div>
+      <div class="scripture-block">
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:41</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">那非利士人漸漸走近大衛，拿盾牌的人在他前面。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">彼個非利士人也愈行倚(kiâⁿ-óa)大衛，捾(kōaⁿ)牌的行佇伊的頭前。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:42</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">非利士人觀看，見了大衛，就藐視他，因為他年輕，面色紅潤，容貌俊美。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">彼個非利士人攑起來看，看見大衛，就看輕伊；因為伊少歲(chió-hè)，色緻(sek-tī)赤(chhiah)，面貌好看。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:43</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">非利士人對大衛說：「你拿着杖到我這裏來，我豈是狗嗎？」非利士人就指着自己的神明詛咒大衛。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">彼個非利士人給大衛講：「我豈是狗嗎，你才攑枴仔來我遮？」非利士人就指家己的上帝咒詛大衛。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:44</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">非利士人又對大衛說：「來吧！我要把你的肉給空中的飛鳥和田野的走獸。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">彼個非利士人閣給大衛講：「你來我遮，我欲用你的肉互空中的飛鳥及田野的野獸。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:45</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛對非利士人說：「你來攻擊我，是靠着刀槍和銅矛，但我來攻擊你，是靠着萬軍之耶和華的名，就是你所辱罵、帶領以色列軍隊的上帝。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛對彼個非利士人講：「你來倚近我，是用刀用槍用戟(kek)；我來倚近你，是用萬軍耶和華的名，以色列軍隊的上帝就是你所藐視者。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:46</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">今日耶和華必將你交在我手裏。我必殺你，砍下你的頭，今日我要把非利士軍兵的屍體給空中的飛鳥和地上的野獸，使全地的人都知道以色列中有上帝，</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">今仔日耶和華欲將你交佇我的手。我欲拍死你，刣你的頭殼，今仔日我欲將非利士軍兵的身屍互空中的飛鳥、地上的野獸，互普天下的人攏知以色列有上帝；</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:47</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">又使這裏的全會眾知道，耶和華使人得勝，不是用刀用槍，因為戰爭全在乎耶和華。他必將你們交在我們手裏。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">閣互諸個歸群的人知耶和華救人，呣是用刀也呣是用槍，因為交戰的事在佇耶和華。伊欲將恁交佇阮的手。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:48</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">那非利士人起來，迎向大衛，走近前來。大衛急忙往戰場，迎向非利士人跑去。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">彼個非利士人起來，進前近倚欲接(chih)大衛。大衛也趕緊走去，向軍隊欲接非利士人。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:49</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛伸手入囊中，從裏面掏出一塊石子來，用機弦甩去，擊中非利士人的前額，石子進入額內，他就仆倒，面伏於地。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛伸手入袋仔內提一塊石仔出來，用索甩去(hìⁿ-khì)，射著非利士人的頭額(thâu-hia̍h)，石仔沈入(tîm ji̍p)頭額，伊就倒落去，面仆佇地裡。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:50</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">這樣，大衛用機弦和石子勝了那非利士人，擊中了他，把他殺死；大衛手中沒有刀。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">按呢，大衛用甩索(hìⁿ-soh)及石仔，卡贏非利士人，拍死伊；總是大衛的手無刀。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:51</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛跑去，站在那非利士人身旁，把他的刀從鞘中拔出來，殺死他，用刀割下他的頭。非利士眾人看見他們的勇士死了，就都逃跑。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛緊緊走去，徛佇彼個非利士人的頂面，將伊的刀拔出鞘(siù)，用彼支刣死伊，斬(chám)伊的頭殼。非利士眾人看見𪜶的勇士已經死，就走。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:52</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">以色列人和猶大人就起來吶喊，追趕非利士人，直到該( [ 17.52] 「該」：七十士譯本和其他古譯本是「迦特」。)和以革倫的城門。被殺的非利士人倒在路上，從沙拉音直到迦特和以革倫。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">以色列人及猶大人就起來喝喊(hoah-hiàm)，追趇非利士人，到迦特及以革倫的城門。著傷(tio̍h-siong)的非利士人倒佇沙拉音的路，直到迦特及以革倫。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:53</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">以色列人追趕非利士人回來，搶奪了他們的軍營。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">以色列人追趇非利士人倒轉來，就搶𪜶的營盤。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:54</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛拿着那非利士人的頭帶到耶路撒冷，卻把那非利士人的軍裝放在自己的帳棚裏。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛將彼個非利士人的頭殼帶到耶路撒冷，閣用伊的軍器下佇家己的布棚。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:55</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛覲見掃羅 掃羅看見大衛去迎戰非利士人，就問押尼珥元帥說：「押尼珥，那年輕人是誰的兒子？」押尼珥說：「王啊，我在你面前起誓，我不知道。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅看見大衛去拍非利士人的時，就問軍長押尼珥講：「押尼珥啊，彼個少年人是是誰的子？」押尼珥講：「我指王的活命來咒誓，我呣知。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:56</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">王說：「你可以問問那孩子是誰的兒子。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">王講：「你去問看彼個囝仔是是誰的子。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:57</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛打死那非利士人回來，押尼珥領他到掃羅面前，大衛手中拿着非利士人的頭。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛拍死非利士人倒來，押尼珥導伊來掃羅的面前，伊的手裡有非利士人的頭殼。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 17:58</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅問他說：「年輕人，你是誰的兒子？」大衛說：「我是你僕人伯利恆人耶西的兒子。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅問伊講：「少年人啊，你是甚麼人的子？」大衛講：「我是你的奴僕伯利恆人耶西的子。」</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEAR -->
+    <div class="section">
+      <div class="section-label">HEAR 靈修心得</div>
+      <div class="hear-grid">
+
+        <div class="hear-card">
+          <div class="hear-tag">H · Highlight｜經文焦點</div>
+          <div class="hear-title">金句精選</div>
+          <div class="hear-body">
+            <p><strong>📌 v.45</strong>——「大衛對非利士人說：『你來攻擊我，是靠着刀槍和銅戟；我來攻擊你，是靠着萬軍之耶和華的名，就是你所辱罵、以色列軍隊的上帝。』</p><br/><p><strong>📌 v.47</strong>——「又使這裏的全會眾知道，耶和華使人得救，不是用刀用槍，因為爭戰的勝敗全在乎耶和華。祂必將你們交在我們手中。」</p>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">E · Explain｜經文解釋</div>
+          <div class="hear-title">三點背景與屬靈洞察</div>
+          <div class="hear-body">
+            <ul><li><strong>兩種名號與力量的對決（v.45）</strong>——歌利亞靠的是肉眼的優勢——「刀槍和銅戟」；大衛靠的是肉眼看不見的實體——「萬軍之耶和華的名」。這不只是兩個士兵的決鬥，而是兩種世界觀、兩個國度的對決。神的名是信徒最強大的避難所與進攻武器。</li><li><strong>神得勝的目的是要普世認識祂（v.46-47）</strong>——大衛宣告得勝的結果是「使普天下的人都知道以色列中有上帝」，並且「使這裏的全會眾知道，耶和華使人得救，不是用刀用槍」。信心的得勝從來不是為了個人的名聲，而是為了擴張神的名、堅固會眾的信心。</li><li><strong>大衛的奔跑與得勝（v.48-49）</strong>——當歌利亞起身迎戰時，大衛「急忙迎着非利士人，往戰陣跑去」。信心不是消極等待，而是充滿行動力。一顆光滑的石子，在神的引導下，精準地擊入歌利亞的額頭。神的能力在人的軟弱上顯得完全，祂用最微小的工具成就了最偉大的拯救。</li></ul>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">A · Apply｜生活應用</div>
+          <div class="hear-title">今日具體行動</div>
+          <div class="hear-body">
+            <ul><li><strong>大聲宣告耶和華的名</strong>——今天當你面對難關（工作壓力、家庭矛盾或健康的威脅）時，不要在心中默默焦慮。像大衛一樣，對著這些巨人宣告：「我迎戰你，是靠著萬軍之耶和華的名！」</li><li><strong>快步跑向你的戰場</strong>——不要逃避神召你去面對的挑戰。靠著神的信心，今天採取一個具體的積極行動去解決那個你一直拖延的難題。</li></ul>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">R · Respond｜禱告回應</div>
+          <div class="hear-title">今日禱告</div>
+          <div class="prayer">
+            主耶穌啊，祢是那在十字架上已經徹底擊敗了魔鬼與死亡的偉大君王！<br/><br/>今天當我看到高大的挑戰與困難時，求祢聖靈將大衛的熱血與信心澆灌在我裡面。讓我看見，勝敗全在乎耶和華，而我已經在耶穌基督裡得勝了。<br/><br/>求祢使我不畏縮、不逃避，而是靠著祢的名向仇敵誇勝，活出得勝有餘的生命。<br/><br/>奉主耶穌名求，阿們。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>本月主題：曠野中的受膏者——撒母耳記上大衛的信心旅程</p>
+    <p><a href="https://bible.fhl.net/NUI/_rwd/#/bible/撒上17:41-58" target="_blank">📖 FHL 電子聖經 撒母耳記上 17:41-58</a></p>
+    <p style="margin-top:12px; opacity:0.4; font-size:11px;">© 2026 每日靈修 · 自動生成</p>
+  </footer>
+
+  <script>
+    let cur = 0;
+    const total = 3;
+    const slidesEl = document.getElementById('slides');
+    const dots = document.querySelectorAll('.dot');
+    const chips = document.querySelectorAll('.chip');
+
+    function update() {
+      slidesEl.style.transform = `translateX(-${cur * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+      chips.forEach((c, i) => c.classList.toggle('active', i === cur));
+    }
+    function move(dir) { cur = (cur + dir + total) % total; update(); }
+    function goTo(idx) { cur = idx; update(); }
+
+    // Swipe
+    let sx = 0;
+    slidesEl.parentElement.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+    slidesEl.parentElement.addEventListener('touchend', e => {
+      const dx = sx - e.changedTouches[0].clientX;
+      if (Math.abs(dx) > 40) move(dx > 0 ? 1 : -1);
+    });
+
+    // Keyboard
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') move(-1);
+      if (e.key === 'ArrowRight') move(1);
+    });
+  </script>
+</body>
+</html>

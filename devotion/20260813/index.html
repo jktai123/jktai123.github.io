@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日靈修 2026-08-13 | 逃亡的開始</title>
+  <meta name="description" content="撒上 19:1-18 | 逃亡的開始：約拿單與米甲的營救 | HEAR 靈修心得 + 視覺圖卡" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07091a;
+      --surface: rgba(255,255,255,0.035);
+      --border: rgba(255,255,255,0.07);
+      --gold: #d4a843;
+      --gold-dim: rgba(212,168,67,0.15);
+      --accent: #8b9de8;
+      --text: #e8e8f2;
+      --muted: #6a6a8a;
+      --serif: 'Noto Serif TC', Georgia, serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(139,157,232,0.12), transparent),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(212,168,67,0.06), transparent);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      padding: 52px 24px 40px;
+      position: relative;
+    }
+    .header::after {
+      content: '';
+      display: block;
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 24px auto 0;
+    }
+    .header .eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 6vw, 38px);
+      color: var(--gold);
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .header .ref {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+    }
+    .header .ref a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139,157,232,0.3);
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+    .header .ref a:hover { border-color: var(--accent); }
+
+    /* ── Section wrapper ── */
+    .wrap { max-width: 480px; margin: 0 auto; padding: 0 20px; }
+    .wrap-wide { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── Carousel ── */
+    .carousel-section { padding: 0 20px; }
+    .carousel-outer {
+      max-width: 360px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .carousel-track {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px var(--border);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .slide { min-width: 100%; }
+    .slide img {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      display: block;
+      border-radius: 24px;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10,10,30,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+    .nav:hover { background: rgba(212,168,67,0.15); border-color: var(--gold); transform: translateY(-50%) scale(1.05); }
+    .nav.prev { left: -24px; }
+    .nav.next { right: -24px; }
+
+    .dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--muted); cursor: pointer;
+      transition: background 0.3s, transform 0.3s, width 0.3s;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.4); }
+
+    .chip-row {
+      display: flex; gap: 8px; justify-content: center;
+      flex-wrap: wrap; margin-top: 14px;
+    }
+    .chip {
+      font-size: 11px; padding: 5px 14px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--muted); cursor: pointer;
+      transition: all 0.2s; letter-spacing: 0.5px;
+    }
+    .chip.active { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+    /* ── Insight banner ── */
+    .insight {
+      max-width: 480px; margin: 40px auto 0; padding: 0 20px;
+    }
+    .insight-box {
+      background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(139,157,232,0.05));
+      border: 1px solid rgba(212,168,67,0.2);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .insight-box .label { font-size: 10px; letter-spacing: 3px; color: var(--gold); margin-bottom: 8px; text-transform: uppercase; }
+    .insight-box p { font-family: var(--serif); font-size: 15px; line-height: 1.8; color: #ccc; }
+
+    /* ── Section headers ── */
+    .section { margin-top: 56px; }
+    .section-label {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 24px;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border));
+    }
+    .section-label::after { background: linear-gradient(90deg, var(--border), transparent); }
+
+    /* ── Scripture table ── */
+    .scripture-block { display: flex; flex-direction: column; gap: 16px; }
+    .verse {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      transition: border-color 0.2s;
+    }
+    .verse:hover { border-color: rgba(212,168,67,0.25); }
+    .verse-num {
+      font-size: 11px; letter-spacing: 2px; color: var(--gold);
+      font-weight: 600; margin-bottom: 10px;
+    }
+    .verse-row { display: flex; gap: 10px; margin-bottom: 6px; align-items: flex-start; }
+    .verse-row:last-child { margin-bottom: 0; }
+    .lang-tag {
+      flex-shrink: 0;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 2px 8px; border-radius: 6px; margin-top: 2px;
+    }
+    .lang-tag.han { background: rgba(139,157,232,0.15); color: var(--accent); }
+    .lang-tag.ro { background: rgba(212,168,67,0.12); color: var(--gold); }
+    .verse-text { font-size: 13.5px; line-height: 1.85; color: #bbbbd0; }
+
+    /* ── HEAR cards ── */
+    .hear-grid { display: flex; flex-direction: column; gap: 14px; }
+    .hear-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .hear-card:hover { border-color: rgba(212,168,67,0.3); transform: translateY(-1px); }
+    .hear-tag {
+      font-size: 10px; letter-spacing: 2.5px; font-weight: 700;
+      color: var(--gold); margin-bottom: 10px; text-transform: uppercase;
+    }
+    .hear-title {
+      font-family: var(--serif); font-size: 17px; font-weight: 700;
+      color: var(--text); margin-bottom: 12px; line-height: 1.5;
+    }
+    .hear-body { font-size: 13.5px; line-height: 1.9; color: #aaa; }
+    .hear-body strong { color: #ddd; font-weight: 600; }
+    .hear-body ul { padding-left: 18px; }
+    .hear-body li { margin-bottom: 8px; }
+    .prayer {
+      font-family: var(--serif); font-style: italic;
+      font-size: 13.5px; line-height: 2.1; color: #c0c0dc;
+      border-left: 2px solid var(--gold);
+      padding-left: 18px; margin-top: 4px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; margin-top: 72px;
+      padding: 0 20px;
+      color: var(--muted); font-size: 12px; line-height: 2;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile polish ── */
+    @media (max-width: 500px) {
+      .nav.prev { left: -16px; }
+      .nav.next { right: -16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="eyebrow">2026 · 08 · 13 · 四 · 每日靈修</div>
+    <h1>逃亡的開始<br>約拿單與米甲的營救</h1>
+    <div class="ref">
+      <a href="https://bible.fhl.net/NUI/_rwd/#/bible/撒上19:1-18" target="_blank">
+        撒上 19:1-18 ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel-section">
+    <div class="carousel-outer">
+      <div class="carousel-track">
+        <div class="slides" id="slides">
+          <div class="slide"><img src="20260813_1I_isometric.jpg" alt="3D等角摘要" loading="eager" /></div>
+          <div class="slide"><img src="20260813_2H_claymation.jpg" alt="黏土心智圖" loading="lazy" /></div>
+          <div class="slide"><img src="20260813_3B_glassmorphism.jpg" alt="玻璃風金句卡" loading="lazy" /></div>
+        </div>
+      </div>
+      <button class="nav prev" onclick="move(-1)" aria-label="上一張">‹</button>
+      <button class="nav next" onclick="move(1)" aria-label="下一張">›</button>
+    </div>
+
+    <div class="chip-row">
+      <button class="chip active" onclick="goTo(0)">① 等角摘要</button>
+      <button class="chip" onclick="goTo(1)">② 心智圖</button>
+      <button class="chip" onclick="goTo(2)">③ 金句卡</button>
+    </div>
+    <div class="dots">
+      <div class="dot active" onclick="goTo(0)"></div>
+      <div class="dot" onclick="goTo(1)"></div>
+      <div class="dot" onclick="goTo(2)"></div>
+    </div>
+  </div>
+
+  <!-- Insight -->
+  <div class="insight">
+    <div class="insight-box">
+      <div class="label">今日洞察</div>
+      <p>王宮的華麗外衣隨時可能被仇恨撕裂，但在逃亡的起點，上帝已在隱密處為大衛預備了真摯的盟約與智慧的營救。</p>
+    </div>
+  </div>
+
+  <!-- Scripture -->
+  <div class="wrap-wide">
+    <div class="section">
+      <div class="section-label">雙版本經文對照</div>
+      <div class="scripture-block">
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:1</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅迫害大衛 掃羅吩咐他兒子約拿單和眾臣僕要殺大衛，但掃羅的兒子約拿單卻很喜愛大衛。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅對伊的子約拿單及眾人臣講，著刣死大衛；總是掃羅的子約拿單不止歡喜大衛。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:2</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單告訴大衛說：「我父掃羅想要殺你，現在你要小心，明日早晨留在一個僻靜的地方藏起來。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單給大衛講：「我的老父掃羅想欲刣你，所以明仔早起你著小心，到一個偏僻的所在，家己匿。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:3</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">我會出去，到你所藏的田裏，站在我父親旁邊，與父親談論到你。我看情形怎樣，會告訴你。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">我欲去你所匿的田，徛佇我的老父身邊，我及我的老父議論你的事。我所看見的我欲給你講。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:4</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單向他父親掃羅說大衛的好話，對他說：「王不可得罪王的僕人大衛，因為他未曾得罪你，他所行的對你都很有益處。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單對伊的老父掃羅論大衛替伊講好話，講：「王呣通得罪你的奴僕大衛；因為伊未曾得罪你，伊對你所行的攏是好。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:5</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">他拚了命殺那非利士人，並且耶和華為全以色列大施拯救。那時你看見，也很歡喜，現在為何要犯罪，流無辜人的血，無緣無故殺大衛呢？」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">因為伊曾拚命刣死彼個非利士人，耶和華為以色列眾人大行拯救；彼時你看見，不止歡喜，今啥事無緣故欲刣死大衛，流無罪的人的血，來犯罪啊？」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:6</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅聽了約拿單的話，就指着永生的耶和華起誓：「我絕不殺他。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅聽約拿單的話，掃羅指耶和華的活來咒誓講：「我無欲互伊死。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:7</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單叫大衛來，把這一切事告訴他。約拿單帶他去見掃羅，他就像以前一樣侍立在掃羅面前。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單叫大衛來，約拿單將這一切的話給伊講，約拿單導大衛去見掃羅。伊猶原徛佇掃羅的面前。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:8</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">此後又有戰爭，大衛出去與非利士人打仗。他大大擊敗他們，他們就在他面前逃跑。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">以後閣有交戰。大衛出去及非利士人交戰，大大刣死𪜶，𪜶就佇伊的面前逃走。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:9</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">從耶和華來的邪靈又降在掃羅身上，掃羅手裏拿槍坐在屋裏，大衛正用手彈琴。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">（掃羅坐佇厝內手攑槍(chhiuⁿ)），彼時對耶和華遐來的歹神閣臨到伊，大衛用手彈琴。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:10</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅想要用槍刺透大衛，把他釘在牆上，他卻躲開掃羅，掃羅的槍刺入牆內。當夜大衛逃走，躲起來了。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅欲用槍刺大衛，釘伊佇壁裡；伊就對掃羅的面前閃開，彼支槍鑿入(chha̍k-ji̍p)壁。彼暝大衛就走，來閃避伊。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:11</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅派一些使者到大衛的房屋那裏守着他，等到天亮要殺他。大衛的妻子米甲對大衛說：「你今夜若不逃命，明日就要被殺。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅差人到大衛的厝守伊，聽候天光欲刣伊。大衛的某米甲對伊講：「你今暝若無逃命，明仔日你欲受刣。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:12</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">於是米甲將大衛從窗戶縋下去，讓他走；大衛就逃走，躲起來了。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">米甲就對窗仔墜(tūi)大衛落去，伊就走去，來閃避。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:13</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">米甲把家中的神像放在床上，頭枕在山羊毛的枕頭上，用衣服蓋起來。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">米甲用家內的偶像下佇眠床，頭殼靠(khòa)佇山羊毛的枕頭，用被(phē)蓋(khàm)伊。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:14</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅派一些使者去捉拿大衛，米甲說：「他病了。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅差人去掠大衛，米甲講：「伊破病。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:15</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅又派一些使者去看大衛，說：「把他連床一起抬到我這裏，我好殺他。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅閣差人去看大衛，講：「連眠床扛來我遮，我通刣死伊。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:16</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">使者進去，看哪，神像在床上，頭枕在山羊毛的枕頭上。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">使者入去，看見床裡有偶像，頭殼靠佇山羊毛的枕頭。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:17</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅對米甲說：「你為甚麼這樣欺騙我，放我仇敵逃走呢？」米甲對掃羅說：「他對我說：『你放我走吧，我何必要殺你呢？』」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅對米甲講：「你啥事按呢騙我，放我的對敵逃走啊？」米甲應講：「伊給我講：『你放我去，我豈著刣死你嗎？』」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 19:18</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛逃跑躲避，來到拉瑪的撒母耳那裏，把掃羅向他所行的事全告訴他。他和撒母耳就去，住在拿約。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛走去，逃閃到拉瑪見撒母耳，將掃羅對伊所行的事攏總給伊講。伊及撒母耳就去拿約徛起。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEAR -->
+    <div class="section">
+      <div class="section-label">HEAR 靈修心得</div>
+      <div class="hear-grid">
+
+        <div class="hear-card">
+          <div class="hear-tag">H · Highlight｜經文焦點</div>
+          <div class="hear-title">金句精選</div>
+          <div class="hear-body">
+            <p><strong>📌 v.4</strong>——約拿單向他父親掃羅說大衛的好話，對他說：「王不可得罪王的僕人大衛，因為他未曾得罪你，他所行的對你都很有益處。」</p>
+            <br/>
+            <p><strong>📌 v.12</strong>——於是米甲將大衛從窗戶縋下去，讓他走；大衛就逃走，躲起來了。</p>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">E · Explain｜經文解釋</div>
+          <div class="hear-title">背景與屬靈洞察</div>
+          <div class="hear-body">
+            <ul>
+              <li><strong>宮廷政治與家庭分裂</strong>——掃羅的瘋狂將其兒女推向了對立面。約拿單因公義和愛惜大衛而抗命，米甲則用神像與謊言欺騙掃羅。這是上帝在危機中藉著掃羅親近的人，成就祂保全大衛的計畫。</li>
+              <li><strong>米甲的神像與軟弱</strong>——米甲在床鋪上放家中的神像（teraphim），透露出即便是大衛的家，當時也參雜了當代民間的偶像崇拜信仰。上帝拯救大衛，不是因為大衛周邊環境全然聖潔無瑕，而是因著祂主權的恩典。</li>
+              <li><strong>回歸先知的拿約</strong>——大衛逃往拉瑪的撒母耳那裡，住在拿約（意思是「居所」）。這表明大衛在生命遭遇重大危機時，首先尋求的是屬靈的遮蓋與神話語的引導，而不是組建軍隊反抗。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">A · Apply｜生活應用</div>
+          <div class="hear-title">今日具體行動</div>
+          <div class="hear-body">
+            <ul>
+              <li><strong>尋找你生命中的「約拿單」與「米甲」</strong>——當我們面對環境的逼迫或突如其來的打擊時，留意上帝身邊已經預備好的扶持與救助，並為此列出感謝。</li>
+              <li><strong>在危機中奔向屬靈居所</strong>——當事業、人際或生活面臨被「追殺」的窘境，不要急著用血氣反擊，給自己安排退隱的時間（如拉瑪的拿約），在禱告與神的話語中重新定位。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">R · Respond｜禱告回應</div>
+          <div class="hear-title">今日禱告</div>
+          <div class="prayer">
+親愛的主耶穌，<br/><br/>在大衛開始流亡的艱難日子裡，祢藉著約拿單的說情、米甲的營救，甚至撒母耳的遮蓋，保護了祢的受膏者。<br/><br/>當我面對生活中的攻擊、誤解或困局時，求祢賜我平靜的心，看見祢藉著身邊的人與環境所為我預備的避難所。<br/><br/>更求祢保守我，使我第一時間不是用血氣反抗，而是奔向那與祢同在的「拿約」，在祢那裡尋求真正的安息與引導。<br/><br/>奉主耶穌基督的聖名禱告，阿們。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>本月主題：曠野中的受膏者——撒母耳記上大衛的信心旅程</p>
+    <p><a href="https://bible.fhl.net/NUI/_rwd/#/bible/撒上19:1-18" target="_blank">📖 FHL 電子聖經 撒上 19:1-18</a></p>
+    <p style="margin-top:12px; opacity:0.4; font-size:11px;">© 2026 每日靈修 · 自動生成</p>
+  </footer>
+
+  <script>
+    let cur = 0;
+    const total = 3;
+    const slidesEl = document.getElementById('slides');
+    const dots = document.querySelectorAll('.dot');
+    const chips = document.querySelectorAll('.chip');
+
+    function update() {
+      slidesEl.style.transform = `translateX(-${cur * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+      chips.forEach((c, i) => c.classList.toggle('active', i === cur));
+    }
+    function move(dir) { cur = (cur + dir + total) % total; update(); }
+    function goTo(idx) { cur = idx; update(); }
+
+    // Swipe
+    let sx = 0;
+    slidesEl.parentElement.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+    slidesEl.parentElement.addEventListener('touchend', e => {
+      const dx = sx - e.changedTouches[0].clientX;
+      if (Math.abs(dx) > 40) move(dx > 0 ? 1 : -1);
+    });
+
+    // Keyboard
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') move(-1);
+      if (e.key === 'ArrowRight') move(1);
+    });
+  </script>
+</body>
+</html>

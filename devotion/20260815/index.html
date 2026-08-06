@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>每日靈修 2026-08-15 | 以拉鐵之盟</title>
+  <meta name="description" content="撒上 20:18-42 | 以拉鐵之盟：流淚的分離 | HEAR 靈修心得 + 視覺圖卡" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #07091a;
+      --surface: rgba(255,255,255,0.035);
+      --border: rgba(255,255,255,0.07);
+      --gold: #d4a843;
+      --gold-dim: rgba(212,168,67,0.15);
+      --accent: #8b9de8;
+      --text: #e8e8f2;
+      --muted: #6a6a8a;
+      --serif: 'Noto Serif TC', Georgia, serif;
+      --sans: 'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      background-image:
+        radial-gradient(ellipse 60% 40% at 50% -10%, rgba(139,157,232,0.12), transparent),
+        radial-gradient(ellipse 40% 30% at 80% 80%, rgba(212,168,67,0.06), transparent);
+      color: var(--text);
+      font-family: var(--sans);
+      min-height: 100vh;
+      padding-bottom: 80px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      padding: 52px 24px 40px;
+      position: relative;
+    }
+    .header::after {
+      content: '';
+      display: block;
+      width: 60px; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 24px auto 0;
+    }
+    .header .eyebrow {
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .header h1 {
+      font-family: var(--serif);
+      font-size: clamp(24px, 6vw, 38px);
+      color: var(--gold);
+      line-height: 1.4;
+      font-weight: 700;
+    }
+    .header .ref {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 1.5px;
+    }
+    .header .ref a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(139,157,232,0.3);
+      padding-bottom: 1px;
+      transition: border-color 0.2s;
+    }
+    .header .ref a:hover { border-color: var(--accent); }
+
+    /* ── Section wrapper ── */
+    .wrap { max-width: 480px; margin: 0 auto; padding: 0 20px; }
+    .wrap-wide { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+
+    /* ── Carousel ── */
+    .carousel-section { padding: 0 20px; }
+    .carousel-outer {
+      max-width: 360px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .carousel-track {
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px var(--border);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+    }
+    .slide { min-width: 100%; }
+    .slide img {
+      width: 100%;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      display: block;
+      border-radius: 24px;
+    }
+    .nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(10,10,30,0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--border);
+      color: #fff;
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      display: flex; align-items: center; justify-content: center;
+      transition: all 0.2s;
+      z-index: 10;
+    }
+    .nav:hover { background: rgba(212,168,67,0.15); border-color: var(--gold); transform: translateY(-50%) scale(1.05); }
+    .nav.prev { left: -24px; }
+    .nav.next { right: -24px; }
+
+    .dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--muted); cursor: pointer;
+      transition: background 0.3s, transform 0.3s, width 0.3s;
+    }
+    .dot.active { background: var(--gold); transform: scale(1.4); }
+
+    .chip-row {
+      display: flex; gap: 8px; justify-content: center;
+      flex-wrap: wrap; margin-top: 14px;
+    }
+    .chip {
+      font-size: 11px; padding: 5px 14px; border-radius: 20px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--muted); cursor: pointer;
+      transition: all 0.2s; letter-spacing: 0.5px;
+    }
+    .chip.active { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
+
+    /* ── Insight banner ── */
+    .insight {
+      max-width: 480px; margin: 40px auto 0; padding: 0 20px;
+    }
+    .insight-box {
+      background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(139,157,232,0.05));
+      border: 1px solid rgba(212,168,67,0.2);
+      border-radius: 16px;
+      padding: 20px 24px;
+      text-align: center;
+    }
+    .insight-box .label { font-size: 10px; letter-spacing: 3px; color: var(--gold); margin-bottom: 8px; text-transform: uppercase; }
+    .insight-box p { font-family: var(--serif); font-size: 15px; line-height: 1.8; color: #ccc; }
+
+    /* ── Section headers ── */
+    .section { margin-top: 56px; }
+    .section-label {
+      display: flex; align-items: center; gap: 12px;
+      font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 24px;
+    }
+    .section-label::before, .section-label::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border));
+    }
+    .section-label::after { background: linear-gradient(90deg, var(--border), transparent); }
+
+    /* ── Scripture table ── */
+    .scripture-block { display: flex; flex-direction: column; gap: 16px; }
+    .verse {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 20px;
+      transition: border-color 0.2s;
+    }
+    .verse:hover { border-color: rgba(212,168,67,0.25); }
+    .verse-num {
+      font-size: 11px; letter-spacing: 2px; color: var(--gold);
+      font-weight: 600; margin-bottom: 10px;
+    }
+    .verse-row { display: flex; gap: 10px; margin-bottom: 6px; align-items: flex-start; }
+    .verse-row:last-child { margin-bottom: 0; }
+    .lang-tag {
+      flex-shrink: 0;
+      font-size: 10px; font-weight: 700; letter-spacing: 1px;
+      padding: 2px 8px; border-radius: 6px; margin-top: 2px;
+    }
+    .lang-tag.han { background: rgba(139,157,232,0.15); color: var(--accent); }
+    .lang-tag.ro { background: rgba(212,168,67,0.12); color: var(--gold); }
+    .verse-text { font-size: 13.5px; line-height: 1.85; color: #bbbbd0; }
+
+    /* ── HEAR cards ── */
+    .hear-grid { display: flex; flex-direction: column; gap: 14px; }
+    .hear-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 22px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .hear-card:hover { border-color: rgba(212,168,67,0.3); transform: translateY(-1px); }
+    .hear-tag {
+      font-size: 10px; letter-spacing: 2.5px; font-weight: 700;
+      color: var(--gold); margin-bottom: 10px; text-transform: uppercase;
+    }
+    .hear-title {
+      font-family: var(--serif); font-size: 17px; font-weight: 700;
+      color: var(--text); margin-bottom: 12px; line-height: 1.5;
+    }
+    .hear-body { font-size: 13.5px; line-height: 1.9; color: #aaa; }
+    .hear-body strong { color: #ddd; font-weight: 600; }
+    .hear-body ul { padding-left: 18px; }
+    .hear-body li { margin-bottom: 8px; }
+    .prayer {
+      font-family: var(--serif); font-style: italic;
+      font-size: 13.5px; line-height: 2.1; color: #c0c0dc;
+      border-left: 2px solid var(--gold);
+      padding-left: 18px; margin-top: 4px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center; margin-top: 72px;
+      padding: 0 20px;
+      color: var(--muted); font-size: 12px; line-height: 2;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Mobile polish ── */
+    @media (max-width: 500px) {
+      .nav.prev { left: -16px; }
+      .nav.next { right: -16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="eyebrow">2026 · 08 · 15 · 六 · 每日靈修</div>
+    <h1>以拉鐵之盟<br>流淚的分離</h1>
+    <div class="ref">
+      <a href="https://bible.fhl.net/NUI/_rwd/#/bible/撒上20:18-42" target="_blank">
+        撒上 20:18-42 ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Carousel -->
+  <div class="carousel-section">
+    <div class="carousel-outer">
+      <div class="carousel-track">
+        <div class="slides" id="slides">
+          <div class="slide"><img src="20260815_1I_isometric.jpg" alt="3D等角摘要" loading="eager" /></div>
+          <div class="slide"><img src="20260815_2H_claymation.jpg" alt="黏土心智圖" loading="lazy" /></div>
+          <div class="slide"><img src="20260815_3B_glassmorphism.jpg" alt="玻璃風金句卡" loading="lazy" /></div>
+        </div>
+      </div>
+      <button class="nav prev" onclick="move(-1)" aria-label="上一張">‹</button>
+      <button class="nav next" onclick="move(1)" aria-label="下一張">›</button>
+    </div>
+
+    <div class="chip-row">
+      <button class="chip active" onclick="goTo(0)">① 等角摘要</button>
+      <button class="chip" onclick="goTo(1)">② 心智圖</button>
+      <button class="chip" onclick="goTo(2)">③ 金句卡</button>
+    </div>
+    <div class="dots">
+      <div class="dot active" onclick="goTo(0)"></div>
+      <div class="dot" onclick="goTo(1)"></div>
+      <div class="dot" onclick="goTo(2)"></div>
+    </div>
+  </div>
+
+  <!-- Insight -->
+  <div class="insight">
+    <div class="insight-box">
+      <div class="label">今日洞察</div>
+      <p>弓箭與石堆之間的暗號，宣告了宮廷生活的徹底終結。流淚的分離，是為了在曠野的洗禮中，塑造成全神主權的君王。</p>
+    </div>
+  </div>
+
+  <!-- Scripture -->
+  <div class="wrap-wide">
+    <div class="section">
+      <div class="section-label">雙版本經文對照</div>
+      <div class="scripture-block">
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:18</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單對他說：「明日是初一，你的座位空着，人必察覺你不在。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單給伊講：「明仔日是月的初一，你的位放空，欲講你無佇啲。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:19</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">到第三日，就要走一段長路下去( [ 20.19] 「就要走一段長路下去」：七十士譯本是「人家更會察覺」。)，去到你遇事那天所藏的地方，在以色磐石( [ 20.19] 「以色磐石」：七十士譯本是「石堆」。)的旁邊等候。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">等到三日，你著緊緊落去，到你前抵著(tú-tio̍h)代誌所匿的所在，佇以色的石磐遐聽候。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:20</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">我會向磐石旁邊射三箭，如同射箭靶一樣。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">我欲射三支箭(chìⁿ)佇石盤邊，那親像考靶(khó-pé)一樣。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:21</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">看哪，我會派僮僕，說：『去把箭找來。』我若對僮僕喊說：『看哪，箭在你的這邊，把箭拿來』，你就可以平安回來；我指着永生的耶和華起誓，你一定沒有事。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">我欲差一個囝仔，講：『你去尋許個箭』我若給囝仔講：『看啊，箭佇你此旁著拾伊』，你就通倒來；我指活的耶和華來咒誓，你有平安無害。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:22</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">我若對孩子說：『看哪，箭在你的前方』，你就要離開，因為是耶和華差你去的。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">我若給囝仔講：『看啊，箭佇你彼旁』你就著去，因為是耶和華差你去。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:23</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">至於你和我，我們所說的話，看哪，耶和華在你我中間作證，直到永遠。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">論到你我今仔日所講的，有耶和華佇你我的中間，直到永遠。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:24</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">大衛就去藏在田野。到了初一，王要坐席用餐。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">大衛就去匿佇田裡。到初一日，王坐桌得欲(tit-beh)食。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:25</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">王照常坐在靠牆的位子上，約拿單在對面( [ 20.25] 「在對面」是根據七十士譯本；原文是「起身」。)，押尼珥坐在掃羅旁邊，大衛的座位卻是空的。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">王照常坐伊的位，就是倚佇壁裡的位，約拿單啲徛，押尼珥坐佇掃羅的身邊，大衛的位放空(pàng-khang)。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:26</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">這日掃羅沒有說甚麼，因為他說：「大衛或許有事，偶染不潔，還未得潔淨。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">總是此日掃羅無講甚麼，伊拍算大衛抵著代誌，無清氣，伊的確是無清氣。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:27</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">初二，大衛的座位還空着。掃羅對他兒子約拿單說：「耶西的兒子為何昨日、今日都沒有來用餐呢？」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">隔日，就是彼月的初二，大衛的位猶原放空。掃羅問伊的子約拿單講：「耶西的子怎樣昨仔日、今仔日無來食？」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:28</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單回答掃羅說：「大衛懇求我允許他回伯利恆去，</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單應掃羅講：「大衛切切求我准伊去伯利恆。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:29</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">說：『求你讓我去，因為我家在城裏有獻祭的事，我哥哥吩咐我去。如今我若在你眼前蒙恩，求你讓我去見我的兄弟。』所以大衛沒有來赴王的筵席。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">伊講：『求你准我去，因為阮兜(tau)佇城內有祭祀；我的兄吩咐我去。今我若佇你的目睭前得著恩典，求你准去見我許個兄』；所以伊無來及王坐桌。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:30</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅向約拿單怒氣大發，對他說：「你這頑梗悖逆之婦人所生的，我怎麼會不知道你選擇耶西的兒子( [ 20.30] 「選擇耶西的兒子」：七十士譯本是「作耶西兒子的朋友」。)，自取羞辱，也使你母親露體蒙羞呢？</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅對約拿單發受氣，給伊講：「你此個硬心悖逆的婦仁人的子，我豈呣知你揀耶西的子，家己取凌辱，致到你的老母抵著褪裼的凌辱嗎？</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:31</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">只要耶西的兒子還活在世上一天，你和你的國必保不住。現在你要派人去，把他帶到我這裏來，因為他是該死的。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">因為耶西的子活佇地上的時，你及你的國的確𣍐堅固。今著差人去，掠伊到我遮；伊的確著死。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:32</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單回答父親掃羅說：「他為甚麼該死呢？他做了甚麼呢？」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單應伊的老父掃羅對伊講：「伊啥事著死啊？伊有做甚麼啊？」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:33</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">掃羅向約拿單擲槍要刺他，約拿單就知道他父親決意要殺死大衛。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">掃羅擲(cho̍h)彼支槍欲鑿(chha̍k)約拿單，約拿單就知伊的老父決意欲刣大衛。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:34</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">於是約拿單氣憤憤地從席上起來。他在初二這天沒有吃飯，因為他為大衛愁煩，又因為他父親羞辱了他。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">對按呢約拿單真受氣，就對桌裡起來佇此初二日無食甚麼。伊因為大衛煩惱，是因為伊的老父凌辱伊。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:35</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">次日早晨，約拿單按着與大衛約定的時候到田野去，有一個小僮僕跟隨他。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">隔早起，約拿單照伊及大衛所約的時出去到田裡，有一個囝仔及伊去。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:36</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單對僮僕說：「你跑去把我所射的箭找來。」僮僕跑去，約拿單就把箭射在僮僕的前方。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">給囝仔講：「你走去，尋我所射的箭。」囝仔走去，伊就射一支箭佇伊的頭前。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:37</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">僮僕到了約拿單落箭之地，約拿單呼叫僮僕說：「箭不是在你的前方嗎？」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">囝仔到約拿單箭射到的所在，約拿單佇囝仔的後面叫講：「箭豈呣是佇你的頭前嗎？」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:38</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單又呼叫僮僕說：「快去，不要站在那裏！」僮僕就撿起箭來，回到主人那裏。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單閣叫囝仔講：「趕緊噢(o͘h)緊緊去，呣通延迁(iân-chhiân)！」約拿單的囝仔就拾(khioh)許個箭，倒轉來伊的主人遐。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:39</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">僮僕不知道這是甚麼意思，只有約拿單和大衛知道這事。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">總是囝仔呣知這是甚麼意思，只有約拿單及大衛知此個代誌。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:40</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單把他的弓箭交給僮僕，吩咐他說：「你拿到城裏去。」</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單將器械(khì-hâi)交代囝仔，吩咐講：「你提倒去城內。」</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:41</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">僮僕一去，大衛就從南邊( [ 20.41] 「南邊」：七十士譯本是「石堆的旁邊」。)出來，俯伏在地，拜了三拜。他們彼此親吻，一起哭泣，大衛哭得更悲哀。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">囝仔去了後，大衛就對南勢一所在出來，仆佇地裡，拜三拜；二人相唚，相及啼哭，大衛閣卡到極(kàu-ke̍k)。</span>
+          </div>
+        </div>
+
+        <div class="verse">
+          <div class="verse-num">📍 撒上 20:42</div>
+          <div class="verse-row">
+            <span class="lang-tag han">漢</span>
+            <span class="verse-text">約拿單對大衛說：「你平平安安地去吧！因為我們二人曾指着耶和華的名起誓說：『願耶和華在你我中間，以及你我後裔中間作證，直到永遠。』」大衛就起身走了，約拿單也回城裏去了。</span>
+          </div>
+          <div class="verse-row">
+            <span class="lang-tag ro">羅</span>
+            <span class="verse-text">約拿單給大衛講：「你今平安去，咱二人已經指耶和華的名咒誓講：『願耶和華佇你我的中間，閣佇你的後裔及我的後裔的中間，直到永遠。』」伊就起來去；約拿單也倒去城內。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEAR -->
+    <div class="section">
+      <div class="section-label">HEAR 靈修心得</div>
+      <div class="hear-grid">
+
+        <div class="hear-card">
+          <div class="hear-tag">H · Highlight｜經文焦點</div>
+          <div class="hear-title">金句精選</div>
+          <div class="hear-body">
+            <p><strong>📌 v.23</strong>——至於你和我，我們所說的話，看哪，耶和華在你我中間作證，直到永遠。</p>
+            <br/>
+            <p><strong>📌 v.41</strong>——...大衛就從南邊出來，俯伏在地，拜了三拜。他們彼此親吻，一起哭泣，大衛哭得更悲哀。</p>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">E · Explain｜經文解釋</div>
+          <div class="hear-title">背景與屬靈洞察</div>
+          <div class="hear-body">
+            <ul>
+              <li><strong>「初一」與宴席的試探</strong>——王室的初一筵席是一個檢驗安全度的儀式。掃羅在初二發現大衛缺席時，徹底爆發，甚至將槍擲向自己的親生兒子約拿單。這說明掃羅的嫉妒已經演變成無法理喻的偏執狂，任何為大衛辯護的人都會被視為叛徒。</li>
+              <li><strong>以拉鐵之盟與射箭信號</strong>——約拿單藉著帶小僮僕到田野射箭，並用呼叫的暗號來向大衛通風報信。此處設計的暗號是為了保護大衛不被旁人發現，也保護約拿單免遭通敵的嫌疑。</li>
+              <li><strong>極度的悲傷與尊榮</strong>——大衛向約拿單拜了三拜，因為約拿單不僅是他的救命恩人，也是君王的長子。他們的哭泣不是軟弱，而是面對命運無奈的撕裂與即將到來的漫長流亡，所表達出深沉的知己之情。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">A · Apply｜生活應用</div>
+          <div class="hear-title">今日具體行動</div>
+          <div class="hear-body">
+            <ul>
+              <li><strong>預備面對「分別」的陣痛</strong>——在跟隨上帝的道路上，有時祂會允許我們與習慣的環境、深愛的人、甚至穩定的地位進行「流淚的分離」。這不是被神遺棄，而是曠野塑造的開始。</li>
+              <li><strong>上帝是我們關係的終極守護者</strong>——約拿單說「耶和華在你我中間作證，直到永遠」。不論空間如何隔離、環境如何變遷，將人際關係交託給神，神的信實就是我們最穩固的聯繫。</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hear-card">
+          <div class="hear-tag">R · Respond｜禱告回應</div>
+          <div class="hear-title">今日禱告</div>
+          <div class="prayer">
+親愛的主耶穌，<br/><br/>當我看到大衛與約拿單在石堆旁抱頭痛哭、流淚分離的畫面，我的心也感受到那份被迫離別的酸楚。<br/><br/>主啊，當我生命中面臨不得不放棄的安逸、不得不分離的摯友或環境時，求祢賜我力量，相信每一次的離別，都有祢更深的目的。<br/><br/>願祢那永不改變的慈愛，常在我們與我們所愛的人中間，作永遠的見證。<br/><br/>奉主耶穌基督的聖名禱告，阿們。
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>本月主題：曠野中的受膏者——撒母耳記上大衛的信心旅程</p>
+    <p><a href="https://bible.fhl.net/NUI/_rwd/#/bible/撒上20:18-42" target="_blank">📖 FHL 電子聖經 撒上 20:18-42</a></p>
+    <p style="margin-top:12px; opacity:0.4; font-size:11px;">© 2026 每日靈修 · 自動生成</p>
+  </footer>
+
+  <script>
+    let cur = 0;
+    const total = 3;
+    const slidesEl = document.getElementById('slides');
+    const dots = document.querySelectorAll('.dot');
+    const chips = document.querySelectorAll('.chip');
+
+    function update() {
+      slidesEl.style.transform = `translateX(-${cur * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+      chips.forEach((c, i) => c.classList.toggle('active', i === cur));
+    }
+    function move(dir) { cur = (cur + dir + total) % total; update(); }
+    function goTo(idx) { cur = idx; update(); }
+
+    // Swipe
+    let sx = 0;
+    slidesEl.parentElement.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+    slidesEl.parentElement.addEventListener('touchend', e => {
+      const dx = sx - e.changedTouches[0].clientX;
+      if (Math.abs(dx) > 40) move(dx > 0 ? 1 : -1);
+    });
+
+    // Keyboard
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') move(-1);
+      if (e.key === 'ArrowRight') move(1);
+    });
+  </script>
+</body>
+</html>
