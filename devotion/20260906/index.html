@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>每日靈修 09/06 · 祢仍然長存 · 來 1:11</title>
+  <style>
+    :root{--gold:#c9a84c;--deep:#0d0d1e;--glass:rgba(255,255,255,0.08);--border:rgba(255,255,255,0.15);--text:#e8e0f0;--muted:#a09ab8}
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--deep);color:var(--text);font-family:'Georgia',serif;background-image:radial-gradient(ellipse at 20% 10%,#1a0a3a 0%,transparent 60%),radial-gradient(ellipse at 80% 90%,#0a1a30 0%,transparent 60%);min-height:100vh}
+    header{text-align:center;padding:2.5rem 1.5rem 1.5rem}
+    .date-badge{display:inline-block;background:var(--glass);border:1px solid var(--border);border-radius:999px;padding:.3rem 1.2rem;font-size:.8rem;color:var(--muted);letter-spacing:.1em;margin-bottom:1rem;backdrop-filter:blur(8px)}
+    header h1{font-size:clamp(2rem,8vw,3.2rem);color:var(--gold);text-shadow:0 0 30px rgba(201,168,76,.4);letter-spacing:.05em;line-height:1.2}
+    header h2{font-size:clamp(1rem,4vw,1.4rem);color:var(--muted);margin-top:.5rem;font-weight:normal;font-style:italic}
+    .fhl-link{display:inline-block;margin-top:1rem;padding:.4rem 1rem;border:1px solid var(--gold);border-radius:999px;color:var(--gold);text-decoration:none;font-size:.8rem;letter-spacing:.08em;transition:all .3s}
+    .fhl-link:hover{background:var(--gold);color:var(--deep)}
+    .carousel-wrap{max-width:420px;margin:2rem auto;position:relative;padding:0 1.5rem}
+    .carousel{overflow:hidden;border-radius:1.5rem;box-shadow:0 8px 40px rgba(0,0,0,.6)}
+    .slides{display:flex;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+    .slides img{width:100%;flex-shrink:0;object-fit:cover;border-radius:1.5rem;display:block}
+    .carousel-nav{display:flex;justify-content:center;gap:.6rem;margin-top:1rem}
+    .carousel-nav button{width:10px;height:10px;border-radius:50%;border:none;background:var(--muted);cursor:pointer;transition:all .3s;padding:0}
+    .carousel-nav button.active{background:var(--gold);transform:scale(1.3)}
+    .carousel-arrows{position:absolute;top:50%;transform:translateY(-50%);width:100%;left:0;display:flex;justify-content:space-between;padding:0 .2rem;pointer-events:none}
+    .carousel-arrows button{pointer-events:all;background:rgba(0,0,0,.5);border:1px solid var(--border);color:var(--gold);width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1.1rem;backdrop-filter:blur(8px);transition:all .3s}
+    .carousel-arrows button:hover{background:var(--gold);color:var(--deep)}
+    .img-caption{text-align:center;font-size:.7rem;color:var(--muted);margin-top:.5rem;font-style:italic}
+    section{max-width:720px;margin:0 auto;padding:2rem 1.5rem}
+    .section-title{font-size:.75rem;letter-spacing:.15em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+    .section-title::after{content:'';flex:1;height:1px;background:var(--border)}
+    .insight-card{background:var(--glass);border:1px solid var(--border);border-radius:1.2rem;padding:1.5rem;backdrop-filter:blur(12px);border-left:3px solid var(--gold);text-align:center}
+    .insight-card p{font-size:1.15rem;line-height:1.8;color:var(--text);font-style:italic}
+    .verse-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.5rem}
+    @media(max-width:500px){.verse-grid{grid-template-columns:1fr}}
+    .verse-col{background:var(--glass);border:1px solid var(--border);border-radius:1rem;padding:1.2rem;backdrop-filter:blur(8px)}
+    .verse-col .lang-label{font-size:.65rem;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:.6rem}
+    .verse-col p{font-size:.95rem;line-height:1.9;color:var(--text)}
+    .verse-ref{font-size:.7rem;color:var(--muted);margin-top:.6rem;text-align:right}
+    .streams-card{background:var(--glass);border:1px solid var(--border);border-radius:1.2rem;padding:1.5rem 1.8rem;backdrop-filter:blur(12px)}
+    .streams-card h3{color:var(--gold);font-size:1rem;margin-bottom:.8rem}
+    .streams-card p{font-size:.9rem;line-height:1.9;color:var(--muted)}
+    .streams-card .author{margin-top:.8rem;font-size:.78rem;color:var(--gold);text-align:right;font-style:italic}
+    .hear-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    @media(max-width:500px){.hear-grid{grid-template-columns:1fr}}
+    .hear-card{background:var(--glass);border:1px solid var(--border);border-radius:1rem;padding:1.2rem;backdrop-filter:blur(8px);transition:transform .3s}
+    .hear-card:hover{transform:translateY(-4px)}
+    .hear-letter{font-size:2rem;font-weight:bold;color:var(--gold);line-height:1;margin-bottom:.4rem}
+    .hear-word{font-size:.75rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:.8rem}
+    .hear-card p{font-size:.88rem;line-height:1.8;color:var(--text)}
+    footer{text-align:center;padding:2rem 1rem 3rem;border-top:1px solid var(--border);margin-top:2rem}
+    footer p{font-size:.75rem;color:var(--muted);line-height:1.8}
+    footer .month-theme{color:var(--gold);font-size:.85rem;margin-bottom:.4rem}
+    .nav-btns{display:flex;justify-content:center;gap:1rem;margin-top:1.2rem;flex-wrap:wrap}
+    .nav-btns a{padding:.5rem 1.4rem;border:1px solid var(--border);border-radius:999px;color:var(--muted);text-decoration:none;font-size:.8rem;transition:all .3s}
+    .nav-btns a:hover{border-color:var(--gold);color:var(--gold)}
+  </style>
+</head>
+<body>
+<header>
+  <div class="date-badge">📅 2026年9月6日（週日）· 荒漠甘泉</div>
+  <h1>祢仍然長存</h1>
+  <h2>Thou Remainest · 希伯來書 1:11</h2>
+  <a class="fhl-link" href="https://bible.fhl.net/NUI/_rwd/#/bible/來:1:11" target="_blank">📖 信望愛電子聖經 ↗</a>
+</header>
+
+<div class="carousel-wrap">
+  <div class="carousel">
+    <div class="slides" id="slides">
+      <img src="20260906_1I_isometric.jpg" alt="3D等角插畫：永恆光柱"/>
+      <img src="20260906_2H_claymation.jpg" alt="黏土風：孤寂壁爐旁的恩典"/>
+      <img src="20260906_3B_glassmorphism.jpg" alt="玻璃擬態：祢仍然長存金句卡"/>
+    </div>
+  </div>
+  <div class="carousel-arrows">
+    <button onclick="move(-1)">‹</button>
+    <button onclick="move(1)">›</button>
+  </div>
+  <div class="carousel-nav" id="nav"></div>
+  <div class="img-caption" id="caption">3D 等角插畫 · 永恆光柱屹立宇宙</div>
+</div>
+
+<section>
+  <div class="section-title">✦ 今日洞察</div>
+  <div class="insight-card">
+    <p>萬物皆如舊衣褪色消逝，惟有那位承受萬有之子——祂的年數永無窮盡。<br>在每一個空椅與眼淚之旁，那位永恆者就在此處，不被時間所磨損。</p>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">📖 雙語經文對照</div>
+  <div class="verse-grid">
+    <div class="verse-col">
+      <div class="lang-label" lang="zh-Hant">和合本 2010（漢）</div>
+      <p lang="zh-Hant">天地都會消滅，你卻長存；<br>天地都會像衣服漸漸舊了；</p>
+      <div class="verse-ref">— 來 1:11</div>
+    </div>
+    <div class="verse-col">
+      <div class="lang-label" lang="nan-Hant">巴克禮台漢本（羅）</div>
+      <p lang="nan-Hant">𪜶欲滅無，獨獨你久長佇啲。<br>𪜶攏欲親像衣服漸漸舊；</p>
+      <div class="verse-ref">— 來 1:11</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">🏜 荒漠甘泉默想</div>
+  <div class="streams-card">
+    <h3>祂仍然長存 · He Remains</h3>
+    <p>壁爐旁有多少孤單的心！那些守著空椅流淚的人，不能自禁。然而，有一位看不見的同在，就在伸手可觸之處——祂就是永恆的那一位。「認出」這同在，比「感受到」更高、更穩。感受會隨雨霧、病痛而波動；但「認出」卻不倚賴情緒天氣。真理不是一個命題，而是一個同在的位格——溫暖的朋友，全能的主。無論是哪一隻手拉下了眼淚，在你柳樹旁的溪邊，這喜樂的真理常在：<strong>祂在這裡，祢仍然長存。</strong></p>
+    <div class="author">— S. D. Gordon（荒漠甘泉）</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-title">💡 HEAR 靈修心得</div>
+  <div class="hear-grid">
+    <div class="hear-card">
+      <div class="hear-letter">H</div>
+      <div class="hear-word">Highlight · 亮點</div>
+      <p>「天地都會消滅，你卻長存」——萬物有限，唯神永恆。這不是情感安慰，而是神學宣告：聖子的永恆性超越宇宙本身的存續。</p>
+    </div>
+    <div class="hear-card">
+      <div class="hear-letter">E</div>
+      <div class="hear-word">Explain · 解析</div>
+      <p>希伯來書引用詩篇 102:26 論證基督優越於天使——天地如舊衣終將破損，但那「承受萬有」的子，祂的年數「無窮無盡」（來 1:12）。</p>
+    </div>
+    <div class="hear-card">
+      <div class="hear-letter">A</div>
+      <div class="hear-word">Apply · 應用</div>
+      <p>我所倚靠的——事業、健康、關係——都會像衣服舊去。當我把錨點扎入那位「永遠長存」的主，孤單的壁爐旁就有了永不熄滅的光。</p>
+    </div>
+    <div class="hear-card">
+      <div class="hear-letter">R</div>
+      <div class="hear-word">Respond · 回應</div>
+      <p>主啊，今天我選擇「認出」祢的同在，而非等待「感受到」。無論周圍有多少空椅與未解的淚，祢仍然長存——這就夠了。阿們。</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="month-theme">📌 九月主題：永恆者的同在</p>
+  <p>每日靈修 · 荒漠甘泉 × 巴克禮台漢本對照版<br>© 2026 家庭靈修計畫 · family.jktai123.com/devotion/</p>
+  <div class="nav-btns">
+    <a href="../">📅 靈修首頁</a>
+    <a href="https://www.glorypress.com/devotional/FaithAndLifeOneYearBook.asp?bid=1" target="_blank">🏜 大光荒漠甘泉</a>
+  </div>
+</footer>
+
+<script>
+  const captions=['3D 等角插畫 · 永恆光柱屹立宇宙','黏土風 · 孤寂壁爐旁的永恆恩典','玻璃擬態 · 祢仍然長存金句卡'];
+  let cur=0;
+  const slides=document.getElementById('slides'),navEl=document.getElementById('nav'),capEl=document.getElementById('caption'),total=3;
+  for(let i=0;i<total;i++){const b=document.createElement('button');if(i===0)b.classList.add('active');b.onclick=()=>goTo(i);navEl.appendChild(b)}
+  function goTo(n){cur=(n+total)%total;slides.style.transform=`translateX(-${cur*100}%)`;document.querySelectorAll('.carousel-nav button').forEach((b,i)=>b.classList.toggle('active',i===cur));capEl.textContent=captions[cur]}
+  function move(d){goTo(cur+d)}
+  let startX=0;
+  slides.addEventListener('touchstart',e=>startX=e.touches[0].clientX,{passive:true});
+  slides.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-startX;if(Math.abs(dx)>40)move(dx<0?1:-1)},{passive:true});
+  setInterval(()=>move(1),5000);
+</script>
+</body>
+</html>
